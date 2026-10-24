@@ -25,14 +25,14 @@
             text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
         }
         a {
-            color: #9B5DE8;
-            text-decoration:  dotted #843b62;
+            color: #C70039;
+            text-decoration:  dotted #416EB4;
             text-decoration-thickness: 2px;
             transition: all 0.2s ease;
         }
         a:hover {
             transform: scale(1.05) rotate(1deg);
-            color: #843b62;
+            color: #416EB4;
             text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
         p {
@@ -46,7 +46,7 @@
             margin: 0.3em 0;
         }
         blockquote {
-            border-left: 6px solid #B660A6;
+            border-left: 6px solid #843b62;
             padding: 0.4em 1.2em;
             margin: 1em 0;
             background: #fafafa;
@@ -59,14 +59,14 @@
             border-radius: 4px;
             font-family: 'Courier New', monospace;
             font-weight: bold;
-            color: #416EB4;
+            color: #1A535C;
         }
         pre {
             background: #fafafa;
             padding: 1em;
             border-radius: 8px;
             overflow-x: auto;
-            border: 3px dotted #2E7D32;
+            border: 3px dotted #7B61FF;
         }
         pre code {
             background: transparent;
@@ -86,7 +86,7 @@
         }
         td {
             padding: 8px 12px;
-            border: 1px dashed #C70039;
+            border: 1px dashed #7B61FF;
         }
         tr:nth-child(odd) td {
             background: #ffffff;
@@ -102,7 +102,7 @@
         }
         img {
             max-width: 90%;
-            border: 6px solid #2E7D32;
+            border: 6px solid #416EB4;
             border-radius: 12px;
             margin: 1em 0;
         }
@@ -112,7 +112,7 @@
             padding: 8px 16px;
             background: #ffffff;
             border-radius: 20px;
-            color: #1A535C;
+            color: #416EB4;
             font-weight: bold;
         }
         .confetti {
@@ -129,7 +129,7 @@
     <a href="javascript:history.back()" class="back-link">← persons</a>
     <p style="color:#2E7D32;">cagent examples</p>
 <p style="color:#2E7D32;">Get inspiration from the following agent examples.</p>
-<h2 id="agentic-development-team" style="color:#2D2942;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Agentic development team</h2>
+<h2 id="agentic-development-team" style="color:#416EB4;border-bottom:1px dashed #843b62;padding-bottom:4px;">Agentic development team</h2>
 <p style="color:#2E7D32;">```yaml {title="dev-team.yaml"}
 agents:
   root:
@@ -174,34 +174,34 @@ agents:
     provider: anthropic
     model: claude-sonnet-4-0
     max_tokens: 64000</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #9B5DE8;"><span class="c1">## Research assistant</span>
+<pre class="codehilite"><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;">## Research assistant
 
-<span class="err">```</span><span class="n">yaml</span><span class="w"> </span><span class="p">{</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;research-assistant.yaml&quot;</span><span class="p">}</span>
-<span class="n">agents</span><span class="p">:</span>
-<span class="w">  </span><span class="n">root</span><span class="p">:</span>
-<span class="w">    </span><span class="n">model</span><span class="p">:</span><span class="w"> </span><span class="n">claude</span>
-<span class="w">    </span><span class="n">description</span><span class="p">:</span><span class="w"> </span><span class="n">Research</span><span class="w"> </span><span class="n">assistant</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">access</span>
-<span class="w">    </span><span class="n">instruction</span><span class="p">:</span><span class="w"> </span><span class="o">|</span>
-<span class="w">      </span><span class="n">You</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">research</span><span class="w"> </span><span class="n">assistant</span><span class="o">.</span><span class="w"> </span><span class="n">Help</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">information</span><span class="p">,</span>
-<span class="w">      </span><span class="n">analyze</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">provide</span><span class="w"> </span><span class="n">insights</span><span class="o">.</span>
-<span class="w">    </span><span class="n">toolsets</span><span class="p">:</span>
-<span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="n">mcp</span>
-<span class="w">        </span><span class="n">command</span><span class="p">:</span><span class="w"> </span><span class="n">mcp</span><span class="o">-</span><span class="n">web</span><span class="o">-</span><span class="n">search</span>
-<span class="w">        </span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;--provider&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;duckduckgo&quot;</span><span class="p">]</span>
-<span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="n">todo</span>
-<span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="n">memory</span>
-<span class="w">        </span><span class="n">path</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./research_memory.db&quot;</span>
+```yaml {title=&quot;research-assistant.yaml&quot;}
+agents:
+  root:
+    model: claude
+    description: Research assistant with web access
+    instruction: |
+      You are a research assistant. Help users find information,
+      analyze data, and provide insights.
+    toolsets:
+      - type: mcp
+        command: mcp-web-search
+        args: [&quot;--provider&quot;, &quot;duckduckgo&quot;]
+      - type: todo
+      - type: memory
+        path: &quot;./research_memory.db&quot;
 
-<span class="n">models</span><span class="p">:</span>
-<span class="w">  </span><span class="n">claude</span><span class="p">:</span>
-<span class="w">    </span><span class="n">provider</span><span class="p">:</span><span class="w"> </span><span class="n">anthropic</span>
-<span class="w">    </span><span class="n">model</span><span class="p">:</span><span class="w"> </span><span class="n">claude</span><span class="o">-</span><span class="n">sonnet</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">0</span>
-<span class="w">    </span><span class="n">max_tokens</span><span class="p">:</span><span class="w"> </span><span class="mi">64000</span>
-</code></pre></div>
+models:
+  claude:
+    provider: anthropic
+    model: claude-sonnet-4-0
+    max_tokens: 64000
+</code></pre>
 
-<h2 id="technical-blog-writer" style="color:#2D2942;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Technical blog writer</h2>
+<h2 id="technical-blog-writer" style="color:#416EB4;border-bottom:1px dashed #843b62;padding-bottom:4px;">Technical blog writer</h2>
 <p style="color:#2E7D32;">```yaml {title="tech-blog-writer.yaml"}</p>
-<h1 id="usrbinenv-cagent-run" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">!/usr/bin/env cagent run</h1>
+<h1 id="usrbinenv-cagent-run" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">!/usr/bin/env cagent run</h1>
 <p style="color:#2E7D32;">version: "1"</p>
 <p style="color:#2E7D32;">agents:
   root:
@@ -209,33 +209,33 @@ agents:
     description: Writes technical blog posts
     instruction: |
       You are the leader of a team of AI agents for a technical blog writing workflow.</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #9B5DE8;"><span class="w">  </span><span class="n">Here</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">members</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">team</span><span class="o">:</span>
-<span class="w">  </span><span class="o">&lt;</span><span class="n">team_members</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">web_search_agent</span><span class="o">:</span><span class="w"> </span><span class="n">Searches</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">web</span>
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">writer</span><span class="o">:</span><span class="w"> </span><span class="n">Writes</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">750</span><span class="o">-</span><span class="n">word</span><span class="w"> </span><span class="n">technical</span><span class="w"> </span><span class="n">blog</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="n">based</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">chosen</span><span class="w"> </span><span class="n">prompt</span>
-<span class="w">  </span><span class="o">&lt;/</span><span class="n">team_members</span><span class="o">&gt;</span>
+<pre class="codehilite"><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;">  Here are the members in your team:
+  &lt;team_members&gt;
+  - web_search_agent: Searches the web
+  - writer: Writes a 750-word technical blog post based on the chosen prompt
+  &lt;/team_members&gt;
 
-<span class="w">  </span><span class="o">&lt;</span><span class="n">WORKFLOW</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="mf">1.</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n n-Quoted">`web_search_agent`</span><span class="w"> </span><span class="n">agent</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">get</span>
-<span class="w">       </span><span class="n">important</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="n">about</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">task</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">asked</span>
+  &lt;WORKFLOW&gt;
+    1. Call the `web_search_agent` agent to search the web to get
+       important information about the task that is asked
 
-<span class="w">    </span><span class="mf">2.</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n n-Quoted">`writer`</span><span class="w"> </span><span class="n">agent</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">write</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">750</span><span class="o">-</span><span class="n">word</span><span class="w"> </span><span class="n">technical</span><span class="w"> </span><span class="n">blog</span>
-<span class="w">       </span><span class="n">post</span><span class="w"> </span><span class="n">based</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">research</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">web_search_agent</span>
-<span class="w">  </span><span class="o">&lt;/</span><span class="n">WORKFLOW</span><span class="o">&gt;</span>
+    2. Call the `writer` agent to write a 750-word technical blog
+       post based on the research done by the web_search_agent
+  &lt;/WORKFLOW&gt;
 
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="k">Use</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">transfer_to_agent</span><span class="w"> </span><span class="n">tool</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">right</span><span class="w"> </span><span class="n">agent</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">right</span>
-<span class="w">    </span><span class="kt">time</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">complete</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">workflow</span><span class="p">.</span>
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="k">DO</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">transfer</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">members</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">once</span>
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="k">ONLY</span><span class="w"> </span><span class="k">CALL</span><span class="w"> </span><span class="k">ONE</span><span class="w"> </span><span class="n">AGENT</span><span class="w"> </span><span class="k">AT</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="kt">TIME</span>
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="k">When</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n n-Quoted">`transfer_to_agent`</span><span class="w"> </span><span class="n">tool</span><span class="p">,</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">exactly</span><span class="w"> </span><span class="k">one</span><span class="w"> </span><span class="k">call</span>
-<span class="w">    </span><span class="k">and</span><span class="w"> </span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">making</span><span class="w"> </span><span class="n">another</span><span class="p">.</span><span class="w"> </span><span class="k">Do</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">batch</span><span class="w"> </span><span class="k">or</span>
-<span class="w">    </span><span class="n">parallelize</span><span class="w"> </span><span class="n">tool</span><span class="w"> </span><span class="n">calls</span><span class="p">.</span>
-<span class="n">sub_agents</span><span class="o">:</span>
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">web_search_agent</span>
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">writer</span>
-<span class="n">toolsets</span><span class="o">:</span>
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="n">think</span>
-</code></pre></div>
+  - Use the transfer_to_agent tool to call the right agent at the right
+    time to complete the workflow.
+  - DO NOT transfer to multiple members at once
+  - ONLY CALL ONE AGENT AT A TIME
+  - When using the `transfer_to_agent` tool, make exactly one call
+    and wait for the result before making another. Do not batch or
+    parallelize tool calls.
+sub_agents:
+  - web_search_agent
+  - writer
+toolsets:
+  - type: think
+</code></pre>
 
 <p style="color:#2E7D32;">web_search_agent:
     model: anthropic
@@ -243,12 +243,12 @@ agents:
     description: Search the web for information
     instruction: |
       Search the web for information</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #9B5DE8;"><span class="w">  </span><span class="n">Always</span><span class="w"> </span><span class="n">include</span><span class="w"> </span><span class="n">sources</span>
-<span class="n">toolsets</span><span class="p">:</span>
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">type</span><span class="p">:</span><span class="w"> </span><span class="n">mcp</span>
-<span class="w">    </span><span class="n">command</span><span class="p">:</span><span class="w"> </span><span class="n">uvx</span>
-<span class="w">    </span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;duckduckgo-mcp-server&quot;</span><span class="p">]</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;">  Always include sources
+toolsets:
+  - type: mcp
+    command: uvx
+    args: [&quot;duckduckgo-mcp-server&quot;]
+</code></pre>
 
 <p style="color:#2E7D32;">writer:
     model: anthropic
@@ -256,18 +256,18 @@ agents:
     instruction: |
       You are an agent that receives a single technical writing prompt
       and generates a detailed, informative, and well-structured technical blog post.</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #9B5DE8;"><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nv">Ensure</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">technically</span><span class="w"> </span><span class="nv">accurate</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">includes</span><span class="w"> </span><span class="nv">relevant</span>
-<span class="w">    </span><span class="nv">code</span><span class="w"> </span><span class="nv">examples</span>,<span class="w"> </span><span class="nv">diagrams</span>,<span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">technical</span><span class="w"> </span><span class="nv">explanations</span><span class="w"> </span><span class="nv">where</span><span class="w"> </span><span class="nv">appropriate</span>.
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nv">Structure</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">blog</span><span class="w"> </span><span class="nv">post</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">clear</span><span class="w"> </span><span class="nv">sections</span>,<span class="w"> </span><span class="nv">including</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">introduction</span>,
-<span class="w">    </span><span class="nv">main</span><span class="w"> </span><span class="nv">content</span>,<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">conclusion</span>.
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nv">Use</span><span class="w"> </span><span class="nv">technical</span><span class="w"> </span><span class="nv">terminology</span><span class="w"> </span><span class="nv">appropriately</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">explain</span><span class="w"> </span><span class="nv">complex</span><span class="w"> </span><span class="nv">concepts</span><span class="w"> </span><span class="nv">clearly</span>.
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="k">Include</span><span class="w"> </span><span class="nv">practical</span><span class="w"> </span><span class="nv">examples</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">real</span><span class="o">-</span><span class="nv">world</span><span class="w"> </span><span class="nv">applications</span><span class="w"> </span><span class="nv">where</span><span class="w"> </span><span class="nv">relevant</span>.
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nv">Make</span><span class="w"> </span><span class="nv">sure</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">engaging</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">technical</span><span class="w"> </span><span class="nv">audience</span><span class="w"> </span><span class="k">while</span>
-<span class="w">    </span><span class="nv">maintaining</span><span class="w"> </span><span class="nv">professional</span><span class="w"> </span><span class="nv">standards</span>.
+<pre class="codehilite"><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;">  - Ensure the content is technically accurate and includes relevant
+    code examples, diagrams, or technical explanations where appropriate.
+  - Structure the blog post with clear sections, including an introduction,
+    main content, and conclusion.
+  - Use technical terminology appropriately and explain complex concepts clearly.
+  - Include practical examples and real-world applications where relevant.
+  - Make sure the content is engaging for a technical audience while
+    maintaining professional standards.
 
-<span class="w">  </span><span class="nv">Constraints</span>:
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="k">DO</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">use</span><span class="w"> </span><span class="nv">lists</span>
-</code></pre></div>
+  Constraints:
+  - DO NOT use lists
+</code></pre>
 
 <p style="color:#2E7D32;">models:
   anthropic:

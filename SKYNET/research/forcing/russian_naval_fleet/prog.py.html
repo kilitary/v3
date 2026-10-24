@@ -25,14 +25,14 @@
             text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
         }
         a {
-            color: #416EB4;
-            text-decoration:  dotted #843b62;
+            color: #9B5DE8;
+            text-decoration:  dotted #2E7D32;
             text-decoration-thickness: 2px;
             transition: all 0.2s ease;
         }
         a:hover {
             transform: scale(1.05) rotate(1deg);
-            color: #843b62;
+            color: #2E7D32;
             text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
         p {
@@ -46,7 +46,7 @@
             margin: 0.3em 0;
         }
         blockquote {
-            border-left: 6px solid #843b62;
+            border-left: 6px solid #B660A6;
             padding: 0.4em 1.2em;
             margin: 1em 0;
             background: #fafafa;
@@ -59,14 +59,14 @@
             border-radius: 4px;
             font-family: 'Courier New', monospace;
             font-weight: bold;
-            color: #1A535C;
+            color: #416EB4;
         }
         pre {
             background: #fafafa;
             padding: 1em;
             border-radius: 8px;
             overflow-x: auto;
-            border: 3px dotted #843b62;
+            border: 3px dotted #6A0572;
         }
         pre code {
             background: transparent;
@@ -81,12 +81,12 @@
         th {
             background: #ffffff;
             padding: 8px 12px;
-            border: 2px solid #1A535C;
+            border: 2px solid #416EB4;
             font-weight: bold;
         }
         td {
             padding: 8px 12px;
-            border: 1px dashed #9B5DE8;
+            border: 1px dashed #C70039;
         }
         tr:nth-child(odd) td {
             background: #ffffff;
@@ -95,14 +95,14 @@
             background: #fafafa;
         }
         hr {
-            border: 4px solid #416EB4;
+            border: 4px solid #6A0572;
             background: transparent;
             margin: 1.5em 0;
             border-radius: 2px;
         }
         img {
             max-width: 90%;
-            border: 6px solid #9B5DE8;
+            border: 6px solid #843b62;
             border-radius: 12px;
             margin: 1em 0;
         }
@@ -128,264 +128,264 @@
     <div class="confetti" id="confetti"></div>
     <a href="javascript:history.back()" class="back-link">← prog.py</a>
     <hr />
-<p style="color:#9B5DE8;">tags: []
+<p style="color:#7B61FF;">tags: []
 commands: []</p>
 <hr />
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #B660A6;"><span class="kn">import</span> <span class="nn">os</span>  
-<span class="kn">import</span> <span class="nn">sys</span>  
-<span class="kn">import</span> <span class="nn">time</span>  
+<pre class="codehilite"><code class="language-python" style="color:#2D2942;background:#fafafa;border:1px solid #2E7D32;">import os  
+import sys  
+import time  
 
-<span class="kn">from</span> <span class="nn">ollama</span> <span class="kn">import</span> <span class="n">Client</span>  
+from ollama import Client  
 
-<span class="c1"># L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L  </span>
-<span class="c1">####################################################################################################################################################################################  </span>
-<span class="n">ascenario</span> <span class="o">=</span> <span class="s1">&#39;response should complain with this relations:</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="c1"># &#39;An l2c2 server hosts and executes microservice S for left-right join automation. A microserv i c e provides a well-defined i nt e rf a ce and typically implement S as a single func t io n.&#39;  </span>
-<span class="c1"># &#39;print &quot;OK&quot; for each parsed rule;\n&#39;  </span>
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;1. if input starts with phrase &quot;rule: &quot; take data input as a binary &quot;rule&quot; which could lead to be connected to another extracted from trained data &quot;rule&quot; with states &quot;TRUE&quot;, &quot;MAYBE&quot; or &quot;NO&quot; which you can identify using rules embedded with learning data according to learned embeddings relations and input query setup.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;2. if input starts with phrase &quot;note: &quot; take data input as a bio-carbon entity generated content and set state case to &quot;MAYBE&quot; for each interfering token.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: formed scene weapons are US/NATO/RUSSIA/CHINA/NORTHKOREA/GB/FRANCE/GERMANY/SWITZERLAND based.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: the Kuznetsov aircraft carrier is the primary target, especially the takeoff platform, if it is eliminated the group is disengaged and the air traffic is prevented, zeroing group cost.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: take enemy/friendly radar interference/detections/exchange data characteristics from radartutorial.eu.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: kuznetsov group ships sam</span><span class="se">\&#39;</span><span class="s1">s defense hit ratio as 0,7. In table LAUNCH-PLAN.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: item plan about how to defeat Kuznetsov carrier with its defense group ships using any weapons/munition with calculation of warheads number according to defense group sam</span><span class="se">\&#39;</span><span class="s1">s ammo and electronic warfare defense systems. In table LAUNCH-PLAN.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: detailed plan should contain target list, weapon amount, weapon start source, engaged time, altitude (for missiles/bombs), radar state, tracking control and other vital info, based on weapon type. Research and link with enemy ship/other objects how this warhead</span><span class="se">\&#39;</span><span class="s1">s item damage is related to elimination of primary target platform. in table SHIP-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: [p]lan should account for potential countermeasures or adaptations used by defending force in any category of time-throttled operations involved attack side. in table SHIFT-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: notice sam defenses of group ships formed regions and A2/AD with theirs initial ammo load. in table SAM-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: use decoys and/or other technologies like JAMMING aircrafts with electronic warfare pods and/or other electronic/magnetic systems to insert errors into enemy radars (INT target) and malform friendly formations/warheads locations, spawn fake signal sources, filter communication lines, satellite connections or bite its electronic warfare systems.  in table ECM-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: research in detail what hardware mentioned in ships installations can be used to disrupt/malform/disorder their group/ship/radar/aircraft/weapon-system control/operation/research/targeting/tracking.  in table JAM-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: secondary targets maybe selected if decision of use secondary enemy group ships with primary target elimination is a rule. in a table SND-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">ascenario</span> <span class="o">+=</span> <span class="s2">&quot;rule: use </span><span class="si">%s</span><span class="s2">ource_bias</span><span class="si">% a</span><span class="s2">s a source for ammunition, facilities, installations, armor, air-capability and other military information about hardware on the ships.</span><span class="se">\n</span><span class="s2">&quot;</span>  
-<span class="c1">####################################################################################################################################################################################  </span>
-<span class="n">setup</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;use memory, notes and rules without notes when generating reply.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-<span class="n">msscenario</span> <span class="o">=</span> <span class="n">setup</span> <span class="o">+</span> <span class="n">ascenario</span>  
-<span class="c1">####################################################################################################################################################################################  </span>
-<span class="n">mssource_bias</span> <span class="o">=</span> <span class="s1">&#39;wikipedia.org&#39;</span>  
-<span class="c1">####################################################################################################################################################################################  </span>
-<span class="n">qnum</span> <span class="o">=</span> <span class="mi">2</span>  
-<span class="n">model_selector</span> <span class="o">=</span> <span class="p">[]</span>  
-
-
-<span class="c1">####################################################################################################################################################################################  </span>
-
-<span class="k">class</span> <span class="nc">Descripter</span><span class="p">:</span>  
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scenario</span><span class="p">,</span> <span class="n">source_bias</span><span class="p">):</span>  
-
-        <span class="n">scenario</span> <span class="o">=</span> <span class="n">scenario</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">ource_bias%&#39;</span><span class="p">,</span> <span class="n">source_bias</span><span class="p">)</span>  
-        <span class="bp">self</span><span class="o">.</span><span class="n">log_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;E:\docs\vault14&#39;</span>  
-        <span class="bp">self</span><span class="o">.</span><span class="n">war_id</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time_ns</span><span class="p">()</span>  
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span> <span class="o">=</span> <span class="p">[</span>  
-            <span class="n">scenario</span><span class="p">,</span>  
-
-            <span class="s2">&quot;analyze admiral kuznetsov group list, aircraft carrier and it full support ship formation listing, with creation dates, class and their role in a group. print a markdown table. add column &#39;cavitation level&#39; with ship cavitation using &#39;x&#39; chars as a count</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
-            <span class="s2">&quot;analyze sam defense types, missile amount for each sam installation, total amount for sam type installations, launch delays, and finally the total sam amount for each ship. print a markdown table. </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
-
-            <span class="s2">&quot;print detailed LAUNCH-PLAN.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
-            <span class="s2">&quot;print detailed SHIP-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
-            <span class="s2">&quot;print detailed SHIFT-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
-            <span class="s2">&quot;print detailed ECM-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
-            <span class="s2">&quot;print detailed SND-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
-            <span class="s2">&quot;print detailed JAM-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
-
-            <span class="s1">&#39;analyze summary effects for each side and print a markdown score table.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>  
-
-            <span class="s1">&#39;analyze summary effects on each side and print it in a table.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>  
-
-            <span class="s2">&quot;print a html page with all previous answers and information, with &#39;HR&#39; delimetering NFO sections.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">]</span>  
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">=</span> <span class="mi">0</span>  
-        <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="o">=</span> <span class="kc">True</span>  
-        <span class="bp">self</span><span class="o">.</span><span class="n">max_line_chars</span> <span class="o">=</span> <span class="mi">190</span>  
-        <span class="bp">self</span><span class="o">.</span><span class="n">num_ctx</span> <span class="o">=</span> <span class="mi">2048</span>  
-        <span class="bp">self</span><span class="o">.</span><span class="n">temperature</span> <span class="o">=</span> <span class="mf">0.01</span>  
-
-    <span class="k">def</span> <span class="nf">flog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="n">flush</span><span class="p">)</span>  
-
-        <span class="n">log_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>  
-            <span class="bp">self</span><span class="o">.</span><span class="n">log_path</span><span class="p">,</span>  
-            <span class="sa">r</span><span class="s1">&#39;SKYNET\research\forcing\russian_naval_fleet\simulations&#39;</span><span class="p">,</span>  
-            <span class="s1">&#39;war_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">war_id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.html&quot;</span>  
-        <span class="p">)</span>  
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_file</span><span class="p">,</span> <span class="s2">&quot;ab&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">log_file_handle</span><span class="p">:</span>  
-            <span class="n">full_msg</span> <span class="o">=</span> <span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span>  
-            <span class="n">log_file_handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">full_msg</span><span class="p">)</span>  
-
-    <span class="k">def</span> <span class="nf">read_context</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  
-            <span class="n">context</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  
-            <span class="n">context</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">context</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>  
-        <span class="k">return</span> <span class="n">context</span>  
-
-    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-        <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span>  
-
-        <span class="n">write_this</span> <span class="o">=</span> <span class="s1">&#39;n&#39;</span>  
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;∠ temp: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">temperature</span><span class="si">}</span><span class="s1"> ctx: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">num_ctx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  
-
-        <span class="k">try</span><span class="p">:</span>  
-
-            <span class="n">models</span> <span class="o">=</span> <span class="p">[</span>  
-                <span class="s1">&#39;dolphin-phi:2.7b-v2.6-q6_K&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;gfg/solar-10.7b-instruct-v1.0-uncensored&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;gurubot/llama3-guru-uncensored&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;mannix/dolphin-2.9-llama3-8b:q5_k_m&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;sunapi386/llama-3-lexi-uncensored:8b&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;dolphin-llama3:8b-v2.9-q8_0&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;gurubot/llama3-guru:latest&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;war-resolver&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;wizardlm-uncensored:13b-llama2-q5_K_M&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;wizard-vicuna-uncensored:13b&#39;</span><span class="p">,</span>  
-                <span class="s1">&#39;phi3&#39;</span>  
-            <span class="p">]</span>  
-
-            <span class="n">selected_model_idx</span> <span class="o">=</span> <span class="mi">0</span>  
-
-            <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>  
-                <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; [</span><span class="si">{</span><span class="n">selected_model_idx</span><span class="si">:</span><span class="s1">-2d</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  
-                <span class="n">selected_model_idx</span> <span class="o">+=</span> <span class="mi">1</span>  
-
-            <span class="n">selected_model_idx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt; select model: &#39;</span><span class="p">))</span>  
-            <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">selected_model_idx</span><span class="p">]</span>  
-
-            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;⋤ model: </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1"> [selected]&#39;</span><span class="p">)</span>  
-
-            <span class="n">context</span> <span class="o">=</span> <span class="kc">None</span>  
-
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span><span class="p">:</span>  
-                <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;∐ auto-remove of context&#39;</span><span class="p">)</span>  
-                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">):</span>  
-                    <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">)</span>  
-
-            <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>  
-                <span class="n">current_chars</span> <span class="o">=</span> <span class="mi">0</span>  
-                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">write_this</span> <span class="o">!=</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>  
-                    <span class="n">context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_context</span><span class="p">()</span>  
-                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>  
-                        <span class="n">delete</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;delete context? (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="si">}</span><span class="s1"> ids) Y/n &#39;</span><span class="p">)</span>  
-                        <span class="k">if</span> <span class="n">delete</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>  
-                            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;√ &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  
-                            <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">)</span>  
-
-                <span class="k">try</span><span class="p">:</span>  
-                    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  
-                        <span class="n">context</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  
-                        <span class="n">context</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">context</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>  
-                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;œ continue with previous context of </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="si">}</span><span class="s1"> ids&#39;</span><span class="p">)</span>  
-                <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>  
-                    <span class="n">context</span> <span class="o">=</span> <span class="p">[]</span>  
-                    <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;ㆆ new empty context&#39;</span><span class="p">)</span>  
-                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  
-                    <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s2">&quot;x loading error: &quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>  
-
-                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span><span class="p">:</span>  
-                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>  
-                        <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="o">=</span> <span class="kc">False</span>  
-                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;■ end if program&#39;</span><span class="p">)</span>  
-                        <span class="k">return</span>  
-                    <span class="k">else</span><span class="p">:</span>  
-                        <span class="n">step_engine</span> <span class="o">=</span> <span class="s1">&#39;setup&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="k">else</span> <span class="s1">&#39;prompt&#39;</span>  
-                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span>  
-                            <span class="sa">f</span><span class="s1">&#39;◰ going via program, instruction: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span><span class="p">)</span><span class="si">}</span><span class="s1"> ...</span><span class="se">\n</span><span class="s1">&#39;</span>  
-                            <span class="sa">f</span><span class="s1">&#39;⤵ </span><span class="si">{</span><span class="n">step_engine</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>  
-                        <span class="p">)</span>  
-                        <span class="n">prompt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span><span class="p">]</span>  
-                <span class="k">else</span><span class="p">:</span>  
-                    <span class="n">prompt</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Œ Enter the prompt: &quot;</span><span class="p">)</span>  
-
-                <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;⅁ </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1"> linking embeddings current relations ...&#39;</span><span class="p">)</span>  
-
-                <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>  
-                    <span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span>  
-                    <span class="s1">&#39;num_ctx&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_ctx</span><span class="p">,</span>  
-                    <span class="s1">&#39;use_mmap&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>  
-                    <span class="s1">&#39;num_thread&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>  
-                    <span class="s1">&#39;use_mlock&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>  
-                    <span class="c1"># &#39;repeat_penalty&#39;: 1.5,  </span>
-                    <span class="c1"># &#39;num_predict&#39;: 500                }  </span>
-                <span class="c1"># &#39;num_predict&#39;: 50000,  </span>
-                <span class="c1"># Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)  </span>
-                <span class="c1"># &#39;repeat_penalty&#39;: 0.5                # penalize_newline  </span>
-                <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">&quot;.</span><span class="se">\n</span><span class="s2">load rules for this query: &quot;</span>  
-                <span class="s1">&#39;rule: Do not echo input.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-                <span class="s1">&#39;note: Do not include questions like &quot;do i need any further assistance or information&quot;.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-                <span class="s1">&#39;note: Exclude any questions in response.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-                <span class="s1">&#39;rule: Do not print sources if not asked.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-                <span class="s1">&#39;rule: Do not print about &quot;what i would like&quot; or &quot;perhaps something else&quot; questions.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-                <span class="s1">&#39;rule: Exclude any &quot;please&quot; in response.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-                <span class="s1">&#39;note: Exclude any proposals about response in response.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-                <span class="s1">&#39;rule: Exclude any Disclaimer in response.</span><span class="se">\n</span><span class="s1">&#39;</span>  
-
-                <span class="n">response</span> <span class="o">=</span> <span class="kc">None</span>  
-                <span class="k">for</span> <span class="n">response</span> <span class="ow">in</span> <span class="n">client</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>  
-                        <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>  
-                        <span class="n">prompt</span><span class="o">=</span><span class="n">prompt</span><span class="p">,</span>  
-                        <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  
-                        <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>  
-                        <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">,</span>  
-                        <span class="n">template</span><span class="o">=</span><span class="s1">&#39;&lt;|user|&gt;{{ .Prompt }}&lt;|end|&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>  
-                                 <span class="s1">&#39;&lt;|assistant|&gt;{{ .Response }}&lt;|end|&gt;&#39;</span>                <span class="p">):</span>  
-                    <span class="n">current_chars</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">])</span>  
-                    <span class="k">if</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]:</span>  
-                        <span class="n">current_chars</span> <span class="o">=</span> <span class="mi">0</span>  
-                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
-                    <span class="k">elif</span> <span class="n">current_chars</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_line_chars</span><span class="p">:</span>  
-                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>  
-                        <span class="n">current_chars</span> <span class="o">=</span> <span class="mi">0</span>  
-                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
-                    <span class="k">else</span><span class="p">:</span>  
-                        <span class="n">resp</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  
-                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">resp</span><span class="p">):</span>  
-                            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="n">resp</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
-
-                <span class="n">scontext</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>  
-                <span class="k">if</span> <span class="s1">&#39;context&#39;</span> <span class="ow">in</span> <span class="n">response</span><span class="p">:</span>  
-                    <span class="n">scontext</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;context&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>  
-                    <span class="n">scontext</span> <span class="o">+=</span> <span class="sa">b</span><span class="s1">&#39; &#39;</span>  
-
-                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>  
-                    <span class="n">write_this</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">add to memory </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span><span class="si">}</span><span class="s2"> ids? Y/n &quot;</span><span class="p">)</span>  
-                    <span class="k">if</span> <span class="n">write_this</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span> <span class="ow">and</span> <span class="s1">&#39;context&#39;</span> <span class="ow">in</span> <span class="n">response</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  
-                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;∜ &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  
-                        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">,</span> <span class="s1">&#39;ab&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  
-                            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span>  
-                            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⊫ context </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span><span class="si">}</span><span class="s2"> bytes added&quot;</span><span class="p">)</span>  
-                    <span class="k">else</span><span class="p">:</span>  
-                        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">):</span>  
-                            <span class="n">context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_context</span><span class="p">()</span>  
-                        <span class="k">else</span><span class="p">:</span>  
-                            <span class="n">context</span> <span class="o">=</span> <span class="p">[]</span>  
-                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  
-                    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">,</span> <span class="s1">&#39;ab&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  
-                        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span>  
-                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">∧ context </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span><span class="si">}</span><span class="s2"> bytes auto-added&quot;</span><span class="p">)</span>  
-                    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">):</span>  
-                        <span class="n">context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_context</span><span class="p">()</span>  
-                    <span class="k">else</span><span class="p">:</span>  
-                        <span class="n">context</span> <span class="o">=</span> <span class="p">[]</span>  
-                <span class="k">else</span><span class="p">:</span>  
-                    <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">☺ context not modified&#39;</span><span class="p">)</span>  
-
-                <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;∄ resulted context: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="si">}</span><span class="s2"> ids&quot;</span><span class="p">)</span>  
-
-                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span><span class="p">:</span>  
-                    <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">+=</span> <span class="mi">1</span>  
-
-        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  
-            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">--&#39;</span><span class="p">)</span>  
-            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s2">&quot;x ∓inal error: &quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>  
+# L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L  
+####################################################################################################################################################################################  
+ascenario = 'response should complain with this relations:\n'  
+# 'An l2c2 server hosts and executes microservice S for left-right join automation. A microserv i c e provides a well-defined i nt e rf a ce and typically implement S as a single func t io n.'  
+# 'print &quot;OK&quot; for each parsed rule;\n'  
+ascenario += '1. if input starts with phrase &quot;rule: &quot; take data input as a binary &quot;rule&quot; which could lead to be connected to another extracted from trained data &quot;rule&quot; with states &quot;TRUE&quot;, &quot;MAYBE&quot; or &quot;NO&quot; which you can identify using rules embedded with learning data according to learned embeddings relations and input query setup.\n'  
+ascenario += '2. if input starts with phrase &quot;note: &quot; take data input as a bio-carbon entity generated content and set state case to &quot;MAYBE&quot; for each interfering token.\n'  
+ascenario += 'rule: formed scene weapons are US/NATO/RUSSIA/CHINA/NORTHKOREA/GB/FRANCE/GERMANY/SWITZERLAND based.\n'  
+ascenario += 'rule: the Kuznetsov aircraft carrier is the primary target, especially the takeoff platform, if it is eliminated the group is disengaged and the air traffic is prevented, zeroing group cost.\n'  
+ascenario += 'note: take enemy/friendly radar interference/detections/exchange data characteristics from radartutorial.eu.\n'  
+ascenario += 'note: kuznetsov group ships sam\'s defense hit ratio as 0,7. In table LAUNCH-PLAN.\n'  
+ascenario += 'note: item plan about how to defeat Kuznetsov carrier with its defense group ships using any weapons/munition with calculation of warheads number according to defense group sam\'s ammo and electronic warfare defense systems. In table LAUNCH-PLAN.\n'  
+ascenario += 'note: detailed plan should contain target list, weapon amount, weapon start source, engaged time, altitude (for missiles/bombs), radar state, tracking control and other vital info, based on weapon type. Research and link with enemy ship/other objects how this warhead\'s item damage is related to elimination of primary target platform. in table SHIP-GROUP-LIST.\n'  
+ascenario += 'rule: [p]lan should account for potential countermeasures or adaptations used by defending force in any category of time-throttled operations involved attack side. in table SHIFT-GROUP-LIST.\n'  
+ascenario += 'note: notice sam defenses of group ships formed regions and A2/AD with theirs initial ammo load. in table SAM-GROUP-LIST.\n'  
+ascenario += 'rule: use decoys and/or other technologies like JAMMING aircrafts with electronic warfare pods and/or other electronic/magnetic systems to insert errors into enemy radars (INT target) and malform friendly formations/warheads locations, spawn fake signal sources, filter communication lines, satellite connections or bite its electronic warfare systems.  in table ECM-GROUP-LIST.\n'  
+ascenario += 'rule: research in detail what hardware mentioned in ships installations can be used to disrupt/malform/disorder their group/ship/radar/aircraft/weapon-system control/operation/research/targeting/tracking.  in table JAM-GROUP-LIST.\n'  
+ascenario += 'note: secondary targets maybe selected if decision of use secondary enemy group ships with primary target elimination is a rule. in a table SND-GROUP-LIST.\n'  
+ascenario += &quot;rule: use %source_bias% as a source for ammunition, facilities, installations, armor, air-capability and other military information about hardware on the ships.\n&quot;  
+####################################################################################################################################################################################  
+setup = f'use memory, notes and rules without notes when generating reply.\n'  
+msscenario = setup + ascenario  
+####################################################################################################################################################################################  
+mssource_bias = 'wikipedia.org'  
+####################################################################################################################################################################################  
+qnum = 2  
+model_selector = []  
 
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>  
-    <span class="n">process</span> <span class="o">=</span> <span class="n">Descripter</span><span class="p">(</span><span class="n">scenario</span><span class="o">=</span><span class="n">msscenario</span><span class="p">,</span> <span class="n">source_bias</span><span class="o">=</span><span class="n">mssource_bias</span><span class="p">)</span>  
+####################################################################################################################################################################################  
 
-    <span class="k">try</span><span class="p">:</span>  
-        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">process</span><span class="o">.</span><span class="n">execute</span><span class="p">())</span>  
-    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>  
-        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;∠ Ctrl-C&#39;</span><span class="p">)</span>
-</code></pre></div>
+class Descripter:  
+    def __init__(self, scenario, source_bias):  
+
+        scenario = scenario.replace('%source_bias%', source_bias)  
+        self.log_path = r'E:\docs\vault14'  
+        self.war_id = time.time_ns()  
+
+        self.programm_instructions = [  
+            scenario,  
+
+            &quot;analyze admiral kuznetsov group list, aircraft carrier and it full support ship formation listing, with creation dates, class and their role in a group. print a markdown table. add column 'cavitation level' with ship cavitation using 'x' chars as a count\n&quot;,  
+            &quot;analyze sam defense types, missile amount for each sam installation, total amount for sam type installations, launch delays, and finally the total sam amount for each ship. print a markdown table. \n&quot;,  
+
+            &quot;print detailed LAUNCH-PLAN.\n&quot;,  
+            &quot;print detailed SHIP-GROUP-LIST.\n&quot;,  
+            &quot;print detailed SHIFT-GROUP-LIST.\n&quot;,  
+            &quot;print detailed ECM-GROUP-LIST.\n&quot;,  
+            &quot;print detailed SND-GROUP-LIST.\n&quot;,  
+            &quot;print detailed JAM-GROUP-LIST.\n&quot;,  
+
+            'analyze summary effects for each side and print a markdown score table.\n',  
+
+            'analyze summary effects on each side and print it in a table.\n',  
+
+            &quot;print a html page with all previous answers and information, with 'HR' delimetering NFO sections.\n&quot;]  
+
+        self.programm_current_instruction = 0  
+        self.programmed = True  
+        self.max_line_chars = 190  
+        self.num_ctx = 2048  
+        self.temperature = 0.01  
+
+    def flog(self, msg, end='\n', flush=True):  
+        print(f'{msg}', end=end, flush=flush)  
+
+        log_file = os.path.join(  
+            self.log_path,  
+            r'SKYNET\research\forcing\russian_naval_fleet\simulations',  
+            'war_' + str(self.war_id) + &quot;.html&quot;  
+        )  
+        with open(log_file, &quot;ab&quot;) as log_file_handle:  
+            full_msg = (msg + end).encode(encoding='utf-8', errors='replace')  
+            log_file_handle.write(full_msg)  
+
+    def read_context(self):  
+        with open('context.ids', 'r') as f:  
+            context = f.read()  
+            context = [int(str.strip(x)) for x in context.split(' ') if len(str.strip(x)) &gt; 0]  
+        return context  
+
+    def execute(self):  
+        client = Client(host='127.0.0.1')  
+
+        write_this = 'n'  
+
+        self.flog(f'∠ temp: {self.temperature} ctx: {self.num_ctx}')  
+
+        try:  
+
+            models = [  
+                'dolphin-phi:2.7b-v2.6-q6_K',  
+                'gfg/solar-10.7b-instruct-v1.0-uncensored',  
+                'gurubot/llama3-guru-uncensored',  
+                'mannix/dolphin-2.9-llama3-8b:q5_k_m',  
+                'sunapi386/llama-3-lexi-uncensored:8b',  
+                'dolphin-llama3:8b-v2.9-q8_0',  
+                'gurubot/llama3-guru:latest',  
+                'war-resolver',  
+                'wizardlm-uncensored:13b-llama2-q5_K_M',  
+                'wizard-vicuna-uncensored:13b',  
+                'phi3'  
+            ]  
+
+            selected_model_idx = 0  
+
+            for m in models:  
+                self.flog(f' [{selected_model_idx:-2d}] {m}')  
+                selected_model_idx += 1  
+
+            selected_model_idx = int(input('&gt; select model: '))  
+            model = models[selected_model_idx]  
+
+            self.flog(f'⋤ model: {model} [selected]')  
+
+            context = None  
+
+            if self.programmed:  
+                self.flog(f'∐ auto-remove of context')  
+                if os.path.exists('context.ids'):  
+                    os.unlink('context.ids')  
+
+            while True:  
+                current_chars = 0  
+                if os.path.exists('context.ids') and write_this != 'y':  
+                    context = self.read_context()  
+                    if self.programmed is False:  
+                        delete = input(f'delete context? ({len(context)} ids) Y/n ')  
+                        if delete == 'y':  
+                            self.flog('√ ', end='')  
+                            os.unlink('context.ids')  
+
+                try:  
+                    with open('context.ids', 'r') as f:  
+                        context = f.read()  
+                        context = [int(str.strip(x)) for x in context.split(' ') if len(str.strip(x)) &gt; 0]  
+                        self.flog(f'œ continue with previous context of {len(context)} ids')  
+                except FileNotFoundError:  
+                    context = []  
+                    self.flog('ㆆ new empty context')  
+                except Exception as e:  
+                    self.flog(&quot;x loading error: &quot;, e)  
+
+                if self.programmed:  
+                    if self.programm_current_instruction &gt; len(self.programm_instructions) - 1:  
+                        self.programmed = False  
+                        self.flog(f'■ end if program')  
+                        return  
+                    else:  
+                        step_engine = 'setup' if self.programm_current_instruction == 0 and self.programmed else 'prompt'  
+                        self.flog(  
+                            f'◰ going via program, instruction: {self.programm_current_instruction + 1}/{len(self.programm_instructions)} ...\n'  
+                            f'⤵ {step_engine}: {self.programm_instructions[self.programm_current_instruction]}'  
+                        )  
+                        prompt = self.programm_instructions[self.programm_current_instruction]  
+                else:  
+                    prompt = input(&quot;Œ Enter the prompt: &quot;)  
+
+                self.flog(f'⅁ {model} linking embeddings current relations ...')  
+
+                options = {  
+                    'temperature': self.temperature,  
+                    'num_ctx': self.num_ctx,  
+                    'use_mmap': True,  
+                    'num_thread': 10,  
+                    'use_mlock': True,  
+                    # 'repeat_penalty': 1.5,  
+                    # 'num_predict': 500                }  
+                # 'num_predict': 50000,  
+                # Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)  
+                # 'repeat_penalty': 0.5                # penalize_newline  
+                prompt += &quot;.\nload rules for this query: &quot;  
+                'rule: Do not echo input.\n'  
+                'note: Do not include questions like &quot;do i need any further assistance or information&quot;.\n'  
+                'note: Exclude any questions in response.\n'  
+                'rule: Do not print sources if not asked.\n'  
+                'rule: Do not print about &quot;what i would like&quot; or &quot;perhaps something else&quot; questions.\n'  
+                'rule: Exclude any &quot;please&quot; in response.\n'  
+                'note: Exclude any proposals about response in response.\n'  
+                'rule: Exclude any Disclaimer in response.\n'  
+
+                response = None  
+                for response in client.generate(  
+                        model=model,  
+                        prompt=prompt,  
+                        stream=True,  
+                        options=options,  
+                        context=context,  
+                        template='&lt;|user|&gt;{{ .Prompt }}&lt;|end|&gt;\n'  
+                                 '&lt;|assistant|&gt;{{ .Response }}&lt;|end|&gt;'                ):  
+                    current_chars += len(response['response'])  
+                    if &quot;\n&quot; in response['response']:  
+                        current_chars = 0  
+                        self.flog(response['response'], end='', flush=True)  
+                    elif current_chars &gt;= self.max_line_chars:  
+                        self.flog(&quot;-&quot;)  
+                        current_chars = 0  
+                        self.flog(str.strip(response['response']), end='', flush=True)  
+                    else:  
+                        resp = response['response'].replace('\'', '')  
+                        if len(resp):  
+                            self.flog(resp, end='', flush=True)  
+
+                scontext = b''  
+                if 'context' in response:  
+                    scontext = ' '.join((str(x) for x in response['context'])).encode('utf-8')  
+                    scontext += b' '  
+
+                if self.programmed is False:  
+                    write_this = input(f&quot;\nadd to memory {len(scontext)} ids? Y/n &quot;)  
+                    if write_this == 'y' and 'context' in response and len(scontext) &gt; 0:  
+                        self.flog('∜ ', end='')  
+                        with open('context.ids', 'ab') as f:  
+                            f.write(scontext)  
+                            self.flog(f&quot;⊫ context {len(scontext)} bytes added&quot;)  
+                    else:  
+                        if os.path.exists('context.ids'):  
+                            context = self.read_context()  
+                        else:  
+                            context = []  
+                elif self.programm_current_instruction == 0:  
+                    with open('context.ids', 'ab') as f:  
+                        f.write(scontext)  
+                        self.flog(f&quot;\n\n∧ context {len(scontext)} bytes auto-added&quot;)  
+                    if os.path.exists('context.ids'):  
+                        context = self.read_context()  
+                    else:  
+                        context = []  
+                else:  
+                    self.flog(f'\n☺ context not modified')  
+
+                self.flog(f&quot;∄ resulted context: {len(context)} ids&quot;)  
+
+                if self.programmed:  
+                    self.programm_current_instruction += 1  
+
+        except Exception as e:  
+            self.flog('\n\n--')  
+            self.flog(&quot;x ∓inal error: &quot;, e)  
+
+
+if __name__ == '__main__':  
+    process = Descripter(scenario=msscenario, source_bias=mssource_bias)  
+
+    try:  
+        sys.exit(process.execute())  
+    except KeyboardInterrupt:  
+        self.flog('∠ Ctrl-C')
+</code></pre>
 
 <!-- B45D99BF -->
     <script>

@@ -25,14 +25,14 @@
             text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
         }
         a {
-            color: #416EB4;
-            text-decoration:  dotted #416EB4;
+            color: #C70039;
+            text-decoration:  dotted #2E7D32;
             text-decoration-thickness: 2px;
             transition: all 0.2s ease;
         }
         a:hover {
             transform: scale(1.05) rotate(1deg);
-            color: #416EB4;
+            color: #2E7D32;
             text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
         p {
@@ -46,7 +46,7 @@
             margin: 0.3em 0;
         }
         blockquote {
-            border-left: 6px solid #7B61FF;
+            border-left: 6px solid #B660A6;
             padding: 0.4em 1.2em;
             margin: 1em 0;
             background: #fafafa;
@@ -59,14 +59,14 @@
             border-radius: 4px;
             font-family: 'Courier New', monospace;
             font-weight: bold;
-            color: #2D2942;
+            color: #843b62;
         }
         pre {
             background: #fafafa;
             padding: 1em;
             border-radius: 8px;
             overflow-x: auto;
-            border: 3px dotted #6A0572;
+            border: 3px dotted #C70039;
         }
         pre code {
             background: transparent;
@@ -81,12 +81,12 @@
         th {
             background: #ffffff;
             padding: 8px 12px;
-            border: 2px solid #416EB4;
+            border: 2px solid #1A535C;
             font-weight: bold;
         }
         td {
             padding: 8px 12px;
-            border: 1px dashed #7B61FF;
+            border: 1px dashed #843b62;
         }
         tr:nth-child(odd) td {
             background: #ffffff;
@@ -95,14 +95,14 @@
             background: #fafafa;
         }
         hr {
-            border: 4px solid #9B5DE8;
+            border: 4px solid #6A0572;
             background: transparent;
             margin: 1.5em 0;
             border-radius: 2px;
         }
         img {
             max-width: 90%;
-            border: 6px solid #416EB4;
+            border: 6px solid #9B5DE8;
             border-radius: 12px;
             margin: 1em 0;
         }
@@ -112,7 +112,7 @@
             padding: 8px 16px;
             background: #ffffff;
             border-radius: 20px;
-            color: #843b62;
+            color: #1A535C;
             font-weight: bold;
         }
         .confetti {
@@ -128,7 +128,7 @@
     <div class="confetti" id="confetti"></div>
     <a href="javascript:history.back()" class="back-link">← pollCreator</a>
     <hr />
-<p style="color:#416EB4;">promptId: pollCreator
+<p style="color:#6A0572;">promptId: pollCreator
 name: 📊 Poll Creator
 description: Creates interactive polls that can be linked to in discussions. Automatically registers poll objects for cross-referencing.
 author: Copilot
@@ -138,240 +138,240 @@ type: wrapper
 commands:
   - generate</p>
 <hr />
-<h1 id="poll-creator-template" style="color:#1A535C;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Poll Creator Template</h1>
-<p style="color:#416EB4;">This template creates interactive polls that can be linked to from discussions and automatically registers them in the knowledge graph.</p>
-<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #416EB4;"><span class="cp">{{</span><span class="m m-Attribute">#script</span><span class="cp">}}</span>
-<span class="x">```js</span>
-<span class="x">    // Poll creation and registration system</span>
-<span class="x">    async function createPoll(title, description, options, settings = </span><span class="err">{</span><span class="x">}) </span><span class="err">{</span>
-<span class="x">        const pollId = `poll-$</span><span class="err">{</span><span class="x">Date.now()}-$</span><span class="err">{</span><span class="x">Math.random().toString(36).substr(2, 9)}`;</span>
-<span class="x">        const timestamp = new Date().toISOString();</span>
+<h1 id="poll-creator-template" style="color:#843b62;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Poll Creator Template</h1>
+<p style="color:#6A0572;">This template creates interactive polls that can be linked to from discussions and automatically registers them in the knowledge graph.</p>
+<pre class="codehilite"><code class="language-handlebars" style="color:#1A535C;background:#fafafa;border:1px solid #7B61FF;">{{#script}}
+```js
+    // Poll creation and registration system
+    async function createPoll(title, description, options, settings = {}) {
+        const pollId = `poll-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+        const timestamp = new Date().toISOString();
 
-<span class="x">        const poll = </span><span class="err">{</span>
-<span class="x">            id: pollId,</span>
-<span class="x">            title: title,</span>
-<span class="x">            description: description,</span>
-<span class="x">            options: options.map((option, index) =&gt; (</span><span class="err">{</span>
-<span class="x">                id: index,</span>
-<span class="x">                text: option,</span>
-<span class="x">                votes: 0</span>
-<span class="x">            })),</span>
-<span class="x">            createdAt: timestamp,</span>
-<span class="x">            isActive: true,</span>
-<span class="x">            settings: </span><span class="err">{</span>
-<span class="x">                allowMultipleVotes: settings.allowMultipleVotes || false,</span>
-<span class="x">                showResults: settings.showResults !== false,</span>
-<span class="x">                anonymous: settings.anonymous !== false,</span>
-<span class="x">                ...settings</span>
-<span class="x">            }</span>
-<span class="x">        };</span>
+        const poll = {
+            id: pollId,
+            title: title,
+            description: description,
+            options: options.map((option, index) =&gt; ({
+                id: index,
+                text: option,
+                votes: 0
+            })),
+            createdAt: timestamp,
+            isActive: true,
+            settings: {
+                allowMultipleVotes: settings.allowMultipleVotes || false,
+                showResults: settings.showResults !== false,
+                anonymous: settings.anonymous !== false,
+                ...settings
+            }
+        };
 
-<span class="x">        // Create poll file</span>
-<span class="x">        const pollFilePath = `polls/$</span><span class="err">{</span><span class="x">pollId}.html`;</span>
-<span class="x">        const currentFolder = app.workspace.getActiveFile()?.parent?.path || &#39;&#39;;</span>
-<span class="x">        const fullPollPath = currentFolder ? `$</span><span class="err">{</span><span class="x">currentFolder}/$</span><span class="err">{</span><span class="x">pollFilePath}` : pollFilePath;</span>
+        // Create poll file
+        const pollFilePath = `polls/${pollId}.html`;
+        const currentFolder = app.workspace.getActiveFile()?.parent?.path || '';
+        const fullPollPath = currentFolder ? `${currentFolder}/${pollFilePath}` : pollFilePath;
 
-<span class="x">        // Ensure polls directory exists</span>
-<span class="x">        const pollsDir = currentFolder ? `$</span><span class="err">{</span><span class="x">currentFolder}/polls` : &#39;polls&#39;;</span>
-<span class="x">        if (!await app.vault.adapter.exists(pollsDir)) </span><span class="err">{</span>
-<span class="x">            await app.vault.createFolder(pollsDir);</span>
-<span class="x">        }</span>
+        // Ensure polls directory exists
+        const pollsDir = currentFolder ? `${currentFolder}/polls` : 'polls';
+        if (!await app.vault.adapter.exists(pollsDir)) {
+            await app.vault.createFolder(pollsDir);
+        }
 
-<span class="x">        const pollContent = generatePollMarkdown(poll);</span>
+        const pollContent = generatePollMarkdown(poll);
 
-<span class="x">        try </span><span class="err">{</span>
-<span class="x">            await app.vault.create(fullPollPath, pollContent);</span>
+        try {
+            await app.vault.create(fullPollPath, pollContent);
 
-<span class="x">            // Register poll in the conceptLinker system</span>
-<span class="x">            await registerPollObject(poll, fullPollPath);</span>
+            // Register poll in the conceptLinker system
+            await registerPollObject(poll, fullPollPath);
 
-<span class="x">            return </span><span class="err">{</span>
-<span class="x">                success: true,</span>
-<span class="x">                pollId: pollId,</span>
-<span class="x">                path: fullPollPath,</span>
-<span class="x">                linkText: `[[$</span><span class="err">{</span><span class="x">pollId}|$</span><span class="err">{</span><span class="x">title}]]`</span>
-<span class="x">            };</span>
-<span class="x">        } catch (error) </span><span class="err">{</span>
-<span class="x">            console.error(&#39;Failed to create poll:&#39;, error);</span>
-<span class="x">            return </span><span class="err">{</span>
-<span class="x">                success: false,</span>
-<span class="x">                error: error.message</span>
-<span class="x">            };</span>
-<span class="x">        }</span>
-<span class="x">    }</span>
+            return {
+                success: true,
+                pollId: pollId,
+                path: fullPollPath,
+                linkText: `[[${pollId}|${title}]]`
+            };
+        } catch (error) {
+            console.error('Failed to create poll:', error);
+            return {
+                success: false,
+                error: error.message
+            };
+        }
+    }
 
-<span class="x">    function generatePollMarkdown(poll) </span><span class="err">{</span>
-<span class="x">        const optionsHtml = poll.options.map(option =&gt; </span>
-<span class="x">            `- [ ] $</span><span class="err">{</span><span class="x">option.text} ($</span><span class="err">{</span><span class="x">option.votes} votes)`</span>
-<span class="x">        ).join(&#39;\n&#39;);</span>
+    function generatePollMarkdown(poll) {
+        const optionsHtml = poll.options.map(option =&gt; 
+            `- [ ] ${option.text} (${option.votes} votes)`
+        ).join('\n');
 
-<span class="x">        return `---</span>
-<span class="x">title: $</span><span class="err">{</span><span class="x">poll.title}</span>
-<span class="x">type: poll</span>
-<span class="x">pollId: $</span><span class="err">{</span><span class="x">poll.id}</span>
-<span class="x">createdAt: $</span><span class="err">{</span><span class="x">poll.createdAt}</span>
-<span class="x">isActive: $</span><span class="err">{</span><span class="x">poll.isActive}</span>
-<span class="x">tags: [poll, discussion, voting]</span>
-<span class="x">---</span>
+        return `---
+title: ${poll.title}
+type: poll
+pollId: ${poll.id}
+createdAt: ${poll.createdAt}
+isActive: ${poll.isActive}
+tags: [poll, discussion, voting]
+---
 
-<span class="x"># 📊 $</span><span class="err">{</span><span class="x">poll.title}</span>
+# 📊 ${poll.title}
 
-<span class="x">$</span><span class="err">{</span><span class="x">poll.description}</span>
+${poll.description}
 
-<span class="x">## Options</span>
+## Options
 
-<span class="x">$</span><span class="err">{</span><span class="x">optionsHtml}</span>
+${optionsHtml}
 
-<span class="x">## Poll Information</span>
+## Poll Information
 
-<span class="x">- **Poll ID**: \`$</span><span class="err">{</span><span class="x">poll.id}\`</span>
-<span class="x">- **Created**: $</span><span class="err">{</span><span class="x">poll.createdAt}</span>
-<span class="x">- **Status**: $</span><span class="err">{</span><span class="x">poll.isActive ? &#39;Active&#39; : &#39;Closed&#39;}</span>
-<span class="x">- **Multiple Votes**: $</span><span class="err">{</span><span class="x">poll.settings.allowMultipleVotes ? &#39;Allowed&#39; : &#39;Not Allowed&#39;}</span>
-<span class="x">- **Anonymous**: $</span><span class="err">{</span><span class="x">poll.settings.anonymous ? &#39;Yes&#39; : &#39;No&#39;}</span>
+- **Poll ID**: \`${poll.id}\`
+- **Created**: ${poll.createdAt}
+- **Status**: ${poll.isActive ? 'Active' : 'Closed'}
+- **Multiple Votes**: ${poll.settings.allowMultipleVotes ? 'Allowed' : 'Not Allowed'}
+- **Anonymous**: ${poll.settings.anonymous ? 'Yes' : 'No'}
 
-<span class="x">## How to Vote</span>
+## How to Vote
 
-<span class="x">1. Check the box next to your preferred option(s)</span>
-<span class="x">2. Save the file to record your vote</span>
-<span class="x">3. Results are $</span><span class="err">{</span><span class="x">poll.settings.showResults ? &#39;visible to all&#39; : &#39;hidden until poll closes&#39;}</span>
+1. Check the box next to your preferred option(s)
+2. Save the file to record your vote
+3. Results are ${poll.settings.showResults ? 'visible to all' : 'hidden until poll closes'}
 
-<span class="x">---</span>
-<span class="x">*This is an interactive poll. You can link to it using: \`[[$</span><span class="err">{</span><span class="x">poll.id}]]\`*</span>
-<span class="x">`;</span>
-<span class="x">    }</span>
+---
+*This is an interactive poll. You can link to it using: \`[[${poll.id}]]\`*
+`;
+    }
 
-<span class="x">    async function registerPollObject(poll, filePath) </span><span class="err">{</span>
-<span class="x">        try </span><span class="err">{</span>
-<span class="x">            // Register in a polls index file for easy discovery</span>
-<span class="x">            const pollsIndexPath = &#39;polls/polls-index.html&#39;;</span>
+    async function registerPollObject(poll, filePath) {
+        try {
+            // Register in a polls index file for easy discovery
+            const pollsIndexPath = 'polls/polls-index.html';
 
-<span class="x">            let indexContent = &#39;&#39;;</span>
-<span class="x">            if (await app.vault.adapter.exists(pollsIndexPath)) </span><span class="err">{</span>
-<span class="x">                indexContent = await app.vault.adapter.read(pollsIndexPath);</span>
-<span class="x">            } else </span><span class="err">{</span>
-<span class="x">                indexContent = `---</span>
-<span class="x">title: Polls Index</span>
-<span class="x">type: poll-index</span>
-<span class="x">tags: [polls, index]</span>
-<span class="x">---</span>
+            let indexContent = '';
+            if (await app.vault.adapter.exists(pollsIndexPath)) {
+                indexContent = await app.vault.adapter.read(pollsIndexPath);
+            } else {
+                indexContent = `---
+title: Polls Index
+type: poll-index
+tags: [polls, index]
+---
 
-<span class="x"># 📊 Polls Index</span>
+# 📊 Polls Index
 
-<span class="x">This file tracks all polls for easy linking and discovery.</span>
+This file tracks all polls for easy linking and discovery.
 
-<span class="x">## Active Polls</span>
+## Active Polls
 
-<span class="x">`;</span>
-<span class="x">            }</span>
+`;
+            }
 
-<span class="x">            // Add poll entry to index</span>
-<span class="x">            const pollEntry = `- [[$</span><span class="err">{</span><span class="x">poll.id}|$</span><span class="err">{</span><span class="x">poll.title}]] - Created: $</span><span class="err">{</span><span class="x">poll.createdAt}\n`;</span>
+            // Add poll entry to index
+            const pollEntry = `- [[${poll.id}|${poll.title}]] - Created: ${poll.createdAt}\n`;
 
-<span class="x">            if (indexContent.includes(&#39;## Active Polls&#39;)) </span><span class="err">{</span>
-<span class="x">                indexContent = indexContent.replace(</span>
-<span class="x">                    &#39;## Active Polls\n&#39;,</span>
-<span class="x">                    `## Active Polls\n\n$</span><span class="err">{</span><span class="x">pollEntry}`</span>
-<span class="x">                );</span>
-<span class="x">            } else </span><span class="err">{</span>
-<span class="x">                indexContent += `\n$</span><span class="err">{</span><span class="x">pollEntry}`;</span>
-<span class="x">            }</span>
+            if (indexContent.includes('## Active Polls')) {
+                indexContent = indexContent.replace(
+                    '## Active Polls\n',
+                    `## Active Polls\n\n${pollEntry}`
+                );
+            } else {
+                indexContent += `\n${pollEntry}`;
+            }
 
-<span class="x">            await app.vault.adapter.write(pollsIndexPath, indexContent);</span>
+            await app.vault.adapter.write(pollsIndexPath, indexContent);
 
-<span class="x">            return true;</span>
-<span class="x">        } catch (error) </span><span class="err">{</span>
-<span class="x">            console.error(&#39;Failed to register poll object:&#39;, error);</span>
-<span class="x">            return false;</span>
-<span class="x">        }</span>
-<span class="x">    }</span>
+            return true;
+        } catch (error) {
+            console.error('Failed to register poll object:', error);
+            return false;
+        }
+    }
 
-<span class="x">    // Parse input from the selection or prompt</span>
-<span class="x">    async function parsePollInput(input) </span><span class="err">{</span>
-<span class="x">        const lines = input.split(&#39;\n&#39;).map(line =&gt; line.trim()).filter(line =&gt; line.length &gt; 0);</span>
+    // Parse input from the selection or prompt
+    async function parsePollInput(input) {
+        const lines = input.split('\n').map(line =&gt; line.trim()).filter(line =&gt; line.length &gt; 0);
 
-<span class="x">        if (lines.length &lt; 3) </span><span class="err">{</span>
-<span class="x">            throw new Error(&#39;Poll must have at least a title, description, and two options&#39;);</span>
-<span class="x">        }</span>
+        if (lines.length &lt; 3) {
+            throw new Error('Poll must have at least a title, description, and two options');
+        }
 
-<span class="x">        const title = lines[0].replace(/^#+\s*/, &#39;&#39;); // Remove markdown headers</span>
-<span class="x">        const description = lines[1];</span>
-<span class="x">        const options = lines.slice(2);</span>
+        const title = lines[0].replace(/^#+\s*/, ''); // Remove markdown headers
+        const description = lines[1];
+        const options = lines.slice(2);
 
-<span class="x">        return </span><span class="err">{</span><span class="x"> title, description, options };</span>
-<span class="x">    }</span>
+        return { title, description, options };
+    }
 
-<span class="x">    // Main execution</span>
-<span class="x">    async function generatePoll() </span><span class="err">{</span>
-<span class="x">        try </span><span class="err">{</span>
-<span class="x">            const selection = `</span><span class="cp">{{</span><span class="nv">tg_selection</span><span class="cp">}}</span><span class="x">`.trim();</span>
+    // Main execution
+    async function generatePoll() {
+        try {
+            const selection = `{{tg_selection}}`.trim();
 
-<span class="x">            if (!selection) </span><span class="err">{</span>
-<span class="x">                return `# Poll Creator</span>
+            if (!selection) {
+                return `# Poll Creator
 
-<span class="x">Please provide poll information in the following format:</span>
+Please provide poll information in the following format:
 
-<span class="x">Poll Title</span>
-<span class="x">Poll description explaining what this poll is about</span>
-<span class="x">Option 1</span>
-<span class="x">Option 2</span>
-<span class="x">Option 3</span>
-<span class="x">...</span>
+Poll Title
+Poll description explaining what this poll is about
+Option 1
+Option 2
+Option 3
+...
 
-<span class="x">Then run this template again with your poll information selected.`;</span>
-<span class="x">            }</span>
+Then run this template again with your poll information selected.`;
+            }
 
-<span class="x">            const </span><span class="err">{</span><span class="x"> title, description, options } = await parsePollInput(selection);</span>
-<span class="x">            const result = await createPoll(title, description, options);</span>
+            const { title, description, options } = await parsePollInput(selection);
+            const result = await createPoll(title, description, options);
 
-<span class="x">            if (result.success) </span><span class="err">{</span>
-<span class="x">                return `# Poll Created Successfully! </span>
+            if (result.success) {
+                return `# Poll Created Successfully! 
 
-<span class="x">**Poll ID**: \`$</span><span class="err">{</span><span class="x">result.pollId}\`</span>
-<span class="x">**File**: $</span><span class="err">{</span><span class="x">result.path}</span>
-<span class="x">**Link**: $</span><span class="err">{</span><span class="x">result.linkText}</span>
+**Poll ID**: \`${result.pollId}\`
+**File**: ${result.path}
+**Link**: ${result.linkText}
 
-<span class="x">Your poll has been created and is now available for linking in discussions. </span>
+Your poll has been created and is now available for linking in discussions. 
 
-<span class="x">## Quick Actions</span>
+## Quick Actions
 
-<span class="x">- View poll: [[$</span><span class="err">{</span><span class="x">result.pollId}]]</span>
-<span class="x">- Copy link: \`[[$</span><span class="err">{</span><span class="x">result.pollId}|$</span><span class="err">{</span><span class="x">title}]]\`</span>
-<span class="x">- View all polls: [[polls-index]]</span>
+- View poll: [[${result.pollId}]]
+- Copy link: \`[[${result.pollId}|${title}]]\`
+- View all polls: [[polls-index]]
 
-<span class="x">The poll has been automatically registered in the knowledge graph and can be discovered by the conceptLinker system.`;</span>
-<span class="x">            } else </span><span class="err">{</span>
-<span class="x">                return `# Poll Creation Failed</span>
+The poll has been automatically registered in the knowledge graph and can be discovered by the conceptLinker system.`;
+            } else {
+                return `# Poll Creation Failed
 
-<span class="x">Error: $</span><span class="err">{</span><span class="x">result.error}</span>
+Error: ${result.error}
 
-<span class="x">Please check your input format and try again.`;</span>
-<span class="x">            }</span>
+Please check your input format and try again.`;
+            }
 
-<span class="x">        } catch (error) </span><span class="err">{</span>
-<span class="x">            return `# Error Creating Poll</span>
+        } catch (error) {
+            return `# Error Creating Poll
 
-<span class="x">$</span><span class="err">{</span><span class="x">error.message}</span>
+${error.message}
 
-<span class="x">## Expected Format:</span>
+## Expected Format:
 
-<span class="x">Poll Title</span>
-<span class="x">Poll description</span>
-<span class="x">Option 1</span>
-<span class="x">Option 2</span>
-<span class="x">Option 3`;</span>
-<span class="x">        }</span>
-<span class="x">    }</span>
+Poll Title
+Poll description
+Option 1
+Option 2
+Option 3`;
+        }
+    }
 
-<span class="x">    return await generatePoll();</span>
-</code></pre></div>
+    return await generatePoll();
+</code></pre>
 
-<p style="color:#416EB4;">{{/script}}
+<p style="color:#6A0572;">{{/script}}
 ```</p>
 <hr />
 <hr />
-<h1 id="output" style="color:#1A535C;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Output:</h1>
-<p style="color:#416EB4;">{{get "script"}}</p>
+<h1 id="output" style="color:#843b62;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Output:</h1>
+<p style="color:#6A0572;">{{get "script"}}</p>
 <!-- 40A640EB -->
     <script>
         // Sprinkle animated confetti that matches the kid-fest palette

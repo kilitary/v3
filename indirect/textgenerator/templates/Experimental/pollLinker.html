@@ -25,14 +25,14 @@
             text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
         }
         a {
-            color: #B660A6;
-            text-decoration:  dotted #2E7D32;
+            color: #9B5DE8;
+            text-decoration:  dotted #9B5DE8;
             text-decoration-thickness: 2px;
             transition: all 0.2s ease;
         }
         a:hover {
             transform: scale(1.05) rotate(1deg);
-            color: #2E7D32;
+            color: #9B5DE8;
             text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
         p {
@@ -46,7 +46,7 @@
             margin: 0.3em 0;
         }
         blockquote {
-            border-left: 6px solid #B660A6;
+            border-left: 6px solid #C70039;
             padding: 0.4em 1.2em;
             margin: 1em 0;
             background: #fafafa;
@@ -59,7 +59,7 @@
             border-radius: 4px;
             font-family: 'Courier New', monospace;
             font-weight: bold;
-            color: #416EB4;
+            color: #2D2942;
         }
         pre {
             background: #fafafa;
@@ -81,7 +81,7 @@
         th {
             background: #ffffff;
             padding: 8px 12px;
-            border: 2px solid #416EB4;
+            border: 2px solid #843b62;
             font-weight: bold;
         }
         td {
@@ -95,14 +95,14 @@
             background: #fafafa;
         }
         hr {
-            border: 4px solid #416EB4;
+            border: 4px solid #9B5DE8;
             background: transparent;
             margin: 1.5em 0;
             border-radius: 2px;
         }
         img {
             max-width: 90%;
-            border: 6px solid #2E7D32;
+            border: 6px solid #416EB4;
             border-radius: 12px;
             margin: 1em 0;
         }
@@ -112,7 +112,7 @@
             padding: 8px 16px;
             background: #ffffff;
             border-radius: 20px;
-            color: #843b62;
+            color: #416EB4;
             font-weight: bold;
         }
         .confetti {
@@ -138,243 +138,243 @@ type: wrapper
 commands:
   - generate</p>
 <hr />
-<h1 id="poll-linker-template" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">Poll Linker Template</h1>
+<h1 id="poll-linker-template" style="color:#1A535C;border-bottom:1px dashed #843b62;padding-bottom:4px;">Poll Linker Template</h1>
 <p style="color:#7B61FF;">This template enhances the conceptLinker system to automatically find and link poll objects in discussions.</p>
-<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #416EB4;"><span class="cp">{{</span><span class="m m-Attribute">#script</span><span class="cp">}}</span>
-<span class="x">```js</span>
-<span class="x">    // Enhanced poll discovery and linking system</span>
-<span class="x">    async function findPollObjects() </span><span class="err">{</span>
-<span class="x">        const polls = [];</span>
+<pre class="codehilite"><code class="language-handlebars" style="color:#1A535C;background:#fafafa;border:1px solid #2E7D32;">{{#script}}
+```js
+    // Enhanced poll discovery and linking system
+    async function findPollObjects() {
+        const polls = [];
 
-<span class="x">        try </span><span class="err">{</span>
-<span class="x">            // Check if polls directory exists</span>
-<span class="x">            const pollsDir = &#39;polls&#39;;</span>
-<span class="x">            if (await app.vault.adapter.exists(pollsDir)) </span><span class="err">{</span>
-<span class="x">                const pollFiles = await app.vault.adapter.list(pollsDir);</span>
+        try {
+            // Check if polls directory exists
+            const pollsDir = 'polls';
+            if (await app.vault.adapter.exists(pollsDir)) {
+                const pollFiles = await app.vault.adapter.list(pollsDir);
 
-<span class="x">                for (const file of pollFiles.files) </span><span class="err">{</span>
-<span class="x">                    if (file.endsWith(&#39;.html&#39;) &amp;&amp; !file.endsWith(&#39;polls-index.html&#39;)) </span><span class="err">{</span>
-<span class="x">                        try </span><span class="err">{</span>
-<span class="x">                            const content = await app.vault.adapter.read(file);</span>
-<span class="x">                            const poll = parsePollFromContent(content, file);</span>
-<span class="x">                            if (poll) </span><span class="err">{</span>
-<span class="x">                                polls.push(poll);</span>
-<span class="x">                            }</span>
-<span class="x">                        } catch (error) </span><span class="err">{</span>
-<span class="x">                            console.warn(`Could not read poll file $</span><span class="err">{</span><span class="x">file}:`, error);</span>
-<span class="x">                        }</span>
-<span class="x">                    }</span>
-<span class="x">                }</span>
-<span class="x">            }</span>
+                for (const file of pollFiles.files) {
+                    if (file.endsWith('.html') &amp;&amp; !file.endsWith('polls-index.html')) {
+                        try {
+                            const content = await app.vault.adapter.read(file);
+                            const poll = parsePollFromContent(content, file);
+                            if (poll) {
+                                polls.push(poll);
+                            }
+                        } catch (error) {
+                            console.warn(`Could not read poll file ${file}:`, error);
+                        }
+                    }
+                }
+            }
 
-<span class="x">            // Also search for polls in current directory</span>
-<span class="x">            const currentFile = app.workspace.getActiveFile();</span>
-<span class="x">            if (currentFile?.parent) </span><span class="err">{</span>
-<span class="x">                const currentDir = currentFile.parent.path;</span>
-<span class="x">                const localPollsDir = `$</span><span class="err">{</span><span class="x">currentDir}/polls`;</span>
+            // Also search for polls in current directory
+            const currentFile = app.workspace.getActiveFile();
+            if (currentFile?.parent) {
+                const currentDir = currentFile.parent.path;
+                const localPollsDir = `${currentDir}/polls`;
 
-<span class="x">                if (await app.vault.adapter.exists(localPollsDir)) </span><span class="err">{</span>
-<span class="x">                    const localPollFiles = await app.vault.adapter.list(localPollsDir);</span>
+                if (await app.vault.adapter.exists(localPollsDir)) {
+                    const localPollFiles = await app.vault.adapter.list(localPollsDir);
 
-<span class="x">                    for (const file of localPollFiles.files) </span><span class="err">{</span>
-<span class="x">                        if (file.endsWith(&#39;.html&#39;) &amp;&amp; !file.endsWith(&#39;polls-index.html&#39;)) </span><span class="err">{</span>
-<span class="x">                            try </span><span class="err">{</span>
-<span class="x">                                const content = await app.vault.adapter.read(file);</span>
-<span class="x">                                const poll = parsePollFromContent(content, file);</span>
-<span class="x">                                if (poll) </span><span class="err">{</span>
-<span class="x">                                    polls.push(poll);</span>
-<span class="x">                                }</span>
-<span class="x">                            } catch (error) </span><span class="err">{</span>
-<span class="x">                                console.warn(`Could not read local poll file $</span><span class="err">{</span><span class="x">file}:`, error);</span>
-<span class="x">                            }</span>
-<span class="x">                        }</span>
-<span class="x">                    }</span>
-<span class="x">                }</span>
-<span class="x">            }</span>
-<span class="x">        } catch (error) </span><span class="err">{</span>
-<span class="x">            console.error(&#39;Error finding poll objects:&#39;, error);</span>
-<span class="x">        }</span>
+                    for (const file of localPollFiles.files) {
+                        if (file.endsWith('.html') &amp;&amp; !file.endsWith('polls-index.html')) {
+                            try {
+                                const content = await app.vault.adapter.read(file);
+                                const poll = parsePollFromContent(content, file);
+                                if (poll) {
+                                    polls.push(poll);
+                                }
+                            } catch (error) {
+                                console.warn(`Could not read local poll file ${file}:`, error);
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (error) {
+            console.error('Error finding poll objects:', error);
+        }
 
-<span class="x">        return polls;</span>
-<span class="x">    }</span>
+        return polls;
+    }
 
-<span class="x">    function parsePollFromContent(content, filePath) </span><span class="err">{</span>
-<span class="x">        try </span><span class="err">{</span>
-<span class="x">            // Extract frontmatter</span>
-<span class="x">            const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);</span>
-<span class="x">            if (!frontmatterMatch) return null;</span>
+    function parsePollFromContent(content, filePath) {
+        try {
+            // Extract frontmatter
+            const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
+            if (!frontmatterMatch) return null;
 
-<span class="x">            const frontmatter = frontmatterMatch[1];</span>
-<span class="x">            const pollIdMatch = frontmatter.match(/pollId:\s*(.+)/);</span>
-<span class="x">            const titleMatch = frontmatter.match(/title:\s*(.+)/);</span>
-<span class="x">            const typeMatch = frontmatter.match(/type:\s*(.+)/);</span>
+            const frontmatter = frontmatterMatch[1];
+            const pollIdMatch = frontmatter.match(/pollId:\s*(.+)/);
+            const titleMatch = frontmatter.match(/title:\s*(.+)/);
+            const typeMatch = frontmatter.match(/type:\s*(.+)/);
 
-<span class="x">            if (!pollIdMatch || typeMatch?.[1] !== &#39;poll&#39;) return null;</span>
+            if (!pollIdMatch || typeMatch?.[1] !== 'poll') return null;
 
-<span class="x">            const pollId = pollIdMatch[1].trim();</span>
-<span class="x">            const title = titleMatch?.[1]?.trim() || pollId;</span>
+            const pollId = pollIdMatch[1].trim();
+            const title = titleMatch?.[1]?.trim() || pollId;
 
-<span class="x">            // Extract description from content</span>
-<span class="x">            const bodyContent = content.replace(/^---\n[\s\S]*?\n---/, &#39;&#39;).trim();</span>
-<span class="x">            const descriptionMatch = bodyContent.match(/# [^\n]+\n\n([^\n]+)/);</span>
-<span class="x">            const description = descriptionMatch?.[1] || &#39;&#39;;</span>
+            // Extract description from content
+            const bodyContent = content.replace(/^---\n[\s\S]*?\n---/, '').trim();
+            const descriptionMatch = bodyContent.match(/# [^\n]+\n\n([^\n]+)/);
+            const description = descriptionMatch?.[1] || '';
 
-<span class="x">            return </span><span class="err">{</span>
-<span class="x">                id: pollId,</span>
-<span class="x">                title: title,</span>
-<span class="x">                description: description,</span>
-<span class="x">                filePath: filePath,</span>
-<span class="x">                linkText: `[[$</span><span class="err">{</span><span class="x">pollId}|$</span><span class="err">{</span><span class="x">title}]]`</span>
-<span class="x">            };</span>
-<span class="x">        } catch (error) </span><span class="err">{</span>
-<span class="x">            console.warn(&#39;Error parsing poll content:&#39;, error);</span>
-<span class="x">            return null;</span>
-<span class="x">        }</span>
-<span class="x">    }</span>
+            return {
+                id: pollId,
+                title: title,
+                description: description,
+                filePath: filePath,
+                linkText: `[[${pollId}|${title}]]`
+            };
+        } catch (error) {
+            console.warn('Error parsing poll content:', error);
+            return null;
+        }
+    }
 
-<span class="x">    async function findRelevantPolls(text, polls) </span><span class="err">{</span>
-<span class="x">        const relevantPolls = [];</span>
-<span class="x">        const words = text.toLowerCase().split(/\s+/);</span>
+    async function findRelevantPolls(text, polls) {
+        const relevantPolls = [];
+        const words = text.toLowerCase().split(/\s+/);
 
-<span class="x">        for (const poll of polls) </span><span class="err">{</span>
-<span class="x">            const pollWords = (poll.title + &#39; &#39; + poll.description).toLowerCase().split(/\s+/);</span>
+        for (const poll of polls) {
+            const pollWords = (poll.title + ' ' + poll.description).toLowerCase().split(/\s+/);
 
-<span class="x">            // Calculate relevance score</span>
-<span class="x">            let score = 0;</span>
-<span class="x">            for (const word of words) </span><span class="err">{</span>
-<span class="x">                if (word.length &gt; 3) </span><span class="err">{</span><span class="x"> // Skip short words</span>
-<span class="x">                    for (const pollWord of pollWords) </span><span class="err">{</span>
-<span class="x">                        if (pollWord.includes(word) || word.includes(pollWord)) </span><span class="err">{</span>
-<span class="x">                            score++;</span>
-<span class="x">                        }</span>
-<span class="x">                    }</span>
-<span class="x">                }</span>
-<span class="x">            }</span>
+            // Calculate relevance score
+            let score = 0;
+            for (const word of words) {
+                if (word.length &gt; 3) { // Skip short words
+                    for (const pollWord of pollWords) {
+                        if (pollWord.includes(word) || word.includes(pollWord)) {
+                            score++;
+                        }
+                    }
+                }
+            }
 
-<span class="x">            // Check for specific poll-related keywords</span>
-<span class="x">            const pollKeywords = [&#39;vote&#39;, &#39;poll&#39;, &#39;survey&#39;, &#39;opinion&#39;, &#39;decide&#39;, &#39;choice&#39;, &#39;select&#39;];</span>
-<span class="x">            for (const keyword of pollKeywords) </span><span class="err">{</span>
-<span class="x">                if (text.toLowerCase().includes(keyword)) </span><span class="err">{</span>
-<span class="x">                    score += 2;</span>
-<span class="x">                }</span>
-<span class="x">            }</span>
+            // Check for specific poll-related keywords
+            const pollKeywords = ['vote', 'poll', 'survey', 'opinion', 'decide', 'choice', 'select'];
+            for (const keyword of pollKeywords) {
+                if (text.toLowerCase().includes(keyword)) {
+                    score += 2;
+                }
+            }
 
-<span class="x">            if (score &gt; 0) </span><span class="err">{</span>
-<span class="x">                relevantPolls.push(</span><span class="err">{</span>
-<span class="x">                    ...poll,</span>
-<span class="x">                    relevanceScore: score</span>
-<span class="x">                });</span>
-<span class="x">            }</span>
-<span class="x">        }</span>
+            if (score &gt; 0) {
+                relevantPolls.push({
+                    ...poll,
+                    relevanceScore: score
+                });
+            }
+        }
 
-<span class="x">        // Sort by relevance score</span>
-<span class="x">        return relevantPolls.sort((a, b) =&gt; b.relevanceScore - a.relevanceScore);</span>
-<span class="x">    }</span>
+        // Sort by relevance score
+        return relevantPolls.sort((a, b) =&gt; b.relevanceScore - a.relevanceScore);
+    }
 
-<span class="x">    async function enhanceTextWithPollLinks(text) </span><span class="err">{</span>
-<span class="x">        const polls = await findPollObjects();</span>
+    async function enhanceTextWithPollLinks(text) {
+        const polls = await findPollObjects();
 
-<span class="x">        if (polls.length === 0) </span><span class="err">{</span>
-<span class="x">            return </span><span class="err">{</span>
-<span class="x">                enhancedText: text,</span>
-<span class="x">                foundPolls: [],</span>
-<span class="x">                message: &quot;No poll objects found. Create polls using the pollCreator template.&quot;</span>
-<span class="x">            };</span>
-<span class="x">        }</span>
+        if (polls.length === 0) {
+            return {
+                enhancedText: text,
+                foundPolls: [],
+                message: &quot;No poll objects found. Create polls using the pollCreator template.&quot;
+            };
+        }
 
-<span class="x">        const relevantPolls = await findRelevantPolls(text, polls);</span>
+        const relevantPolls = await findRelevantPolls(text, polls);
 
-<span class="x">        if (relevantPolls.length === 0) </span><span class="err">{</span>
-<span class="x">            return </span><span class="err">{</span>
-<span class="x">                enhancedText: text,</span>
-<span class="x">                foundPolls: polls,</span>
-<span class="x">                message: `Found $</span><span class="err">{</span><span class="x">polls.length} poll(s) but none are relevant to this discussion.`</span>
-<span class="x">            };</span>
-<span class="x">        }</span>
+        if (relevantPolls.length === 0) {
+            return {
+                enhancedText: text,
+                foundPolls: polls,
+                message: `Found ${polls.length} poll(s) but none are relevant to this discussion.`
+            };
+        }
 
-<span class="x">        // Add poll links section to the text</span>
-<span class="x">        const pollLinksSection = `</span>
+        // Add poll links section to the text
+        const pollLinksSection = `
 
-<span class="x">## 📊 Related Polls</span>
+## 📊 Related Polls
 
-<span class="x">$</span><span class="err">{</span><span class="x">relevantPolls.map(poll =&gt; </span>
-<span class="x">    `- $</span><span class="err">{</span><span class="x">poll.linkText} - $</span><span class="err">{</span><span class="x">poll.description}`</span>
-<span class="x">).join(&#39;\n&#39;)}</span>
+${relevantPolls.map(poll =&gt; 
+    `- ${poll.linkText} - ${poll.description}`
+).join('\n')}
 
-<span class="x">---</span>
-<span class="x">*Auto-linked polls based on discussion content*`;</span>
+---
+*Auto-linked polls based on discussion content*`;
 
-<span class="x">        return </span><span class="err">{</span>
-<span class="x">            enhancedText: text + pollLinksSection,</span>
-<span class="x">            foundPolls: polls,</span>
-<span class="x">            relevantPolls: relevantPolls,</span>
-<span class="x">            message: `Enhanced discussion with $</span><span class="err">{</span><span class="x">relevantPolls.length} relevant poll link(s).`</span>
-<span class="x">        };</span>
-<span class="x">    }</span>
+        return {
+            enhancedText: text + pollLinksSection,
+            foundPolls: polls,
+            relevantPolls: relevantPolls,
+            message: `Enhanced discussion with ${relevantPolls.length} relevant poll link(s).`
+        };
+    }
 
-<span class="x">    // Main execution</span>
-<span class="x">    async function processPollLinking() </span><span class="err">{</span>
-<span class="x">        const selection = `</span><span class="cp">{{</span><span class="nv">tg_selection</span><span class="cp">}}</span><span class="x">`.trim();</span>
+    // Main execution
+    async function processPollLinking() {
+        const selection = `{{tg_selection}}`.trim();
 
-<span class="x">        if (!selection) </span><span class="err">{</span>
-<span class="x">            const polls = await findPollObjects();</span>
+        if (!selection) {
+            const polls = await findPollObjects();
 
-<span class="x">            return `# Poll Linker</span>
+            return `# Poll Linker
 
-<span class="x">## Available Poll Objects</span>
+## Available Poll Objects
 
-<span class="x">$</span><span class="err">{</span><span class="x">polls.length &gt; 0 ? </span>
-<span class="x">    polls.map(poll =&gt; `- $</span><span class="err">{</span><span class="x">poll.linkText} - $</span><span class="err">{</span><span class="x">poll.description}`).join(&#39;\n&#39;) :</span>
-<span class="x">    &#39;No poll objects found. Create some using the pollCreator template.&#39;</span>
-<span class="x">}</span>
+${polls.length &gt; 0 ? 
+    polls.map(poll =&gt; `- ${poll.linkText} - ${poll.description}`).join('\n') :
+    'No poll objects found. Create some using the pollCreator template.'
+}
 
-<span class="x">## Usage</span>
+## Usage
 
-<span class="x">Select text from a discussion and run this template to automatically find and link relevant polls.</span>
+Select text from a discussion and run this template to automatically find and link relevant polls.
 
-<span class="x">## Status</span>
+## Status
 
-<span class="x">- **Total Polls Found**: $</span><span class="err">{</span><span class="x">polls.length}</span>
-<span class="x">- **Poll Discovery**: $</span><span class="err">{</span><span class="x">polls.length &gt; 0 ? &#39;✅ Working&#39; : &#39;❌ No objects found&#39;}</span>
-<span class="x">- **Linking System**: ✅ Active`;</span>
-<span class="x">        }</span>
+- **Total Polls Found**: ${polls.length}
+- **Poll Discovery**: ${polls.length &gt; 0 ? '✅ Working' : '❌ No objects found'}
+- **Linking System**: ✅ Active`;
+        }
 
-<span class="x">        const result = await enhanceTextWithPollLinks(selection);</span>
+        const result = await enhanceTextWithPollLinks(selection);
 
-<span class="x">        return `# Poll Linking Results</span>
+        return `# Poll Linking Results
 
-<span class="x">$</span><span class="err">{</span><span class="x">result.message}</span>
+${result.message}
 
-<span class="x">## Enhanced Text</span>
+## Enhanced Text
 
-<span class="x">$</span><span class="err">{</span><span class="x">result.enhancedText}</span>
+${result.enhancedText}
 
-<span class="x">## Discovery Summary</span>
+## Discovery Summary
 
-<span class="x">- **Total Polls Available**: $</span><span class="err">{</span><span class="x">result.foundPolls.length}</span>
-<span class="x">- **Relevant Polls Found**: $</span><span class="err">{</span><span class="x">result.relevantPolls?.length || 0}</span>
-<span class="x">- **Status**: $</span><span class="err">{</span><span class="x">result.foundPolls.length &gt; 0 ? &#39;✅ Objects found and linking working&#39; : &#39;❌ No objects found - create polls first&#39;}</span>
+- **Total Polls Available**: ${result.foundPolls.length}
+- **Relevant Polls Found**: ${result.relevantPolls?.length || 0}
+- **Status**: ${result.foundPolls.length &gt; 0 ? '✅ Objects found and linking working' : '❌ No objects found - create polls first'}
 
-<span class="x">$</span><span class="err">{</span><span class="x">result.relevantPolls?.length &gt; 0 ? `</span>
-<span class="x">## Linked Polls Details</span>
+${result.relevantPolls?.length &gt; 0 ? `
+## Linked Polls Details
 
-<span class="x">$</span><span class="err">{</span><span class="x">result.relevantPolls.map(poll =&gt; </span>
-<span class="x">    `### $</span><span class="err">{</span><span class="x">poll.title}</span>
-<span class="x">- **ID**: \`$</span><span class="err">{</span><span class="x">poll.id}\`</span>
-<span class="x">- **Relevance Score**: $</span><span class="err">{</span><span class="x">poll.relevanceScore}</span>
-<span class="x">- **Link**: $</span><span class="err">{</span><span class="x">poll.linkText}</span>
-<span class="x">- **Description**: $</span><span class="err">{</span><span class="x">poll.description}`</span>
-<span class="x">).join(&#39;\n\n&#39;)}` : &#39;&#39;}`;</span>
-<span class="x">    }</span>
+${result.relevantPolls.map(poll =&gt; 
+    `### ${poll.title}
+- **ID**: \`${poll.id}\`
+- **Relevance Score**: ${poll.relevanceScore}
+- **Link**: ${poll.linkText}
+- **Description**: ${poll.description}`
+).join('\n\n')}` : ''}`;
+    }
 
-<span class="x">    return await processPollLinking();</span>
-</code></pre></div>
+    return await processPollLinking();
+</code></pre>
 
 <p style="color:#7B61FF;">{{/script}}
 ```</p>
 <hr />
 <hr />
-<h1 id="output" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">Output:</h1>
+<h1 id="output" style="color:#1A535C;border-bottom:1px dashed #843b62;padding-bottom:4px;">Output:</h1>
 <p style="color:#7B61FF;">{{get "script"}}</p>
 <!-- 04B8943C -->
     <script>

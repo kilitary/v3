@@ -25,14 +25,14 @@
             text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
         }
         a {
-            color: #416EB4;
-            text-decoration:  dotted #843b62;
+            color: #843b62;
+            text-decoration:  dotted #416EB4;
             text-decoration-thickness: 2px;
             transition: all 0.2s ease;
         }
         a:hover {
             transform: scale(1.05) rotate(1deg);
-            color: #843b62;
+            color: #416EB4;
             text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
         p {
@@ -59,7 +59,7 @@
             border-radius: 4px;
             font-family: 'Courier New', monospace;
             font-weight: bold;
-            color: #1A535C;
+            color: #2D2942;
         }
         pre {
             background: #fafafa;
@@ -81,12 +81,12 @@
         th {
             background: #ffffff;
             padding: 8px 12px;
-            border: 2px solid #843b62;
+            border: 2px solid #416EB4;
             font-weight: bold;
         }
         td {
             padding: 8px 12px;
-            border: 1px dashed #843b62;
+            border: 1px dashed #2E7D32;
         }
         tr:nth-child(odd) td {
             background: #ffffff;
@@ -95,7 +95,7 @@
             background: #fafafa;
         }
         hr {
-            border: 4px solid #6A0572;
+            border: 4px solid #C70039;
             background: transparent;
             margin: 1.5em 0;
             border-radius: 2px;
@@ -128,7 +128,7 @@
     <div class="confetti" id="confetti"></div>
     <a href="javascript:history.back()" class="back-link">← conceptLinker</a>
     <hr />
-<p style="color:#7B61FF;">promptId: conceptLinker
+<p style="color:#6A0572;">promptId: conceptLinker
 name: 🗞️conceptLinker
 description: Generate notes and links them from the current note's words
 author: Noureddine
@@ -141,59 +141,59 @@ disableProvider: true
 commands:
   - generate</p>
 <hr />
-<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #6A0572;">
-</code></pre></div>
+<pre class="codehilite"><code class="language-handlebars" style="color:#843b62;background:#fafafa;border:1px solid #7B61FF;">
+</code></pre>
 
 <hr />
 <hr />
-<p style="color:#7B61FF;">{{#script}}</p>
-<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #6A0572;"><span class="w">    </span><span class="c1">// Uses an external function &#39;gen&#39; to generate concepts and their definitions</span>
-<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">extractAndDefineConcepts</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Extract concepts from the following content and define them. Do not refer to the current note. do not refer to already refered concepts(contained in []). Return a json Record&lt;name, definition&gt;. Ensure the &#39;name&#39; is exactly as it appears in the text, without any modifications: \n</span><span class="si">${</span><span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\[\[.*?\]\]/g</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<p style="color:#6A0572;">{{#script}}</p>
+<pre class="codehilite"><code class="language-js" style="color:#843b62;background:#fafafa;border:1px solid #7B61FF;">    // Uses an external function 'gen' to generate concepts and their definitions
+    async function extractAndDefineConcepts(text) {
+        const prompt = `Extract concepts from the following content and define them. Do not refer to the current note. do not refer to already refered concepts(contained in []). Return a json Record&lt;name, definition&gt;. Ensure the 'name' is exactly as it appears in the text, without any modifications: \n${text.replace(/\[\[.*?\]\]/g, '')}`;
 
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">conceptData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">genJSON</span><span class="p">(</span><span class="nx">prompt</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns object</span>
+        const conceptData = await genJSON(prompt); // returns object
 
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">conceptData</span><span class="p">).</span><span class="nx">map</span><span class="p">(([</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">definition</span><span class="p">])</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">definition</span><span class="p">}));</span>
-<span class="w">    </span><span class="p">}</span>
+        return Object.entries(conceptData).map(([name, definition]) =&gt; ({name, definition}));
+    }
 
-<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">replaceConceptsWithLinks</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="nx">concepts</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">modifiedText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">text</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">concepts</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">concept</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">modifiedText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">modifiedText</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">(</span><span class="nx">concept</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;g&#39;</span><span class="p">),</span><span class="w"> </span><span class="sb">`[[</span><span class="si">${</span><span class="nx">concept</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">]]`</span><span class="p">);</span>
-<span class="w">        </span><span class="p">});</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">modifiedText</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+    function replaceConceptsWithLinks(text, concepts) {
+        let modifiedText = text;
+        concepts.forEach(concept =&gt; {
+            modifiedText = modifiedText.replace(new RegExp(concept.name, 'g'), `[[${concept.name}]]`);
+        });
+        return modifiedText;
+    }
 
-<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">createConceptPages</span><span class="p">(</span><span class="nx">concepts</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">currentFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">workspace</span><span class="p">.</span><span class="nx">getActiveFile</span><span class="p">().</span><span class="nx">parent</span><span class="p">.</span><span class="nx">path</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">concept</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">concepts</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">conceptFilePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">currentFolder</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">concept</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">.html`</span><span class="p">;</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">await</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">vault</span><span class="p">.</span><span class="nx">exists</span><span class="p">(</span><span class="nx">conceptFilePath</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="k">await</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">vault</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">conceptFilePath</span><span class="p">,</span><span class="w"> </span><span class="sb">`# </span><span class="si">${</span><span class="nx">concept</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">\n\n</span><span class="si">${</span><span class="nx">concept</span><span class="p">.</span><span class="nx">definition</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
+    async function createConceptPages(concepts) {
+        const currentFolder = app.workspace.getActiveFile().parent.path;
+        for (const concept of concepts) {
+            const conceptFilePath = `${currentFolder}/${concept.name}.html`;
+            if (!await app.vault.exists(conceptFilePath)) {
+                await app.vault.create(conceptFilePath, `# ${concept.name}\n\n${concept.definition}`);
+            }
+        }
+    }
 
-<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">extractConcepts</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">activeFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">workspace</span><span class="p">.</span><span class="nx">getActiveFile</span><span class="p">();</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">activeFile</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+    async function extractConcepts() {
+            const activeFile = app.workspace.getActiveFile();
+            if (!activeFile) return;
 
-<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">fileContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">+</span><span class="k">await</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">vault</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span><span class="nx">activeFile</span><span class="p">))</span>
+            const fileContent = (&quot;&quot;+await app.vault.read(activeFile))
 
-<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">concepts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">extractAndDefineConcepts</span><span class="p">(</span><span class="nx">fileContent</span><span class="p">);</span>
+            const concepts = await extractAndDefineConcepts(fileContent);
 
-<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">modifiedContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">replaceConceptsWithLinks</span><span class="p">(</span><span class="nx">fileContent</span><span class="p">,</span><span class="w"> </span><span class="nx">concepts</span><span class="p">);</span>
-<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span><span class="nx">modifiedContent</span><span class="p">})</span>
-<span class="w">            </span><span class="k">await</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">vault</span><span class="p">.</span><span class="nx">modify</span><span class="p">(</span><span class="nx">activeFile</span><span class="p">,</span><span class="w"> </span><span class="nx">modifiedContent</span><span class="p">);</span>
+            const modifiedContent = replaceConceptsWithLinks(fileContent, concepts);
+            console.log({modifiedContent})
+            await app.vault.modify(activeFile, modifiedContent);
 
-<span class="w">            </span><span class="k">await</span><span class="w"> </span><span class="nx">createConceptPages</span><span class="p">(</span><span class="nx">concepts</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
+            await createConceptPages(concepts);
+        }
 
-<span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">extractConcepts</span><span class="p">();</span>
-<span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
-</code></pre></div>
+ await extractConcepts();
+ return &quot;&quot;;
+</code></pre>
 
-<p style="color:#7B61FF;">{{/script}}</p>
+<p style="color:#6A0572;">{{/script}}</p>
 <!-- 64C29519 -->
     <script>
         // Sprinkle animated confetti that matches the kid-fest palette

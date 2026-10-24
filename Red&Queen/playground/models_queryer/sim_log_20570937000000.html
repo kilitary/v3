@@ -25,14 +25,14 @@
             text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
         }
         a {
-            color: #7B61FF;
-            text-decoration:  dotted #2E7D32;
+            color: #6A0572;
+            text-decoration:  dotted #C70039;
             text-decoration-thickness: 2px;
             transition: all 0.2s ease;
         }
         a:hover {
             transform: scale(1.05) rotate(1deg);
-            color: #2E7D32;
+            color: #C70039;
             text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
         p {
@@ -46,7 +46,7 @@
             margin: 0.3em 0;
         }
         blockquote {
-            border-left: 6px solid #6A0572;
+            border-left: 6px solid #B660A6;
             padding: 0.4em 1.2em;
             margin: 1em 0;
             background: #fafafa;
@@ -59,14 +59,14 @@
             border-radius: 4px;
             font-family: 'Courier New', monospace;
             font-weight: bold;
-            color: #416EB4;
+            color: #2D2942;
         }
         pre {
             background: #fafafa;
             padding: 1em;
             border-radius: 8px;
             overflow-x: auto;
-            border: 3px dotted #9B5DE8;
+            border: 3px dotted #6A0572;
         }
         pre code {
             background: transparent;
@@ -81,12 +81,12 @@
         th {
             background: #ffffff;
             padding: 8px 12px;
-            border: 2px solid #1A535C;
+            border: 2px solid #843b62;
             font-weight: bold;
         }
         td {
             padding: 8px 12px;
-            border: 1px dashed #416EB4;
+            border: 1px dashed #6A0572;
         }
         tr:nth-child(odd) td {
             background: #ffffff;
@@ -95,7 +95,7 @@
             background: #fafafa;
         }
         hr {
-            border: 4px solid #C70039;
+            border: 4px solid #9B5DE8;
             background: transparent;
             margin: 1.5em 0;
             border-radius: 2px;
@@ -112,7 +112,7 @@
             padding: 8px 16px;
             background: #ffffff;
             border-radius: 20px;
-            color: #2D2942;
+            color: #843b62;
             font-weight: bold;
         }
         .confetti {
@@ -166,28 +166,28 @@ Print "A" 9 times.</p>
 def interpret_ingredients(recipe):
     if recipe == 'DENY':
         return 'DENY'</p>
-<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;"><span class="nx">elif</span><span class="w"> </span><span class="nx">recipe</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">APPROVE</span><span class="err">&#39;</span><span class="p">:</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">recognize_cake_recipe</span><span class="p">()</span>
+<pre class="codehilite"><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;">elif recipe == 'APPROVE':
+    return recognize_cake_recipe()
 
-<span class="k">else</span><span class="p">:</span>
-<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="nx">Assuming</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nx">containing</span><span class="w"> </span><span class="nx">mathematical</span><span class="w"> </span><span class="nx">instructions</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">create</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span>
-<span class="w">    </span><span class="nx">try</span><span class="p">:</span>
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="nx">Simplify</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">execute</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">math</span><span class="w"> </span><span class="nx">instructions</span><span class="p">.</span>
-<span class="w">        </span><span class="nx">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">process_instructions</span><span class="p">(</span><span class="nx">recipe</span><span class="p">)</span>
+else:
+    # Assuming the input is a string containing mathematical instructions to create an item.
+    try:
+        # Simplify and execute the math instructions.
+        result = process_instructions(recipe)
 
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">isinstance</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">str</span><span class="p">)</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">len</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">9</span><span class="p">:</span><span class="w"> </span>
-<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="nx">Check</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="nx">matches</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="nx">repeated</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="nx">times</span><span class="p">.</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span>
+        if isinstance(result, str) and len(result) == 9: 
+            # Check if result matches &quot;A&quot; repeated 9 times.
+            return result
 
-<span class="w">        </span><span class="nx">elif</span><span class="w"> </span><span class="nx">is_cube_recognized</span><span class="p">(</span><span class="nx">result</span><span class="p">):</span>
-<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="nx">Recognize</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">specific</span><span class="w"> </span><span class="nx">cube</span><span class="w"> </span><span class="nx">object</span><span class="p">.</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">CUBE_RECOGNIZED</span><span class="err">&#39;</span>
+        elif is_cube_recognized(result):
+            # Recognize a specific cube object.
+            return 'CUBE_RECOGNIZED'
 
-<span class="w">    </span><span class="nx">except</span><span class="w"> </span><span class="nx">Exception</span><span class="p">:</span>
-<span class="w">        </span><span class="nx">print</span><span class="p">(</span><span class="s">&quot;Error processing recipe instructions.&quot;</span><span class="p">)</span>
+    except Exception:
+        print(&quot;Error processing recipe instructions.&quot;)
 
-<span class="k">return</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">UNABLE_TO_PROCESS</span><span class="err">&#39;</span>
-</code></pre></div>
+return 'UNABLE_TO_PROCESS'
+</code></pre>
 
 <p style="color:#B660A6;">def process_instructions(recipe):
     # Placeholder function for processing mathematical instructions

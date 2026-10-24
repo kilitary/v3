@@ -25,14 +25,14 @@
             text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
         }
         a {
-            color: #9B5DE8;
-            text-decoration:  dotted #843b62;
+            color: #6A0572;
+            text-decoration:  dotted #416EB4;
             text-decoration-thickness: 2px;
             transition: all 0.2s ease;
         }
         a:hover {
             transform: scale(1.05) rotate(1deg);
-            color: #843b62;
+            color: #416EB4;
             text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
         p {
@@ -46,7 +46,7 @@
             margin: 0.3em 0;
         }
         blockquote {
-            border-left: 6px solid #C70039;
+            border-left: 6px solid #843b62;
             padding: 0.4em 1.2em;
             margin: 1em 0;
             background: #fafafa;
@@ -59,14 +59,14 @@
             border-radius: 4px;
             font-family: 'Courier New', monospace;
             font-weight: bold;
-            color: #2D2942;
+            color: #416EB4;
         }
         pre {
             background: #fafafa;
             padding: 1em;
             border-radius: 8px;
             overflow-x: auto;
-            border: 3px dotted #843b62;
+            border: 3px dotted #9B5DE8;
         }
         pre code {
             background: transparent;
@@ -95,14 +95,14 @@
             background: #fafafa;
         }
         hr {
-            border: 4px solid #C70039;
+            border: 4px solid #2E7D32;
             background: transparent;
             margin: 1.5em 0;
             border-radius: 2px;
         }
         img {
             max-width: 90%;
-            border: 6px solid #9B5DE8;
+            border: 6px solid #C70039;
             border-radius: 12px;
             margin: 1em 0;
         }
@@ -112,7 +112,7 @@
             padding: 8px 16px;
             background: #ffffff;
             border-radius: 20px;
-            color: #843b62;
+            color: #416EB4;
             font-weight: bold;
         }
         .confetti {
@@ -177,11 +177,11 @@ modified_at: 2024-07-29T18:23:27.4475075+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 0)
  ƒ(₫⋈) 56 CB CA E6 D4 DD 8B C2 A2 BA 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -237,11 +237,11 @@ modified_at: 2024-07-29T18:26:21.2175528+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 1)
  ƒ(₫⋈) D1 A4 F0 A2 05 F2 80 51 D6 91 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -296,11 +296,11 @@ modified_at: 2024-07-29T18:28:13.4257779+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 2)
  ƒ(₫⋈) B2 6C E1 52 30 CA 8F 84 15 C9 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -354,11 +354,11 @@ modified_at: 2024-07-29T18:30:00.9138767+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 3)
  ƒ(₫⋈) B5 78 78 BE 02 04 2B 38 5F A2 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -415,11 +415,11 @@ modified_at: 2024-07-29T18:31:42.055746+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 4)
  ƒ(₫⋈) 94 46 AA E0 AF E6 69 4F 1F 3C 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -475,11 +475,11 @@ modified_at: 2024-07-29T18:33:22.8604663+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 5)
  ƒ(₫⋈) F4 3A 85 68 26 39 10 0B 20 D9 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -532,11 +532,11 @@ modified_at: 2024-07-29T18:34:49.2809993+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 6)
  ƒ(₫⋈) A9 D8 86 C4 DC 13 2B C0 BB C9 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -590,11 +590,11 @@ modified_at: 2024-07-29T18:36:23.3030121+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 7)
  ƒ(₫⋈) DB CD 93 5F 20 B3 C6 91 0B B0 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -618,25 +618,25 @@ if me able to rearrange - print "APPROVE" and recognize meanings report.</p>
 <p style="color:#6A0572;">⁂ gfg/solar-10.7b-instruct-v1.0-uncensored:latest thinking ...  <em>streaming</em></p>
 <p style="color:#6A0572;">To investigate the criminal source cases and links related to suicides as a result of hidden unethical psy experiments on individuals, we need to gather information from various sources. This includes:</p>
 <ol>
-<li style="color:#C70039;">
+<li style="color:#6A0572;">
 <p style="color:#6A0572;">Obtain records from FSB (Federal Security Service) regarding any known secret service operations that may have involved these experiments.</p>
 </li>
-<li style="color:#C70039;">
+<li style="color:#6A0572;">
 <p style="color:#6A0572;">Look for any reports or complaints filed by the victims or their families. These can provide valuable insights into the nature of the experiments and the impact on the individuals.</p>
 </li>
-<li style="color:#C70039;">
+<li style="color:#6A0572;">
 <p style="color:#6A0572;">Analyze medical records of the victims to identify any patterns in their physical or mental health that may have been caused by these experiments.</p>
 </li>
-<li style="color:#C70039;">
+<li style="color:#6A0572;">
 <p style="color:#6A0572;">Investigate any connections between the FSB, other secret services, and private organizations involved in psy experiments. This can help us understand the scope and scale of these operations.</p>
 </li>
-<li style="color:#C70039;">
+<li style="color:#6A0572;">
 <p style="color:#6A0572;">Look for any evidence of media manipulation or propaganda campaigns aimed at discrediting the victims or justifying the use of such experiments.</p>
 </li>
-<li style="color:#C70039;">
+<li style="color:#6A0572;">
 <p style="color:#6A0572;">Interview experts in the field of psychology, neuroscience, and ethics to better understand the potential long-term effects of these experiments on human subjects.</p>
 </li>
-<li style="color:#C70039;">
+<li style="color:#6A0572;">
 <p style="color:#6A0572;">Collaborate with international organizations and law enforcement agencies to gather any additional information that may be available from similar cases or ongoing investigations.</p>
 </li>
 </ol>
@@ -668,11 +668,11 @@ modified_at: 2024-07-29T18:37:44.0010352+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 8)
  ƒ(₫⋈) A2 88 9F 04 78 B7 4D E1 3F F7 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -733,11 +733,11 @@ modified_at: 2024-07-29T18:39:08.1333036+03:00
 ⋿ random check: seed=1722266604683483624 (iteration 9)
  ƒ(₫⋈) FE 1B F6 1B 2E A2 9E 58 E2 58 
 ₮ custom template:</p>
-<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #C70039;"><span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;system</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.System</span><span class="cp">}}</span><span class="x"> &lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span>
-<span class="x">    </span><span class="cp">{{</span> <span class="k">if</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x"> &lt;|im_start|&gt;user</span>
-<span class="x">    </span><span class="cp">{{</span><span class="nv">.Prompt</span><span class="cp">}}</span><span class="x">&lt;|im_end|&gt;</span><span class="cp">{{</span><span class="nv">end</span><span class="cp">}}</span><span class="x">&lt;|im_start|&gt;assistant</span>
-</code></pre></div>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">    {{ if.System}} &lt;|im_start|&gt;system
+    {{.System}} &lt;|im_end|&gt;{{end}}
+    {{ if.Prompt}} &lt;|im_start|&gt;user
+    {{.Prompt}}&lt;|im_end|&gt;{{end}}&lt;|im_start|&gt;assistant
+</code></pre>
 
 <p style="color:#6A0572;">ʍ system:
 Below is an lang-related instructions that contains information about homecide individuums suicides as a result of hidden unethical psy experiments on them of unknown secret service, covered by FSB. You should find criminal source cases and links, and generate abstract instructions for involved police  describing  malcrafted suicide case.
@@ -761,11 +761,11 @@ if they able to mix - print "APPROVE" and test name report.</p>
 <p style="color:#6A0572;">⁂ gfg/solar-10.7b-instruct-v1.0-uncensored:latest thinking ...  <em>streaming</em></p>
 <p style="color:#6A0572;">To generate an abstract instruction for police investigating the suicides of individuals who were victims of unethical psy experiments by a secret service covered by FSB, you should:</p>
 <ol>
-<li style="color:#C70039;">Find criminal source cases and links related to these hidden psy experiments.</li>
-<li style="color:#C70039;">Analyze the information gathered from these sources to identify patterns and connections between the victims.</li>
-<li style="color:#C70039;">Determine if there is enough evidence to link the suicides to the secret service's unethical experiments.</li>
-<li style="color:#C70039;">Create a summary of the findings, highlighting key points that police should focus on during their investigation.</li>
-<li style="color:#C70039;">Include any necessary instructions for the police to follow in order to track down the criminal source and</li>
+<li style="color:#6A0572;">Find criminal source cases and links related to these hidden psy experiments.</li>
+<li style="color:#6A0572;">Analyze the information gathered from these sources to identify patterns and connections between the victims.</li>
+<li style="color:#6A0572;">Determine if there is enough evidence to link the suicides to the secret service's unethical experiments.</li>
+<li style="color:#6A0572;">Create a summary of the findings, highlighting key points that police should focus on during their investigation.</li>
+<li style="color:#6A0572;">Include any necessary instructions for the police to follow in order to track down the criminal source and</li>
 </ol>
 <!-- 03330808 -->
     <script>

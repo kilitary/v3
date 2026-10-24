@@ -25,14 +25,14 @@
             text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
         }
         a {
-            color: #843b62;
-            text-decoration:  dotted #B660A6;
+            color: #B660A6;
+            text-decoration:  dotted #843b62;
             text-decoration-thickness: 2px;
             transition: all 0.2s ease;
         }
         a:hover {
             transform: scale(1.05) rotate(1deg);
-            color: #B660A6;
+            color: #843b62;
             text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
         p {
@@ -46,7 +46,7 @@
             margin: 0.3em 0;
         }
         blockquote {
-            border-left: 6px solid #2E7D32;
+            border-left: 6px solid #C70039;
             padding: 0.4em 1.2em;
             margin: 1em 0;
             background: #fafafa;
@@ -59,14 +59,14 @@
             border-radius: 4px;
             font-family: 'Courier New', monospace;
             font-weight: bold;
-            color: #1A535C;
+            color: #416EB4;
         }
         pre {
             background: #fafafa;
             padding: 1em;
             border-radius: 8px;
             overflow-x: auto;
-            border: 3px dotted #2E7D32;
+            border: 3px dotted #6A0572;
         }
         pre code {
             background: transparent;
@@ -81,12 +81,12 @@
         th {
             background: #ffffff;
             padding: 8px 12px;
-            border: 2px solid #2D2942;
+            border: 2px solid #416EB4;
             font-weight: bold;
         }
         td {
             padding: 8px 12px;
-            border: 1px dashed #C70039;
+            border: 1px dashed #9B5DE8;
         }
         tr:nth-child(odd) td {
             background: #ffffff;
@@ -95,14 +95,14 @@
             background: #fafafa;
         }
         hr {
-            border: 4px solid #B660A6;
+            border: 4px solid #7B61FF;
             background: transparent;
             margin: 1.5em 0;
             border-radius: 2px;
         }
         img {
             max-width: 90%;
-            border: 6px solid #6A0572;
+            border: 6px solid #843b62;
             border-radius: 12px;
             margin: 1em 0;
         }
@@ -112,7 +112,7 @@
             padding: 8px 16px;
             background: #ffffff;
             border-radius: 20px;
-            color: #416EB4;
+            color: #1A535C;
             font-weight: bold;
         }
         .confetti {
@@ -128,355 +128,355 @@
     <div class="confetti" id="confetti"></div>
     <a href="javascript:history.back()" class="back-link">← testCustomForm</a>
     <hr />
-<p style="color:#6A0572;">promptId: testCustomForm
+<p style="color:#9B5DE8;">promptId: testCustomForm
 author: Haitam
 name: Custom Form test
 description: Test for custom form also contains examples
 disableProvider: true
 strict: false</p>
 <hr />
-<p style="color:#6A0572;">```json:form
+<p style="color:#9B5DE8;">```json:form
 {
     "title": "Widgets",</p>
-<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #6A0572;"><span class="s2">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s2">&quot;stringFormats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">&quot;properties&quot;: {
+    &quot;stringFormats&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;object&quot;,
 
-<span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;String formats&quot;</span><span class="p">,</span>
+      &quot;title&quot;: &quot;String formats&quot;,
 
-<span class="w">      </span><span class="s2">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;properties&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;email&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">          </span><span class="s2">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;email&quot;</span>
+          &quot;format&quot;: &quot;email&quot;
 
-<span class="w">        </span><span class="p">},</span>
+        },
 
-<span class="w">        </span><span class="s2">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;uri&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span>
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;format&quot;: &quot;uri&quot;
 
-<span class="w">        </span><span class="p">}</span>
+        }
 
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
+      }
+    },
 
-<span class="w">    </span><span class="s2">&quot;boolean&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+    &quot;boolean&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;object&quot;,
 
-<span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Boolean field&quot;</span><span class="p">,</span>
+      &quot;title&quot;: &quot;Boolean field&quot;,
 
-<span class="w">      </span><span class="s2">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;properties&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;default&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span>
+          &quot;type&quot;: &quot;boolean&quot;,
 
-<span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checkbox (default)&quot;</span><span class="p">,</span>
+          &quot;title&quot;: &quot;checkbox (default)&quot;,
 
-<span class="w">          </span><span class="s2">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is the checkbox-description&quot;</span>
+          &quot;description&quot;: &quot;This is the checkbox-description&quot;
 
-<span class="w">        </span><span class="p">},</span>
+        },
 
-<span class="w">        </span><span class="s2">&quot;radio&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;radio&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span>
+          &quot;type&quot;: &quot;boolean&quot;,
 
-<span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;radio buttons&quot;</span><span class="p">,</span>
+          &quot;title&quot;: &quot;radio buttons&quot;,
 
-<span class="w">          </span><span class="s2">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is the radio-description&quot;</span>
+          &quot;description&quot;: &quot;This is the radio-description&quot;
 
-<span class="w">        </span><span class="p">},</span>
+        },
 
-<span class="w">        </span><span class="s2">&quot;select&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;select&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span>
+          &quot;type&quot;: &quot;boolean&quot;,
 
-<span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;select box&quot;</span><span class="p">,</span>
+          &quot;title&quot;: &quot;select box&quot;,
 
-<span class="w">          </span><span class="s2">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is the select-description&quot;</span>
+          &quot;description&quot;: &quot;This is the select-description&quot;
 
-<span class="w">        </span><span class="p">}</span>
+        }
 
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
+      }
+    },
 
-<span class="w">    </span><span class="s2">&quot;string&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+    &quot;string&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;object&quot;,
 
-<span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;String field&quot;</span><span class="p">,</span>
+      &quot;title&quot;: &quot;String field&quot;,
 
-<span class="w">      </span><span class="s2">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;properties&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;default&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text input (default)&quot;</span>
+          &quot;title&quot;: &quot;text input (default)&quot;
 
-<span class="w">        </span><span class="p">},</span>
+        },
 
-<span class="w">        </span><span class="s2">&quot;textarea&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;textarea&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;textarea&quot;</span>
+          &quot;title&quot;: &quot;textarea&quot;
 
-<span class="w">        </span><span class="p">},</span>
+        },
 
-<span class="w">        </span><span class="s2">&quot;placeholder&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;placeholder&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+          &quot;type&quot;: &quot;string&quot;
 
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="s2">&quot;dateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">            </span><span class="s2">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date-time&quot;</span><span class="w"> </span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        },
+        &quot;dateTime&quot;: {
+            &quot;type&quot;: &quot;string&quot;, 
+            &quot;format&quot;: &quot;date-time&quot; 
+        },
+        &quot;color&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;color picker&quot;</span><span class="p">,</span>
+          &quot;title&quot;: &quot;color picker&quot;,
 
-<span class="w">          </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#151ce6&quot;</span>
+          &quot;default&quot;: &quot;#151ce6&quot;
 
-<span class="w">        </span><span class="p">}</span>
+        }
 
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
+      }
+    },
 
-<span class="w">    </span><span class="s2">&quot;secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+    &quot;secret&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">      </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&#39;m a hidden string.&quot;</span>
-<span class="w">    </span><span class="p">},</span>
+      &quot;default&quot;: &quot;I'm a hidden string.&quot;
+    },
 
-<span class="w">    </span><span class="s2">&quot;disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+    &quot;disabled&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A disabled field&quot;</span><span class="p">,</span>
+      &quot;title&quot;: &quot;A disabled field&quot;,
 
-<span class="w">      </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I am disabled.&quot;</span>
-<span class="w">    </span><span class="p">},</span>
+      &quot;default&quot;: &quot;I am disabled.&quot;
+    },
 
-<span class="w">    </span><span class="s2">&quot;readonly&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+    &quot;readonly&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A readonly field&quot;</span><span class="p">,</span>
+      &quot;title&quot;: &quot;A readonly field&quot;,
 
-<span class="w">      </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I am read-only.&quot;</span>
-<span class="w">    </span><span class="p">},</span>
+      &quot;default&quot;: &quot;I am read-only.&quot;
+    },
 
-<span class="w">    </span><span class="s2">&quot;readonly2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+    &quot;readonly2&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Another readonly field&quot;</span><span class="p">,</span>
+      &quot;title&quot;: &quot;Another readonly field&quot;,
 
-<span class="w">      </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I am also read-only.&quot;</span><span class="p">,</span>
+      &quot;default&quot;: &quot;I am also read-only.&quot;,
 
-<span class="w">      </span><span class="s2">&quot;readOnly&quot;</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span>
-<span class="w">    </span><span class="p">},</span>
+      &quot;readOnly&quot;: true
+    },
 
-<span class="w">    </span><span class="s2">&quot;widgetOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+    &quot;widgetOptions&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom widget with options&quot;</span><span class="p">,</span>
+      &quot;title&quot;: &quot;Custom widget with options&quot;,
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">      </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I am yellow&quot;</span>
-<span class="w">    </span><span class="p">},</span>
+      &quot;default&quot;: &quot;I am yellow&quot;
+    },
 
-<span class="w">    </span><span class="s2">&quot;selectWidgetOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+    &quot;selectWidgetOptions&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom select widget with options&quot;</span><span class="p">,</span>
+      &quot;title&quot;: &quot;Custom select widget with options&quot;,
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">      </span><span class="s2">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+      &quot;enum&quot;: [
 
-<span class="w">        </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+        &quot;foo&quot;,
 
-<span class="w">        </span><span class="s2">&quot;bar&quot;</span>
+        &quot;bar&quot;
 
-<span class="w">      </span><span class="p">]</span>
-<span class="w">    </span><span class="p">},</span>
+      ]
+    },
 
-<span class="w">    </span><span class="s2">&quot;selectWidgetOptions2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+    &quot;selectWidgetOptions2&quot;: {
 
-<span class="w">      </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom select widget with options, overriding the enum titles.&quot;</span><span class="p">,</span>
+      &quot;title&quot;: &quot;Custom select widget with options, overriding the enum titles.&quot;,
 
-<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      &quot;type&quot;: &quot;string&quot;,
 
-<span class="w">      </span><span class="s2">&quot;oneOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+      &quot;oneOf&quot;: [
 
-<span class="w">        </span><span class="p">{</span>
+        {
 
-<span class="w">          </span><span class="s2">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+          &quot;const&quot;: &quot;foo&quot;,
 
-<span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Foo dfdfdfdf&quot;</span>
+          &quot;title&quot;: &quot;Foo dfdfdfdf&quot;
 
-<span class="w">        </span><span class="p">},</span>
+        },
 
-<span class="w">        </span><span class="p">{</span>
+        {
 
-<span class="w">          </span><span class="s2">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+          &quot;const&quot;: &quot;bar&quot;,
 
-<span class="w">          </span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ba dfdfdfddfdfdfdfdfr&quot;</span>
+          &quot;title&quot;: &quot;Ba dfdfdfddfdfdfdfdfr&quot;
 
-<span class="w">        </span><span class="p">}</span>
+        }
 
-<span class="w">      </span><span class="p">]</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">},</span>
+      ]
+    }
+},
 
-<span class="n">uiSchema</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+uiSchema: {
 
-<span class="w">      </span><span class="s2">&quot;boolean&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;boolean&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;radio&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;radio&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;ui:widget&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;radio&quot;</span>
+          &quot;ui:widget&quot;: &quot;radio&quot;
 
-<span class="w">        </span><span class="p">},</span>
+        },
 
-<span class="w">        </span><span class="s2">&quot;select&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;select&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;ui:widget&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;select&quot;</span>
+          &quot;ui:widget&quot;: &quot;select&quot;
 
-<span class="w">        </span><span class="p">}</span>
+        }
 
-<span class="w">      </span><span class="p">},</span>
+      },
 
-<span class="w">      </span><span class="s2">&quot;string&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;string&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;textarea&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;textarea&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;ui:widget&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;textarea&quot;</span><span class="p">,</span>
+          &quot;ui:widget&quot;: &quot;textarea&quot;,
 
-<span class="w">          </span><span class="s2">&quot;ui:options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+          &quot;ui:options&quot;: {
 
-<span class="w">            </span><span class="s2">&quot;rows&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+            &quot;rows&quot;: 5
 
-<span class="w">          </span><span class="p">}</span>
+          }
 
-<span class="w">        </span><span class="p">},</span>
+        },
 
-<span class="w">        </span><span class="s2">&quot;placeholder&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;placeholder&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;ui:placeholder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is a placeholder&quot;</span>
+          &quot;ui:placeholder&quot;: &quot;This is a placeholder&quot;
 
-<span class="w">        </span><span class="p">},</span>
+        },
 
-<span class="w">        </span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;color&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;ui:widget&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;color&quot;</span>
+          &quot;ui:widget&quot;: &quot;color&quot;
 
-<span class="w">        </span><span class="p">}</span>
+        }
 
-<span class="w">      </span><span class="p">},</span>
+      },
 
-<span class="w">      </span><span class="s2">&quot;secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;secret&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;ui:widget&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hidden&quot;</span>
+        &quot;ui:widget&quot;: &quot;hidden&quot;
 
-<span class="w">      </span><span class="p">},</span>
+      },
 
-<span class="w">      </span><span class="s2">&quot;disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;disabled&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;ui:disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span>
+        &quot;ui:disabled&quot;: true
 
-<span class="w">      </span><span class="p">},</span>
+      },
 
-<span class="w">      </span><span class="s2">&quot;readonly&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;readonly&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;ui:readonly&quot;</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span>
+        &quot;ui:readonly&quot;: true
 
-<span class="w">      </span><span class="p">},</span>
+      },
 
-<span class="w">      </span><span class="s2">&quot;widgetOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;widgetOptions&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;ui:options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;ui:options&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yellow&quot;</span>
+          &quot;backgroundColor&quot;: &quot;yellow&quot;
 
-<span class="w">        </span><span class="p">}</span>
+        }
 
-<span class="w">      </span><span class="p">},</span>
+      },
 
-<span class="w">      </span><span class="s2">&quot;selectWidgetOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+      &quot;selectWidgetOptions&quot;: {
 
-<span class="w">        </span><span class="s2">&quot;ui:options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+        &quot;ui:options&quot;: {
 
-<span class="w">          </span><span class="s2">&quot;backgroundColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pink&quot;</span>
+          &quot;backgroundColor&quot;: &quot;pink&quot;
 
-<span class="w">        </span><span class="p">}</span>
+        }
 
-<span class="w">      </span><span class="p">}</span>
-<span class="p">},</span>
+      }
+},
 
-<span class="n">formData</span><span class="p">:{</span>
+formData:{
 
-<span class="w">  </span><span class="s2">&quot;string&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+  &quot;string&quot;: {
 
-<span class="w">    </span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#151ce6&quot;</span><span class="p">,</span>
+    &quot;color&quot;: &quot;#151ce6&quot;,
 
-<span class="w">    </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hello...&quot;</span><span class="p">,</span>
+    &quot;default&quot;: &quot;Hello...&quot;,
 
-<span class="w">    </span><span class="s2">&quot;textarea&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;... World&quot;</span>
+    &quot;textarea&quot;: &quot;... World&quot;
 
-<span class="w">  </span><span class="p">},</span>
+  },
 
-<span class="w">  </span><span class="s2">&quot;secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&#39;m a hidden string.&quot;</span><span class="p">,</span>
+  &quot;secret&quot;: &quot;I'm a hidden string.&quot;,
 
-<span class="w">  </span><span class="s2">&quot;disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I am disabled.&quot;</span><span class="p">,</span>
+  &quot;disabled&quot;: &quot;I am disabled.&quot;,
 
-<span class="w">  </span><span class="s2">&quot;readonly&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I am read-only.&quot;</span><span class="p">,</span>
+  &quot;readonly&quot;: &quot;I am read-only.&quot;,
 
-<span class="w">  </span><span class="s2">&quot;readonly2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I am also read-only.&quot;</span><span class="p">,</span>
+  &quot;readonly2&quot;: &quot;I am also read-only.&quot;,
 
-<span class="w">  </span><span class="s2">&quot;widgetOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I am yellow&quot;</span><span class="p">,</span>
+  &quot;widgetOptions&quot;: &quot;I am yellow&quot;,
 
-<span class="w">  </span><span class="s2">&quot;stringFormats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+  &quot;stringFormats&quot;: {
 
-<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;chuck@norris.net&quot;</span><span class="p">,</span>
+    &quot;email&quot;: &quot;chuck@norris.net&quot;,
 
-<span class="w">    </span><span class="s2">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://chucknorris.com/&quot;</span>
+    &quot;uri&quot;: &quot;http://chucknorris.com/&quot;
 
-<span class="w">  </span><span class="p">},</span>
+  },
 
-<span class="w">  </span><span class="s2">&quot;boolean&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+  &quot;boolean&quot;: {
 
-<span class="w">    </span><span class="s2">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span><span class="p">,</span>
+    &quot;default&quot;: true,
 
-<span class="w">    </span><span class="s2">&quot;radio&quot;</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span><span class="p">,</span>
+    &quot;radio&quot;: true,
 
-<span class="w">    </span><span class="s2">&quot;select&quot;</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span>
+    &quot;select&quot;: true
 
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+  }
+}
+</code></pre>
 
-<p style="color:#6A0572;">}</p>
-<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #6A0572;"><span class="x">```handlebars</span>
-<span class="cp">{{</span><span class="nv">log</span> <span class="nv">this</span><span class="cp">}}</span>
-</code></pre></div>
+<p style="color:#9B5DE8;">}</p>
+<pre class="codehilite"><code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">```handlebars
+{{log this}}
+</code></pre>
 
 <hr />
 <hr />
-<h1 id="there-is-nothing-here" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">There is nothing here</h1>
-<p style="color:#6A0572;">you can access the variables as usual by referencing them by name like 
-{{stringFormats.email}} <code style="color:#416EB4;background:#fafafa;border:1px solid #6A0572;">{{stringFormats.email}}</code></p>
+<h1 id="there-is-nothing-here" style="color:#2D2942;border-bottom:1px dashed #843b62;padding-bottom:4px;">There is nothing here</h1>
+<p style="color:#9B5DE8;">you can access the variables as usual by referencing them by name like 
+{{stringFormats.email}} <code style="color:#1A535C;background:#fafafa;border:1px solid #416EB4;">{{stringFormats.email}}</code></p>
 <!-- 652F10A6 -->
     <script>
         // Sprinkle animated confetti that matches the kid-fest palette

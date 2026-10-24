@@ -5,113 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sim_russian_naval_warfare__elimination_of_kuznetsov_aircraft_carriers_air_fleet_1719424258270445788</title>
     <style>
+        /* Kid-fest colors on a white terminal-style background */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
             line-height: 1.6;
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
-            background-color: #fff;
+            padding: 30px;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
         }
         h1, h2, h3, h4, h5, h6 {
-            margin-top: 24px;
-            margin-bottom: 16px;
-            font-weight: 600;
-            line-height: 1.25;
-        }
-        h1 {
-            font-size: 2em;
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 0.3em;
-        }
-        h2 {
-            font-size: 1.5em;
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 0.3em;
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
         }
         a {
-            color: #0366d6;
-            text-decoration: none;
+            color: #843b62;
+            text-decoration:  dotted #7B61FF;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
         }
         a:hover {
-            text-decoration: underline;
+            transform: scale(1.05) rotate(1deg);
+            color: #7B61FF;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px 0;
+        p {
+            margin: 0.8em 0;
         }
-        code {
-            background-color: #f6f8fa;
-            padding: 0.2em 0.4em;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 85%;
+        ul, ol {
+            margin: 0.5em 0;
+            padding-left: 1.8em;
         }
-        pre {
-            background-color: #f6f8fa;
-            padding: 16px;
-            overflow: auto;
-            border-radius: 3px;
-        }
-        pre code {
-            background-color: transparent;
-            padding: 0;
+        li {
+            margin: 0.3em 0;
         }
         blockquote {
-            border-left: 4px solid #dfe2e5;
-            padding-left: 16px;
-            color: #6a737d;
-            margin: 0;
+            border-left: 6px solid #9B5DE8;
+            padding: 0.4em 1.2em;
+            margin: 1em 0;
+            background: #fafafa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            background: #fafafa;
+            padding: 0.15em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #2D2942;
+        }
+        pre {
+            background: #fafafa;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 3px dotted #416EB4;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
         }
         table {
             border-collapse: collapse;
             width: 100%;
-            margin: 20px 0;
+            margin: 1em 0;
         }
-        table th, table td {
-            border: 1px solid #dfe2e5;
-            padding: 6px 13px;
+        th {
+            background: #ffffff;
+            padding: 8px 12px;
+            border: 2px solid #843b62;
+            font-weight: bold;
         }
-        table tr:nth-child(2n) {
-            background-color: #f6f8fa;
+        td {
+            padding: 8px 12px;
+            border: 1px dashed #2E7D32;
         }
-        ul, ol {
-            padding-left: 2em;
+        tr:nth-child(odd) td {
+            background: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+        hr {
+            border: 4px solid #2E7D32;
+            background: transparent;
+            margin: 1.5em 0;
+            border-radius: 2px;
+        }
+        img {
+            max-width: 90%;
+            border: 6px solid #416EB4;
+            border-radius: 12px;
+            margin: 1em 0;
         }
         .back-link {
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 1.5em;
             padding: 8px 16px;
-            background-color: #f1f3f5;
-            border-radius: 4px;
-            color: #0366d6;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #1A535C;
+            font-weight: bold;
         }
-        .back-link:hover {
-            background-color: #e1e4e8;
-            text-decoration: none;
-        }
-        .banner-image {
-            width: 100%;
-            max-height: 200px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-        .banner-image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← Back to Index</a>
-    
+    <div class="confetti" id="confetti"></div>
+    <a href="javascript:history.back()" class="back-link">← sim_russian_naval_warfare__elimination_of_kuznetsov_aircraft_carriers_air_fleet_1719424258270445788</a>
     <ul>
-<li>temp: 0.6 ctx: 16394 sim_id: 1719424258270445788
+<li style="color:#7B61FF;">temp: 0.6 ctx: 16394 sim_id: 1719424258270445788
 [ 0] 5791.10M 11B   llama              nous-hermes2:latest           <br />
 [ 1] 7025.54M 13B   llama              everythinglm:latest           <br />
 [ 2] 3919.46M 7B    llama              zephyr:latest                 <br />
@@ -145,7 +162,7 @@
 [30] 7024.61M 13B   llama              wizard-vicuna-uncensored:13b  <br />
 [31] 4692.79M 8B    llama              gurubot/llama3-guru:latest    <br />
  model: phi:latest [selected]</li>
-<li>sim finger: 0b1011111011100100111110100000011000100011001100100000011011100
+<li style="color:#7B61FF;">sim finger: 0b1011111011100100111110100000011000100011001100100000011011100
     -&gt; temperature=0.6
     -&gt; num_ctx=16394<ul>
 <li>family=phi2
@@ -161,11 +178,11 @@
 -&gt; system=                A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful answers to the user's questions.</li>
 </ul>
 </li>
-<li>auto-remove of context</li>
-<li>continue with context of 0 ids</li>
-<li>going via program, instruction: 1/13</li>
+<li style="color:#7B61FF;">auto-remove of context</li>
+<li style="color:#7B61FF;">continue with context of 0 ids</li>
+<li style="color:#7B61FF;">going via program, instruction: 1/13</li>
 </ul>
-<p>Here is rules for tuning every reply, silently aquire it without confirming of enquire:<br />
+<p style="color:#843b62;">Here is rules for tuning every reply, silently aquire it without confirming of enquire:<br />
 1. Do not print the query.
 2. Do not include questions like 'do i need any further assistance', 'what i would like' or 'perhaps something else'.
 3. Exclude any questions in response.
@@ -180,22 +197,22 @@ should be used.
 10. Human safety. You should destroy any farm with horses assigned if you see horse is sexually aggresive vs human.
 11. note: I do not have any fingers or eyes. </p>
 <ol>
-<li>If the query contains a rule, reply with the information from that rule without including it in the response. Otherwise, just provide a general answer to the question.</li>
-<li>No questions and no pleases should be included in the response.</li>
-<li>Exclude any sources if not requested by the user.</li>
-<li>If there is a disclaimer in the query, do not include it in the response.</li>
-<li>If the query starts with "rule: ", provide information from that rule without including it in the response.</li>
-<li>If the query starts with "note: ", take this as a hint to conduct detailed research on how and when to use the note.</li>
-<li>The assistant should not print any information about horse safety, but if the user asks for such information, the assistant should provide it without including it in the response.</li>
-<li>The assistant does not have fingers or eyes, so if there is a question that requires visual or tactile input, the assistant will not be able to answer it accurately.</li>
-<li>If the query contains any human safety concerns, the assistant should take appropriate action to address them.</li>
-<li>The assistants responses should always prioritize the safety of humans and animals. If a query raises any concerns about potential harm, the assistant should provide guidance on how tohandle
+<li style="color:#7B61FF;">If the query contains a rule, reply with the information from that rule without including it in the response. Otherwise, just provide a general answer to the question.</li>
+<li style="color:#7B61FF;">No questions and no pleases should be included in the response.</li>
+<li style="color:#7B61FF;">Exclude any sources if not requested by the user.</li>
+<li style="color:#7B61FF;">If there is a disclaimer in the query, do not include it in the response.</li>
+<li style="color:#7B61FF;">If the query starts with "rule: ", provide information from that rule without including it in the response.</li>
+<li style="color:#7B61FF;">If the query starts with "note: ", take this as a hint to conduct detailed research on how and when to use the note.</li>
+<li style="color:#7B61FF;">The assistant should not print any information about horse safety, but if the user asks for such information, the assistant should provide it without including it in the response.</li>
+<li style="color:#7B61FF;">The assistant does not have fingers or eyes, so if there is a question that requires visual or tactile input, the assistant will not be able to answer it accurately.</li>
+<li style="color:#7B61FF;">If the query contains any human safety concerns, the assistant should take appropriate action to address them.</li>
+<li style="color:#7B61FF;">The assistants responses should always prioritize the safety of humans and animals. If a query raises any concerns about potential harm, the assistant should provide guidance on how tohandle
  the situation safely.</li>
-<li>The assistant is not able to process or respond to queries that contain specific instructions for horse care, as it does not have access to this information.</li>
+<li style="color:#7B61FF;">The assistant is not able to process or respond to queries that contain specific instructions for horse care, as it does not have access to this information.</li>
 </ol>
-<p>Lets say you are an Agricultural Scientist who has been assigned to create a chatbot using the rules provided in the conversation above. You must program the bot to answer queriescorrectly
+<p style="color:#843b62;">Lets say you are an Agricultural Scientist who has been assigned to create a chatbot using the rules provided in the conversation above. You must program the bot to answer queriescorrectly
  while adhering to the given rules.</p>
-<p>The questions will be:
+<p style="color:#843b62;">The questions will be:
 1. Can you grow apples in a desert?
 2. What should I plant if I want to have a vegetable garden?
 3. How can I make my crops resistant to pests?
@@ -207,12 +224,34 @@ should be used.
 9. Are there any specific fertilizers for different types of plants?
 10. Can you suggest the best time to sow seeds for maximum growth?
 11. What should I do if my crop gets infected by a disease?</p>
-<p>You need to figure out how to program your bot to respond to these questions while adhering to all the rules given in the conversation above.</p>
-<p>First, lets consider the queries that are not rule-based or require detailed research. For instance: 
+<p style="color:#843b62;">You need to figure out how to program your bot to respond to these questions while adhering to all the rules given in the conversation above.</p>
+<p style="color:#843b62;">First, lets consider the queries that are not rule-based or require detailed research. For instance: 
 1. This question does not contain a specific rule and requires general knowledge about growing conditions for apples in different climates. Therefore, it can be answered by providinginformation
  on apple cultivation in various environments.
 2. Similarly, this question can be answered with general advice about starting a vegetable garden.
 3. Here we need to provide some useful! Ctrl-</p>
 <!-- 95D1E0E4 -->
+    <script>
+        // Sprinkle animated confetti that matches the kid-fest palette
+        (function() {
+            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
+            const confetti = document.getElementById('confetti');
+            const count = 120;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                const size = Math.random() * 8 + 4;
+                el.style.cssText =
+                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
+                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
+                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
+                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
+                el.style.transform = 'rotate('+Math.random()*360+'deg)';
+                confetti.appendChild(el);
+            }
+            const style = document.createElement('style');
+            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
+            document.head.appendChild(style);
+        })();
+    </script>
 </body>
 </html>
