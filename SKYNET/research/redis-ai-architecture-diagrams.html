@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Redis AI Architecture Diagrams"</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 85%;
+        }
+        pre {
+            background-color: #f6f8fa;
+            padding: 16px;
+            overflow: auto;
+            border-radius: 3px;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        blockquote {
+            border-left: 4px solid #dfe2e5;
+            padding-left: 16px;
+            color: #6a737d;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #dfe2e5;
+            padding: 6px 13px;
+        }
+        table tr:nth-child(2n) {
+            background-color: #f6f8fa;
+        }
+        ul, ol {
+            padding-left: 2em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            background-color: #f1f3f5;
+            border-radius: 4px;
+            color: #0366d6;
+        }
+        .back-link:hover {
+            background-color: #e1e4e8;
+            text-decoration: none;
+        }
+        .banner-image {
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .banner-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <ul>
+<li>redis</li>
+<li>ai</li>
+<li>architecture</li>
+<li>diagrams</li>
+<li>visualization
+state: Documentation
+type: visual-documentation</li>
+</ul>
+<hr />
+<h1 id="redis-ai-architecture-diagrams">Redis AI Architecture Diagrams</h1>
+<p>Visual representations of Redis AI integration patterns with AI/LLM/Agent systems.</p>
+<h2 id="system-integration-overview">System Integration Overview</h2>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────────────────┐
+│                     AI/LLM/Agent Ecosystem                          │
+│                                                                     │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐          │
+│  │   LLM    │  │  Vector  │  │  Agent   │  │  ML/DL   │          │
+│  │   APIs   │  │Databases │  │Framework │  │  Models  │          │
+│  └─────┬────┘  └─────┬────┘  └─────┬────┘  └─────┬────┘          │
+│        │             │             │             │                │
+└────────┼─────────────┼─────────────┼─────────────┼────────────────┘
+         │             │             │             │
+         └─────────────┴─────────────┴─────────────┘
+                       │
+         ┌─────────────▼─────────────┐
+         │                           │
+         │      REDIS AI HUB         │
+         │                           │
+         │  ┌─────────────────────┐  │
+         │  │   RedisAI Module    │  │
+         │  │  - Model Serving    │  │
+         │  │  - Tensor Ops       │  │
+         │  └─────────────────────┘  │
+         │                           │
+         │  ┌─────────────────────┐  │
+         │  │   RediSearch        │  │
+         │  │  - Vector Index     │  │
+         │  │  - Similarity       │  │
+         │  └─────────────────────┘  │
+         │                           │
+         │  ┌─────────────────────┐  │
+         │  │   Core Redis        │  │
+         │  │  - Cache            │  │
+         │  │  - State            │  │
+         │  │  - Pub/Sub          │  │
+         │  │  - Streams          │  │
+         │  └─────────────────────┘  │
+         │                           │
+         └───────────┬───────────────┘
+                     │
+         ┌───────────▼───────────┐
+         │                       │
+         │   Application Layer   │
+         │  - Web Apps           │
+         │  - Microservices      │
+         │  - Mobile Apps        │
+         │  - IoT Devices        │
+         │                       │
+         └───────────────────────┘
+</code></pre></div>
+
+<h2 id="connection-types-matrix">Connection Types Matrix</h2>
+<div class="codehilite"><pre><span></span><code><span class="err">┌────────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w">             </span><span class="n">What</span><span class="w"> </span><span class="n">Connects</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Redis</span><span class="w"> </span><span class="n">AI</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">How</span><span class="w">                    </span><span class="err">│</span>
+<span class="err">└────────────────────────────────────────────────────────────────┘</span>
+
+<span class="n">LLM</span><span class="w"> </span><span class="n">APIs</span><span class="w"> </span><span class="p">(</span><span class="n">OpenAI</span><span class="p">,</span><span class="w"> </span><span class="n">Anthropic</span><span class="p">,</span><span class="w"> </span><span class="n">Cohere</span><span class="p">)</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Response</span><span class="w"> </span><span class="n">Caching</span><span class="w">          </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">String</span><span class="o">/</span><span class="n">Hash</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Rate</span><span class="w"> </span><span class="n">Limiting</span><span class="w">             </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">TTL</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Token</span><span class="w"> </span><span class="n">Usage</span><span class="w"> </span><span class="n">Tracking</span><span class="w">      </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Sorted</span><span class="w"> </span><span class="n">Set</span><span class="p">]</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">Prompt</span><span class="w"> </span><span class="n">Template</span><span class="w"> </span><span class="n">Storage</span><span class="w">   </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">String</span><span class="o">/</span><span class="n">Hash</span><span class="p">]</span>
+
+<span class="n">Embedding</span><span class="w"> </span><span class="n">Models</span><span class="w"> </span><span class="p">(</span><span class="n">sentence</span><span class="o">-</span><span class="n">transformers</span><span class="p">,</span><span class="w"> </span><span class="n">OpenAI</span><span class="w"> </span><span class="n">ada</span><span class="p">)</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Embedding</span><span class="w"> </span><span class="n">Storage</span><span class="w">         </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RediSearch</span><span class="w"> </span><span class="n">Vector</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Batch</span><span class="w"> </span><span class="n">Processing</span><span class="w">          </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Streams</span><span class="p">]</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">Inference</span><span class="w">           </span><span class="p">[</span><span class="n">RedisAI</span><span class="p">]</span>
+
+<span class="n">Agent</span><span class="w"> </span><span class="n">Frameworks</span><span class="w"> </span><span class="p">(</span><span class="n">LangChain</span><span class="p">,</span><span class="w"> </span><span class="n">AutoGPT</span><span class="p">,</span><span class="w"> </span><span class="n">CrewAI</span><span class="p">)</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Agent</span><span class="w"> </span><span class="n">State</span><span class="w">               </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Hash</span><span class="o">/</span><span class="n">JSON</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Memory</span><span class="w"> </span><span class="n">Storage</span><span class="w">            </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">List</span><span class="o">/</span><span class="n">Stream</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Tool</span><span class="w"> </span><span class="n">Results</span><span class="w"> </span><span class="n">Cache</span><span class="w">        </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">String</span><span class="p">]</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">Multi</span><span class="o">-</span><span class="n">Agent</span><span class="w"> </span><span class="n">Messaging</span><span class="w">     </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Pub</span><span class="o">/</span><span class="n">Sub</span><span class="p">]</span>
+
+<span class="n">Vector</span><span class="w"> </span><span class="n">Databases</span><span class="w"> </span><span class="p">(</span><span class="n">Pinecone</span><span class="p">,</span><span class="w"> </span><span class="n">Weaviate</span><span class="w"> </span><span class="n">integration</span><span class="p">)</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Primary</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="n">Store</span><span class="w">      </span><span class="p">[</span><span class="n">RediSearch</span><span class="w"> </span><span class="n">native</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Metadata</span><span class="w"> </span><span class="n">Filtering</span><span class="w">        </span><span class="p">[</span><span class="n">RediSearch</span><span class="w"> </span><span class="n">filters</span><span class="p">]</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">Hybrid</span><span class="w"> </span><span class="n">Search</span><span class="w">             </span><span class="p">[</span><span class="n">RediSearch</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">full</span><span class="o">-</span><span class="n">text</span><span class="p">]</span>
+
+<span class="n">Stream</span><span class="w"> </span><span class="n">Processors</span><span class="w"> </span><span class="p">(</span><span class="n">Kafka</span><span class="p">,</span><span class="w"> </span><span class="n">Flink</span><span class="p">,</span><span class="w"> </span><span class="n">Spark</span><span class="p">)</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Event</span><span class="w"> </span><span class="n">Ingestion</span><span class="w">           </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Streams</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Processing</span><span class="w"> </span><span class="n">Queue</span><span class="w">          </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">List</span><span class="o">/</span><span class="n">Stream</span><span class="p">]</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="n">Storage</span><span class="w">            </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Any</span><span class="w"> </span><span class="n">Type</span><span class="p">]</span>
+
+<span class="n">ML</span><span class="w"> </span><span class="n">Frameworks</span><span class="w"> </span><span class="p">(</span><span class="n">TensorFlow</span><span class="p">,</span><span class="w"> </span><span class="n">PyTorch</span><span class="p">,</span><span class="w"> </span><span class="n">ONNX</span><span class="p">)</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">Serving</span><span class="w">             </span><span class="p">[</span><span class="n">RedisAI</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Feature</span><span class="w"> </span><span class="n">Store</span><span class="w">             </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Hash</span><span class="o">/</span><span class="n">JSON</span><span class="p">]</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">Training</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">Cache</span><span class="w">       </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Any</span><span class="w"> </span><span class="n">Type</span><span class="p">]</span>
+
+<span class="n">Microservices</span><span class="w"> </span><span class="n">Architecture</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="n">Discovery</span><span class="w">         </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Hash</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Configuration</span><span class="w">             </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Hash</span><span class="o">/</span><span class="n">JSON</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Circuit</span><span class="w"> </span><span class="n">Breaker</span><span class="w"> </span><span class="n">State</span><span class="w">     </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">String</span><span class="p">]</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">Distributed</span><span class="w"> </span><span class="n">Locks</span><span class="w">         </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Lua</span><span class="p">]</span>
+
+<span class="n">API</span><span class="w"> </span><span class="n">Gateways</span><span class="w"> </span><span class="p">(</span><span class="n">Kong</span><span class="p">,</span><span class="w"> </span><span class="n">nginx</span><span class="p">,</span><span class="w"> </span><span class="n">Envoy</span><span class="p">)</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Request</span><span class="w"> </span><span class="n">Routing</span><span class="w"> </span><span class="n">Rules</span><span class="w">     </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Hash</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Rate</span><span class="w"> </span><span class="n">Limiting</span><span class="w">             </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Counter</span><span class="p">]</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">Response</span><span class="w"> </span><span class="n">Caching</span><span class="w">          </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">String</span><span class="p">]</span>
+
+<span class="n">Web</span><span class="o">/</span><span class="n">Mobile</span><span class="w"> </span><span class="n">Applications</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Session</span><span class="w"> </span><span class="n">Management</span><span class="w">        </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">String</span><span class="o">/</span><span class="n">Hash</span><span class="p">]</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">Preferences</span><span class="w">          </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Hash</span><span class="o">/</span><span class="n">JSON</span><span class="p">]</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">Real</span><span class="o">-</span><span class="n">time</span><span class="w"> </span><span class="n">Updates</span><span class="w">         </span><span class="p">[</span><span class="n">Redis</span><span class="w"> </span><span class="n">Pub</span><span class="o">/</span><span class="n">Sub</span><span class="p">]</span>
+</code></pre></div>
+
+<h2 id="llm-caching-architecture-detailed">LLM Caching Architecture (Detailed)</h2>
+<div class="codehilite"><pre><span></span><code>┌──────────────────────────────────────────────────────────────────┐
+│<span class="w">                         </span><span class="nv">Request</span><span class="w"> </span><span class="nv">Flow</span><span class="w">                              </span>│
+└──────────────────────────────────────────────────────────────────┘
+
+┌─────────┐
+│<span class="w"> </span><span class="nv">Client</span><span class="w">  </span>│
+│<span class="w"> </span><span class="nv">Request</span><span class="w"> </span>│
+└────┬────┘
+<span class="w">     </span>│
+<span class="w">     </span>│<span class="w"> </span><span class="mi">1</span>.<span class="w"> </span><span class="nv">Incoming</span><span class="w"> </span><span class="nv">Request</span>
+<span class="w">     </span>▼
+┌─────────────────┐
+│<span class="w">   </span><span class="nv">API</span><span class="w"> </span><span class="nv">Gateway</span><span class="w">   </span>│
+│<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nv">Validation</span><span class="w">   </span>│
+│<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nv">Auth</span><span class="w">         </span>│
+└────┬────────────┘
+<span class="w">     </span>│
+<span class="w">     </span>│<span class="w"> </span><span class="mi">2</span>.<span class="w"> </span><span class="nv">Generate</span><span class="w"> </span><span class="nv">Cache</span><span class="w"> </span><span class="nv">Key</span>
+<span class="w">     </span>│<span class="w">    </span><span class="nv">hash</span><span class="ss">(</span><span class="nv">prompt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">model</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">params</span><span class="ss">)</span>
+<span class="w">     </span>▼
+┌─────────────────────────────────┐
+│<span class="w">      </span><span class="nv">Redis</span><span class="w"> </span><span class="nv">Cache</span><span class="w"> </span><span class="nv">Layer</span><span class="w">          </span>│
+│<span class="w">                                 </span>│
+│<span class="w">  </span><span class="nv">Key</span><span class="w"> </span><span class="nv">Format</span>:<span class="w">                    </span>│
+│<span class="w">  </span><span class="nv">llm</span>:<span class="nv">cache</span>:{<span class="nv">hash</span>}<span class="w">               </span>│
+│<span class="w">                                 </span>│
+│<span class="w">  </span><span class="nv">Value</span><span class="w"> </span><span class="nv">Structure</span>:<span class="w">               </span>│
+│<span class="w">  </span>{<span class="w">                              </span>│
+│<span class="w">    </span><span class="s2">&quot;response&quot;</span>:<span class="w"> </span><span class="s2">&quot;...&quot;</span>,<span class="w">           </span>│
+│<span class="w">    </span><span class="s2">&quot;model&quot;</span>:<span class="w"> </span><span class="s2">&quot;gpt-4&quot;</span>,<span class="w">            </span>│
+│<span class="w">    </span><span class="s2">&quot;timestamp&quot;</span>:<span class="w"> </span><span class="mi">1234567890</span>,<span class="w">     </span>│
+│<span class="w">    </span><span class="s2">&quot;tokens&quot;</span>:<span class="w"> </span><span class="mi">150</span><span class="w">                </span>│
+│<span class="w">  </span>}<span class="w">                              </span>│
+└────┬──────────────┬─────────────┘
+<span class="w">     </span>│<span class="w">              </span>│
+<span class="w">     </span>│<span class="w"> </span><span class="nv">Cache</span><span class="w"> </span><span class="nv">HIT</span>?<span class="w">   </span>│
+<span class="w">     </span>│<span class="w">              </span>│
+<span class="w">  </span>┌──▼──────┐<span class="w">  </span>┌───▼────────┐
+<span class="w">  </span>│<span class="w">  </span><span class="nv">YES</span><span class="w">    </span>│<span class="w">  </span>│<span class="w">    </span><span class="nv">NO</span><span class="w">      </span>│
+<span class="w">  </span>│<span class="w">         </span>│<span class="w">  </span>│<span class="w">            </span>│
+<span class="w">  </span>│<span class="w"> </span><span class="k">Return</span><span class="w">  </span>│<span class="w">  </span>│<span class="w"> </span><span class="mi">3</span>.<span class="w"> </span><span class="nv">Call</span><span class="w">    </span>│
+<span class="w">  </span>│<span class="w"> </span><span class="nv">Cached</span><span class="w">  </span>│<span class="w">  </span>│<span class="w">    </span><span class="nv">LLM</span><span class="w"> </span><span class="nv">API</span><span class="w"> </span>│
+<span class="w">  </span>│<span class="w"> </span><span class="nv">Response</span>│<span class="w">  </span>│<span class="w">            </span>│
+<span class="w">  </span>└──┬──────┘<span class="w">  </span>└───┬────────┘
+<span class="w">     </span>│<span class="w">             </span>│
+<span class="w">     </span>│<span class="w">             </span>▼
+<span class="w">     </span>│<span class="w">        </span>┌────────────────┐
+<span class="w">     </span>│<span class="w">        </span>│<span class="w">   </span><span class="nv">LLM</span><span class="w"> </span><span class="nv">Service</span><span class="w">  </span>│
+<span class="w">     </span>│<span class="w">        </span>│<span class="w">  </span><span class="ss">(</span><span class="nv">OpenAI</span>,<span class="w"> </span><span class="nv">etc</span><span class="ss">)</span><span class="w"> </span>│
+<span class="w">     </span>│<span class="w">        </span>└────┬───────────┘
+<span class="w">     </span>│<span class="w">             </span>│
+<span class="w">     </span>│<span class="w">             </span>│<span class="w"> </span><span class="mi">4</span>.<span class="w"> </span><span class="nv">Get</span><span class="w"> </span><span class="nv">Response</span>
+<span class="w">     </span>│<span class="w">             </span>▼
+<span class="w">     </span>│<span class="w">        </span>┌────────────────┐
+<span class="w">     </span>│<span class="w">        </span>│<span class="w"> </span><span class="nv">Store</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">Cache</span><span class="w"> </span>│
+<span class="w">     </span>│<span class="w">        </span>│<span class="w">   </span><span class="nv">TTL</span>:<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">hour</span><span class="w">  </span>│
+<span class="w">     </span>│<span class="w">        </span>└────┬───────────┘
+<span class="w">     </span>│<span class="w">             </span>│
+<span class="w">     </span>└─────────────┘
+<span class="w">                   </span>│
+<span class="w">                   </span>▼
+<span class="w">            </span>┌──────────────┐
+<span class="w">            </span>│<span class="w">   </span><span class="nv">Response</span><span class="w">   </span>│
+<span class="w">            </span>│<span class="w">   </span><span class="nv">to</span><span class="w"> </span><span class="nv">Client</span><span class="w">  </span>│
+<span class="w">            </span>└──────────────┘
+
+<span class="nv">Performance</span><span class="w"> </span><span class="nv">Metrics</span>:
+├─►<span class="w"> </span><span class="nv">Cache</span><span class="w"> </span><span class="nv">HIT</span>:<span class="w">  </span><span class="o">&lt;</span><span class="mi">1</span><span class="nv">ms</span><span class="w"> </span><span class="nv">response</span><span class="w"> </span><span class="nv">time</span>,<span class="w"> </span><span class="mh">$0</span>.<span class="mi">00</span><span class="w"> </span><span class="nv">cost</span>
+└─►<span class="w"> </span><span class="nv">Cache</span><span class="w"> </span><span class="nv">MISS</span>:<span class="w"> </span><span class="mi">500</span><span class="o">-</span><span class="mi">2000</span><span class="nv">ms</span>,<span class="w"> </span><span class="mh">$0</span>.<span class="mi">002</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">10</span><span class="w"> </span><span class="nv">cost</span><span class="w"> </span><span class="nv">per</span><span class="w"> </span><span class="nv">request</span>
+</code></pre></div>
+
+<h2 id="multi-agent-system-architecture">Multi-Agent System Architecture</h2>
+<div class="codehilite"><pre><span></span><code>┌──────────────────────────────────────────────────────────────────┐
+│                    Multi-Agent Redis Architecture                 │
+└──────────────────────────────────────────────────────────────────┘
+
+                    ┌─────────────────────┐
+                    │   Redis Cluster     │
+                    │                     │
+                    │  ┌───────────────┐  │
+                    │  │ Pub/Sub       │  │
+                    │  │ Channels:     │  │
+                    │  │ - agent:tasks │  │
+                    │  │ - agent:events│  │
+                    │  │ - agent:logs  │  │
+                    │  └───────────────┘  │
+                    │                     │
+                    │  ┌───────────────┐  │
+                    │  │ State Store   │  │
+                    │  │ agent:{id}    │  │
+                    │  └───────────────┘  │
+                    │                     │
+                    │  ┌───────────────┐  │
+                    │  │ Shared KB     │  │
+                    │  │ knowledge:*   │  │
+                    │  └───────────────┘  │
+                    │                     │
+                    └──────────┬──────────┘
+                               │
+        ┌──────────────────────┼──────────────────────┐
+        │                      │                      │
+        ▼                      ▼                      ▼
+┌───────────────┐      ┌───────────────┐     ┌───────────────┐
+│  Agent Type 1 │      │  Agent Type 2 │     │  Agent Type N │
+│  (Planner)    │      │  (Executor)   │     │  (Custom)     │
+│               │      │               │     │               │
+│ Responsibilities:    │ Responsibilities:   │ Responsibilities:
+│ - Task planning      │ - Task execution    │ - Domain specific
+│ - Work delegation    │ - Result reporting  │ - Specialized ops
+│ - Coordination       │ - Error handling    │ - Integration    │
+│                      │                     │                  │
+│ Redis Operations:    │ Redis Operations:   │ Redis Operations:
+│ • PUBLISH tasks      │ • SUBSCRIBE tasks   │ • Custom logic   │
+│ • SET agent state    │ • GET agent state   │ • Data processing│
+│ • HSET knowledge     │ • LPUSH results     │ • API calls      │
+└───────────────┘      └───────────────┘     └───────────────┘
+
+Communication Flow:
+1. Planner → PUBLISH agent:tasks → Executor receives
+2. Executor → SET agent:state → Updates progress
+3. Executor → PUBLISH agent:events → Planner notified
+4. All → HSET knowledge:* → Shared learning
+</code></pre></div>
+
+<h2 id="rag-retrieval-augmented-generation-pipeline">RAG (Retrieval-Augmented Generation) Pipeline</h2>
+<div class="codehilite"><pre><span></span><code><span class="err">┌──────────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w">         </span><span class="n">RAG</span><span class="w"> </span><span class="n">Pipeline</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">Redis</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="k">Search</span><span class="w">                     </span><span class="err">│</span>
+<span class="err">└──────────────────────────────────────────────────────────────────┘</span>
+
+<span class="k">User</span><span class="w"> </span><span class="nl">Query</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;What is Redis AI?&quot;</span>
+<span class="w">      </span><span class="err">│</span>
+<span class="w">      </span><span class="err">▼</span>
+<span class="err">┌─────────────────────┐</span>
+<span class="err">│</span><span class="w">  </span><span class="mf">1.</span><span class="w"> </span><span class="n">Embed</span><span class="w"> </span><span class="n">Query</span><span class="w">     </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="k">Using</span><span class="w"> </span><span class="n">embedding</span><span class="w">    </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="n">model</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="k">ada</span><span class="p">)</span><span class="w">  </span><span class="err">│</span>
+<span class="err">└──────┬──────────────┘</span>
+<span class="w">       </span><span class="err">│</span>
+<span class="w">       </span><span class="err">│</span><span class="w"> </span><span class="n">Query</span><span class="w"> </span><span class="nl">Vector</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">0.1, 0.3, ...</span><span class="o">]</span>
+<span class="w">       </span><span class="err">▼</span>
+<span class="err">┌─────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w">  </span><span class="mf">2.</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="n">Similarity</span><span class="w"> </span><span class="k">Search</span><span class="w">        </span><span class="err">│</span>
+<span class="err">│</span><span class="w">                                     </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="n">Redis</span><span class="w"> </span><span class="nl">Command</span><span class="p">:</span><span class="w">                     </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="n">FT</span><span class="p">.</span><span class="k">SEARCH</span><span class="w"> </span><span class="n">idx</span><span class="w">                      </span><span class="err">│</span>
+<span class="err">│</span><span class="w">    </span><span class="ss">&quot;*=&gt;[KNN 5 @embedding $vec]&quot;</span><span class="w">     </span><span class="err">│</span>
+<span class="err">│</span><span class="w">    </span><span class="n">PARAMS</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="err">{</span><span class="n">query_vector</span><span class="err">}</span><span class="w">      </span><span class="err">│</span>
+<span class="err">│</span><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="n">score</span><span class="w">           </span><span class="err">│</span>
+<span class="err">│</span><span class="w">                                     </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="k">Index</span><span class="w"> </span><span class="k">Structure</span><span class="err">:</span><span class="w">                   </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="nl">doc</span><span class="p">:</span><span class="err">{</span><span class="n">id</span><span class="err">}</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="err">{</span><span class="w">                       </span><span class="err">│</span>
+<span class="err">│</span><span class="w">    </span><span class="nl">content</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;...&quot;</span><span class="p">,</span><span class="w">                  </span><span class="err">│</span>
+<span class="err">│</span><span class="w">    </span><span class="nl">embedding</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">float32</span><span class="o">]</span><span class="p">,</span><span class="w">            </span><span class="err">│</span>
+<span class="err">│</span><span class="w">    </span><span class="nl">metadata</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="p">...</span><span class="err">}</span><span class="w">                  </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="err">}</span><span class="w">                                  </span><span class="err">│</span>
+<span class="err">└──────┬──────────────────────────────┘</span>
+<span class="w">       </span><span class="err">│</span>
+<span class="w">       </span><span class="err">│</span><span class="w"> </span><span class="k">Top</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="k">Similar</span><span class="w"> </span><span class="n">Documents</span>
+<span class="w">       </span><span class="err">▼</span>
+<span class="err">┌─────────────────────┐</span>
+<span class="err">│</span><span class="w">  </span><span class="mf">3.</span><span class="w"> </span><span class="n">Build</span><span class="w"> </span><span class="n">Context</span><span class="w">   </span><span class="err">│</span>
+<span class="err">│</span><span class="w">                     </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="n">Context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">concat</span><span class="p">(</span><span class="w">  </span><span class="err">│</span>
+<span class="err">│</span><span class="w">    </span><span class="n">doc1</span><span class="p">.</span><span class="n">content</span><span class="p">,</span><span class="w">    </span><span class="err">│</span>
+<span class="err">│</span><span class="w">    </span><span class="n">doc2</span><span class="p">.</span><span class="n">content</span><span class="p">,</span><span class="w">    </span><span class="err">│</span>
+<span class="err">│</span><span class="w">    </span><span class="p">...</span><span class="w">              </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="p">)</span><span class="w">                  </span><span class="err">│</span>
+<span class="err">└──────┬──────────────┘</span>
+<span class="w">       </span><span class="err">│</span>
+<span class="w">       </span><span class="err">│</span><span class="w"> </span><span class="n">Enriched</span><span class="w"> </span><span class="n">Context</span>
+<span class="w">       </span><span class="err">▼</span>
+<span class="err">┌─────────────────────────────┐</span>
+<span class="err">│</span><span class="w">  </span><span class="mf">4.</span><span class="w"> </span><span class="n">Build</span><span class="w"> </span><span class="n">Augmented</span><span class="w"> </span><span class="n">Prompt</span><span class="w">  </span><span class="err">│</span>
+<span class="err">│</span><span class="w">                             </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="n">Prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;&quot;&quot;              │</span>
+<span class="ss">│  Context: {context}         │</span>
+<span class="ss">│                             │</span>
+<span class="ss">│  Question: {user_query}     │</span>
+<span class="ss">│                             │</span>
+<span class="ss">│  Answer:                    │</span>
+<span class="ss">│  &quot;&quot;&quot;</span><span class="w">                        </span><span class="err">│</span>
+<span class="err">└──────┬──────────────────────┘</span>
+<span class="w">       </span><span class="err">│</span>
+<span class="w">       </span><span class="err">│</span><span class="w"> </span><span class="n">Augmented</span><span class="w"> </span><span class="n">Prompt</span>
+<span class="w">       </span><span class="err">▼</span>
+<span class="err">┌─────────────────────┐</span>
+<span class="err">│</span><span class="w">  </span><span class="mf">5.</span><span class="w"> </span><span class="n">LLM</span><span class="w"> </span><span class="n">Generation</span><span class="w">  </span><span class="err">│</span>
+<span class="err">│</span><span class="w">                     </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="k">Check</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="k">first</span><span class="err">:</span><span class="w"> </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="nl">llm</span><span class="p">:</span><span class="nl">cache</span><span class="p">:</span><span class="err">{</span><span class="n">hash</span><span class="err">}</span><span class="w">   </span><span class="err">│</span>
+<span class="err">│</span><span class="w">                     </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">miss</span><span class="p">,</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="n">LLM</span><span class="w">  </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="ow">and</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="k">result</span><span class="w">   </span><span class="err">│</span>
+<span class="err">└──────┬──────────────┘</span>
+<span class="w">       </span><span class="err">│</span>
+<span class="w">       </span><span class="err">│</span><span class="w"> </span><span class="n">Final</span><span class="w"> </span><span class="n">Response</span>
+<span class="w">       </span><span class="err">▼</span>
+<span class="err">┌─────────────────────┐</span>
+<span class="err">│</span><span class="w">  </span><span class="mf">6.</span><span class="w"> </span><span class="k">Return</span><span class="w"> </span><span class="k">Result</span><span class="w">   </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="k">with</span><span class="w"> </span><span class="n">citations</span><span class="w">     </span><span class="err">│</span>
+<span class="err">└─────────────────────┘</span>
+
+<span class="nl">Performance</span><span class="p">:</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="k">Search</span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="o">-</span><span class="mi">5</span><span class="n">ms</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">millions</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">docs</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="nl">Building</span><span class="p">:</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">1</span><span class="n">ms</span>
+<span class="err">├─►</span><span class="w"> </span><span class="n">LLM</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="p">(</span><span class="n">cached</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">1</span><span class="n">ms</span>
+<span class="err">└─►</span><span class="w"> </span><span class="n">LLM</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="p">(</span><span class="n">uncached</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="mi">500</span><span class="o">-</span><span class="mi">2000</span><span class="n">ms</span>
+</code></pre></div>
+
+<h2 id="real-time-inference-pipeline">Real-Time Inference Pipeline</h2>
+<div class="codehilite"><pre><span></span><code><span class="err">┌──────────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w">           </span><span class="n">Real</span><span class="o">-</span><span class="n">Time</span><span class="w"> </span><span class="n">ML</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">Inference</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">RedisAI</span><span class="w">               </span><span class="err">│</span>
+<span class="err">└──────────────────────────────────────────────────────────────────┘</span>
+
+<span class="n">Data</span><span class="w"> </span><span class="n">Sources</span><span class="w">                   </span><span class="n">Redis</span><span class="w"> </span><span class="n">Streams</span><span class="w">              </span><span class="n">Processing</span>
+<span class="err">┌──────────┐</span><span class="w">                                             </span>
+<span class="err">│</span><span class="w">  </span><span class="n">IoT</span><span class="w">     </span><span class="err">│─┐</span><span class="w">                                           </span>
+<span class="err">│</span><span class="w"> </span><span class="n">Devices</span><span class="w">  </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w">              </span><span class="err">┌─────────────────┐</span><span class="w">          </span>
+<span class="err">└──────────┘</span><span class="w"> </span><span class="err">│</span><span class="w">              </span><span class="err">│</span><span class="w"> </span><span class="n">Redis</span><span class="w"> </span><span class="n">Stream</span><span class="w">    </span><span class="err">│</span><span class="w">          </span>
+<span class="w">             </span><span class="err">├─────────────►│</span><span class="w"> </span><span class="s">&quot;events:sensor&quot;</span><span class="w"> </span><span class="err">│</span><span class="w">          </span>
+<span class="err">┌──────────┐</span><span class="w"> </span><span class="err">│</span><span class="w">              </span><span class="err">│</span><span class="w">                 </span><span class="err">│</span><span class="w">          </span>
+<span class="err">│</span><span class="w">  </span><span class="n">Web</span><span class="w">     </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w">              </span><span class="err">│</span><span class="w"> </span><span class="n">Entry</span><span class="w"> </span><span class="n">Format</span><span class="o">:</span><span class="w">   </span><span class="err">│</span><span class="w">          </span>
+<span class="err">│</span><span class="w">  </span><span class="n">APIs</span><span class="w">    </span><span class="err">│─┤</span><span class="w">              </span><span class="err">│</span><span class="w"> </span><span class="o">{</span><span class="w">               </span><span class="err">│</span><span class="w">          </span>
+<span class="err">└──────────┘</span><span class="w"> </span><span class="err">│</span><span class="w">              </span><span class="err">│</span><span class="w">   </span><span class="n">id</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;123-0&quot;</span><span class="o">,</span><span class="w">  </span><span class="err">│</span><span class="w">          </span>
+<span class="w">             </span><span class="err">│</span><span class="w">              </span><span class="err">│</span><span class="w">   </span><span class="n">data</span><span class="o">:</span><span class="w"> </span><span class="o">{...}</span><span class="w">   </span><span class="err">│</span><span class="w">          </span>
+<span class="err">┌──────────┐</span><span class="w"> </span><span class="err">│</span><span class="w">              </span><span class="err">│</span><span class="w"> </span><span class="o">}</span><span class="w">               </span><span class="err">│</span><span class="w">          </span>
+<span class="err">│</span><span class="w">  </span><span class="n">Mobile</span><span class="w">  </span><span class="err">│</span><span class="w"> </span><span class="err">│</span><span class="w">              </span><span class="err">└────────┬────────┘</span><span class="w">          </span>
+<span class="err">│</span><span class="w">  </span><span class="n">Apps</span><span class="w">    </span><span class="err">│─┘</span><span class="w">                       </span><span class="err">│</span><span class="w">                   </span>
+<span class="err">└──────────┘</span><span class="w">                         </span><span class="err">│</span><span class="w">                   </span>
+<span class="w">                                     </span><span class="err">│</span><span class="w"> </span><span class="n">XREAD</span><span class="w">              </span>
+<span class="w">                                     </span><span class="err">▼</span><span class="w">                    </span>
+<span class="w">                            </span><span class="err">┌─────────────────┐</span><span class="w">           </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">  </span><span class="n">Consumer</span><span class="w"> </span><span class="n">App</span><span class="w">   </span><span class="err">│</span><span class="w">           </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">  </span><span class="o">(</span><span class="n">Python</span><span class="o">/</span><span class="n">Node</span><span class="o">)</span><span class="w">  </span><span class="err">│</span><span class="w">           </span>
+<span class="w">                            </span><span class="err">└────────┬────────┘</span><span class="w">           </span>
+<span class="w">                                     </span><span class="err">│</span><span class="w">                    </span>
+<span class="w">                                     </span><span class="err">│</span><span class="w"> </span><span class="mi">1</span><span class="o">.</span><span class="w"> </span><span class="n">Read</span><span class="w"> </span><span class="n">Stream</span><span class="w">     </span>
+<span class="w">                                     </span><span class="err">│</span><span class="w"> </span><span class="mi">2</span><span class="o">.</span><span class="w"> </span><span class="n">Preprocess</span><span class="w">      </span>
+<span class="w">                                     </span><span class="err">▼</span><span class="w">                    </span>
+<span class="w">                            </span><span class="err">┌─────────────────────┐</span><span class="w">       </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">  </span><span class="n">RedisAI</span><span class="w"> </span><span class="n">Pipeline</span><span class="w">   </span><span class="err">│</span><span class="w">       </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">                     </span><span class="err">│</span><span class="w">       </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">  </span><span class="nn">AI</span><span class="p">.</span><span class="n">DAGRUN</span><span class="w">          </span><span class="err">│</span><span class="w">       </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">    </span><span class="o">|&gt;</span><span class="w"> </span><span class="n">TENSORSET</span><span class="w">     </span><span class="err">│</span><span class="w">       </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">    </span><span class="o">|&gt;</span><span class="w"> </span><span class="n">MODELEXECUTE</span><span class="w">  </span><span class="err">│</span><span class="w">       </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">    </span><span class="o">|&gt;</span><span class="w"> </span><span class="n">TENSORGET</span><span class="w">     </span><span class="err">│</span><span class="w">       </span>
+<span class="w">                            </span><span class="err">└────────┬────────────┘</span><span class="w">       </span>
+<span class="w">                                     </span><span class="err">│</span><span class="w">                    </span>
+<span class="w">                                     </span><span class="err">│</span><span class="w"> </span><span class="n">Inference</span><span class="w"> </span><span class="n">Result</span><span class="w">   </span>
+<span class="w">                                     </span><span class="err">▼</span><span class="w">                    </span>
+<span class="w">                            </span><span class="err">┌─────────────────┐</span><span class="w">           </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">  </span><span class="n">Post</span><span class="o">-</span><span class="n">Process</span><span class="w">   </span><span class="err">│</span><span class="w">           </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">  </span><span class="o">&amp;</span><span class="w"> </span><span class="n">Store</span><span class="w">        </span><span class="err">│</span><span class="w">           </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">                 </span><span class="err">│</span><span class="w">           </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">  </span><span class="n">SET</span><span class="w"> </span><span class="n">result</span><span class="o">:</span><span class="mi">123</span><span class="w"> </span><span class="err">│</span><span class="w">           </span>
+<span class="w">                            </span><span class="err">│</span><span class="w">  </span><span class="n">PUBLISH</span><span class="w"> </span><span class="n">alerts</span><span class="w"> </span><span class="err">│</span><span class="w">           </span>
+<span class="w">                            </span><span class="err">└────────┬────────┘</span><span class="w">           </span>
+<span class="w">                                     </span><span class="err">│</span><span class="w">                    </span>
+<span class="w">                   </span><span class="err">┌─────────────────┼─────────────────┐</span><span class="w">  </span>
+<span class="w">                   </span><span class="err">▼</span><span class="w">                 </span><span class="err">▼</span><span class="w">                 </span><span class="err">▼</span><span class="w">  </span>
+<span class="w">           </span><span class="err">┌──────────┐</span><span class="w">      </span><span class="err">┌──────────┐</span><span class="w">     </span><span class="err">┌──────────┐</span>
+<span class="w">           </span><span class="err">│</span><span class="n">Dashboard</span><span class="w"> </span><span class="err">│</span><span class="w">      </span><span class="err">│</span><span class="w">  </span><span class="n">Alerts</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">│</span><span class="w">  </span><span class="n">Storage</span><span class="w"> </span><span class="err">│</span>
+<span class="w">           </span><span class="err">│</span><span class="w">   </span><span class="n">UI</span><span class="w">     </span><span class="err">│</span><span class="w">      </span><span class="err">│</span><span class="w">  </span><span class="n">System</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">│</span><span class="w">   </span><span class="n">Layer</span><span class="w">  </span><span class="err">│</span>
+<span class="w">           </span><span class="err">└──────────┘</span><span class="w">      </span><span class="err">└──────────┘</span><span class="w">     </span><span class="err">└──────────┘</span>
+
+<span class="n">Throughput</span><span class="o">:</span><span class="w"> </span><span class="mi">10</span><span class="o">,</span><span class="mi">000</span><span class="o">+</span><span class="w"> </span><span class="n">inferences</span><span class="o">/</span><span class="n">second</span>
+<span class="n">Latency</span><span class="o">:</span><span class="w"> </span><span class="n">Single</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">milliseconds</span><span class="w"> </span><span class="o">(</span><span class="n">p99</span><span class="o">)</span>
+</code></pre></div>
+
+<h2 id="data-flow-patterns">Data Flow Patterns</h2>
+<h3 id="pattern-request-response-with-caching">Pattern: Request-Response with Caching</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">Request</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">Cache</span><span class="w"> </span><span class="k">Check</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">HIT</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="k">Immediate</span><span class="w"> </span><span class="n">Response</span>
+<span class="w">                      </span><span class="err">↓</span>
+<span class="w">                    </span><span class="o">[</span><span class="n">MISS</span><span class="o">]</span>
+<span class="w">                      </span><span class="err">↓</span>
+<span class="w">                 </span><span class="k">Compute</span><span class="o">/</span><span class="k">Fetch</span>
+<span class="w">                      </span><span class="err">↓</span>
+<span class="w">                 </span><span class="n">Store</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Cache</span><span class="w"> </span><span class="err">──→</span><span class="w"> </span><span class="n">Response</span>
+<span class="w">                      </span><span class="err">↑</span>
+<span class="w">                  </span><span class="k">Set</span><span class="w"> </span><span class="n">TTL</span>
+</code></pre></div>
+
+<h3 id="pattern-pubsub-event-distribution">Pattern: Pub/Sub Event Distribution</h3>
+<div class="codehilite"><pre><span></span><code>Event Source
+     │
+     ▼
+PUBLISH channel
+     │
+     └─────┬─────┬─────┬─────
+           ▼     ▼     ▼     ▼
+        Sub1  Sub2  Sub3  Sub4
+         │     │     │     │
+         ▼     ▼     ▼     ▼
+      Action Action Action Action
+</code></pre></div>
+
+<h3 id="pattern-stream-processing-pipeline">Pattern: Stream Processing Pipeline</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">Producer</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">XADD</span><span class="w"> </span><span class="n">stream</span>
+<span class="w">                </span><span class="err">│</span>
+<span class="w">                </span><span class="err">▼</span>
+<span class="w">         </span><span class="p">[</span><span class="n">Stream</span><span class="w"> </span><span class="n">Buffer</span><span class="p">]</span>
+<span class="w">                </span><span class="err">│</span>
+<span class="w">     </span><span class="err">┌──────────┴──────────┐</span>
+<span class="w">     </span><span class="err">▼</span><span class="w">                     </span><span class="err">▼</span>
+<span class="n">Consumer</span><span class="w"> </span><span class="n">Group</span><span class="w"> </span><span class="mi">1</span><span class="w">    </span><span class="n">Consumer</span><span class="w"> </span><span class="n">Group</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">     </span><span class="err">│</span><span class="w">                     </span><span class="err">│</span>
+<span class="w">     </span><span class="err">▼</span><span class="w">                     </span><span class="err">▼</span>
+<span class="w">  </span><span class="n">Process</span><span class="w"> </span><span class="n">A</span><span class="w">            </span><span class="n">Process</span><span class="w"> </span><span class="n">B</span>
+<span class="w">     </span><span class="err">│</span><span class="w">                     </span><span class="err">│</span>
+<span class="w">     </span><span class="err">└──────────┬──────────┘</span>
+<span class="w">                </span><span class="err">▼</span>
+<span class="w">         </span><span class="n">Downstream</span><span class="w"> </span><span class="n">System</span>
+</code></pre></div>
+
+<h2 id="integration-complexity-matrix">Integration Complexity Matrix</h2>
+<div class="codehilite"><pre><span></span><code><span class="err">┌───────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w">  </span><span class="nx">Integration</span><span class="w"> </span><span class="nx">Complexity</span><span class="w"> </span><span class="nx">vs</span><span class="p">.</span><span class="w"> </span><span class="nx">Value</span><span class="w"> </span><span class="nx">Matrix</span><span class="w">                      </span><span class="err">│</span>
+<span class="err">└───────────────────────────────────────────────────────────────┘</span>
+
+<span class="nx">High</span><span class="w"> </span><span class="nx">Value</span>
+<span class="w">    </span><span class="err">│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">┌────────────────┐</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">  </span><span class="nx">RAG</span><span class="w"> </span><span class="nx">Pipeline</span><span class="w">  </span><span class="err">│</span><span class="w"> </span><span class="err">◄──</span><span class="w"> </span><span class="nx">Optimal</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">  </span><span class="p">(</span><span class="nx">Vector</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">LLM</span><span class="p">)</span><span class="err">│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">└────────────────┘</span>
+<span class="w">    </span><span class="err">│</span><span class="w">        </span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">┌──────────────┐</span><span class="w">     </span><span class="err">┌─────────────────┐</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w"> </span><span class="nx">Agent</span><span class="w"> </span><span class="nx">State</span><span class="w">  </span><span class="err">│</span><span class="w">     </span><span class="err">│</span><span class="w">  </span><span class="nx">Multi</span><span class="o">-</span><span class="nx">Model</span><span class="w">    </span><span class="err">│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w"> </span><span class="nx">Management</span><span class="w">   </span><span class="err">│</span><span class="w">     </span><span class="err">│</span><span class="w">  </span><span class="nx">Orchestration</span><span class="w">  </span><span class="err">│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">└──────────────┘</span><span class="w">     </span><span class="err">└─────────────────┘</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">┌──────────────┐</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w"> </span><span class="nx">LLM</span><span class="w"> </span><span class="nx">Response</span><span class="w"> </span><span class="err">│</span><span class="w"> </span><span class="err">◄──</span><span class="w"> </span><span class="nx">Quick</span><span class="w"> </span><span class="nx">Win</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="nx">Caching</span><span class="w">    </span><span class="err">│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="err">└──────────────┘</span>
+<span class="w">    </span><span class="err">│</span>
+<span class="nx">Low</span><span class="w"> </span><span class="nx">Value</span>
+<span class="w">    </span><span class="err">│</span>
+<span class="w">    </span><span class="err">└────────────────────────────────────────────►</span>
+<span class="w">        </span><span class="nx">Low</span><span class="w"> </span><span class="nx">Complexity</span><span class="w">              </span><span class="nx">High</span><span class="w"> </span><span class="nx">Complexity</span>
+
+<span class="nx">Legend</span><span class="p">:</span>
+<span class="err">•</span><span class="w"> </span><span class="nx">Quick</span><span class="w"> </span><span class="nx">Win</span><span class="p">:</span><span class="w"> </span><span class="nx">High</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">low</span><span class="w"> </span><span class="nx">complexity</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">implement</span><span class="w"> </span><span class="nx">first</span>
+<span class="err">•</span><span class="w"> </span><span class="nx">Optimal</span><span class="p">:</span><span class="w"> </span><span class="nx">High</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">medium</span><span class="w"> </span><span class="nx">complexity</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">core</span><span class="w"> </span><span class="nx">features</span>
+<span class="err">•</span><span class="w"> </span><span class="nx">Advanced</span><span class="p">:</span><span class="w"> </span><span class="nx">High</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">high</span><span class="w"> </span><span class="nx">complexity</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">after</span><span class="w"> </span><span class="nx">foundations</span>
+</code></pre></div>
+
+<h2 id="technology-stack-layers">Technology Stack Layers</h2>
+<div class="codehilite"><pre><span></span><code>┌──────────────────────────────────────────────────────────┐
+│                    Application Layer                      │
+│  Web Apps • Mobile Apps • APIs • Microservices          │
+└────────────────────┬─────────────────────────────────────┘
+                     │
+┌────────────────────┴─────────────────────────────────────┐
+│                  AI/ML Framework Layer                    │
+│  LangChain • AutoGPT • LlamaIndex • HuggingFace         │
+└────────────────────┬─────────────────────────────────────┘
+                     │
+┌────────────────────┴─────────────────────────────────────┐
+│                    Redis Integration Layer                │
+│                                                           │
+│  ┌───────────┐  ┌───────────┐  ┌───────────┐           │
+│  │  RedisAI  │  │RediSearch │  │Core Redis │           │
+│  │           │  │           │  │           │           │
+│  │ • Models  │  │ • Vectors │  │ • Cache   │           │
+│  │ • Tensors │  │ • Search  │  │ • State   │           │
+│  └───────────┘  └───────────┘  │ • Pub/Sub │           │
+│                                 │ • Streams │           │
+│                                 └───────────┘           │
+└────────────────────┬─────────────────────────────────────┘
+                     │
+┌────────────────────┴─────────────────────────────────────┐
+│                   Infrastructure Layer                    │
+│  Redis Cluster • Redis Sentinel • Redis Enterprise       │
+└───────────────────────────────────────────────────────────┘
+</code></pre></div>
+
+<h2 id="deployment-topologies">Deployment Topologies</h2>
+<h3 id="single-instance-development">Single Instance (Development)</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────┐
+│   Application       │
+└──────────┬──────────┘
+           │
+┌──────────▼──────────┐
+│   Redis Instance    │
+│   - All modules     │
+│   - localhost:6379  │
+└─────────────────────┘
+</code></pre></div>
+
+<h3 id="high-availability-production">High Availability (Production)</h3>
+<div class="codehilite"><pre><span></span><code>        Load Balancer
+              │
+    ┌─────────┼─────────┐
+    │         │         │
+    ▼         ▼         ▼
+  App1      App2      App3
+    │         │         │
+    └─────────┼─────────┘
+              │
+    ┌─────────▼─────────┐
+    │  Redis Sentinel   │
+    │   (Monitoring)    │
+    └─────────┬─────────┘
+              │
+    ┌─────────┼─────────┐
+    ▼         ▼         ▼
+ Master    Replica   Replica
+ (Write)   (Read)    (Read)
+</code></pre></div>
+
+<h3 id="cluster-massive-scale">Cluster (Massive Scale)</h3>
+<div class="codehilite"><pre><span></span><code><span class="w">        </span><span class="n">Application</span><span class="w"> </span><span class="n">Tier</span>
+<span class="w">    </span><span class="err">┌─────────┬─────────┐</span>
+<span class="w">    </span><span class="err">│</span><span class="w">         </span><span class="err">│</span><span class="w">         </span><span class="err">│</span>
+<span class="w">    </span><span class="err">▼</span><span class="w">         </span><span class="err">▼</span><span class="w">         </span><span class="err">▼</span>
+<span class="w"> </span><span class="n">App1</span><span class="w">      </span><span class="n">App2</span><span class="w">    </span><span class="p">...</span><span class="w">  </span><span class="n">AppN</span>
+<span class="w">    </span><span class="err">│</span><span class="w">         </span><span class="err">│</span><span class="w">         </span><span class="err">│</span>
+<span class="w">    </span><span class="err">└─────────┼─────────┘</span>
+<span class="w">              </span><span class="err">│</span>
+<span class="w">    </span><span class="err">┌─────────▼─────────────────┐</span>
+<span class="w">    </span><span class="err">│</span><span class="w">    </span><span class="n">Redis</span><span class="w"> </span><span class="n">Cluster</span><span class="w">          </span><span class="err">│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">                           </span><span class="err">│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">  </span><span class="err">┌─────┐</span><span class="w">  </span><span class="err">┌─────┐</span><span class="w">  </span><span class="err">┌────┐│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="n">Shard</span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="n">Shard</span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="p">...</span><span class="w"> </span><span class="err">││</span>
+<span class="w">    </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="mh">1</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="mh">2</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="w">  </span><span class="n">N</span><span class="w"> </span><span class="err">││</span>
+<span class="w">    </span><span class="err">│</span><span class="w">  </span><span class="err">└──┬──┘</span><span class="w">  </span><span class="err">└──┬──┘</span><span class="w">  </span><span class="err">└─┬──┘│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">     </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="w">       </span><span class="err">│</span><span class="w">   </span><span class="err">│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">  </span><span class="err">┌──▼──┐</span><span class="w">  </span><span class="err">┌─▼───┐</span><span class="w">  </span><span class="err">┌▼──┐│</span>
+<span class="w">    </span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="n">Rep</span><span class="w"> </span><span class="mh">1</span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="n">Rep</span><span class="w"> </span><span class="mh">2</span><span class="err">│</span><span class="w">  </span><span class="err">│</span><span class="p">...</span><span class="err">││</span>
+<span class="w">    </span><span class="err">│</span><span class="w">  </span><span class="err">└─────┘</span><span class="w">  </span><span class="err">└─────┘</span><span class="w">  </span><span class="err">└───┘│</span>
+<span class="w">    </span><span class="err">└───────────────────────────┘</span>
+
+<span class="w">    </span><span class="nl">Features:</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">Horizontal</span><span class="w"> </span><span class="n">scaling</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">Automatic</span><span class="w"> </span><span class="n">sharding</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="mh">1000</span><span class="o">+</span><span class="w"> </span><span class="n">nodes</span><span class="w"> </span><span class="n">supported</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">Multi</span><span class="o">-</span><span class="n">region</span><span class="w"> </span><span class="n">deployment</span>
+</code></pre></div>
+
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li>[[redis-ai-integration.md]] - Detailed integration guide</li>
+<li>[[redis-ai-quick-reference.md]] - Quick reference guide</li>
+<li>[[SKYNET.md]] - Technology research overview</li>
+</ul>
+<hr />
+<p><em>Architecture Diagrams</em>
+<em>Last Updated: 2025-11-17</em>
+<em>ASCII art diagrams for terminal/markdown viewing</em></p>
+<!-- 9E2A5C16 -->
+</body>
+</html>

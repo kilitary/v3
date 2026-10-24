@@ -1,0 +1,14 @@
+{
+  "accentColor": "#4ad9c1",
+  "cssTheme": "Material Gruvbox",
+  "interfaceFontFamily": "Franklin Gothic",
+  "theme": "moonstone",
+  "textFontFamily": "Franklin Gothic,Dosis,DotumChe,Cuprum,Corbel,Cambria,Ebrima,Dubai,DokChampa,Consolas",
+  "baseFontSize": 13,
+  "nativeMenus": false,
+  "translucency": false,
+  "baseFontSizeAction": true,
+  "monospaceFontFamily": "Inter,Liberation Mono",
+  "showViewHeader": true,
+  "showRibbon": true
+}

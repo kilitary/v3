@@ -1,0 +1,28 @@
+: Positron Emission Tomography (“PET”) is the medical procedure to test for schizophrenia.
+Positron emission tomography in schizophrenia: a new perspective
+https://pubmed.ncbi.nlm.nih.gov/20237027/
+National Institute of Health (NIH) 
+
+The Journal of Nuclear Medicine
+Positron Emission Tomography in Schizophrenia: A New Perspective
+
+http://jnm.snmjournals.org/content/51/4/511.full
+
+Abstract
+
+PET is an important functional imaging technique that can be used to investigate neurotransmitter receptors and transporters directly by mapping human brain function. PET is increasingly being used greatly to advance our understanding of the neurobiology and pathophysiology of schizophrenia.
+Methods: This review focuses on the use of PET tracers and kinetic modeling in identifying regional brain abnormalities and regions associated with cognitive functioning in schizophrenia. A variety of PET tracers have been used to identify brain abnormalities, including 11C, 15O-water, 18F-fallypride, and L-3,4-dihydroxy-6-18F-fluorophenylalanine (18F-FDOPA).
+Results: Some studies have used compartmental modeling to determine tracer binding kinetics. The most consistent findings show a difference in the dopamine content in the prefrontal cortex, anterior cingulate gyrus, and hippocampus between healthy controls and patients with schizophrenia. Studies also show a higher density of D2 receptors in the striatum and neural brain dysconnectivity.
+Conclusion: Future investigations integrating clinical, imaging, genetic, and cognitive aspects are warranted to gain a better understanding of the pathophysiology of this disorder.
+
+
+ARTICLE TWO: PET scans showed better results as far as differences between known normal brains and known schizophrenia brains.
+Theory of Mind and Schizophrenia: A Positron Emission Tomography Study of Medication-Free Patients
+https://pubmed.ncbi.nlm.nih.gov/18559406/
+
+Abstract
+
+Background: "Theory of mind" (TOM) refers to the ability to attribute mental states (ie, beliefs and goals) to one's self and others and to recognize that behaviors are guided by these mental states. This capacity, critical for social competence, is impaired in schizophrenia. We undertook a study of TOM in a group of patients with schizophrenia and healthy controls.
+Method: We used positron emission tomography to identify the neural circuits recruited during a verbal task that required participants to attribute mental states to a character in a story of their creation. The comparison task consisted of reading aloud a neutral story, controlling for the speech component of the task.
+Results: Patients and controls generated the same percentage of TOM utterances. However, the two groups had markedly different patterns of brain activation. Compared with controls, patients had a lower blood flow in multiple regions in the left hemisphere including the frontal and visual association cortices, posterior hippocampus, and insula. The flow was also lower in contralateral areas in the lateral cerebellum and vermis, thalamus, and posterior insula. On the other hand, the flow was higher in the patients predominantly in the right hemisphere, including multiple frontal and parietal regions, insula, visual association cortex, and pulvinar.
+Discussion: The areas of lower flow are consistent with previous studies indicating impairment in recruiting cortical-cerebellar circuitry in schizophrenia. The areas of higher flow may reflect a need to draw on the right hemisphere to compensate for deficits in left hemisphere networks that include frontal cortex, anterior cingulate, cerebellum, and thalamus.

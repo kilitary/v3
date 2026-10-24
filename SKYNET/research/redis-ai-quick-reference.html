@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Redis AI Quick Reference - Integration Patterns"</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 85%;
+        }
+        pre {
+            background-color: #f6f8fa;
+            padding: 16px;
+            overflow: auto;
+            border-radius: 3px;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        blockquote {
+            border-left: 4px solid #dfe2e5;
+            padding-left: 16px;
+            color: #6a737d;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #dfe2e5;
+            padding: 6px 13px;
+        }
+        table tr:nth-child(2n) {
+            background-color: #f6f8fa;
+        }
+        ul, ol {
+            padding-left: 2em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            background-color: #f1f3f5;
+            border-radius: 4px;
+            color: #0366d6;
+        }
+        .back-link:hover {
+            background-color: #e1e4e8;
+            text-decoration: none;
+        }
+        .banner-image {
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .banner-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <ul>
+<li>redis</li>
+<li>ai</li>
+<li>quick-reference</li>
+<li>cheatsheet</li>
+<li>integration
+state: Reference
+type: technical-reference</li>
+</ul>
+<hr />
+<h1 id="redis-ai-quick-reference-integration-patterns">Redis AI Quick Reference - Integration Patterns</h1>
+<h2 id="quick-connection-matrix">Quick Connection Matrix</h2>
+<h3 id="what-can-connect-to-redis-ai">What Can Connect to Redis AI?</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Connection Type</th>
+<th>Use Case</th>
+<th>Latency</th>
+<th>Scalability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LLM APIs</strong> (OpenAI, Anthropic)</td>
+<td>HTTP → Redis Cache</td>
+<td>Response caching, rate limiting</td>
+<td>&lt;1ms cache hit</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Embedding Models</strong></td>
+<td>Direct → RedisAI or Vector Store</td>
+<td>Generate &amp; store embeddings</td>
+<td>1-10ms</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Agent Frameworks</strong> (LangChain, AutoGPT)</td>
+<td>Library → Redis</td>
+<td>State management, memory</td>
+<td>&lt;1ms</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Vector Databases</strong></td>
+<td>Native RediSearch</td>
+<td>Semantic search, RAG</td>
+<td>1-5ms</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Stream Processors</strong> (Kafka, Flink)</td>
+<td>Redis Streams</td>
+<td>Real-time AI pipelines</td>
+<td>&lt;5ms</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>ML Models</strong> (TF, PyTorch)</td>
+<td>RedisAI Module</td>
+<td>Model serving, inference</td>
+<td>1-50ms</td>
+<td>Vertical/Horizontal</td>
+</tr>
+<tr>
+<td><strong>Microservices</strong></td>
+<td>Redis Client Libraries</td>
+<td>Distributed AI features</td>
+<td>&lt;1ms</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>API Gateways</strong></td>
+<td>Redis as Middleware</td>
+<td>Request routing, caching</td>
+<td>&lt;1ms</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Web Applications</strong></td>
+<td>Redis Session Store</td>
+<td>User context, personalization</td>
+<td>&lt;1ms</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Mobile Apps</strong></td>
+<td>REST API → Redis</td>
+<td>Offline-first AI features</td>
+<td>Varies</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>IoT Devices</strong></td>
+<td>Redis Pub/Sub</td>
+<td>Edge AI coordination</td>
+<td>5-50ms</td>
+<td>Horizontal</td>
+</tr>
+<tr>
+<td><strong>Jupyter Notebooks</strong></td>
+<td>Python Redis Client</td>
+<td>Experimentation, prototyping</td>
+<td>Varies</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="integration-patterns-cheat-sheet">Integration Patterns Cheat Sheet</h2>
+<h3 id="pattern-1-llm-response-cache">Pattern 1: LLM Response Cache</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Simple implementation</span>
+<span class="k">def</span> <span class="nf">cached_llm_call</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">):</span>
+    <span class="n">cache_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;llm:</span><span class="si">{</span><span class="nb">hash</span><span class="p">(</span><span class="n">prompt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">model</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="c1"># Try cache first</span>
+    <span class="n">cached</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cache_key</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cached</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cached</span>
+
+    <span class="c1"># Call LLM</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">llm_api</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+
+    <span class="c1"># Cache for 1 hour</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">setex</span><span class="p">(</span><span class="n">cache_key</span><span class="p">,</span> <span class="mi">3600</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
+
+<p><strong>When to use</strong>: High-frequency similar queries, cost optimization
+<strong>Expected improvement</strong>: 50-90% cost reduction, 100x faster responses</p>
+<h3 id="pattern-2-agent-state-persistence">Pattern 2: Agent State Persistence</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Agent state in Redis Hash</span>
+<span class="k">def</span> <span class="nf">save_agent_state</span><span class="p">(</span><span class="n">agent_id</span><span class="p">,</span> <span class="n">session_id</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;agent:</span><span class="si">{</span><span class="n">agent_id</span><span class="si">}</span><span class="s2">:session:</span><span class="si">{</span><span class="n">session_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">hset</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">mapping</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">context</span><span class="p">),</span>
+        <span class="s2">&quot;turn&quot;</span><span class="p">:</span> <span class="n">state</span><span class="o">.</span><span class="n">turn_count</span><span class="p">,</span>
+        <span class="s2">&quot;updated&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+    <span class="p">})</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">expire</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="mi">86400</span><span class="p">)</span>  <span class="c1"># 24 hours</span>
+
+<span class="k">def</span> <span class="nf">load_agent_state</span><span class="p">(</span><span class="n">agent_id</span><span class="p">,</span> <span class="n">session_id</span><span class="p">):</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;agent:</span><span class="si">{</span><span class="n">agent_id</span><span class="si">}</span><span class="s2">:session:</span><span class="si">{</span><span class="n">session_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="n">redis</span><span class="o">.</span><span class="n">hgetall</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>When to use</strong>: Conversational AI, stateful agents
+<strong>Expected improvement</strong>: &lt;1ms state retrieval, multi-instance agent support</p>
+<h3 id="pattern-3-vector-similarity-search">Pattern 3: Vector Similarity Search</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Using RediSearch for vector search</span>
+<span class="k">def</span> <span class="nf">store_embedding</span><span class="p">(</span><span class="n">doc_id</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">embedding</span><span class="p">):</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;doc:</span><span class="si">{</span><span class="n">doc_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;$&quot;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">text</span><span class="p">,</span>
+        <span class="s2">&quot;embedding&quot;</span><span class="p">:</span> <span class="n">embedding</span>
+    <span class="p">})</span>
+
+<span class="k">def</span> <span class="nf">search_similar</span><span class="p">(</span><span class="n">query_embedding</span><span class="p">,</span> <span class="n">top_k</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;*=&gt;[KNN </span><span class="si">{</span><span class="n">top_k</span><span class="si">}</span><span class="s2"> @embedding $vec]&quot;</span><span class="p">)</span> \
+        <span class="o">.</span><span class="n">return_fields</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">)</span> \
+        <span class="o">.</span><span class="n">dialect</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">redis</span><span class="o">.</span><span class="n">ft</span><span class="p">(</span><span class="s2">&quot;idx&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+        <span class="n">query</span><span class="p">,</span>
+        <span class="n">query_params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;vec&quot;</span><span class="p">:</span> <span class="n">query_embedding</span><span class="p">}</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+<p><strong>When to use</strong>: RAG, semantic search, recommendation systems
+<strong>Expected improvement</strong>: Sub-5ms search, millions of vectors</p>
+<h3 id="pattern-4-multi-agent-coordination">Pattern 4: Multi-Agent Coordination</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Pub/Sub for agent communication</span>
+<span class="k">def</span> <span class="nf">agent_send_message</span><span class="p">(</span><span class="n">from_agent</span><span class="p">,</span> <span class="n">to_channel</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">to_channel</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+        <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="n">from_agent</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">message</span><span class="p">,</span>
+        <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="p">}))</span>
+
+<span class="k">def</span> <span class="nf">agent_listen</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">callback</span><span class="p">):</span>
+    <span class="n">pubsub</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">pubsub</span><span class="p">()</span>
+    <span class="n">pubsub</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">pubsub</span><span class="o">.</span><span class="n">listen</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span>
+            <span class="n">callback</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]))</span>
+</code></pre></div>
+
+<p><strong>When to use</strong>: Multi-agent systems, distributed AI workflows
+<strong>Expected improvement</strong>: Real-time coordination, loose coupling</p>
+<h3 id="pattern-5-model-inference-pipeline">Pattern 5: Model Inference Pipeline</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># RedisAI for model serving</span>
+<span class="k">def</span> <span class="nf">run_inference</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">input_data</span><span class="p">):</span>
+    <span class="c1"># Store input tensor</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">ai_tensorset</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;input:</span><span class="si">{</span><span class="n">req_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">input_data</span><span class="p">)</span>
+
+    <span class="c1"># Run model</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">ai_modelexecute</span><span class="p">(</span>
+        <span class="n">model_name</span><span class="p">,</span>
+        <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;input:</span><span class="si">{</span><span class="n">req_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+        <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;output:</span><span class="si">{</span><span class="n">req_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Get result</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">ai_tensorget</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;output:</span><span class="si">{</span><span class="n">req_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Cleanup</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;input:</span><span class="si">{</span><span class="n">req_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;output:</span><span class="si">{</span><span class="n">req_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+
+<p><strong>When to use</strong>: Low-latency inference, model serving at scale
+<strong>Expected improvement</strong>: &lt;50ms inference, no external dependencies</p>
+<h2 id="data-structure-selection-guide">Data Structure Selection Guide</h2>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Redis Structure</th>
+<th>AI Use Case</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalar Values</strong></td>
+<td>String</td>
+<td>Model predictions, flags</td>
+<td><code>SET prediction:123 "positive"</code></td>
+</tr>
+<tr>
+<td><strong>Structured Data</strong></td>
+<td>Hash</td>
+<td>Agent state, user profiles</td>
+<td><code>HSET user:1 age 25 segment "premium"</code></td>
+</tr>
+<tr>
+<td><strong>Ordered Collections</strong></td>
+<td>List</td>
+<td>Conversation history</td>
+<td><code>LPUSH chat:1 "message text"</code></td>
+</tr>
+<tr>
+<td><strong>Unique Sets</strong></td>
+<td>Set</td>
+<td>Tags, categories</td>
+<td><code>SADD tags:doc1 "ai" "ml"</code></td>
+</tr>
+<tr>
+<td><strong>Ranked Items</strong></td>
+<td>Sorted Set</td>
+<td>Recommendations, priorities</td>
+<td><code>ZADD recs:1 0.95 "item1"</code></td>
+</tr>
+<tr>
+<td><strong>Time Series</strong></td>
+<td>Stream</td>
+<td>Event logs, audit trails</td>
+<td><code>XADD events:inference * model gpt4</code></td>
+</tr>
+<tr>
+<td><strong>Complex Objects</strong></td>
+<td>JSON</td>
+<td>Agent memory, configs</td>
+<td><code>JSON.SET agent:1 $ '{"facts":[]}'</code></td>
+</tr>
+<tr>
+<td><strong>Vectors</strong></td>
+<td>Vector + RediSearch</td>
+<td>Embeddings, similarity</td>
+<td>Vector field in index</td>
+</tr>
+<tr>
+<td><strong>Binary Data</strong></td>
+<td>String (binary)</td>
+<td>Model weights, tensors</td>
+<td>RedisAI tensors</td>
+</tr>
+</tbody>
+</table>
+<h2 id="performance-expectations">Performance Expectations</h2>
+<h3 id="operation-latency-typical">Operation Latency (Typical)</h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Expected Latency</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET/SET</td>
+<td>0.1-0.5 ms</td>
+<td>Single key operations</td>
+</tr>
+<tr>
+<td>HGETALL</td>
+<td>0.5-2 ms</td>
+<td>Depends on hash size</td>
+</tr>
+<tr>
+<td>Vector Search</td>
+<td>1-10 ms</td>
+<td>Depends on vector count, dimensions</td>
+</tr>
+<tr>
+<td>RedisAI Inference</td>
+<td>1-100 ms</td>
+<td>Depends on model complexity</td>
+</tr>
+<tr>
+<td>Pub/Sub Message</td>
+<td>1-5 ms</td>
+<td>Network dependent</td>
+</tr>
+<tr>
+<td>Stream Read</td>
+<td>0.5-2 ms</td>
+<td>Per batch</td>
+</tr>
+<tr>
+<td>Pipeline (100 ops)</td>
+<td>2-10 ms</td>
+<td>Amortized per operation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scalability-limits">Scalability Limits</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Limit</th>
+<th>Scaling Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keys</td>
+<td>Billions</td>
+<td>Use Redis Cluster</td>
+</tr>
+<tr>
+<td>Vector Dimensions</td>
+<td>4096+</td>
+<td>Optimize indexing algorithm</td>
+</tr>
+<tr>
+<td>Vectors per Index</td>
+<td>100M+</td>
+<td>Shard across multiple indexes</td>
+</tr>
+<tr>
+<td>Pub/Sub Channels</td>
+<td>Unlimited</td>
+<td>Use patterns for grouping</td>
+</tr>
+<tr>
+<td>Connected Clients</td>
+<td>10,000+</td>
+<td>Use connection pooling</td>
+</tr>
+<tr>
+<td>Throughput</td>
+<td>1M+ ops/sec</td>
+<td>Redis Cluster + pipelining</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Up to available RAM</td>
+<td>Use Redis Enterprise for disk tier</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-integration-code-snippets">Common Integration Code Snippets</h2>
+<h3 id="python-connection-setup">Python Connection Setup</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">from</span> <span class="nn">redis.cluster</span> <span class="kn">import</span> <span class="n">RedisCluster</span>
+
+<span class="c1"># Single instance</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span>
+    <span class="n">decode_responses</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">socket_timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">socket_connect_timeout</span><span class="o">=</span><span class="mi">5</span>
+<span class="p">)</span>
+
+<span class="c1"># Cluster</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">RedisCluster</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span>
+    <span class="n">decode_responses</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="c1"># With connection pool</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">ConnectionPool</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span>
+    <span class="n">max_connections</span><span class="o">=</span><span class="mi">50</span>
+<span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">connection_pool</span><span class="o">=</span><span class="n">pool</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="nodejsjavascript-connection">Node.js/JavaScript Connection</h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">redis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;redis&#39;</span><span class="p">);</span>
+
+<span class="c1">// Single instance</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">redis</span><span class="p">.</span><span class="nx">createClient</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">6379</span>
+<span class="p">});</span>
+
+<span class="k">await</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+
+<span class="c1">// Cluster</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createCluster</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;redis&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cluster</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createCluster</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">rootNodes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;redis://node1:6379&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;redis://node2:6379&#39;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">});</span>
+
+<span class="k">await</span><span class="w"> </span><span class="nx">cluster</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+</code></pre></div>
+
+<h3 id="go-connection">Go Connection</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;github.com/go-redis/redis/v8&quot;</span>
+<span class="w">    </span><span class="s">&quot;context&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">// Single instance</span>
+<span class="nx">rdb</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">redis</span><span class="p">.</span><span class="nx">NewClient</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">redis</span><span class="p">.</span><span class="nx">Options</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Addr</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost:6379&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">DB</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1">// Cluster</span>
+<span class="nx">rdb</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">redis</span><span class="p">.</span><span class="nx">NewClusterClient</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">redis</span><span class="p">.</span><span class="nx">ClusterOptions</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Addrs</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;localhost:6379&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;localhost:6380&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">})</span>
+</code></pre></div>
+
+<h2 id="troubleshooting-quick-guide">Troubleshooting Quick Guide</h2>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Symptoms</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Slow Queries</strong></td>
+<td>High latency on operations</td>
+<td>Use <code>SLOWLOG GET</code>, add indexes, optimize key structure</td>
+</tr>
+<tr>
+<td><strong>Memory Issues</strong></td>
+<td>Redis using too much RAM</td>
+<td>Set maxmemory policy, use TTL, compress values</td>
+</tr>
+<tr>
+<td><strong>Connection Errors</strong></td>
+<td>Clients can't connect</td>
+<td>Check network, increase max clients, use connection pool</td>
+</tr>
+<tr>
+<td><strong>Cache Misses</strong></td>
+<td>Low hit rate</td>
+<td>Analyze access patterns, adjust TTL, pre-warm cache</td>
+</tr>
+<tr>
+<td><strong>Pub/Sub Delays</strong></td>
+<td>Messages delayed</td>
+<td>Check network, reduce message size, use Streams</td>
+</tr>
+<tr>
+<td><strong>Vector Search Slow</strong></td>
+<td>Search takes &gt;100ms</td>
+<td>Optimize index params, reduce vector dimensions, shard</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monitoring-commands">Monitoring Commands</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Check memory usage</span>
+redis-cli<span class="w"> </span>INFO<span class="w"> </span>memory
+
+<span class="c1"># See slow queries</span>
+redis-cli<span class="w"> </span>SLOWLOG<span class="w"> </span>GET<span class="w"> </span><span class="m">10</span>
+
+<span class="c1"># Monitor commands in real-time</span>
+redis-cli<span class="w"> </span>MONITOR
+
+<span class="c1"># Check connected clients</span>
+redis-cli<span class="w"> </span>CLIENT<span class="w"> </span>LIST
+
+<span class="c1"># Database statistics</span>
+redis-cli<span class="w"> </span>INFO<span class="w"> </span>stats
+
+<span class="c1"># Key space analysis</span>
+redis-cli<span class="w"> </span>--bigkeys
+
+<span class="c1"># Memory analysis</span>
+redis-cli<span class="w"> </span>--memkeys
+</code></pre></div>
+
+<h2 id="configuration-recommendations">Configuration Recommendations</h2>
+<h3 id="for-llm-caching">For LLM Caching</h3>
+<div class="codehilite"><pre><span></span><code>#<span class="w"> </span><span class="nv">redis</span>.<span class="nv">conf</span><span class="w"> </span><span class="nv">optimizations</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">LLM</span><span class="w"> </span><span class="nv">caching</span>
+<span class="nv">maxmemory</span><span class="w"> </span><span class="mi">8</span><span class="nv">gb</span>
+<span class="nv">maxmemory</span><span class="o">-</span><span class="nv">policy</span><span class="w"> </span><span class="nv">allkeys</span><span class="o">-</span><span class="nv">lru</span>
+<span class="nv">maxmemory</span><span class="o">-</span><span class="nv">samples</span><span class="w"> </span><span class="mi">10</span>
+
+#<span class="w"> </span><span class="nv">Persistence</span><span class="w"> </span><span class="ss">(</span><span class="nv">adjust</span><span class="w"> </span><span class="nv">based</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">needs</span><span class="ss">)</span>
+<span class="nv">save</span><span class="w"> </span><span class="mi">900</span><span class="w"> </span><span class="mi">1</span>
+<span class="nv">save</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mi">10</span>
+<span class="nv">save</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="mi">10000</span>
+
+#<span class="w"> </span><span class="nv">Network</span>
+<span class="nb">timeout</span><span class="w"> </span><span class="mi">300</span>
+<span class="nv">tcp</span><span class="o">-</span><span class="nv">keepalive</span><span class="w"> </span><span class="mi">60</span>
+</code></pre></div>
+
+<h3 id="for-agent-state-management">For Agent State Management</h3>
+<div class="codehilite"><pre><span></span><code># Focus on durability
+appendonly yes
+appendfsync everysec
+auto-aof-rewrite-percentage 100
+auto-aof-rewrite-min-size 64mb
+
+# Memory
+maxmemory-policy noeviction  # Don&#39;t evict agent state
+</code></pre></div>
+
+<h3 id="for-vector-search">For Vector Search</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Performance optimization</span>
+<span class="n">maxmemory</span><span class="w"> </span><span class="mi">16</span><span class="n">gb</span>
+<span class="n">maxmemory</span><span class="o">-</span><span class="n">policy</span><span class="w"> </span><span class="n">noeviction</span>
+
+<span class="c1"># Load RediSearch module</span>
+<span class="n">loadmodule</span><span class="w"> </span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">redisearch</span><span class="o">.</span><span class="n">so</span>
+
+<span class="c1"># Increase search timeout</span>
+<span class="n">timeout</span><span class="w"> </span><span class="mi">300</span>
+</code></pre></div>
+
+<h2 id="integration-decision-tree">Integration Decision Tree</h2>
+<div class="codehilite"><pre><span></span><code><span class="nv">Need</span><span class="w"> </span><span class="nv">AI</span><span class="o">/</span><span class="nv">LLM</span><span class="o">/</span><span class="nv">Agent</span><span class="w"> </span><span class="nv">integration</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">Redis</span>?
+│
+├─<span class="w"> </span><span class="nv">Need</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">reduce</span><span class="w"> </span><span class="nv">LLM</span><span class="w"> </span><span class="nv">API</span><span class="w"> </span><span class="nv">costs</span>?
+│<span class="w">  </span>└─<span class="w"> </span><span class="nv">Use</span>:<span class="w"> </span><span class="nv">Response</span><span class="w"> </span><span class="nv">caching</span><span class="w"> </span><span class="nv">pattern</span>
+│
+├─<span class="w"> </span><span class="nv">Need</span><span class="w"> </span><span class="nv">semantic</span><span class="w"> </span><span class="nv">search</span>?
+│<span class="w">  </span>└─<span class="w"> </span><span class="nv">Use</span>:<span class="w"> </span><span class="nv">Vector</span><span class="w"> </span><span class="nv">similarity</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">RediSearch</span>
+│
+├─<span class="w"> </span><span class="nv">Need</span><span class="w"> </span><span class="nv">agent</span><span class="w"> </span><span class="nv">memory</span><span class="o">/</span><span class="nv">state</span>?
+│<span class="w">  </span>└─<span class="w"> </span><span class="nv">Use</span>:<span class="w"> </span><span class="nv">Hash</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">JSON</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">state</span><span class="w"> </span><span class="nv">management</span>
+│
+├─<span class="w"> </span><span class="nv">Need</span><span class="w"> </span><span class="nv">real</span><span class="o">-</span><span class="nv">time</span><span class="w"> </span><span class="nv">AI</span><span class="w"> </span><span class="nv">processing</span>?
+│<span class="w">  </span>└─<span class="w"> </span><span class="nv">Use</span>:<span class="w"> </span><span class="nv">Redis</span><span class="w"> </span><span class="nv">Streams</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">RedisAI</span>
+│
+├─<span class="w"> </span><span class="nv">Need</span><span class="w"> </span><span class="nv">multi</span><span class="o">-</span><span class="nv">agent</span><span class="w"> </span><span class="nv">coordination</span>?
+│<span class="w">  </span>└─<span class="w"> </span><span class="nv">Use</span>:<span class="w"> </span><span class="nv">Pub</span><span class="o">/</span><span class="nv">Sub</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">shared</span><span class="w"> </span><span class="nv">state</span>
+│
+├─<span class="w"> </span><span class="nv">Need</span><span class="w"> </span><span class="nv">model</span><span class="w"> </span><span class="nv">serving</span>?
+│<span class="w">  </span>└─<span class="w"> </span><span class="nv">Use</span>:<span class="w"> </span><span class="nv">RedisAI</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">inference</span>
+│
+└─<span class="w"> </span><span class="nv">Need</span><span class="w"> </span><span class="nv">RAG</span><span class="w"> </span><span class="ss">(</span><span class="nv">Retrieval</span><span class="o">-</span><span class="nv">Augmented</span><span class="w"> </span><span class="nv">Generation</span><span class="ss">)</span>?
+<span class="w">   </span>└─<span class="w"> </span><span class="nv">Use</span>:<span class="w"> </span><span class="nv">Vector</span><span class="w"> </span><span class="nv">search</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">LLM</span><span class="w"> </span><span class="nv">caching</span>
+</code></pre></div>
+
+<h2 id="deployment-checklist">Deployment Checklist</h2>
+<h3 id="before-going-to-production">Before Going to Production</h3>
+<ul>
+<li>[ ] Enable persistence (RDB or AOF)</li>
+<li>[ ] Set up Redis Cluster for HA</li>
+<li>[ ] Configure maxmemory and eviction policy</li>
+<li>[ ] Enable authentication (requirepass or ACL)</li>
+<li>[ ] Set up SSL/TLS if needed</li>
+<li>[ ] Configure monitoring (Prometheus, Grafana)</li>
+<li>[ ] Set up backup strategy</li>
+<li>[ ] Load test with expected traffic</li>
+<li>[ ] Document key naming conventions</li>
+<li>[ ] Set up alerting for key metrics</li>
+<li>[ ] Plan for scaling (vertical vs horizontal)</li>
+<li>[ ] Review security settings</li>
+</ul>
+<h2 id="cost-optimization-tips">Cost Optimization Tips</h2>
+<ol>
+<li>
+<p><strong>Use TTL aggressively</strong>: Auto-expire unused data
+   <code>python
+   redis.setex("temp:data", 3600, value)  # 1 hour</code></p>
+</li>
+<li>
+<p><strong>Compress large values</strong>: Reduce memory usage
+   <code>python
+   import zlib
+   compressed = zlib.compress(large_data.encode())
+   redis.set("key", compressed)</code></p>
+</li>
+<li>
+<p><strong>Use pipelining</strong>: Reduce round trips
+   <code>python
+   pipe = redis.pipeline()
+   for i in range(1000):
+       pipe.set(f"key:{i}", f"value:{i}")
+   pipe.execute()</code></p>
+</li>
+<li>
+<p><strong>Implement cache warming</strong>: Reduce cold starts
+   <code>python
+   def warm_cache():
+       popular_items = get_popular_items()
+       for item in popular_items:
+           cache_item(item)</code></p>
+</li>
+<li>
+<p><strong>Monitor and tune</strong>: Adjust based on metrics
+   <code>python
+   def get_cache_hit_rate():
+       info = redis.info('stats')
+       hits = info['keyspace_hits']
+       misses = info['keyspace_misses']
+       return hits / (hits + misses) if (hits + misses) &gt; 0 else 0</code></p>
+</li>
+</ol>
+<h2 id="security-best-practices">Security Best Practices</h2>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 1. Use strong authentication</span>
+<span class="n">redis</span> <span class="o">=</span> <span class="n">Redis</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;redis.example.com&#39;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;strong-random-password&#39;</span><span class="p">,</span>
+    <span class="n">ssl</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="c1"># 2. Implement ACLs</span>
+<span class="c1"># redis-cli: ACL SETUSER myapp on &gt;password ~myapp:* +get +set +del</span>
+
+<span class="c1"># 3. Encrypt sensitive data</span>
+<span class="kn">from</span> <span class="nn">cryptography.fernet</span> <span class="kn">import</span> <span class="n">Fernet</span>
+
+<span class="n">key</span> <span class="o">=</span> <span class="n">Fernet</span><span class="o">.</span><span class="n">generate_key</span><span class="p">()</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">Fernet</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="n">encrypted</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;sensitive data&quot;</span><span class="p">)</span>
+<span class="n">redis</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;secure:key&quot;</span><span class="p">,</span> <span class="n">encrypted</span><span class="p">)</span>
+
+<span class="n">decrypted</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;secure:key&quot;</span><span class="p">))</span>
+
+<span class="c1"># 4. Use separate Redis instances for different security levels</span>
+<span class="n">redis_public</span> <span class="o">=</span> <span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;public-redis&#39;</span><span class="p">)</span>  <span class="c1"># Non-sensitive</span>
+<span class="n">redis_secure</span> <span class="o">=</span> <span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;secure-redis&#39;</span><span class="p">)</span>  <span class="c1"># Sensitive data</span>
+</code></pre></div>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<h3 id="official-documentation">Official Documentation</h3>
+<ul>
+<li>Redis Commands: https://redis.io/commands/</li>
+<li>RedisAI: https://redis.io/docs/stack/ai/</li>
+<li>RediSearch: https://redis.io/docs/stack/search/</li>
+<li>Redis Pub/Sub: https://redis.io/docs/manual/pubsub/</li>
+</ul>
+<h3 id="client-libraries">Client Libraries</h3>
+<ul>
+<li>Python: redis-py, redisai-py</li>
+<li>Node.js: node-redis, ioredis</li>
+<li>Go: go-redis</li>
+<li>Java: Jedis, Lettuce</li>
+<li>.NET: StackExchange.Redis</li>
+</ul>
+<h3 id="tools">Tools</h3>
+<ul>
+<li>RedisInsight: GUI for Redis management</li>
+<li>redis-cli: Command-line interface</li>
+<li>Redis Benchmark: Performance testing</li>
+<li>Redis Exporter: Prometheus metrics</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li>[[redis-ai-integration.md]] - Comprehensive integration guide</li>
+<li>[[SKYNET.md]] - Technology research overview</li>
+<li>[[ai scenarios simulator]] - AI simulation scenarios</li>
+</ul>
+<hr />
+<p><em>Quick Reference Guide</em>
+<em>Last Updated: 2025-11-17</em>
+<em>For detailed implementations, see redis-ai-integration.md</em></p>
+<!-- 3B7D9F42 -->
+</body>
+</html>

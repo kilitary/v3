@@ -1,0 +1,111 @@
+{
+  "addToCommand": true,
+  "addToContextMenu": true,
+  "createInstanceNearExistingOnes": true,
+  "errorNoticeTimeout": 0,
+  "exposeInternalModules": true,
+  "focusOnNewInstance": true,
+  "hideStatusBar": "focused",
+  "language": "en",
+  "newInstanceBehavior": "newTab",
+  "noticeTimeout": 15,
+  "openChangelogOnUpdate": false,
+  "pinNewInstance": false,
+  "preferredRenderer": "canvas",
+  "profiles": {
+    "529dca54-09a2-4bc7-88b4-4cf235e1ccc6": {
+      "args": [],
+      "executable": "C:\\Windows\\System32\\wsl.exe",
+      "name": "kali",
+      "platforms": {
+        "win32": true
+      },
+      "pythonExecutable": "python3",
+      "restoreHistory": true,
+      "successExitCodes": [
+        "0",
+        "SIGINT",
+        "SIGTERM"
+      ],
+      "terminalOptions": {
+        "fontFamily": "liberation mono",
+        "fontSize": 11,
+        "fontWeight": "normal"
+      },
+      "type": "integrated",
+      "useWin32Conhost": true
+    },
+    "9e8eb26a-e983-4894-bf79-e29a0ded382d": {
+      "args": [],
+      "executable": "C:\\Windows\\System32\\cmd.exe",
+      "name": "ms win",
+      "platforms": {
+        "win32": true
+      },
+      "pythonExecutable": "python3",
+      "restoreHistory": true,
+      "successExitCodes": [
+        "0",
+        "SIGINT",
+        "SIGTERM"
+      ],
+      "terminalOptions": {},
+      "type": "integrated",
+      "useWin32Conhost": true
+    },
+    "f9505b27-9b3b-4385-85d8-0b4e61d5a6ad": {
+      "args": [],
+      "executable": "powershell",
+      "name": "powershell",
+      "platforms": {
+        "win32": true
+      },
+      "pythonExecutable": "python3",
+      "restoreHistory": true,
+      "successExitCodes": [
+        "0",
+        "SIGINT",
+        "SIGTERM"
+      ],
+      "terminalOptions": {},
+      "type": "integrated",
+      "useWin32Conhost": true
+    },
+    "4b1c0471-49c7-4760-8863-1f558716e20c": {
+      "args": [],
+      "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "name": "gitbash",
+      "platforms": {
+        "win32": true
+      },
+      "pythonExecutable": "python3",
+      "restoreHistory": true,
+      "successExitCodes": [
+        "0",
+        "SIGINT",
+        "SIGTERM"
+      ],
+      "terminalOptions": {},
+      "type": "integrated",
+      "useWin32Conhost": true
+    },
+    "e81e1930-87ac-42c4-8b92-50a736387164": {
+      "args": [],
+      "executable": "C:\\Windows\\System32\\cmd.exe",
+      "name": "cmd",
+      "platforms": {
+        "win32": true
+      },
+      "pythonExecutable": "python3",
+      "restoreHistory": true,
+      "successExitCodes": [
+        "0",
+        "SIGINT",
+        "SIGTERM"
+      ],
+      "terminalOptions": {},
+      "type": "integrated",
+      "useWin32Conhost": true
+    }
+  }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAUDE</title>
+    <style>
+        /* Kid-fest colors on a white terminal-style background */
+        body {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        a {
+            color: #B660A6;
+            text-decoration:  dotted #6A0572;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            transform: scale(1.05) rotate(1deg);
+            color: #6A0572;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        ul, ol {
+            margin: 0.5em 0;
+            padding-left: 1.8em;
+        }
+        li {
+            margin: 0.3em 0;
+        }
+        blockquote {
+            border-left: 6px solid #7B61FF;
+            padding: 0.4em 1.2em;
+            margin: 1em 0;
+            background: #fafafa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            background: #fafafa;
+            padding: 0.15em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #416EB4;
+        }
+        pre {
+            background: #fafafa;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 3px dotted #C70039;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        th {
+            background: #ffffff;
+            padding: 8px 12px;
+            border: 2px solid #1A535C;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px dashed #2E7D32;
+        }
+        tr:nth-child(odd) td {
+            background: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+        hr {
+            border: 4px solid #9B5DE8;
+            background: transparent;
+            margin: 1.5em 0;
+            border-radius: 2px;
+        }
+        img {
+            max-width: 90%;
+            border: 6px solid #B660A6;
+            border-radius: 12px;
+            margin: 1em 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5em;
+            padding: 8px 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #416EB4;
+            font-weight: bold;
+        }
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    <a href="javascript:history.back()" class="back-link">← CLAUDE</a>
+    <h1 id="claudemd" style="color:#2D2942;border-bottom:1px dashed #9B5DE8;padding-bottom:4px;">CLAUDE.html</h1>
+<p style="color:#843b62;">This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+<h2 id="what-this-repository-is" style="color:#843b62;border-bottom:1px dashed #843b62;padding-bottom:4px;">What This Repository Is</h2>
+<p style="color:#843b62;">An <a href="https://obsidian.html/">Obsidian</a> knowledge vault (<code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">vault14.2</code>) containing interdisciplinary research documentation, simulation logs, and utility Python scripts. The primary content is markdown files organized into research domains; the Python scripts are tooling built on top of that content.</p>
+<h2 id="python-scripts" style="color:#843b62;border-bottom:1px dashed #843b62;padding-bottom:4px;">Python Scripts</h2>
+<p style="color:#843b62;">Install dependencies:</p>
+<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+
+<p style="color:#843b62;">Run the markdown-to-HTML converter (converts all <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">.html</code> files and generates <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">index.html</code>):</p>
+<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">python<span class="w"> </span>convert_to_html.py
+</code></pre></div>
+
+<p style="color:#843b62;">Run the response prover mock (analyzes <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">psy-references/mail2fbi.txt</code> and generates a mock response):</p>
+<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">python<span class="w"> </span>response_prover_mock.py
+<span class="c1"># or with a custom mail file:</span>
+python<span class="w"> </span>response_prover_mock.py<span class="w"> </span>path/to/mail.txt
+</code></pre></div>
+
+<p style="color:#843b62;">Run the grouped-nodes test suite:</p>
+<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">python<span class="w"> </span>test_response_prover_grouped_nodes.py
+</code></pre></div>
+
+<h2 id="repository-structure" style="color:#843b62;border-bottom:1px dashed #843b62;padding-bottom:4px;">Repository Structure</h2>
+<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;"><span class="n">vault14</span><span class="o">.</span><span class="mi">2</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">SKYNET</span><span class="o">/</span><span class="w">           </span><span class="c1"># Technology &amp; systems research (RF/microwave, nav scanning, text-machine AI)</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">Red</span><span class="o">&amp;</span><span class="n">Queen</span><span class="o">/</span><span class="w">        </span><span class="c1"># Interdisciplinary research (biology, electronics, linguistics, simulation logs)</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">playground</span><span class="o">/</span><span class="n">models_queryer</span><span class="o">/</span><span class="w">  </span><span class="c1"># sim_log_*.html — LLM query simulation logs used by response_prover_mock.py</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">axis9</span><span class="o">/</span><span class="w">            </span><span class="c1"># Core strategic research, issues, planning</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">BMO</span><span class="o">/</span><span class="w">              </span><span class="c1"># System/user profiles and configuration</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">Excalidraw</span><span class="o">/</span><span class="w">       </span><span class="c1"># Visual diagrams and drawing exports</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">programs</span><span class="o">/</span><span class="w">         </span><span class="c1"># Software tools and utilities documentation</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">textgenerator</span><span class="o">/</span><span class="w">    </span><span class="c1"># AI text generation templates</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">psy</span><span class="o">-</span><span class="n">references</span><span class="o">/</span><span class="w">   </span><span class="c1"># Psychological and social research references</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">copilot</span><span class="o">/</span><span class="w">          </span><span class="c1"># GitHub Copilot integration notes</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">convert_to_html</span><span class="o">.</span><span class="n">py</span><span class="w">        </span><span class="c1"># Batch MD→HTML converter (embeds images as base64)</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">response_prover_mock</span><span class="o">.</span><span class="n">py</span><span class="w">   </span><span class="c1"># Mock FSB/FSS response generator using verb-logic analysis</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">test_response_prover_grouped_nodes</span><span class="o">.</span><span class="n">py</span><span class="w">  </span><span class="c1"># Tests for the grouped-nodes detection logic</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span><span class="w">           </span><span class="c1"># colorama, gpiozero, rich</span>
+<span class="err">└──</span><span class="w"> </span><span class="o">.</span><span class="n">obsidian</span><span class="o">/</span><span class="w">        </span><span class="c1"># Obsidian app config, plugins, themes (do not edit manually)</span>
+</code></pre></div>
+
+<h2 id="key-architectural-points" style="color:#843b62;border-bottom:1px dashed #843b62;padding-bottom:4px;">Key Architectural Points</h2>
+<p style="color:#843b62;"><strong><code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">convert_to_html.py</code></strong> — <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">MarkdownToHTMLConverter</code> class. Walks all <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">*.html</code> recursively, embeds images as base64 data URIs, rewrites <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">.html</code> links to <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">.html</code>, and produces a searchable <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">index.html</code>. Hardcoded root path <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">/home/runner/work/named/named</code> in <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">__main__</code> — update when running locally.</p>
+<p style="color:#843b62;"><strong><code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">response_prover_mock.py</code></strong> — <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">ResponseProverMock</code> class. Loads <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">psy-references/mail2fbi.txt</code>, samples up to 10 <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">sim_log_*.html</code> files from <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">Red&amp;Queen/playground/models_queryer/</code>, runs a verb-logic categorization system (<code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">VerbCategory</code> enum), and generates a structured mock response. Core decision flow: <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">_detect_grouped_nodes_scenario()</code> → grouped-nodes branch or standard APPROVE/DENY branch. Output is printed and also saved to <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">tmp/response_prover_output_&lt;timestamp&gt;.html</code>.</p>
+<p style="color:#843b62;"><strong>Obsidian conventions</strong> — Internal links use <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">[[wiki-style]]</code> syntax. Tags are applied via YAML frontmatter or inline <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">#tag</code>. The <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">.obsidian/</code> directory holds plugin configs (<code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">data.json</code> per plugin) and themes. Do not commit plugin binary <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">main.js</code> files unless intentionally updating a plugin.</p>
+<h2 id="copilot-instructions" style="color:#843b62;border-bottom:1px dashed #843b62;padding-bottom:4px;">Copilot Instructions</h2>
+<p style="color:#843b62;">From <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">.github/copilot-instructions.html</code>: the knowledge system uses a 4-step process (LOAD → ANALYZE with 2–4 random cycles → RELOAD at 51% → OUTPUT) following Red&amp;Queen random shuffle patterns from simulation logs.</p>
+<h2 id="notes" style="color:#843b62;border-bottom:1px dashed #843b62;padding-bottom:4px;">Notes</h2>
+<ul>
+<li style="color:#7B61FF;">Markdown files are bilingual (English and Russian); the Russian README is <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">README_ru.html</code>.</li>
+<li style="color:#7B61FF;"><code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">tracked_files.json</code> records file tracking metadata for the vault.</li>
+<li style="color:#7B61FF;">The <code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">expandor.c</code> file at the root is a C utility; no build system is present for it.</li>
+<li style="color:#7B61FF;"><code style="color:#1A535C;background:#fafafa;border:1px solid #9B5DE8;">root.ipynb</code> is a Jupyter notebook at the vault root.</li>
+</ul>
+    <script>
+        // Sprinkle animated confetti that matches the kid-fest palette
+        (function() {
+            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
+            const confetti = document.getElementById('confetti');
+            const count = 120;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                const size = Math.random() * 8 + 4;
+                el.style.cssText =
+                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
+                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
+                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
+                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
+                el.style.transform = 'rotate('+Math.random()*360+'deg)';
+                confetti.appendChild(el);
+            }
+            const style = document.createElement('style');
+            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>

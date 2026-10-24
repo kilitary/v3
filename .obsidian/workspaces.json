@@ -1,0 +1,756 @@
+{
+  "temp": {
+    "main": {
+      "id": "5c04643aa10cf69b",
+      "type": "split",
+      "children": [
+        {
+          "id": "df148db56f79738d",
+          "type": "split",
+          "children": [
+            {
+              "id": "e560048a8f4e9a0a",
+              "type": "split",
+              "dimension": 71.33333333333333,
+              "children": [
+                {
+                  "id": "23dc9e10a854ccda",
+                  "type": "tabs",
+                  "children": [
+                    {
+                      "id": "f873ff7e2f0b8bcb",
+                      "type": "leaf",
+                      "state": {
+                        "type": "markdown",
+                        "state": {
+                          "file": "issue/Zudo and -Пыточный конвеер в Росии- и пси ПО -Рука- =прокурора Ширеевой Н гульнара=.md",
+                          "mode": "source",
+                          "backlinks": true,
+                          "source": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "418e55eae9e629e9",
+                      "type": "leaf",
+                      "state": {
+                        "type": "big-calendar",
+                        "state": {}
+                      }
+                    },
+                    {
+                      "id": "daf978af4743cdc8",
+                      "type": "leaf",
+                      "state": {
+                        "type": "desk-view",
+                        "state": {}
+                      }
+                    }
+                  ],
+                  "currentTab": 1,
+                  "stacked": true
+                },
+                {
+                  "id": "730d4c08a6c09b2d",
+                  "type": "tabs",
+                  "children": [
+                    {
+                      "id": "b590ea37114724bf",
+                      "type": "leaf",
+                      "state": {
+                        "type": "markdown",
+                        "state": {
+                          "file": "2024-04-16.md",
+                          "mode": "source",
+                          "backlinks": true,
+                          "source": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "3e54f364cd4e32c9",
+                      "type": "leaf",
+                      "state": {
+                        "type": "markdown",
+                        "state": {
+                          "file": "202404191642.md",
+                          "mode": "source",
+                          "backlinks": true,
+                          "source": false
+                        }
+                      }
+                    }
+                  ],
+                  "currentTab": 1
+                }
+              ],
+              "direction": "vertical"
+            },
+            {
+              "id": "fe4535f34ddf142c",
+              "type": "tabs",
+              "dimension": 28.666666666666664,
+              "children": [
+                {
+                  "id": "3481689f861765ca",
+                  "type": "leaf",
+                  "state": {
+                    "type": "kanban",
+                    "state": {
+                      "file": "vault14/work flows/global ai, defense and counter-ss operations.md"
+                    }
+                  }
+                }
+              ],
+              "stacked": true
+            }
+          ],
+          "direction": "horizontal"
+        }
+      ],
+      "direction": "vertical"
+    },
+    "left": {
+      "id": "d93c9ec04906117f",
+      "type": "split",
+      "children": [
+        {
+          "id": "d39147fdf452733e",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "e8ab14f810b8b92a",
+              "type": "leaf",
+              "state": {
+                "type": "file-explorer",
+                "state": {
+                  "sortOrder": "alphabetical"
+                }
+              }
+            },
+            {
+              "id": "f342cc04e3559737",
+              "type": "leaf",
+              "state": {
+                "type": "search",
+                "state": {
+                  "query": "tag:#chatGPT",
+                  "matchingCase": true,
+                  "explainSearch": false,
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "byModifiedTime"
+                }
+              }
+            },
+            {
+              "id": "0a0a13b041a1b9f4",
+              "type": "leaf",
+              "state": {
+                "type": "bookmarks",
+                "state": {}
+              }
+            },
+            {
+              "id": "c1d0a448154ce2c9",
+              "type": "leaf",
+              "state": {
+                "type": "todo",
+                "state": {}
+              }
+            },
+            {
+              "id": "68ae1f1e3332b505",
+              "type": "leaf",
+              "state": {
+                "type": "file-tree-view",
+                "state": {}
+              }
+            }
+          ]
+        },
+        {
+          "id": "fe5b13938652ae46",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "70bdc9dbe52d8599",
+              "type": "leaf",
+              "state": {
+                "type": "timeline",
+                "state": {}
+              }
+            }
+          ]
+        }
+      ],
+      "direction": "horizontal",
+      "width": 250.5
+    },
+    "right": {
+      "id": "04f9fc2d318d98b7",
+      "type": "split",
+      "children": [
+        {
+          "id": "0bcd4e39cb77ddac",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "ae36d55c56c85f80",
+              "type": "leaf",
+              "state": {
+                "type": "backlink",
+                "state": {
+                  "file": "202404191642.md",
+                  "collapseAll": true,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              }
+            },
+            {
+              "id": "d743e47a1491bd4d",
+              "type": "leaf",
+              "state": {
+                "type": "outgoing-link",
+                "state": {
+                  "file": "202404191642.md",
+                  "linksCollapsed": false,
+                  "unlinkedCollapsed": false
+                }
+              }
+            },
+            {
+              "id": "d54c54655ce8ca53",
+              "type": "leaf",
+              "state": {
+                "type": "PROGRESS_CLOCKS_VIEW",
+                "state": {}
+              }
+            },
+            {
+              "id": "1a93ba2f5b4706b7",
+              "type": "leaf",
+              "state": {
+                "type": "Timetable",
+                "state": {}
+              }
+            },
+            {
+              "id": "3082f803f3ba694d",
+              "type": "leaf",
+              "state": {
+                "type": "git-view",
+                "state": {}
+              }
+            },
+            {
+              "id": "2d495139f5dedbe7",
+              "type": "leaf",
+              "state": {
+                "type": "graph-analysis",
+                "state": {}
+              }
+            },
+            {
+              "id": "66a895a7075c133f",
+              "type": "leaf",
+              "state": {
+                "type": "ai-research-assistant",
+                "state": {}
+              }
+            },
+            {
+              "id": "9c48c8f85310942d",
+              "type": "leaf",
+              "state": {
+                "type": "advanced-tables-toolbar",
+                "state": {}
+              }
+            }
+          ],
+          "currentTab": 7
+        },
+        {
+          "id": "77f847cbcc6365f1",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "80647946df64b14c",
+              "type": "leaf",
+              "state": {
+                "type": "all-properties",
+                "state": {
+                  "sortOrder": "frequency",
+                  "showSearch": false,
+                  "searchQuery": ""
+                }
+              }
+            },
+            {
+              "id": "dde49514ef20b517",
+              "type": "leaf",
+              "state": {
+                "type": "file-properties",
+                "state": {
+                  "file": "202404191642.md"
+                }
+              }
+            },
+            {
+              "id": "408f418166af1fce",
+              "type": "leaf",
+              "state": {
+                "type": "tag",
+                "state": {
+                  "sortOrder": "frequency",
+                  "useHierarchy": true
+                }
+              }
+            }
+          ],
+          "currentTab": 2
+        },
+        {
+          "id": "5f6904f0d7e0784d",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "edbebe7c0b513400",
+              "type": "leaf",
+              "state": {
+                "type": "outline",
+                "state": {
+                  "file": "202404191642.md"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "direction": "horizontal",
+      "width": 331.5
+    },
+    "left-ribbon": {
+      "hiddenItems": {
+        "switcher:Open quick switcher": false,
+        "graph:Open graph view": false,
+        "canvas:Create new canvas": false,
+        "daily-notes:Open today's daily note": false,
+        "templates:Insert template": false,
+        "command-palette:Open command palette": false,
+        "quiz-generator:Open generator": false,
+        "ai-research-assistant:AI Research Assistant": false,
+        "big-calendar:Big Calendar": false,
+        "table-editor-obsidian:Advanced Tables Toolbar": false,
+        "gpt3-notes:GPT-3 Notes": false,
+        "select-and-complete:Select and Complete": false,
+        "desk:Create new desk": false,
+        "git-integration:Open git menu": false,
+        "companion:Toggle completion": false,
+        "markdown-importer:Open format converter": false,
+        "zk-prefixer:Create new unique note": false,
+        "workspaces:Manage workspace layouts": false,
+        "obsidian-day-planner:Timeline": false,
+        "obsidian-textgenerator-plugin:Generate Text!": false,
+        "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+        "obsidian-gallery:Gallery": false,
+        "notion-like-tables:Create loom": false,
+        "obsidian-projects:Open projects": false,
+        "markdown-table-editor:Open Markdown Table Editor": false,
+        "obsidian-excalidraw-plugin:Create new drawing": false,
+        "file-tree-alternative:File Tree Alternative Plugin": false,
+        "breadcrumbs:Breadcrumbs Visualisation": false,
+        "darlal-switcher-plus:Open in Headings Mode": false,
+        "darlal-switcher-plus:Open Symbols for the active editor": false,
+        "obsidian-focus-mode:Toggle Focus Mode (Shift + Click to show active pane only)": false,
+        "advanced-random-note:Open random note modal": false,
+        "task-status:Change Checkbox Status": false,
+        "card-board:CardBoard": false
+      }
+    },
+    "active": "3e54f364cd4e32c9",
+    "mtime": "2024-04-19T16:42:13+03:00"
+  },
+  "test": {
+    "main": {
+      "id": "5c04643aa10cf69b",
+      "type": "split",
+      "children": [
+        {
+          "id": "df148db56f79738d",
+          "type": "split",
+          "children": [
+            {
+              "id": "e560048a8f4e9a0a",
+              "type": "split",
+              "dimension": 71.33333333333333,
+              "children": [
+                {
+                  "id": "23dc9e10a854ccda",
+                  "type": "tabs",
+                  "children": [
+                    {
+                      "id": "f873ff7e2f0b8bcb",
+                      "type": "leaf",
+                      "state": {
+                        "type": "markdown",
+                        "state": {
+                          "file": "issue/Zudo and -Пыточный конвеер в Росии- и пси ПО -Рука- =прокурора Ширеевой Н гульнара=.md",
+                          "mode": "source",
+                          "backlinks": true,
+                          "source": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "418e55eae9e629e9",
+                      "type": "leaf",
+                      "state": {
+                        "type": "big-calendar",
+                        "state": {}
+                      }
+                    },
+                    {
+                      "id": "daf978af4743cdc8",
+                      "type": "leaf",
+                      "state": {
+                        "type": "desk-view",
+                        "state": {}
+                      }
+                    }
+                  ],
+                  "currentTab": 1,
+                  "stacked": true
+                },
+                {
+                  "id": "730d4c08a6c09b2d",
+                  "type": "tabs",
+                  "children": [
+                    {
+                      "id": "b590ea37114724bf",
+                      "type": "leaf",
+                      "state": {
+                        "type": "markdown",
+                        "state": {
+                          "file": "2024-04-16.md",
+                          "mode": "source",
+                          "backlinks": true,
+                          "source": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "3e54f364cd4e32c9",
+                      "type": "leaf",
+                      "state": {
+                        "type": "markdown",
+                        "state": {
+                          "file": "202404191642.md",
+                          "mode": "source",
+                          "backlinks": true,
+                          "source": false
+                        }
+                      }
+                    }
+                  ],
+                  "currentTab": 1
+                }
+              ],
+              "direction": "vertical"
+            },
+            {
+              "id": "fe4535f34ddf142c",
+              "type": "tabs",
+              "dimension": 28.666666666666664,
+              "children": [
+                {
+                  "id": "3481689f861765ca",
+                  "type": "leaf",
+                  "state": {
+                    "type": "kanban",
+                    "state": {
+                      "file": "vault14/work flows/global ai, defense and counter-ss operations.md"
+                    }
+                  }
+                }
+              ],
+              "stacked": true
+            }
+          ],
+          "direction": "horizontal"
+        }
+      ],
+      "direction": "vertical"
+    },
+    "left": {
+      "id": "d93c9ec04906117f",
+      "type": "split",
+      "children": [
+        {
+          "id": "d39147fdf452733e",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "e8ab14f810b8b92a",
+              "type": "leaf",
+              "state": {
+                "type": "file-explorer",
+                "state": {
+                  "sortOrder": "alphabetical"
+                }
+              }
+            },
+            {
+              "id": "f342cc04e3559737",
+              "type": "leaf",
+              "state": {
+                "type": "search",
+                "state": {
+                  "query": "tag:#chatGPT",
+                  "matchingCase": true,
+                  "explainSearch": false,
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "byModifiedTime"
+                }
+              }
+            },
+            {
+              "id": "0a0a13b041a1b9f4",
+              "type": "leaf",
+              "state": {
+                "type": "bookmarks",
+                "state": {}
+              }
+            },
+            {
+              "id": "c1d0a448154ce2c9",
+              "type": "leaf",
+              "state": {
+                "type": "todo",
+                "state": {}
+              }
+            },
+            {
+              "id": "68ae1f1e3332b505",
+              "type": "leaf",
+              "state": {
+                "type": "file-tree-view",
+                "state": {}
+              }
+            }
+          ]
+        },
+        {
+          "id": "fe5b13938652ae46",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "70bdc9dbe52d8599",
+              "type": "leaf",
+              "state": {
+                "type": "timeline",
+                "state": {}
+              }
+            }
+          ]
+        }
+      ],
+      "direction": "horizontal",
+      "width": 250.5
+    },
+    "right": {
+      "id": "04f9fc2d318d98b7",
+      "type": "split",
+      "children": [
+        {
+          "id": "0bcd4e39cb77ddac",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "ae36d55c56c85f80",
+              "type": "leaf",
+              "state": {
+                "type": "backlink",
+                "state": {
+                  "file": "202404191642.md",
+                  "collapseAll": true,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              }
+            },
+            {
+              "id": "d743e47a1491bd4d",
+              "type": "leaf",
+              "state": {
+                "type": "outgoing-link",
+                "state": {
+                  "file": "202404191642.md",
+                  "linksCollapsed": false,
+                  "unlinkedCollapsed": false
+                }
+              }
+            },
+            {
+              "id": "d54c54655ce8ca53",
+              "type": "leaf",
+              "state": {
+                "type": "PROGRESS_CLOCKS_VIEW",
+                "state": {}
+              }
+            },
+            {
+              "id": "1a93ba2f5b4706b7",
+              "type": "leaf",
+              "state": {
+                "type": "Timetable",
+                "state": {}
+              }
+            },
+            {
+              "id": "3082f803f3ba694d",
+              "type": "leaf",
+              "state": {
+                "type": "git-view",
+                "state": {}
+              }
+            },
+            {
+              "id": "2d495139f5dedbe7",
+              "type": "leaf",
+              "state": {
+                "type": "graph-analysis",
+                "state": {}
+              }
+            },
+            {
+              "id": "66a895a7075c133f",
+              "type": "leaf",
+              "state": {
+                "type": "ai-research-assistant",
+                "state": {}
+              }
+            },
+            {
+              "id": "9c48c8f85310942d",
+              "type": "leaf",
+              "state": {
+                "type": "advanced-tables-toolbar",
+                "state": {}
+              }
+            }
+          ],
+          "currentTab": 7
+        },
+        {
+          "id": "77f847cbcc6365f1",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "80647946df64b14c",
+              "type": "leaf",
+              "state": {
+                "type": "all-properties",
+                "state": {
+                  "sortOrder": "frequency",
+                  "showSearch": false,
+                  "searchQuery": ""
+                }
+              }
+            },
+            {
+              "id": "dde49514ef20b517",
+              "type": "leaf",
+              "state": {
+                "type": "file-properties",
+                "state": {
+                  "file": "202404191642.md"
+                }
+              }
+            },
+            {
+              "id": "408f418166af1fce",
+              "type": "leaf",
+              "state": {
+                "type": "tag",
+                "state": {
+                  "sortOrder": "frequency",
+                  "useHierarchy": true
+                }
+              }
+            }
+          ],
+          "currentTab": 2
+        },
+        {
+          "id": "5f6904f0d7e0784d",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "edbebe7c0b513400",
+              "type": "leaf",
+              "state": {
+                "type": "outline",
+                "state": {
+                  "file": "202404191642.md"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "direction": "horizontal",
+      "width": 331.5
+    },
+    "left-ribbon": {
+      "hiddenItems": {
+        "switcher:Open quick switcher": false,
+        "graph:Open graph view": false,
+        "canvas:Create new canvas": false,
+        "daily-notes:Open today's daily note": false,
+        "templates:Insert template": false,
+        "command-palette:Open command palette": false,
+        "quiz-generator:Open generator": false,
+        "ai-research-assistant:AI Research Assistant": false,
+        "big-calendar:Big Calendar": false,
+        "table-editor-obsidian:Advanced Tables Toolbar": false,
+        "gpt3-notes:GPT-3 Notes": false,
+        "select-and-complete:Select and Complete": false,
+        "desk:Create new desk": false,
+        "git-integration:Open git menu": false,
+        "companion:Toggle completion": false,
+        "markdown-importer:Open format converter": false,
+        "zk-prefixer:Create new unique note": false,
+        "workspaces:Manage workspace layouts": false,
+        "obsidian-day-planner:Timeline": false,
+        "obsidian-textgenerator-plugin:Generate Text!": false,
+        "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+        "obsidian-gallery:Gallery": false,
+        "notion-like-tables:Create loom": false,
+        "obsidian-projects:Open projects": false,
+        "markdown-table-editor:Open Markdown Table Editor": false,
+        "obsidian-excalidraw-plugin:Create new drawing": false,
+        "file-tree-alternative:File Tree Alternative Plugin": false,
+        "breadcrumbs:Breadcrumbs Visualisation": false,
+        "darlal-switcher-plus:Open in Headings Mode": false,
+        "darlal-switcher-plus:Open Symbols for the active editor": false,
+        "obsidian-focus-mode:Toggle Focus Mode (Shift + Click to show active pane only)": false,
+        "advanced-random-note:Open random note modal": false,
+        "task-status:Change Checkbox Status": false,
+        "card-board:CardBoard": false
+      }
+    },
+    "active": "3e54f364cd4e32c9",
+    "mtime": "2024-04-19T16:42:19+03:00"
+  }
+}

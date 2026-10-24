@@ -1,0 +1,15 @@
+{
+  "settings": {
+    "deleteFinishedTasks": true,
+    "showTooltips": true,
+    "autoSortForTaskQuantity": true,
+    "version": "1.1.1"
+  },
+  "views": [
+    {
+      "name": "View 1",
+      "subjects": [],
+      "tasks": []
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README-redis-ai</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 85%;
+        }
+        pre {
+            background-color: #f6f8fa;
+            padding: 16px;
+            overflow: auto;
+            border-radius: 3px;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        blockquote {
+            border-left: 4px solid #dfe2e5;
+            padding-left: 16px;
+            color: #6a737d;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #dfe2e5;
+            padding: 6px 13px;
+        }
+        table tr:nth-child(2n) {
+            background-color: #f6f8fa;
+        }
+        ul, ol {
+            padding-left: 2em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            background-color: #f1f3f5;
+            border-radius: 4px;
+            color: #0366d6;
+        }
+        .back-link:hover {
+            background-color: #e1e4e8;
+            text-decoration: none;
+        }
+        .banner-image {
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .banner-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <h1 id="redis-ai-integration-documentation">Redis AI Integration Documentation</h1>
+<blockquote>
+<p><strong>Complete guide to connecting Redis AI with AI/LLM/Agent systems</strong></p>
+</blockquote>
+<h2 id="documentation-overview">📚 Documentation Overview</h2>
+<p>This documentation set provides comprehensive coverage of Redis AI integration patterns, architectures, and best practices for building AI/LLM/agent systems.</p>
+<h3 id="files-in-this-collection">Files in This Collection</h3>
+<ol>
+<li><strong><a href="redis-ai-integration.html">redis-ai-integration.md</a></strong> - <em>Primary Reference</em></li>
+<li>Complete integration guide (37KB, ~45 min read)</li>
+<li>What can connect to Redis AI</li>
+<li>Architecture patterns</li>
+<li>5 complete implementation examples</li>
+<li>Best practices and use cases</li>
+<li>
+<p>Performance expectations</p>
+</li>
+<li>
+<p><strong><a href="redis-ai-quick-reference.html">redis-ai-quick-reference.md</a></strong> - <em>Quick Start</em></p>
+</li>
+<li>Quick reference guide (13.5KB, ~10 min read)</li>
+<li>Connection matrix</li>
+<li>Code snippets (Python, Node.js, Go)</li>
+<li>Troubleshooting guide</li>
+<li>
+<p>Configuration recommendations</p>
+</li>
+<li>
+<p><strong><a href="redis-ai-architecture-diagrams.html">redis-ai-architecture-diagrams.md</a></strong> - <em>Visual Guide</em></p>
+</li>
+<li>Architecture diagrams (29.5KB, ~20 min read)</li>
+<li>System integration overview</li>
+<li>Flow diagrams</li>
+<li>Deployment topologies</li>
+<li>Technology stack visualization</li>
+</ol>
+<h2 id="quick-start">🚀 Quick Start</h2>
+<h3 id="for-beginners">For Beginners</h3>
+<p>Start with the <strong>Quick Reference</strong> → Review <strong>Architecture Diagrams</strong> → Deep dive into <strong>Integration Guide</strong></p>
+<h3 id="for-experienced-developers">For Experienced Developers</h3>
+<p>Start with <strong>Quick Reference</strong> for patterns → Reference <strong>Integration Guide</strong> for specific implementations</p>
+<h3 id="for-architects">For Architects</h3>
+<p>Start with <strong>Architecture Diagrams</strong> → Review <strong>Integration Guide</strong> sections → Use <strong>Quick Reference</strong> for decisions</p>
+<h2 id="what-youll-learn">🎯 What You'll Learn</h2>
+<h3 id="core-concepts">Core Concepts</h3>
+<ul>
+<li>How Redis AI connects to LLMs (OpenAI, Anthropic, etc.)</li>
+<li>Using Redis for AI agent state management</li>
+<li>Vector similarity search with RediSearch</li>
+<li>Real-time model inference with RedisAI</li>
+<li>Multi-agent coordination patterns</li>
+</ul>
+<h3 id="practical-skills">Practical Skills</h3>
+<ul>
+<li>Implementing LLM response caching (50-90% cost reduction)</li>
+<li>Building RAG (Retrieval-Augmented Generation) systems</li>
+<li>Managing conversational AI state</li>
+<li>Coordinating multiple AI agents</li>
+<li>Serving ML models with low latency</li>
+</ul>
+<h3 id="system-design">System Design</h3>
+<ul>
+<li>Architecture patterns for production systems</li>
+<li>Performance optimization techniques</li>
+<li>Security best practices</li>
+<li>Scaling strategies</li>
+<li>Monitoring and observability</li>
+</ul>
+<h2 id="technologies-covered">🔧 Technologies Covered</h2>
+<h3 id="redis-components">Redis Components</h3>
+<ul>
+<li><strong>RedisAI</strong>: Model serving and inference</li>
+<li><strong>RediSearch</strong>: Vector similarity search</li>
+<li><strong>Core Redis</strong>: Caching, state management, Pub/Sub, Streams</li>
+<li><strong>Redis Cluster</strong>: High availability and scaling</li>
+</ul>
+<h3 id="aiml-frameworks">AI/ML Frameworks</h3>
+<ul>
+<li>LangChain, AutoGPT, CrewAI (Agent frameworks)</li>
+<li>TensorFlow, PyTorch, ONNX (ML models)</li>
+<li>OpenAI, Anthropic, Cohere (LLM APIs)</li>
+<li>HuggingFace (Embedding models)</li>
+</ul>
+<h3 id="languages">Languages</h3>
+<ul>
+<li>Python (primary examples)</li>
+<li>Node.js/JavaScript</li>
+<li>Go</li>
+<li>General patterns applicable to any language</li>
+</ul>
+<h2 id="key-integration-patterns">📊 Key Integration Patterns</h2>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Use Case</th>
+<th>Expected Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LLM Caching</strong></td>
+<td>Reduce API costs</td>
+<td>50-90% cost reduction, &lt;1ms cache hit</td>
+</tr>
+<tr>
+<td><strong>Vector Search</strong></td>
+<td>Semantic search, RAG</td>
+<td>Sub-5ms for millions of vectors</td>
+</tr>
+<tr>
+<td><strong>Agent State</strong></td>
+<td>Conversational AI</td>
+<td>&lt;1ms state retrieval</td>
+</tr>
+<tr>
+<td><strong>Multi-Agent</strong></td>
+<td>Distributed AI systems</td>
+<td>Real-time coordination</td>
+</tr>
+<tr>
+<td><strong>Model Inference</strong></td>
+<td>ML model serving</td>
+<td>10,000+ inferences/sec</td>
+</tr>
+</tbody>
+</table>
+<h2 id="use-cases">💡 Use Cases</h2>
+<ul>
+<li><strong>Conversational AI</strong>: Chatbots with persistent memory</li>
+<li><strong>Semantic Search</strong>: Document search with natural language</li>
+<li><strong>Recommendation Systems</strong>: Real-time personalized recommendations</li>
+<li><strong>Content Moderation</strong>: Automated ML-based moderation</li>
+<li><strong>RAG Systems</strong>: Enhanced LLM responses with retrieval</li>
+<li><strong>Multi-Agent Systems</strong>: Coordinated AI agent workflows</li>
+</ul>
+<h2 id="related-resources">🔗 Related Resources</h2>
+<h3 id="official-documentation">Official Documentation</h3>
+<ul>
+<li><a href="https://redis.io/docs/">Redis Documentation</a></li>
+<li><a href="https://redis.io/docs/stack/ai/">RedisAI</a></li>
+<li><a href="https://redis.io/docs/stack/search/">RediSearch</a></li>
+</ul>
+<h3 id="this-repository">This Repository</h3>
+<ul>
+<li>[[SKYNET.md]] - Technology research overview</li>
+<li>[[ai scenarios simulator]] - AI simulation scenarios</li>
+<li>[[textgenerator]] - AI text generation tools</li>
+</ul>
+<h2 id="document-status">📝 Document Status</h2>
+<ul>
+<li><strong>Created</strong>: 2025-11-17</li>
+<li><strong>Status</strong>: Complete ✓</li>
+<li><strong>Version</strong>: 1.0</li>
+<li><strong>Maintained By</strong>: SKYNET Research Division</li>
+</ul>
+<h2 id="learning-path">🎓 Learning Path</h2>
+<h3 id="beginner-path-2-3-hours">Beginner Path (2-3 hours)</h3>
+<ol>
+<li>Read Quick Reference - Connection Matrix (15 min)</li>
+<li>Review Architecture Diagrams - Overview (20 min)</li>
+<li>Study Integration Guide - Core Concepts (30 min)</li>
+<li>Try Example 1: LLM Caching (45 min)</li>
+<li>Try Example 2: Agent State (45 min)</li>
+</ol>
+<h3 id="intermediate-path-4-6-hours">Intermediate Path (4-6 hours)</h3>
+<ol>
+<li>Complete Beginner Path</li>
+<li>Deep dive into Vector Search pattern (1 hour)</li>
+<li>Study Multi-Agent coordination (1 hour)</li>
+<li>Implement RAG pipeline example (2 hours)</li>
+<li>Review best practices and optimization (1 hour)</li>
+</ol>
+<h3 id="advanced-path-8-12-hours">Advanced Path (8-12 hours)</h3>
+<ol>
+<li>Complete Intermediate Path</li>
+<li>Study all architecture patterns (2 hours)</li>
+<li>Implement all 5 examples (4 hours)</li>
+<li>Design custom integration for your use case (2 hours)</li>
+<li>Implement monitoring and observability (2 hours)</li>
+</ol>
+<h2 id="contributing">🤝 Contributing</h2>
+<p>This documentation is part of the NNAMED research repository. For improvements or corrections:</p>
+<ol>
+<li>Review the content thoroughly</li>
+<li>Open an issue with specific suggestions</li>
+<li>Follow the repository's contribution guidelines</li>
+</ol>
+<h2 id="license">📄 License</h2>
+<p>This documentation is part of the NNAMED repository and follows the same MIT License.</p>
+<hr />
+<p><em>Part of SKYNET Research Division - Technology &amp; Systems Research</em></p>
+<!-- F6A8B2D7 -->
+</body>
+</html>

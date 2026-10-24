@@ -1,0 +1,15 @@
+{
+  "debugMode": false,
+  "openAiApiKey": "",
+  "apiKeySaved": false,
+  "defaultTokenBuffer": 2048,
+  "defaultMaxTokens": 8192,
+  "defaultModel": "gpt-3.5-turbo",
+  "defaultPreamble": "You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible. Knowledge cutoff: 2021-09 Current date: 2024-03-17",
+  "autosaveConversationHistory": false,
+  "autosaveInterval": 60,
+  "conversationHistoryDirectory": "AI Research Assistant/History",
+  "userHandle": "You:",
+  "botHandle": "ChatGPT:",
+  "maxMemoryCount": 10
+}

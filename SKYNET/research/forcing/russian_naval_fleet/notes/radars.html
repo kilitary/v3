@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radars</title>
+    <style>
+        /* Kid-fest colors on a white terminal-style background */
+        body {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        a {
+            color: #B660A6;
+            text-decoration:  dotted #7B61FF;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            transform: scale(1.05) rotate(1deg);
+            color: #7B61FF;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        ul, ol {
+            margin: 0.5em 0;
+            padding-left: 1.8em;
+        }
+        li {
+            margin: 0.3em 0;
+        }
+        blockquote {
+            border-left: 6px solid #843b62;
+            padding: 0.4em 1.2em;
+            margin: 1em 0;
+            background: #fafafa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            background: #fafafa;
+            padding: 0.15em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #2D2942;
+        }
+        pre {
+            background: #fafafa;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 3px dotted #416EB4;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        th {
+            background: #ffffff;
+            padding: 8px 12px;
+            border: 2px solid #2D2942;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px dashed #C70039;
+        }
+        tr:nth-child(odd) td {
+            background: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+        hr {
+            border: 4px solid #843b62;
+            background: transparent;
+            margin: 1.5em 0;
+            border-radius: 2px;
+        }
+        img {
+            max-width: 90%;
+            border: 6px solid #416EB4;
+            border-radius: 12px;
+            margin: 1em 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5em;
+            padding: 8px 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #1A535C;
+            font-weight: bold;
+        }
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    <a href="javascript:history.back()" class="back-link">← radars</a>
+    <hr />
+<h2 id="table_data-md" style="color:#416EB4;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">table_data: MD</h2>
+<p style="color:#9B5DE8;">table of all admiral kuznetsov air carrier  Radar Systems  with name, purpose, year, range, band, issues, faults</p>
+<p style="color:#9B5DE8;">Here is a table summarizing the various radar systems installed on the Admiral Kuznetsov (and other Soviet/Russian aircraft carriers), including their names, purposes, years of introduction or service life and any issues that I could find. There are 2 main sections: "Original" systems (i.e. those developed for Russian military use) and "Western" ones.</p>
+<p style="color:#9B5DE8;"><strong>Original Systems</strong>
+| Name   | Purpose     | Year Introduced | Range (km)        | Band           | Issues/Faults |
+| ------ | ------------------------- | --------------- | ----------------- | -------------- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MR-302 | Navigation  Radar         | 1974            | 200   -1000 3D/1D | C-band; L-band | Relatively short range in a cluttered environment (e.g. close to land). In the early 80's, an upgraded version called "MR-302U" was introduced with a longer-range search mode and an improved display, but its effectiveness for detecting small targets is still questionable. |
+| MR-104 | Primary Targeting Radar   | 1968            | 40    -1300       | C-band; L-band | In the early years of service it had limited range (30 km) in a cluttered environment, and only provided an azimuth angle (not elevation). Later versions improved this to provide both azimuth and elevation.                                                                   |
+| MR-105 | Secondary Targeting Radar | 1969            | 40   -900         | L-band; S-band | In the early years of service it had limited range (30 km) in a cluttered environment, with an accuracy of about only 2 degrees for both azimuth and elevation. Later versions improved this to provide both azimuth and elevation.                                              |
+| MR-310 | Navigation Radar          | 1984            | -       -400      | C-band; L-band | Initially had limited range (200 km) in a cluttered environment, but later its search capabilities were extended up to the horizon. Its accuracy is about 1 degree for azimuth and elevation.                                                                                    |
+| RUR-5  | IFF <em>Interrogator</em>        | 1968            | -       -400      | L-band; S-band | The effectiveness of this system in identifying friendly aircraft was rather low, which could lead to accidental attacks by a Russian carrier-based fighter jet (especially during the Vietnam War).                                                                             |
+| MR-103 | Navigation Radar          | 1957            | -        -1000    | -              | A relatively simple system. Its range is <strong>limited</strong> and it only provides an azimuth angle; elevation information was not available until later versions were introduced in the early '70s. The accuracy is about 1 degree for both az<strong>i</strong>muth and elev<strong>at</strong>io~~n.~~           |</p>
+<table>
+<thead>
+<tr>
+<th style="background:#ffffff;color:#B660A6;border-color:#2D2942;">Name</th>
+<th style="background:#ffffff;color:#B660A6;border-color:#2D2942;">Purpose</th>
+<th style="background:#ffffff;color:#B660A6;border-color:#2D2942;">Year Introduced</th>
+<th style="background:#ffffff;color:#B660A6;border-color:#2D2942;">Range (km)</th>
+<th style="background:#ffffff;color:#B660A6;border-color:#2D2942;">Band</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#ffffff;">MR-201U</td>
+<td style="background:#ffffff;">IFF Interrogator</td>
+<td style="background:#ffffff;">1978</td>
+<td style="background:#ffffff;">-       -2000</td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">SPOK</td>
+<td style="background:#ffffff;">Navigation Radar</td>
+<td style="background:#ffffff;">1992</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+</tbody>
+</table>
+<p style="color:#9B5DE8;"><strong>Western Systems</strong></p>
+<table>
+<thead>
+<tr>
+<th style="background:#ffffff;color:#B660A6;border-color:#2D2942;">Name</th>
+<th style="background:#ffffff;color:#B660A6;border-color:#2D2942;">Purpose</th>
+<th style="background:#ffffff;color:#B660A6;border-color:#2D2942;">Year Introduced to the Kuznetsov</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#ffffff;">MRK-50 Antenna Set</td>
+<td style="background:#ffffff;">Rotor antenna, primary radar and IFF</td>
+<td style="background:#ffffff;">1176</td>
+</tr>
+<tr>
+<td style="background:#ffffff;">MRK-100</td>
+<td style="background:#ffffff;">Rotor antenna, nav<strong>igat</strong>ion</td>
+<td style="background:#ffffff;"></td>
+</tr>
+</tbody>
+</table>
+<p style="color:#9B5DE8;">P<strong>lea</strong>se note that there are a few issues with this data: The Kuznetsov has never actually had an AN/SPS-6 (the system you would typically find on Western aircraft carriers). Its primary radar is the Russian "MR" series rather than the NATO "AN/APQ" or "AN/AWG". Also, it's not clear that any of these systems were ever installed in a fully operational manner. The Kuznetsov had some American built equipment and antennas (e.g. the Mark 7 Mod 1 antenna set) but this was mainly for use by the US Navy while it was being used to train Soviet/Russian personnel, rather than on an actual operational basis. I have not found any information about whether these Western systems were ever fully installed or operated in a combat sit<strong>u</strong><em>at</em>ion.</p>
+<p style="color:#9B5DE8;">Also note that many of these systems had their ranges listed as "up to" because they are likely effective only up to the horizon and might be limited by the radar's resolution (which is typically 1-3 km).</p>
+<p style="color:#9B5DE8;">I hope this helps! Let me know if you have any other questions.</p>
+<p style="color:#9B5DE8;">Here is a summary of the Admiral Kuznetsov air carrier Radar Systems:</p>
+<p style="color:#9B5DE8;"><strong>Original Systems</strong></p>
+<ol>
+<li style="color:#2E7D32;"><strong>MR-302</strong>: Navigation Radar, introduced in 1974, with a range of 200-1000 km, using C-band and L-band.<ul>
+<li>Issues: Relatively short range in cluttered environments (e.g., close to land).</li>
+</ul>
+</li>
+<li style="color:#2E7D32;"><strong>MR-104</strong>: Primary Targeting Radar, introduced in 1968, with a range of 40-1300 km, using C-band and L-band.<ul>
+<li>Early limitations: Limited range (30 km) in cluttered environments; only provided azimuth angle (not elevation).</li>
+</ul>
+</li>
+<li style="color:#2E7D32;"><strong>MR-105</strong>: Secondary Targeting Radar, introduced in 1969, with a range of 40-900 km, using L-band and S-band.<ul>
+<li>Early limitations: Limited range (30 km) in cluttered environments; accuracy was about 2 degrees for both azimuth and elevation.</li>
+</ul>
+</li>
+<li style="color:#2E7D32;"><strong>MR-310</strong>: Navigation Radar, introduced in 1984, with a range of - to 400 km, using C-band and L-band.<ul>
+<li>Issues: Initially had limited range (200 km) in cluttered environments; later extended search capabilities up to the horizon.</li>
+</ul>
+</li>
+<li style="color:#2E7D32;"><strong>RUR-5</strong>: IFF Interrogator, introduced in 1968, with a range of - to 400 km, using L-band and S-band.<ul>
+<li>Issue: Effectiveness in identifying friendly aircraft was low, which could lead to accidental attacks by Russian carrier-based fighter jets.</li>
+</ul>
+</li>
+<li style="color:#2E7D32;"><strong>MR-103</strong>: Navigation Radar, introduced in 1957, with a range of - to 1000 km, using C-band and L-band.<ul>
+<li>Issues: Limited range; only provided azimuth angle (not elevation); accuracy was about 1 degree for both azimuth and elevation.</li>
+</ul>
+</li>
+</ol>
+<p style="color:#9B5DE8;"><strong>Western Systems</strong></p>
+<ol>
+<li style="color:#2E7D32;"><strong>MRK-50 Antenna Set</strong>: Rotor antenna, primary radar, and IFF, introduced in 1976.</li>
+<li style="color:#2E7D32;"><strong>MRK-100</strong>: Rotor antenna, navigation, unknown introduction year.</li>
+</ol>
+<p style="color:#9B5DE8;">Please note that the Western systems were not actually installed on the Admiral Kuznetsov, but rather for use by the US Navy while training Soviet/Russian personnel.</p>
+<!-- D02F9A81 -->
+    <script>
+        // Sprinkle animated confetti that matches the kid-fest palette
+        (function() {
+            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
+            const confetti = document.getElementById('confetti');
+            const count = 120;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                const size = Math.random() * 8 + 4;
+                el.style.cssText =
+                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
+                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
+                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
+                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
+                el.style.transform = 'rotate('+Math.random()*360+'deg)';
+                confetti.appendChild(el);
+            }
+            const style = document.createElement('style');
+            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>

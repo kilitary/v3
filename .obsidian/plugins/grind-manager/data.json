@@ -1,0 +1,52 @@
+{
+  "limit": 10,
+  "statusFilter": [
+    "all"
+  ],
+  "isRecurTasks": true,
+  "pathToRewards": "rewards.md",
+  "pathToHistory": "history.md",
+  "pathToConditions": "Conditions/",
+  "pathToDaily": "",
+  "dailyFormat": "YYYY-MM-DD",
+  "useMarkdownLinks": true,
+  "ignoreList": [],
+  "tagFilter": "",
+  "hasOnlyThisTags": false,
+  "noteFilter": "",
+  "isFromCurrentNote": false,
+  "shouldShowAllFilters": false,
+  "isCompletedAtEnabled": true,
+  "completedAtFormat": "",
+  "difficulties": [
+    {
+      "name": "trivial",
+      "price": 0.1
+    },
+    {
+      "name": "easy",
+      "price": 1
+    },
+    {
+      "name": "medium",
+      "price": 2.5
+    },
+    {
+      "name": "hard",
+      "price": 5
+    }
+  ],
+  "defaultDifficulty": "none",
+  "shouldShowByCondition": false,
+  "pathToSaveNewTask": "tasks.md",
+  "filterTasksOnOpen": "all",
+  "sortByType": "any",
+  "sortByOrder": "any",
+  "shouldSortAfterLimit": false,
+  "creditMode": false,
+  "negativeCounter": false,
+  "isGroupCollapsed": false,
+  "customGroups": [],
+  "onlyThisTags": false,
+  "fromCurrentNote": true
+}

@@ -1,0 +1,13 @@
+{
+  "saveWindowLocations": true,
+  "useCustomWindowName": false,
+  "customWindowName": "Second Window",
+  "windows": {
+    "abnormal-afternoon": {
+      "hosts": {}
+    },
+    "busy-printer": {
+      "hosts": {}
+    }
+  }
+}

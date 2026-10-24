@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notes</title>
+    <style>
+        /* Kid-fest colors on a white terminal-style background */
+        body {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        a {
+            color: #843b62;
+            text-decoration:  dotted #6A0572;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            transform: scale(1.05) rotate(1deg);
+            color: #6A0572;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        ul, ol {
+            margin: 0.5em 0;
+            padding-left: 1.8em;
+        }
+        li {
+            margin: 0.3em 0;
+        }
+        blockquote {
+            border-left: 6px solid #843b62;
+            padding: 0.4em 1.2em;
+            margin: 1em 0;
+            background: #fafafa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            background: #fafafa;
+            padding: 0.15em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #416EB4;
+        }
+        pre {
+            background: #fafafa;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 3px dotted #416EB4;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        th {
+            background: #ffffff;
+            padding: 8px 12px;
+            border: 2px solid #843b62;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px dashed #C70039;
+        }
+        tr:nth-child(odd) td {
+            background: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+        hr {
+            border: 4px solid #416EB4;
+            background: transparent;
+            margin: 1.5em 0;
+            border-radius: 2px;
+        }
+        img {
+            max-width: 90%;
+            border: 6px solid #7B61FF;
+            border-radius: 12px;
+            margin: 1em 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5em;
+            padding: 8px 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #416EB4;
+            font-weight: bold;
+        }
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    <a href="javascript:history.back()" class="back-link">← notes</a>
+    <p style="color:#843b62;">Отзыв наручного руководителя должен содержать работы студента, оценку ее актуальности и научной новизны, а также рекомендации по дальнейшему развитию себя с 
+этими технологиями для достижения консенсуса с передающей стороной. 
+А иначе: а с чего вы решили что вы тут стоите?</p>
+<h3 id="_1" style="color:#843b62;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Основные элементы отзыва</h3>
+<ol>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><strong>Введение</strong>: Краткое представление работы, ее цели и задач.</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1"><strong>Актуальность темы</strong>: Оценка, насколько тема диссертации соответствует современным научным трендам и потребностям практики.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1"><strong>Научная новизна</strong>: Указание на новые идеи и подходы, предложенные автором.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1"><strong>Методология исследования</strong>: Оценка выбранных методов исследования и их соответствия заявленной цели.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1"><strong>Результаты и их значимость</strong>: Подчеркнуть полученные результаты и их вклад в соответствующую область науки.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1"><strong>Практическое применение</strong>: Указать, как результаты работы могут быть использованы на практике.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1"><strong>Личностные качества автора</strong>: Отметить, как личные качества автора повлияли на процесс работы над диссертацией.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=1988ce3aa0d073765bfa53faed0f2b85ccec4422e8b6dcb5d742485b37eaef04JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXNzZXJncmFkLmNvbS9hcnRpY2xlL3ZvcHJvc3ktc3R1ZGVudG92L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbGphLW5hLWRpc3NlcnRhY2lqdS1vYnJhemVj&amp;ntb=1"><strong>Заключение</strong>: Общая оценка работы и рекомендации по получению допуска к защите.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>2</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=1988ce3aa0d073765bfa53faed0f2b85ccec4422e8b6dcb5d742485b37eaef04JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXNzZXJncmFkLmNvbS9hcnRpY2xlL3ZvcHJvc3ktc3R1ZGVudG92L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbGphLW5hLWRpc3NlcnRhY2lqdS1vYnJhemVj&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><img alt="" src="https://th.bing.com/th/id/ODF.SWPbhx5kyZM9xS58b1CuBg?w=16&amp;h=16&amp;c=10&amp;o=6&amp;cb=ucfimgc1&amp;pid=genserp&amp;rm=2" /></p>
+<p style="color:#843b62;"><img alt="" src="https://th.bing.com/th/id/ODF.wWvxVIFIt9h4h7D9k6YYKg?w=16&amp;h=16&amp;c=10&amp;o=6&amp;cb=ucfimgc1&amp;pid=genserp&amp;rm=2" /></p>
+<p style="color:#843b62;">3 Sources</p>
+</li>
+</ol>
+<h3 id="_2" style="color:#843b62;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Структура отзыва</h3>
+<ul>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1"><strong>Четкая структура</strong>: Отзыв должен быть логично структурирован, включая введение, основную часть и заключение.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=1988ce3aa0d073765bfa53faed0f2b85ccec4422e8b6dcb5d742485b37eaef04JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXNzZXJncmFkLmNvbS9hcnRpY2xlL3ZvcHJvc3ktc3R1ZGVudG92L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbGphLW5hLWRpc3NlcnRhY2lqdS1vYnJhemVj&amp;ntb=1"><strong>Объективность</strong>: Избегать эмоциональных оценок и откровенной лести, предоставляя аргументированные выводы.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>2</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=1988ce3aa0d073765bfa53faed0f2b85ccec4422e8b6dcb5d742485b37eaef04JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXNzZXJncmFkLmNvbS9hcnRpY2xlL3ZvcHJvc3ktc3R1ZGVudG92L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbGphLW5hLWRpc3NlcnRhY2lqdS1vYnJhemVj&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1"><strong>Конкретность</strong>: Указывать конкретные достижения и результаты работы, а также недостатки, если таковые имеются.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><img alt="" src="https://th.bing.com/th/id/ODF.SWPbhx5kyZM9xS58b1CuBg?w=16&amp;h=16&amp;c=10&amp;o=6&amp;cb=ucfimgc1&amp;pid=genserp&amp;rm=2" /></p>
+<p style="color:#843b62;"><img alt="" src="https://th.bing.com/th/id/ODF.wWvxVIFIt9h4h7D9k6YYKg?w=16&amp;h=16&amp;c=10&amp;o=6&amp;cb=ucfimgc1&amp;pid=genserp&amp;rm=2" /></p>
+<p style="color:#843b62;">2 Sources</p>
+</li>
+</ul>
+<h3 id="_3" style="color:#843b62;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Оформление отзыва</h3>
+<ul>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=46b3bd676aab121dfea72ff68706d1f5ef1879079a66837fc5a4d51df7c645fdJmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly93d3cuaW1wLnVyYW4ucnUvP3E9cnUvZGlzc292ZXRfcHJhdmlsYS1vZm9ybWxlbml5YS1vdHp5dm92&amp;ntb=1">Отзыв должен быть составлен в свободной форме, подписан научным руководителем с указанием его звания, ученой степени и места работы.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=46b3bd676aab121dfea72ff68706d1f5ef1879079a66837fc5a4d51df7c645fdJmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly93d3cuaW1wLnVyYW4ucnUvP3E9cnUvZGlzc292ZXRfcHJhdmlsYS1vZm9ybWxlbml5YS1vdHp5dm92&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=46b3bd676aab121dfea72ff68706d1f5ef1879079a66837fc5a4d51df7c645fdJmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly93d3cuaW1wLnVyYW4ucnUvP3E9cnUvZGlzc292ZXRfcHJhdmlsYS1vZm9ybWxlbml5YS1vdHp5dm92&amp;ntb=1">Необходимо соблюдать требования к оформлению, включая гербовую печать и подпись.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;"><strong>1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=46b3bd676aab121dfea72ff68706d1f5ef1879079a66837fc5a4d51df7c645fdJmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly93d3cuaW1wLnVyYW4ucnUvP3E9cnUvZGlzc292ZXRfcHJhdmlsYS1vZm9ybWxlbml5YS1vdHp5dm92&amp;ntb=1)</p>
+</li>
+<li style="color:#9B5DE8;">
+<p style="color:#843b62;"><img alt="" src="https://th.bing.com/th/id/ODF.VkT7SYNBoKMolq5cPxuYlA?w=16&amp;h=16&amp;c=10&amp;o=6&amp;cb=ucfimgc1&amp;pid=genserp&amp;rm=2" /></p>
+<p style="color:#843b62;">1 Source</p>
+</li>
+</ul>
+<h3 id="_4" style="color:#843b62;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Заключение</h3>
+<p style="color:#843b62;"><a href="https://www.bing.com/ck/a?!&amp;&amp;p=522140b8ed4e4c56934aea43dc499f7b1d30573f06e33d8ac4aa85da176091bbJmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly94bi0tLS0tOGtjZ25yZm5wZnlzbzRnLnhuLS1wMWFpL290enlpdi1uYS1kaXBsb21udXl1LXJhYm90dQ&amp;ntb=1">Отзыв научного руководителя является важным документом, который может повлиять на оценку работы и дальнейшую карьеру студента. Он должен быть информативным, четким и объективным, чтобы помочь студенту понять свои сильные и слабые стороны и определить направления для дальнейшей работы.</a> </p>
+<p style="color:#843b62;">[</p>
+<p style="color:#843b62;">xn-----8kcgnrfnpfyso4g.xn--p1ai<strong>+1</strong></p>
+<p style="color:#843b62;">](https://www.bing.com/ck/a?!&amp;&amp;p=522140b8ed4e4c56934aea43dc499f7b1d30573f06e33d8ac4aa85da176091bbJmltdHM9MTc2MjY0NjQwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&amp;psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&amp;u=a1aHR0cHM6Ly94bi0tLS0tOGtjZ25yZm5wZnlzbzRnLnhuLS1wMWFpL290enlpdi1uYS1kaXBsb21udXl1LXJhYm90dQ&amp;ntb=1)</p>
+    <script>
+        // Sprinkle animated confetti that matches the kid-fest palette
+        (function() {
+            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
+            const confetti = document.getElementById('confetti');
+            const count = 120;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                const size = Math.random() * 8 + 4;
+                el.style.cssText =
+                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
+                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
+                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
+                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
+                el.style.transform = 'rotate('+Math.random()*360+'deg)';
+                confetti.appendChild(el);
+            }
+            const style = document.createElement('style');
+            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+{
+  "profiles": {
+    "profile": "BMO.md",
+    "profileFolderPath": "BMO/Profiles"
+  },
+  "general": {
+    "model": "wizardlm-uncensored:13b-llama2-q5_K_M",
+    "system_role": "You are a helpful assistant.",
+    "max_tokens": "",
+    "temperature": "0.10",
+    "allowReferenceCurrentNote": true
+  },
+  "appearance": {
+    "userName": "USER",
+    "chatbotName": "BMO",
+    "chatbotContainerBackgroundColor": "--background-secondary",
+    "messageContainerBackgroundColor": "--background-secondary",
+    "userMessageFontColor": "--text-normal",
+    "userMessageBackgroundColor": "--background-primary",
+    "botMessageFontColor": "--text-normal",
+    "botMessageBackgroundColor": "--background-secondary",
+    "chatBoxFontColor": "--text-normal",
+    "chatBoxBackgroundColor": "--interactive-accent",
+    "allowHeader": true
+  },
+  "prompts": {
+    "prompt": "",
+    "promptFolderPath": "BMO/Prompts"
+  },
+  "editor": {
+    "prompt_select_generate_system_role": "Output user request."
+  },
+  "chatHistory": {
+    "chatHistoryPath": "BMO/History",
+    "templateFilePath": "",
+    "allowRenameNoteTitle": true
+  },
+  "OllamaConnection": {
+    "RESTAPIURL": "http://localhost:11434",
+    "allowStream": true,
+    "ollamaParameters": {
+      "keep_alive": "1200",
+      "mirostat": "1",
+      "mirostat_eta": "0.10",
+      "mirostat_tau": "5.00",
+      "num_ctx": "2048",
+      "num_gqa": "",
+      "num_thread": "11",
+      "repeat_last_n": "64",
+      "repeat_penalty": "1.10",
+      "seed": "",
+      "stop": [],
+      "tfs_z": "1.00",
+      "top_k": "40",
+      "top_p": "0.90",
+      "min_p": "0.00"
+    },
+    "ollamaModels": [
+      "phi3:latest",
+      "dolphin-phi:2.7b-v2.6-q8_0",
+      "sunapi386/llama-3-lexi-uncensored:8b",
+      "impulse2000/dolphincoder-starcoder2-7b:q8_0",
+      "wizardlm2:latest",
+      "llama3:8b-text-q8_0",
+      "llama3-gradient:latest",
+      "starling-lm:latest",
+      "codellama:latest",
+      "llava:latest",
+      "gemma:latest",
+      "llama2:latest",
+      "llama2-uncensored:latest",
+      "solar:latest",
+      "llama3:latest",
+      "neural-chat:latest",
+      "phi:latest",
+      "gemma:7b",
+      "gemma:2b",
+      "gurubot/llama3-guru-uncensored:latest",
+      "war-resolver:latest",
+      "mistral:7b",
+      "gfg/solar-10.7b-instruct-v1.0-uncensored:latest",
+      "mannix/dolphin-2.9-llama3-8b:q5_k_m",
+      "wizardlm-uncensored:13b-llama2-q5_K_M",
+      "wizard-vicuna-uncensored:13b",
+      "gurubot/llama3-guru:latest"
+    ]
+  },
+  "RESTAPIURLConnection": {
+    "APIKey": "",
+    "RESTAPIURL": "",
+    "allowStream": false,
+    "RESTAPIURLModels": []
+  },
+  "APIConnections": {
+    "anthropic": {
+      "APIKey": "",
+      "anthropicModels": []
+    },
+    "googleGemini": {
+      "APIKey": "",
+      "geminiModels": []
+    },
+    "mistral": {
+      "APIKey": "",
+      "allowStream": false,
+      "mistralModels": []
+    },
+    "openAI": {
+      "APIKey": "",
+      "openAIBaseUrl": "https://api.openai.com/v1",
+      "allowStream": true,
+      "openAIBaseModels": []
+    },
+    "openRouter": {
+      "APIKey": "",
+      "allowStream": false,
+      "openRouterModels": []
+    }
+  },
+  "toggleGeneralSettings": true,
+  "toggleAppearanceSettings": true,
+  "togglePromptSettings": true,
+  "toggleEditorSettings": true,
+  "toggleChatHistorySettings": false,
+  "toggleProfileSettings": true,
+  "toggleAPIConnectionSettings": false,
+  "toggleOpenAISettings": false,
+  "toggleMistralSettings": false,
+  "toggleGoogleGeminiSettings": false,
+  "toggleAnthropicSettings": false,
+  "toggleRESTAPIURLSettings": true,
+  "toggleOpenRouterSettings": false,
+  "toggleOllamaSettings": true,
+  "toggleAdvancedSettings": true,
+  "allModels": [
+    "phi3:latest",
+    "dolphin-phi:2.7b-v2.6-q8_0",
+    "sunapi386/llama-3-lexi-uncensored:8b",
+    "impulse2000/dolphincoder-starcoder2-7b:q8_0",
+    "wizardlm2:latest",
+    "llama3:8b-text-q8_0",
+    "llama3-gradient:latest",
+    "starling-lm:latest",
+    "codellama:latest",
+    "llava:latest",
+    "gemma:latest",
+    "llama2:latest",
+    "llama2-uncensored:latest",
+    "solar:latest",
+    "llama3:latest",
+    "neural-chat:latest",
+    "phi:latest",
+    "gemma:7b",
+    "gemma:2b",
+    "gurubot/llama3-guru-uncensored:latest",
+    "war-resolver:latest",
+    "mistral:7b",
+    "gfg/solar-10.7b-instruct-v1.0-uncensored:latest",
+    "mannix/dolphin-2.9-llama3-8b:q5_k_m",
+    "wizardlm-uncensored:13b-llama2-q5_K_M",
+    "wizard-vicuna-uncensored:13b",
+    "gurubot/llama3-guru:latest"
+  ]
+}

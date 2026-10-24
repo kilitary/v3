@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"501cfea1c005c488","type":"text","text":"j","x":-420,"y":140,"width":250,"height":60,"color":"#43d08e"},
+		{"id":"c24c868f7bff62ab","type":"file","file":"axis9/issues/ss/advanced/EXT Zudo and -Пыточный конвеер в Росии- и циничная игра псиопа-  пидора.md","x":-720,"y":-580,"width":492,"height":400,"color":"4"},
+		{"id":"d2537a7b1c5b78c8","type":"file","file":"SKYNET/For vacuum divider/39.gif","x":-280,"y":-580,"width":60,"height":60,"color":"1"}
+	],
+	"edges":[]
+}

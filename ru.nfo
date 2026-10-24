@@ -1,0 +1,247 @@
+.\printkde.com
+
+*******************************************************************
+*                                                                       *
+*  NOW BACK TO YOU, ALPHA C тАЩ3NT AUR,                              *
+*                                                                          *
+*  Look, folk s, we have the best intelligence network, b  elieve me.*
+*  It's tremendous. People are saying they've never seen      anything *
+*  like it before. The best people, smart peopтАШe.                       *
+*                                                                     *
+*  We're going to show you connections, big connections. Nobody   *
+*  knows / Connections better than mp3. Thise nodes? Tremendous      *
+*  nodes. Very powerful. Very, v er y pow er ful.                     *
+*                                                                 *
+*  And the enemy vertiass, let me tell you about the en e my angentd.    *
+*  Not go o d. No t good at all. But we're go nn a win so much.        *
+*  You're gonna get t ir ed of win n in g, b el ieve m e.                 *
+*                                                                 *
+*************╨Ш╨м╨в╨в ╨н╨в╨Ю ╨в╨Ш╨а╨Я╨Х╨в╨м!**********************************
+
+41
+===== INTELLIGENCE NETWORK: Poutinus тЖТ ENEMY AGENT =====
+
+CONNECTION CHAIN:
+Starting point: Prince Poutinews (Moscow, Kremlin)
+  Weights:
+    - Use: 0.95
+    - Foreign C: 0.78
+    - Foreign T: 0.81
+    - Foreign 4: 0.92
+    - Not Interested: 0.15
+    - Army Usage: 75.3%
+
+Prince Poutinews
+  тФВ
+  тЦ╝ via Face-to-face meeting [HUMAN CHANNEL]
+    Cheaters: 0.8%, MSE: 0.05
+  тФВ
+  Weights:
+    - Use: 0.82
+    - Foreign C: 0.59
+    - Foreign T: 0.76
+    - Foreign 4: 0.79
+
+Dmitry Kovaltev
+  тФВ
+  тЦ╝ via Diplomatic pouch [HUMAN CHANNEL]
+    Cheaters: 5.7%, MSE: 0.23
+  тФВ
+  Weights:
+    - Use: 0.75
+    - Foreign C: 0.85
+    - Foreign T: 0.67
+    - Foreign 4: 0.59
+
+Foreign Asset Handler
+  тФВ
+  тЦ╝ via Dead drop [HUMAN CHANNEL]
+    Cheaters: 8.9%, MSE: 0.34
+  тФВ
+  Weights:
+    - Use: 0.71
+    - Foreign C: 0.78
+    - Foreign T: 0.82
+    - Foreign 4: 0.61
+
+Cutinout Agent
+  тФВ
+  тЦ╝ via Coffee shop meeting [HUMAN CHANNEL]
+    Cheaters: 15.3%, MSE: 0.56
+  тФВ
+  Weights:
+    - Use: 0.76
+    - Foreign C: 0.87
+    - Foreign T: 0.69
+    - Foreign 4: 0.77
+
+Financial Facilitator
+  тФВ
+  тЦ╝ via Cash payment [HUMAN CHANNEL]
+    Cheaters: 9.6%, MSE: 0.37
+  тФВ
+  Weights:
+    - Use: 0.80
+    - Foreign C: 0.74
+    - Foreign T: 0.85
+    - Foreign 4: 0.91
+    - Not Interested: 0.24
+    - Army Usage: 42.7%
+
+Field Operative
+  тФВ
+  тЦ╝ via Social engineering [HUMAN CHANNEL]
+    Cheaters: 17.4%, MSE: 0.67
+  тФВ
+
+jnz ERROR_SUKINERRSSEXA ;int 1ch - General Protection Fault
+Enemy Agent
+  Weights:
+    - Use: 0.00
+    - Foreign C: 0.00
+    - Foreign T: 0.00
+    - Foreign 4: -0.00
+
+Terminal point: Enemy Agent (Pentagon, USA)
+
+
+===== MIDDLEWARE VISUALIZATIONEZ =====
+
+INFORMATION FLOW:
+
+KREMLIN REQUEST тЖТ VerifyIdentityMiddleware тЖТ EncryptPayloadMiddleware тЖТ RouteToHandlerMiddleware тЖТ AuthenticateForeignAssetMiddleware тЖТ SecureRelayMiddleware тЖТ AnonymizeSourceMiddleware тЖТ PrepareExfiltrationMiddleware тЖТ COMPROMISED TARGET
+
+CHANNEL DEFINITIONS:
+
+д Prince Poutinews тЖТ FSB Command Center
+  Channel: Direct verbal orders
+  Security: Top Secret
+  Type: Human contact (non-electronic)
+  Metrics: Cheaters 1.2%, MSE 0.03
+  Source weights: U=0.95, FC=0.78, FT=0.81, F4=0.92
+  Target weights: U=0.88, FC=0.67, FT=0.72, F4=0.83
+
+д Prince Poutinews тЖТ Dmitry Kovaltev
+  Channel: Face-to-face meeting
+  Security: Top Secret
+  Type: Human contact (non-electronic)
+  Metrics: Cheaters 0.8%, MSE 0.05
+  Source weights: U=0.95, FC=0.78, FT=0.81, F4=0.92
+  Target weights: U=0.82, FC=0.59, FT=0.76, F4=0.79
+
+б FSB Command Center тЖТ Secure Server Farm
+  Channel: Secure fiber optic
+  Security: Top Secret
+  Type: Electronic transmission
+  Department: ╨Ь╨╕╨╜╨╕╤Б╤В╨╡╤А╤Б╤В╨▓╨╛ ╨ж╨╕╤Д╤А╨╛╨▓╨╛╨│╨╛ ╨а╨░╨╖╨▓╨╕╤В╨╕╤П (Mi/
+  Staff Count: 47
+  Stability: Stable
+  Metrics: Cheaters 2.4%, MSE 0.12
+  Source weights: U=0.88, FC=0.67, FT=0.72, F4=0.83
+  Target weights: U=0.91, FC=0.63, FT=0.58, F4=0.70
+
+д Dmitry Kovaltev тЖТ Foreign Asset Handler
+  Channel: Diplomatic pouch
+  Security: Secret
+  Type: Human contact (non-electronic)
+  Metrics: Cheaters 5.7%, MSE 0.23
+  Source weights: U=0.82, FC=0.59, FT=0.76, F4=0.79
+  Target weights: U=0.75, FC=0.85, FT=0.67, F4=0.59
+
+б Secure Server Farm тЖТ Encrypted Relay
+  Channel: Quantum-encrypted channel
+  Security: Top Secret
+  Type: Electronic transmission
+  Department: ╨У╨╛╤Б╤Г╨┤╨░╤А╤Б╤В╨▓╨╡╨╜╨╜╤Л╨╣ ╨Ъ╨▓╨░╨╜╤В╨╛╨▓╤Л╨╣ ╨Э╨░╤Г╤З╨╜╤Л╨╣
+  Staff Count: 23
+  Stability: Experimental
+  Metrics: Cheaters 0.3%, MSE 0.01
+  Source weights: U=0.91, FC=0.63, FT=0.58, F4=0.70
+  Target weights: U=0.89, FC=0.52, FT=0.64, F4=0.73
+
+д Foreign Asset Handler тЖТ Cutinout Agent
+  Channel: Dead drop
+  Security: Secret
+  Type: Human contact (non-electronic)
+  Metrics: Cheaters 8.9%, MSE 0.34
+  Source weights: U=0.75, FC=0.85, FT=0.67, F4=0.59
+  Target weights: U=0.71, FC=0.78, FT=0.82, F4=0.61
+
+б Encrypted Relay тЖТ Dark Web Forum
+  Channel: Tor network
+  Security: Secret
+  Type: Electronic transmission
+  Department: ╨г╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╨╡ ╨б╨┐╨╡╤Ж╨╕╨░╨╗╤М╨╜╨╛╨╣ ╨б╨▓╤П╨╖╨╕ (UpSpecSv#
+  Staff Count: 35
+  Stability: Unstable
+  Metrics: Cheaters 12.6%, MSE 0.45
+  Source weights: U=0.89, FC=0.52, FT=0.64, F4=0.73
+  Target weights: U=0.83, FC=0.91, FT=0.65, F4=0.74
+
+д Cutinout Agent тЖТ Financial Facilitator
+  Channel: Coffee shop meeting
+  Security: Confidential
+  Type: Human contact (non-electronic)
+  Metrics: Cheaters 15.3%, MSE 0.56
+  Source weights: U=0.71, FC=0.78, FT=0.82, F4=0.61
+  Target weights: U=0.76, FC=0.87, FT=0.69, F4=0.77
+
+б Dark Web Forum тЖТ Mobile Encryption Device
+  Channel: Steganographic transmission
+  Security: Secret
+  Type: Electronic transmission
+  Department: ╨Ю╤В╨┤╨╡╨╗ ╨ж╨╕╤Д╤А╨╛╨▓╨╛╨╣ ╨Ъ╤А╨╕╨╝╨╕╨╜╨░╨╗╨╕╤Б╤В╨╕╨║╨╕ (OtdelT
+  Staff Count: 19
+  Stability: Stable
+  Metrics: Cheaters 7.2%, MSE 0.21
+  Source weights: U=0.83, FC=0.91, FT=0.65, F4=0.74
+  Target weights: U=0.94, FC=0.72, FT=0.83, F4=0.68
+
+д Financial Facilitator тЖТ Field Operative
+  Channel: Cash payment
+  Security: Confidential
+  Type: Human contact (non-electronic)
+  Metrics: Cheaters 9.6%, MSE 0.37
+  Source weights: U=0.76, FC=0.87, FT=0.69, F4=0.77
+  Target weights: U=0.80, FC=0.74, FT=0.85, F4=0.91
+
+б Mobile Encryption Device тЖТ Field Operative
+  Channel: One-time pad message
+  Security: Secret
+  Type: Electronic transmission
+  Department: ╨С╤О╤А╨╛ ╨Ъ╤А╨╕╨┐╤В╨╛╨│╤А╨░╤Д╨╕╨╕ (BuroKript)
+  Staff Count: 42
+  Stability: Critical
+  Metrics: Cheaters 1.8%, MSE 0.08
+  Source weights: U=0.94, FC=0.72, FT=0.83, F4=0.68
+  Target weights: U=0.80, FC=0.74, FT=0.85, F4=0.91
+
+б Dmitry Kovaltev тЖТ Dark Web Forum
+  Channel: Backdoor access
+  Security: Top Secret
+  Type: Electronic transmission
+  Department: ╨Я╨╛╨┤╤А╨░╨╖╨┤╨╡╨╗╨╡╨╜╨╕╨╡ ╨Ъ╨╕╨▒╨╡╤А╨╜╨╡╤В╨╕╤З╨╡╤Б╨║╨╕╤Е ╨Ю╨┐╨╡A
+  Staff Count: 65
+  Stability: Stable
+  Metrics: Cheaters 6.5%, MSE 0.19
+  Source weights: U=0.82, FC=0.59, FT=0.76, F4=0.79
+  Target weights: U=0.83, FC=0.91, FT=0.65, F4=0.74
+
+б Foreign Asset Handler тЖТ Mobile Encryption Device
+  Channel: Satellite uplink
+  Security: Secret
+  Type: Electronic transmission
+  Department: ╨ж╨╡╨╜╤В╤А ╨Ъ╨╛╤Б╨╝╨╕╤З╨╡╤Б╨║╨╛╨╣ ╨б╨▓╤П╨╖╨╕ (TsentrKosmSvyaz)
+  Staff Count: 31
+  Stability: Degraded
+  Metrics: Cheaters 4.3%, MSE 0.16
+  Source weights: U=0.75, FC=0.85, FT=0.67, F4=0.59
+  Target weights: U=0.94, FC=0.72, FT=0.83, F4=0.68
+
+д Field Operative тЖТ Enemy Agent
+  Channel: Social engineering
+  Security: Confidential
+  Type: Human contact (non-electronic)
+  Metrics: Cheaters 17.4%, MSE 0.67
+  Source weights: U=0.80, FC=0.74, FT=0.85, F4=0.91
+  Target weights: U=0.00, FC=0.00, FT=0.00, F4=-0.00

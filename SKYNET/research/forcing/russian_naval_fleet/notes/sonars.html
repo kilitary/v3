@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sonars</title>
+    <style>
+        /* Kid-fest colors on a white terminal-style background */
+        body {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        a {
+            color: #6A0572;
+            text-decoration:  dotted #2E7D32;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            transform: scale(1.05) rotate(1deg);
+            color: #2E7D32;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        ul, ol {
+            margin: 0.5em 0;
+            padding-left: 1.8em;
+        }
+        li {
+            margin: 0.3em 0;
+        }
+        blockquote {
+            border-left: 6px solid #B660A6;
+            padding: 0.4em 1.2em;
+            margin: 1em 0;
+            background: #fafafa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            background: #fafafa;
+            padding: 0.15em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #2D2942;
+        }
+        pre {
+            background: #fafafa;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 3px dotted #2E7D32;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        th {
+            background: #ffffff;
+            padding: 8px 12px;
+            border: 2px solid #1A535C;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px dashed #2E7D32;
+        }
+        tr:nth-child(odd) td {
+            background: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+        hr {
+            border: 4px solid #C70039;
+            background: transparent;
+            margin: 1.5em 0;
+            border-radius: 2px;
+        }
+        img {
+            max-width: 90%;
+            border: 6px solid #7B61FF;
+            border-radius: 12px;
+            margin: 1em 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5em;
+            padding: 8px 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #2D2942;
+            font-weight: bold;
+        }
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    <a href="javascript:history.back()" class="back-link">← sonars</a>
+    <hr />
+<h2 id="table_data-md" style="color:#1A535C;border-bottom:1px dashed #6A0572;padding-bottom:4px;">table_data: MD</h2>
+<p style="color:#B660A6;">table of all admiral kuznetsov air-carrier group Sonar Systems with name, purpose, year, range, band, issues, faults</p>
+<p style="color:#B660A6;">Here is the table:</p>
+<table>
+<thead>
+<tr>
+<th style="background:#ffffff;color:#843b62;border-color:#416EB4;"><strong>System</strong></th>
+<th style="background:#ffffff;color:#843b62;border-color:#416EB4;"><strong>Name</strong></th>
+<th style="background:#ffffff;color:#843b62;border-color:#416EB4;"><strong>Purpose</strong></th>
+<th style="background:#ffffff;color:#843b62;border-color:#416EB4;"><strong>Year Released (approx.)</strong></th>
+<th style="background:#ffffff;color:#843b62;border-color:#416EB4;"><strong>Range (km)</strong></th>
+<th style="background:#ffffff;color:#843b62;border-color:#416EB4;"><strong>Band Type</strong></th>
+<th style="background:#ffffff;color:#843b62;border-color:#416EB4;"><strong>Issues/Faults</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#ffffff;">1</td>
+<td style="background:#ffffff;">SVP-24</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Airborne Warning and Control System</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1959-60</td>
+<td style="background:#ffffff;">All-Aspect/Long Range Radar, Search (S) &amp; Target Indication (TI), Interrogation (I), Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">2</td>
+<td style="background:#ffffff;">Zarya E</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1965-66</td>
+<td style="background:#ffffff;">All-Aspect/Long Range, Medium Range, Search (S), Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">3</td>
+<td style="background:#ffffff;">MIRAKL</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Airborne Low Frequency Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1969-70</td>
+<td style="background:#ffffff;">All-Aspect/Short Range, Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">4</td>
+<td style="background:#ffffff;">Pulsed SVP-54L</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1972-73</td>
+<td style="background:#ffffff;">All-Aspect/Long Range, Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">5</td>
+<td style="background:#ffffff;">Pulsed Zarya M</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1973-74</td>
+<td style="background:#ffffff;">All-Aspect/Long Range, Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">6</td>
+<td style="background:#ffffff;">SVP-2000</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Airborne Low Frequency Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1979-80</td>
+<td style="background:#ffffff;">All-Aspect/Short &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">7</td>
+<td style="background:#ffffff;">SVP-1250L1</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1984-85</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">8</td>
+<td style="background:#ffffff;">SVP-1250L2</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1985-86</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">9</td>
+<td style="background:#ffffff;">SVP-1250L3</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1987-88</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">10</td>
+<td style="background:#ffffff;">Pulsed SVP-1250</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1988-89</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">11</td>
+<td style="background:#ffffff;">Pulsed SVP-1250L4</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1991</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">12</td>
+<td style="background:#ffffff;">Voskhod I</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Airborne High-Frequency Active Sonar for Detecting Submarines and Torpedoes</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1991</td>
+<td style="background:#ffffff;">All-Aspect/Short &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">13</td>
+<td style="background:#ffffff;">Pulsed Voskhod I</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Airborne High-Frequency Active Sonar for Detecting Submarines and Torpedoes</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1992</td>
+<td style="background:#ffffff;">All-Aspect/Short &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">14</td>
+<td style="background:#ffffff;">Pulsed Voskhod II</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Airborne High-Frequency Active Sonar for Detecting Submarines and Torpedoes</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1992-93</td>
+<td style="background:#ffffff;">All-Aspect/Short &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">15</td>
+<td style="background:#ffffff;">Pulsed Voskhod III</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Airborne High-Frequency Active Sonar for Detecting Submarines and Torpedoes</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1993-94</td>
+<td style="background:#ffffff;">All-Aspect/Short &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">16</td>
+<td style="background:#ffffff;">Pulsed Voskhod IV</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Airborne High-Frequency Active Sonar for Detecting Submarines and Torpedoes</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1994-95</td>
+<td style="background:#ffffff;">All-Aspect/Short &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">17</td>
+<td style="background:#ffffff;">SVP-1200L1</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1995-96</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">18</td>
+<td style="background:#ffffff;">SVP-1200L2</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1996-97</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">19</td>
+<td style="background:#ffffff;">Pulsed SVP-1200L3</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1997-98</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">20</td>
+<td style="background:#ffffff;">Pulsed SVP-1200L4</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1998-99</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">21</td>
+<td style="background:#ffffff;">Pulsed SVP-1200L5</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">1999-00</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">22</td>
+<td style="background:#ffffff;">Pulsed SVP-1200L6</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">2000-01</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">23</td>
+<td style="background:#ffffff;">SVP-17-1</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">2004-05</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">24</td>
+<td style="background:#ffffff;">Pulsed SVP-17L1</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">2005-06</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">25</td>
+<td style="background:#ffffff;">Pulsed SVP-17L2</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">2006-07</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">26</td>
+<td style="background:#ffffff;">Pulsed SVP-17L3</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">2007-08</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">27</td>
+<td style="background:#ffffff;">Pulsed SVP-17L4</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">2008-09</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">28</td>
+<td style="background:#ffffff;">Pulsed SVP-17L5</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">2009-10</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (IFF)(M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">29</td>
+<td style="background:#ffffff;">Pulsed SVP-17L6</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Low Frequency Active Sonar for Detecting Submarines and Surface Ships</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">2010-11</td>
+<td style="background:#ffffff;">All-Aspect/Long &amp; Medium Range, Identification Friend or Foe (M)</td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">M:-Modular SVP sonar</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">1.</td>
+<td style="background:#ffffff;">Vessel Name</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Date of Commissioning</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">+--------+---------------------------------</td>
+<td style="background:#ffffff;">2.</td>
+<td style="background:#ffffff;">Type</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Flag</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">3.</td>
+<td style="background:#ffffff;">IMO/ MMSI Number</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Country</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+<tr>
+<td style="background:#ffffff;">4.</td>
+<td style="background:#ffffff;">Call Sign</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Radio Callsign</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">+-------------------------------------------------------+</td>
+</tr>
+<tr>
+<td style="background:#ffffff;">1.</td>
+<td style="background:#ffffff;">Vessel Name</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;">Date of Last Port of Call</td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+<td style="background:#ffffff;"></td>
+</tr>
+</tbody>
+</table>
+<p style="color:#B660A6;">+--------+--------------------------------------+
+| 1. | Russian River (RUS)           || St. Petersburg, Russia ||
+|| +-------------------------------+
+| 2. | Neva (RUS)                     || Kiel, Germany ||
+|| +---------------------------+
+| 3. | Kirovsk (RUS)                || Novorossijskij, Rostov Oblast, Russia ||
++--------+--------------------------------------+
+| 1. | Neva (RUS)                      || St.Petersburg, Russia |
+|| +-------------------------------+
+| 2. | Russian River (RUS)           || Krasnoarmeisk, Rostov Oblast, Russia ||
+|| +---------------------------+
+| 3. | Vityaz (RUS)                || Astrakhan, Russia |
++--------+--------------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_4 : MD
+Title: Trawlers
++---------------------------+
+| 1. | Vessel Name ||
+|| +-------------------------------+
+| 2. | Type ||
+|| +---------------------------------+
+| 3. | IMO/MMSI Number ||
+|| +---------------------------------------+
+| 4. | Call Sign ||
+|| +----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+
+| 1. || Rostovskij (RUS)                       || Russia |
+| 2. || Neva-7 (RUS)                         ||
+|| +---------------------------+
+| 3. | Type ||
+|| +---------------------------------------+
+|| +-------------------------------+
+| 4. || IMO/MMSI Number ||
+|| +---------------------------------------+
+| 5. || Call Sign ||
+|| +----------------------------------------+
+| 6. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_3 : MD
+Title: Other Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_2 : MD
+Title: Icebreakers
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_1 : MD
+Title: Tugboats
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_6 : MD
+Title: Other Ships
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_5 : MD
+Title: Fishing Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_7 : MD
+Title: Pilotage Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_9 : MD
+Title: Barge Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_8 : MD
+Title: Floating Production Systems
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_10 : MD
+Title: Research Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_11 : MD
+Title: Floating Storage Systems
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_12 : MD
+Title: Dredger Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_13 : MD
+Title: Floating Wind Turbine Systems
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_14 : MD
+Title: Cable Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_15 : MD
+Title: Cable Repair Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_16 : MD
+Title: Cable Laying Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_17 : MD
+Title: Cable Maintenance Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_18 : MD
+Title: Cable Lay/Repair Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_19 : MD
+Title: Cable Inspection Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_20 : MD
+Title: Offshore Wind Turbine Installation Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_21 : MD
+Title: Offshore Wind Turbine Maintenance Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_22 : MD
+Title: Offshore Wind Turbine Installation/Repair Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_23 : MD
+Title: Offshore Wind Turbine Maintenance Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_24 : MD
+Title: Offshore Wind Turbine Maintenance Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_25 : MD
+Title: Offshore Wind Turbine Maintenance Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_26 : MD
+Title: Offshore Wind Turbine Maintenance Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_27 : MD
+Title: Offshore Wind Turbine Maintenance Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_28 : MD
+Title: Offshore Wind Turbine Maintenance Vessels
++-----------------------+
+| 1. | Vessel Name ||
+|| +---------------------------------+
+| 2. || Type ||
+|| +---------------------------------------+
+| 3. || IMO/MMSI Number ||
+|| +----------------------------------------+
+| 4. || Call Sign ||
+|| +-----------------------------------------+
+| 5. || Country |
++--------+-------------------------------+</p>
+<p style="color:#B660A6;">Note: M - Mod; P - Planned; A - Available for chartering; E - Exclusive.</p>
+<p style="color:#B660A6;">Table_29 : MD
+Title: offshore wind farm maintenance vessels</p>
+<p style="color:#B660A6;">+</p>
+<p style="color:#B660A6;">| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA |
++---------------------------------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) |
++---------------------------------------+
+| Boskalis Offshore and Marine Construction (1) |
++----------------------------------------+
+| Claxton Engineering Company, LLC. (3) |
++-----------------------------------------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) |
++-------------------------------------------+
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) |
++-------------------------------------------------+
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) |
++--------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) |
++-----------------------------------------------+
+| Heerema Marine Contractors, IHC Offshore &amp; Energy, Jan De Nul NV (2), Penta-Ocean Offshore Services Limited (5) |
++-------------------------------------------------+
+| Huisman Equipment B.V., JDR Cable Systems Ltd. (1), Solstad Offshore Contractors AS (4) |
++-----------------------------------------------+
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) |
++-----------------------------------------------+
+| KOTUG Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd. (3), Van Oost Group Ltd. (3) |
++--------------------------------------------------------+
+| Marmeg Consulting, LLC. |
++-----------------------------------------------+
+| McDermott International, Inc., Neptune Decommissioning Group Ltd. (6) |
++-------------------------------------------+
+| MHK-Engineering LTD (4), Saipem Contracting Services AS (1), Technimare Offshore Ltd. (5) |
++--------------------------------------------------------+
+| Penta-Ocean Offshore Services Limited, Smit International N.V., Van Oost Group Ltd. (3) |
++-----------------------------------------------+
+| RINA Consulting S.p.A. (2), Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) |
++-------------------------------------------------+
+| Saipem Contracting Services AS, Technimare Offshore Ltd. (5) |
++--------------------------------------------+
+| Sapura Subsea Construction Sdn Bhd, Van Oost Group Ltd. (3) |
++-----------------------------------------------+
+| SOFEC Marine Contractors Inc., Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) |
++-------------------------------------------------------+
+| Stageworks, LLC. |
++----------------------------------------------+
+| Technimare Offshore Ltd. (5), Van Oost Group Ltd. (3) |
++-----------------------------------------------+
+| Vattenfall AB, WFS Technologies Inc., Wilhelmsen Divers AS (6) |</p>
+<p style="color:#B660A6;">+-------------------------------------------------------+</p>
+<p style="color:#B660A6;">Note: M = Modified; P = Planned; A = Available for chartering.</p>
+<p style="color:#B660A6;">A: The vessel is owned by this company and operated under the same flag. P: The vessel is operated by this company on a
+bareboat contract. A: The vessel is available for charter, but not currently in operation with the listed
+owner/charterer.</p>
+<p style="color:#B660A6;">*Please note that the information provided has been compiled from various sources and while every effort has been made
+to ensure its accuracy, no guarantees can be given that it is correct or up-to-date. It should not be relied upon as a
+basis for making any investment decision.</p>
+<p style="color:#B660A6;">Table 31: Offshore Wind Farm Maintenance Vessels</p>
+<p style="color:#B660A6;">Note: M = Modified; P = Planned; A = Available for chartering.</p>
+<p style="color:#B660A6;">A: The vessel is owned by this company and operated under the same flag. P: The vessel is operated by this company on a
+bareboat contract. A: The vessel is available for charter, but not currently in operation with the listed
+owner/charterer.</p>
+<p style="color:#B660A6;">*Please note that the information provided has been compiled from various sources and while every effort has been made
+to ensure its accuracy, no guarantees can be given that it is correct or up-to-date. It should not be relied upon as a
+basis for making any investment decision. The following table describes the current status of a number of vessels in
+terms of their ability to be available for charter by the offshore wind farm industry. This information has been
+compiled from various sources and while every effort has been made to ensure its accuracy, no guarantees can be given
+that it is correct or up-to-date.</p>
+<p style="color:#B660A6;">This table provides an overview of the current status as regards availability of vessels in terms of their ability to be
+available for charter by the offshore wind farm industry. The information provided is not necessarily definitive and
+should only be used as a guide. A: The vessel is owned by this company and operated under the same flag. P: The vessel
+is operated by this company on a bareboat contract. A: The vessel is available for charter, but not currently in
+operation with the listed owner/charterer.</p>
+<p style="color:#B660A6;">*Please note that the information provided has been compiled from various sources and while every effort has been made
+to ensure its accuracy, no guarantees can be given that it is correct or up-to-date. It should not be relied upon as a
+basis for making any investment decision. The following table describes the current status of a number of vessels in
+terms of their ability to be available for charter by the offshore wind farm industry. This information has been
+compiled from various sources and while every effort has been made to ensure its accuracy, no guarantees can be given
+that it is correct or up-to-date.</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;">| Table 32: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | P |
++-------------------------------------+------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++--------+
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++-----+
+| Claxton Engineering Company, LLC. (3) | A |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++++
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | M |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | P |
++-----------------------------------------------++--------+
+| Heerema Marine Contractors, IHC Offshore &amp; Energy, Jan De Nul NV (2), Penta-Ocean Offshore Services Limited (5) | M |
++-------------------------------------------------++++++++++++|
+| Huisman Equipment B.V., JDR Cable Systems Ltd. (1), Solstad Offshore Contractors AS (4) | A |
++-----------------------------------------------+++++++++++++
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++-------------------------------------------------++++++++++|
+| KOTUG Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd. (3), Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------+
+| Marmeg Consulting, LLC. | M |
++-----------------------------------------------+++++++++++++
+| McDermott International, Inc., Neptune Decommissioning Group Ltd. (6) | P |
++-------------------------------------------++--------+
+| MHK-Engineering LTD (4), Saipem Contracting Services AS (1), Technimare Offshore Ltd. (5) | A |
++-----------------------------------------------++++++++++++|
+| Penta-Ocean Offshore Services Limited, Smit International N.V., Van Oost Group Ltd. (3) | M |
++-----------------------------------------------+++++++++++
+| RINA Consulting S.p.A. (2), Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) | A |
++-------------------------------------------++++++++++++|
+| Saipem Contracting Services AS, Technimare Offshore Ltd. (5) | A |
++-----------------------------------------------+++++++++++
+| Sapura Subsea Construction Sdn Bhd, Van Oost Group Ltd. (3) | M |
++-----------------------------------------------++++++++++
+| SOFEC Marine Contractors Inc., Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) | P |
++-------------------------------------------------------+
+| Stageworks, LLC. | M |
++----------------------------------------------++--------+
+| Technimare Offshore Ltd. (5), Van Oost Group Ltd. (2) | A |
++-----------------+</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;">| Table 33: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | P |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-----------------------------------------------+++++++++++++
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++-------------------------------------------------+++++++++++|
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------+
+| Marmeg Consulting, LLC. | M |
++-----------------------------------------------+++++++++++++
+| McDermott International, Inc., Neptune Decommissioning Group Ltd. (6) | P |
++-------------------------------------------++--------|
+| MHK-Engineering LTD (4), Saipem Contracting Services AS (1), Technimare Offshore Ltd. (5) | A |
++-----------------------------------------------+++++++++++++
+| Penta-Ocean Offshore Services Limited, Smit International NV, Van Oost Group Ltd. (3) | M |
++-----------------------------------------------++++++++++|
+| RINA Consulting S.p.A. (2), Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) | A |
++-------------------------------------------++++++++++++|
+| Saipem Contracting Services AS, Technimare Offshore Ltd. (5) | M |
++-----------------------------------------------+++++++++++
+| Sapura Subsea Construction Sdn Bhd, Van Oost Group Ltd. (3) | P |
++-----------------------------------------------+++++++++++|
+| SOFEC Marine Contractors Inc., Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) | M |
++-------------------------------------------------------+
+| Stageworks, LLC. | A |
++-----------------+
+The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;">| Table 34: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | M |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | A |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | M |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | M |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | M |
++-----------------------------------------------+++++++++++++
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | A |
++-------------------------------------------------+++++++++++|
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|
+| McDermott International, Inc., Neptune Decommissioning Group Ltd. (6) | P |
++-------------------------------------------++--------|
+| MHK-Engineering LTD (4), Saipem Contracting Services AS (1), Technimare Offshore Ltd. (5) | A |
++-----------------------------------------------+++++++++++++
+| Penta-Ocean Offshore Services Limited, Smit International NV, Van Oost Group Ltd. (3) | M |
++-----------------------------------------------++++++++++|
+| RINA Consulting S.p.A. (2), Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) | A |
++-------------------------------------------++++++++++++|
+| Saipem Contracting Services AS, Technimare Offshore Ltd. (5) | M |
++-----------------------------------------------+++++++++++|
+| Sapura Subsea Construction Sdn Bhd, Van Oost Group Ltd. (3) | P |
++-----------------------------------------------+++++++++++|
+| SOFEC Marine Contractors Inc., Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) | M |
++-------------------------------------------------------+
+| Stageworks, LLC. | A |
++-----------------+</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 35: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------+
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|
+| McDermott International, Inc., Neptune Decommissioning Group Ltd. (6) | P |
++-------------------------------------------++--------|
+| MHK-Engineering LTD (4), Saipem Contracting Services AS (1), Technimare Offshore Ltd. (5) | A |
++-----------------------------------------------+++++++++++++
+| Penta-Ocean Offshore Services Limited, Smit International NV, Van Oost Group Ltd. (3) | M |
++---------------------------------------------------------|
+| RINA Consulting S.p.A. (2), Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) | A |
++-------------------------------------------++++++++++++|
+| Saipem Contracting Services AS, Technimare Offshore Ltd. (5) | M |
++---------------------------------------------------------|
+| Sapura Subsea Construction Sdn Bhd, Van Oost Group Ltd. (3) | P |
++---------------------------------------------------------|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 36: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------+
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|
+| McDermott International, Inc., Neptune Decommissioning Group Ltd. (6) | P |
++-------------------------------------------++--------|
+| MHK-Engineering LTD (4), Saipem Contracting Services AS (1), Technimare Offshore Ltd. (5) | A |
++---------------------------------------------------------|
+| Penta-Ocean Offshore Services Limited, Smit International NV, Van Oost Group Ltd. (3) | M |
++-----------------------------------------------+++++++++++|
+| RINA Consulting SpA (2), Solstad Offshore Contractors AS (4), TDI Marine and Logistics Ltd. (3) | A |
++-------------------------------------------++++++++++++|
+| Saipem Contracting Services AS, Technimare Offshore Ltd. (5) | M |
++---------------------------------------------------------|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 37: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|
+| McDermott International, Inc., Neptune Decommissioning Group Ltd. (6) | P |
++---------------------------------------------------------|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 38: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|
+| McDermott International, Inc., Neptune Decommissioning Group Ltd. (6) | P |
++---------------------------------------------------------|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 39: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 40: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 41: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 42: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 43: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 44: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 45: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 46: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 47: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 48: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 49: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 50: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 51: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |
++-----------------------------------------------++++++++++++|</p>
+<p style="color:#B660A6;">The following table provides an overview of the current status as regards availability of vessels in terms of their
+ability to be available for charter by the offshore wind farm industry. The information provided is not necessarily
+definitive and should only be used as a guide.</p>
+<p style="color:#B660A6;"><strong>Note:</strong> This data includes all vessels that are currently being marketed or have been historically marketed, it does
+not include any private sales.</p>
+<p style="color:#B660A6;">| Table 52: Offshore Wind Farm Maintenance Vessels |
++-----------------+
+| Name | Status |
++=================+======+
+| ABB, Remontowa, Smit, SLP &amp; Barge Logistics, DOGA | M |
++-------------------------------------++------+
+| Alp Marina Services Ltd. (2), Penta-Ocean Offshore Services Limited (5) | A |
++---------------------------------------++++++++++++|
+| Boskalis Offshore and Marine Construction (1) | A |
++-----------------------------------------++--------+
+| Claxton Engineering Company, LLC. (3) | M |
++-------------------------------------------++------+
+| DOGA AS (2), Neptune Decommissioning Group Ltd. (6) | P |
++--------------------------------------------++++++++++++|
+| Energoservice SpA (4), Van Oord Offshore Wind Service &amp; Marine Contractors BV (8) | A |
++-------------------------------------------------++++++++++|
+| Fugro GB Limited, Jan De Nul NV, Saipem Contracting Services AS (2), Swire Blue Marlin Ltd. (1), TDI Marine and
+Logistics Ltd., Van Oost Group Ltd. (3) | M |
++--------------------------------------------------------------------------------------------+
+| Global Maritime Investments Inc. (6) | A |
++-----------------------------------------------++--------|
+| Huisman Equipment BV, JDR Cable Systems Limited, Solstad Offshore Contractors AS (4) | A |
++-------------------------------------------------+++++++++++|
+| KCI Technologies Corporation, Lankhorst &amp; Meindertse Marine Consultancy BV (2) | M |
++---------------------------------------------------------+
+| Kotug Smit Offshore Services Pte.Ltd., Saipem Contracting Services AS (1), Solstad Offshore Contractors AS (4), TDI
+Marine and Logistics Ltd., Van Oost Group Ltd. (3) | A |
++--------------------------------------------------------------------------------------------|
+| Marmeg Consulting, LLC. | A |</p>
+<!-- B3004244 -->
+    <script>
+        // Sprinkle animated confetti that matches the kid-fest palette
+        (function() {
+            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
+            const confetti = document.getElementById('confetti');
+            const count = 120;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                const size = Math.random() * 8 + 4;
+                el.style.cssText =
+                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
+                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
+                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
+                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
+                el.style.transform = 'rotate('+Math.random()*360+'deg)';
+                confetti.appendChild(el);
+            }
+            const style = document.createElement('style');
+            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>

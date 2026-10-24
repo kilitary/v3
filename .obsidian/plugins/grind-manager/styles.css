@@ -1,0 +1,220 @@
+/*! tailwindcss v4.1.16 | MIT License | https://tailwindcss.com */
+@layer properties;
+[data-type="gamified-tasks-view"] {
+  .view-content {
+    padding: 5px;
+    container-type: size;
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .list-item {
+    list-style-type: none;
+  }
+  .todo {
+    display: flex;
+    align-items: center;
+  }
+  .list {
+    padding: 0;
+    padding-inline-start: none;
+  }
+  .border {
+    border: 1px solid var(--divider-color);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .flex-items-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .right-\[-40px\] {
+    right: -40px;
+  }
+  .m-auto {
+    margin: auto;
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline {
+    display: inline;
+  }
+  .list-item {
+    display: list-item;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .text-\[0\.65rem\] {
+    font-size: 0.65rem;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+}
+.gamified-tasks__difficulty-setting {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.gamified-tasks__difficulty-entry {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  &>input {
+    width: 100%;
+  }
+}
+.gamified-tasks__group-setting {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  .gamified-tasks__group-entry {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    &>input {
+      width: 100%;
+    }
+  }
+  & .setting-item-control {
+    display: grid;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+    }
+  }
+}
+.styles-module__tabs_Nql7bW__1100{justify-content:center;gap:10px;display:flex;overflow-y:auto}.styles-module__table_K_25jW__1100{border-collapse:collapse;width:100%;margin-top:20px}#styles-module__search_K_25jW__1100{width:100%;margin-top:.25rem}#styles-module__page-input_K_25jW__1100{width:100%}.styles-module__table_K_25jW__1100 th,.styles-module__table_K_25jW__1100 td{border:1px solid var(--text-normal);text-align:center;padding:0 10px}.styles-module__page-list_K_25jW__1100{gap:10px;padding:0 0 10px;display:flex}.styles-module__container_A08-0G__1100{flex:1;align-items:center;display:flex;position:relative}.styles-module__container_A08-0G__1100>input{width:100%}.styles-module__close_A08-0G__1100{position:absolute;right:0}.styles-module__header_aet0qa__1100{justify-content:space-between;align-items:center;height:100%;display:flex}.styles-module__depository_aet0qa__1100{flex-direction:column;gap:10px;margin-top:10px;display:flex}.styles-module__depository_aet0qa__1100>#styles-module__input-coins_aet0qa__1100{width:100%}.styles-module__depository_aet0qa__1100>.styles-module__buttons_aet0qa__1100{gap:10px;width:100%;display:flex}.styles-module__depository_aet0qa__1100>.styles-module__buttons_aet0qa__1100>button{flex:1}.styles-module__reward_aet0qa__1100{justify-content:space-between;align-items:center;gap:10px;display:flex}.styles-module__title_aet0qa__1100,.styles-module__desc_aet0qa__1100{margin:0;padding:0}.styles-module__list_aet0qa__1100{flex-direction:column;gap:10px;display:flex}@container (width <= 340px){.styles-module__reward_aet0qa__1100{text-align:center;flex-direction:column}}@container (width <= 340px){.styles-module__task_Mr1aJq__1100{flex-direction:column;gap:5px}.styles-module__title_Mr1aJq__1100{text-align:center}.styles-module__counter_Mr1aJq__1100{margin:auto}.styles-module__task__status_Mr1aJq__1100{order:3}}.styles-module__task_Mr1aJq__1100{position:relative}.styles-module__menu_Mr1aJq__1100{z-index:5;flex-direction:column;gap:10px;display:flex;position:absolute}.styles-module__difficulty_Mr1aJq__1100{color:var(--tag-color);font-size:.65rem;position:absolute;top:.225rem;right:.55rem}.styles-module__title_Mr1aJq__1100{width:100%}.styles-module__task__status_Mr1aJq__1100{text-align:center;padding:0}.styles-module__filters_Mr1aJq__1100 hr{margin:5px 0;padding:0}.styles-module__counter_Mr1aJq__1100{white-space:nowrap;margin-left:auto}.styles-module__counter_Mr1aJq__1100 button{width:50px}.styles-module__note_EvfIfG__1100{flex-direction:column;gap:10px;display:flex}.styles-module__note__input-and-button_EvfIfG__1100{gap:10px;display:flex}.styles-module__note__input_EvfIfG__1100{flex:1}.styles-module__task__select-option_EvfIfG__1100{text-align:center;padding:0 .2rem}

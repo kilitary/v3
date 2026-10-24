@@ -1,0 +1,122 @@
+.mainDiv{
+	margin-top: 10px;
+	margin-right: 2px;
+	margin-left: 3px;
+	aspect-ratio: 16 / 9;
+	display: inline;
+}
+.subDiv{
+	display: flex;
+	flex-grow: 1;
+	width: 100%;
+}
+
+.element{
+	background: #ffffff;
+	margin: 1px;
+	flex: 1;
+	height: auto;
+    min-height: 22px;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.elSymb{
+	font-size: 60%;
+	margin: 0;
+    text-wrap: wrap;
+    word-wrap: break-all;
+    word-break: break-all;
+}
+.numOfEl{
+	font-size: 40%;
+	margin: 0;
+    text-wrap: wrap;
+    word-wrap: break-all;
+    word-break: break-all;
+}
+.number{
+	font-size: 11px;
+    margin: 0;
+}
+.mass{
+	font-size: 11px;
+    margin: 0;
+}
+
+#nonExistant.element{
+	background-color: var(--background-secondary);
+	color: var(--background-secondary);
+}
+
+.elementButton{
+	all: unset;
+}
+.dataDiv{
+	color: #fff;
+	margin: 10px;
+}
+h2{
+	color: #fff;
+}
+
+.bigElement{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100px;
+}
+.numberAndMass{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-top: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+h4{
+	padding: none;
+	margin: none;
+}
+.electron-config{
+	white-space: pre-wrap;
+}
+.attrib{
+	margin-top: 5px;
+}
+
+
+
+/* All of the periodic elemnts backgrounds*/
+#nonmetal{
+	background-color: #6789ab;
+}
+#noble-gas{
+	background-color: #ba9876;
+}
+#alkali-metal{
+	background-color: #777;
+}
+#alkaline-earth-metal{
+	background-color: #aaa;
+}
+#post-transition-metal{
+	background-color: #33cc33;
+}
+#transition-metal{
+	background-color: #7777ff;
+}
+#metalloid{
+	background-color: #ff7777;
+}
+#lanthanide{
+	background-color: #786687;
+}
+#actinide{
+	background-color: #765567;
+}
+#unknown{
+	background-color: #333;
+}

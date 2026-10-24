@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RACE_CONDITION_SCHEDULER</title>
+    <style>
+        /* Kid-fest colors on a white terminal-style background */
+        body {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        a {
+            color: #2E7D32;
+            text-decoration:  dotted #B660A6;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            transform: scale(1.05) rotate(1deg);
+            color: #B660A6;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        ul, ol {
+            margin: 0.5em 0;
+            padding-left: 1.8em;
+        }
+        li {
+            margin: 0.3em 0;
+        }
+        blockquote {
+            border-left: 6px solid #C70039;
+            padding: 0.4em 1.2em;
+            margin: 1em 0;
+            background: #fafafa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            background: #fafafa;
+            padding: 0.15em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #1A535C;
+        }
+        pre {
+            background: #fafafa;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 3px dotted #C70039;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        th {
+            background: #ffffff;
+            padding: 8px 12px;
+            border: 2px solid #1A535C;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px dashed #7B61FF;
+        }
+        tr:nth-child(odd) td {
+            background: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+        hr {
+            border: 4px solid #6A0572;
+            background: transparent;
+            margin: 1.5em 0;
+            border-radius: 2px;
+        }
+        img {
+            max-width: 90%;
+            border: 6px solid #C70039;
+            border-radius: 12px;
+            margin: 1em 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5em;
+            padding: 8px 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #2D2942;
+            font-weight: bold;
+        }
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    <a href="javascript:history.back()" class="back-link">← RACE_CONDITION_SCHEDULER</a>
+    <h1 id="race-condition-scheduler-for-6pm-turns" style="color:#843b62;border-bottom:1px dashed #843b62;padding-bottom:4px;">Race Condition Scheduler for 6PM Turns</h1>
+<h2 id="overview" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Overview</h2>
+<p style="color:#7B61FF;">The Race Condition Scheduler is a new feature that creates intentional race conditions at 6PM intervals using all available words from all categories. This system implements comprehensive word processing with random analyze cycles (2-4 range) to enhance parallel processing capabilities.</p>
+<h2 id="features" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Features</h2>
+<h3 id="6pm-scheduling" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🕕 6PM Scheduling</h3>
+<ul>
+<li style="color:#6A0572;">Automatically calculates next 6PM occurrence</li>
+<li style="color:#6A0572;">Works across day boundaries (schedules tomorrow's 6PM if today's has passed)</li>
+<li style="color:#6A0572;">Maintains persistent turn counter to track scheduling events</li>
+</ul>
+<h3 id="all-words-processing" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">📚 All Words Processing</h3>
+<ul>
+<li style="color:#6A0572;">Processes entire vocabulary during race conditions</li>
+<li style="color:#6A0572;">Includes all 11 word categories (940+ words total)</li>
+<li style="color:#6A0572;">Categories: Physical Properties, Computer Verbs, IA Architecture, Circuit Components, Data Structures, Algorithms, Threading Concepts, Security Concepts, Network Protocols, Performance Metrics, Reliability Concepts</li>
+</ul>
+<h3 id="random-analyze-cycles" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🎲 Random Analyze Cycles</h3>
+<ul>
+<li style="color:#6A0572;">Each race condition uses 2-4 random analyze cycles</li>
+<li style="color:#6A0572;">Words are shuffled and repeated across cycles</li>
+<li style="color:#6A0572;">Creates intentional processing conflicts for enhanced parallelism</li>
+</ul>
+<h3 id="race-condition-creation" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🏃‍♂️ Race Condition Creation</h3>
+<ul>
+<li style="color:#6A0572;">Triggers comprehensive processing of all system vocabulary</li>
+<li style="color:#6A0572;">Creates controlled chaos for testing parallel processing limits</li>
+<li style="color:#6A0572;">Deactivates automatically after processing</li>
+</ul>
+<h2 id="usage" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Usage</h2>
+<h3 id="basic-setup" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Basic Setup</h3>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;"><span class="kn">from</span> <span class="nn">compact_evolution</span> <span class="kn">import</span> <span class="n">CompactEvolutionSystem</span>
+
+<span class="c1"># Initialize system</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">CompactEvolutionSystem</span><span class="p">()</span>
+
+<span class="c1"># Enable race condition scheduler</span>
+<span class="n">system</span><span class="o">.</span><span class="n">enable_race_condition_scheduler</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Check scheduler status</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">get_race_condition_status</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Next 6PM trigger: </span><span class="si">{</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;next_6pm_trigger&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="processing-during-race-conditions" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Processing During Race Conditions</h3>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;"><span class="c1"># Normal processing</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">process_request</span><span class="p">(</span><span class="s2">&quot;Process memory with threading&quot;</span><span class="p">)</span>
+
+<span class="c1"># If race condition is active, result will include:</span>
+<span class="k">if</span> <span class="s1">&#39;race_condition&#39;</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+    <span class="n">race_info</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;race_condition&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Race trigger: </span><span class="si">{</span><span class="n">race_info</span><span class="p">[</span><span class="s1">&#39;trigger&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Words processed: </span><span class="si">{</span><span class="n">race_info</span><span class="p">[</span><span class="s1">&#39;total_words_processed&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Turn counter: </span><span class="si">{</span><span class="n">race_info</span><span class="p">[</span><span class="s1">&#39;turn_counter&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="manual-race-condition-testing" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Manual Race Condition Testing</h3>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;"><span class="c1"># Simulate race condition for testing</span>
+<span class="n">system</span><span class="o">.</span><span class="n">race_scheduler</span><span class="o">.</span><span class="n">race_condition_active</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">system</span><span class="o">.</span><span class="n">race_scheduler</span><span class="o">.</span><span class="n">turn_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">process_request</span><span class="p">(</span><span class="s2">&quot;Test request&quot;</span><span class="p">)</span>
+<span class="c1"># Will process all 940+ words regardless of request content</span>
+</code></pre></div>
+
+<h2 id="api-reference" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">API Reference</h2>
+<h3 id="compactevolutionsystem-methods" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">CompactEvolutionSystem Methods</h3>
+<h4 id="enable_race_condition_schedulerenabled-bool-true" style="color:#843b62;border-bottom:1px dashed #B660A6;padding-bottom:4px;"><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">enable_race_condition_scheduler(enabled: bool = True)</code></h4>
+<p style="color:#7B61FF;">Enable or disable the 6PM race condition scheduler.</p>
+<p style="color:#7B61FF;"><strong>Parameters:</strong>
+- <code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">enabled</code>: Whether to enable the scheduler</p>
+<p style="color:#7B61FF;"><strong>Returns:</strong>
+- Prints status and next scheduled trigger time</p>
+<h4 id="get_race_condition_status-dict" style="color:#843b62;border-bottom:1px dashed #B660A6;padding-bottom:4px;"><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">get_race_condition_status() -&gt; Dict</code></h4>
+<p style="color:#7B61FF;">Get current status of the race condition scheduler.</p>
+<p style="color:#7B61FF;"><strong>Returns:</strong></p>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;"><span class="p">{</span>
+    <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="s2">&quot;next_6pm_trigger&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># ISO format datetime</span>
+    <span class="s2">&quot;race_condition_active&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="s2">&quot;turn_counter&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="s2">&quot;all_words_count&quot;</span><span class="p">:</span> <span class="nb">int</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="raceconditionscheduler-class" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">RaceConditionScheduler Class</h3>
+<h4 id="check_6pm_trigger-bool" style="color:#843b62;border-bottom:1px dashed #B660A6;padding-bottom:4px;"><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">check_6pm_trigger() -&gt; bool</code></h4>
+<p style="color:#7B61FF;">Check if it's time for a 6PM turn race condition.</p>
+<h4 id="prepare_all_words_racecategories-dict-listtuplestr-str" style="color:#843b62;border-bottom:1px dashed #B660A6;padding-bottom:4px;"><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">prepare_all_words_race(categories: Dict) -&gt; List[Tuple[str, str]]</code></h4>
+<p style="color:#7B61FF;">Prepare all words from all categories for race condition processing.</p>
+<h4 id="deactivate_race_condition" style="color:#843b62;border-bottom:1px dashed #B660A6;padding-bottom:4px;"><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">deactivate_race_condition()</code></h4>
+<p style="color:#7B61FF;">Deactivate the current race condition.</p>
+<h2 id="implementation-details" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Implementation Details</h2>
+<h3 id="race-condition-detection" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Race Condition Detection</h3>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;"><span class="k">def</span> <span class="nf">process_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+    <span class="c1"># Check for 6pm race condition trigger</span>
+    <span class="n">race_triggered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">race_scheduler</span><span class="o">.</span><span class="n">check_6pm_trigger</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">race_triggered</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">race_scheduler</span><span class="o">.</span><span class="n">race_condition_active</span><span class="p">:</span>
+        <span class="c1"># Process ALL words from ALL categories</span>
+        <span class="n">race_words</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">race_scheduler</span><span class="o">.</span><span class="n">prepare_all_words_race</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">)</span>
+        <span class="c1"># ... process race words</span>
+</code></pre></div>
+
+<h3 id="random-analyze-cycles_1" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Random Analyze Cycles</h3>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;"><span class="c1"># Create random analyze cycles with 2-4 cycles</span>
+<span class="n">analyze_cycles</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">race_words</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">cycle</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">analyze_cycles</span><span class="p">):</span>
+    <span class="c1"># Shuffle words for each cycle to create race conditions</span>
+    <span class="n">shuffled</span> <span class="o">=</span> <span class="n">all_words</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">shuffled</span><span class="p">)</span>
+    <span class="n">race_words</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">shuffled</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="testing" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Testing</h2>
+<h3 id="test-scripts" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Test Scripts</h3>
+<ol>
+<li style="color:#6A0572;">
+<p style="color:#7B61FF;"><strong><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">test_race_condition_6pm.py</code></strong>: Comprehensive test suite
+   - Tests normal processing vs race condition processing
+   - Validates random analyze cycles
+   - Verifies scheduler enable/disable functionality</p>
+</li>
+<li style="color:#6A0572;">
+<p style="color:#7B61FF;"><strong><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">compact_evolution_demo.py</code></strong>: Updated demo with race condition demonstration
+   - Shows full system capabilities including race conditions
+   - Demonstrates word processing volume during race events</p>
+</li>
+</ol>
+<h3 id="running-tests" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Running Tests</h3>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;"><span class="c1"># Run race condition tests</span>
+python3<span class="w"> </span>Red<span class="p">&amp;</span>Queen/test_race_condition_6pm.py
+
+<span class="c1"># Run full demonstration</span>
+python3<span class="w"> </span>Red<span class="p">&amp;</span>Queen/compact_evolution_demo.py
+
+<span class="c1"># Run existing tests to verify compatibility</span>
+python3<span class="w"> </span>Red<span class="p">&amp;</span>Queen/test_decay_trigger.py
+</code></pre></div>
+
+<h2 id="example-output" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Example Output</h2>
+<h3 id="race-condition-triggered" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Race Condition Triggered</h3>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">🚀 Simulating 6pm race condition...
+  Status: APPROVE
+  Total words processed: 940
+  Race trigger: 6pm_turn_race_condition
+  Turn counter: 1
+  Words processed: 940
+  Analyze cycles: random 2-4 cycles as specified
+
+  Sample words (first 15): [&#39;BackTracking&#39;, &#39;Bandwidth&#39;, &#39;Cache&#39;, &#39;SSO&#39;, &#39;Config&#39;, ...]
+
+  Random cycle examples:
+    &#39;Pipeline&#39; processed 4 times
+    &#39;DynamicProgramming&#39; processed 4 times
+    &#39;RAM&#39; processed 4 times
+</code></pre></div>
+
+<h3 id="normal-processing-no-race-condition" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Normal Processing (No Race Condition)</h3>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">🔍 Test 1: Normal Processing
+  Status: APPROVE
+  Identified words: [&#39;Memory&#39;, &#39;Process&#39;, &#39;Thread&#39;, &#39;Process&#39;, &#39;Hyperthread&#39;]
+  Race condition triggered: False
+</code></pre></div>
+
+<h2 id="integration-with-existing-systems" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Integration with Existing Systems</h2>
+<p style="color:#7B61FF;">The race condition scheduler integrates seamlessly with existing functionality:</p>
+<ul>
+<li style="color:#6A0572;">✅ Preserves all existing word detection and processing</li>
+<li style="color:#6A0572;">✅ Maintains compatibility with decay-based parallelism injection</li>
+<li style="color:#6A0572;">✅ Works with existing TimeAxis and ExecutionAxis systems</li>
+<li style="color:#6A0572;">✅ Supports existing hyperthreading and execution planning</li>
+<li style="color:#6A0572;">✅ Maintains compact representation and logic circuit generation</li>
+</ul>
+<h2 id="performance-considerations" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Performance Considerations</h2>
+<ul>
+<li style="color:#6A0572;">Race conditions process 940+ words (vs typical 2-5 words)</li>
+<li style="color:#6A0572;">Processing time increases proportionally during race events</li>
+<li style="color:#6A0572;">Memory usage scales with word repetition (2-4x base vocabulary)</li>
+<li style="color:#6A0572;">Automatic deactivation prevents sustained high processing</li>
+</ul>
+<h2 id="configuration" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Configuration</h2>
+<h3 id="default-settings" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Default Settings</h3>
+<ul>
+<li style="color:#6A0572;">Scheduler: Disabled by default</li>
+<li style="color:#6A0572;">6PM Detection: Automatic based on system time</li>
+<li style="color:#6A0572;">Analyze Cycles: Random 2-4 range</li>
+<li style="color:#6A0572;">Turn Counter: Starts from 0</li>
+</ul>
+<h3 id="customization" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Customization</h3>
+<p style="color:#7B61FF;">The system can be extended to support:
+- Different scheduling intervals
+- Custom word sets for race conditions
+- Configurable analyze cycle ranges
+- Custom race condition triggers</p>
+<h2 id="troubleshooting" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Troubleshooting</h2>
+<h3 id="common-issues" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Common Issues</h3>
+<ol>
+<li style="color:#6A0572;"><strong>Scheduler not triggering</strong>: Ensure <code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;">enabled=True</code> and check system time</li>
+<li style="color:#6A0572;"><strong>No race words processed</strong>: Verify categories are populated</li>
+<li style="color:#6A0572;"><strong>Performance issues</strong>: Race conditions are intensive by design</li>
+</ol>
+<h3 id="debug-information" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">Debug Information</h3>
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #9B5DE8;"><span class="c1"># Check scheduler status</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">get_race_condition_status</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Debug info: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Manual trigger for testing</span>
+<span class="n">system</span><span class="o">.</span><span class="n">race_scheduler</span><span class="o">.</span><span class="n">race_condition_active</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+
+<h2 id="future-enhancements" style="color:#416EB4;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Future Enhancements</h2>
+<p style="color:#7B61FF;">Potential improvements for the race condition system:
+- Multiple daily trigger times
+- Custom word filtering for race conditions
+- Performance metrics during race events
+- Integration with external scheduling systems
+- Race condition intensity levels</p>
+    <script>
+        // Sprinkle animated confetti that matches the kid-fest palette
+        (function() {
+            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
+            const confetti = document.getElementById('confetti');
+            const count = 120;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                const size = Math.random() * 8 + 4;
+                el.style.cssText =
+                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
+                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
+                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
+                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
+                el.style.transform = 'rotate('+Math.random()*360+'deg)';
+                confetti.appendChild(el);
+            }
+            const style = document.createElement('style');
+            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>

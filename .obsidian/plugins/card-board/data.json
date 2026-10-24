@@ -1,0 +1,98 @@
+{
+  "version": "0.13.0",
+  "data": {
+    "boardConfigs": [
+      {
+        "columns": [
+          {
+            "tag": "completed",
+            "data": {
+              "collapsed": true,
+              "index": 0,
+              "limit": 10,
+              "name": "Completed"
+            }
+          },
+          {
+            "tag": "namedTag",
+            "data": {
+              "collapsed": true,
+              "name": "chatGPT",
+              "tag": "ai"
+            }
+          },
+          {
+            "tag": "untagged",
+            "data": {
+              "collapsed": true,
+              "name": "Untagged"
+            }
+          },
+          {
+            "tag": "otherTags",
+            "data": {
+              "collapsed": true,
+              "name": "Other Tags"
+            }
+          }
+        ],
+        "filters": [
+          {
+            "tag": "fileFilter",
+            "data": "2024-04-01.md"
+          },
+          {
+            "tag": "pathFilter",
+            "data": "/"
+          },
+          {
+            "tag": "pathFilter",
+            "data": "AI Research Assistant"
+          },
+          {
+            "tag": "pathFilter",
+            "data": "AI Research Assistant/History"
+          },
+          {
+            "tag": "pathFilter",
+            "data": "axis9"
+          },
+          {
+            "tag": "pathFilter",
+            "data": "issue"
+          },
+          {
+            "tag": "tagFilter",
+            "data": "chatGPT"
+          },
+          {
+            "tag": "tagFilter",
+            "data": "ai/"
+          }
+        ],
+        "filterPolarity": "Allow",
+        "filterScope": "Both",
+        "name": "xfhj",
+        "showColumnTags": true,
+        "showFilteredTags": true
+      }
+    ],
+    "globalSettings": {
+      "defaultColumnNames": {
+        "today": "",
+        "tomorrow": "",
+        "future": "",
+        "undated": "",
+        "otherTags": "",
+        "untagged": "",
+        "completed": ""
+      },
+      "filters": [],
+      "firstDayOfWeek": "FromLocale",
+      "ignoreFileNameDates": false,
+      "taskCompletionFormat": "ObsidianCardBoard",
+      "taskCompletionInLocalTime": true,
+      "taskCompletionShowUtcOffset": true
+    }
+  }
+}

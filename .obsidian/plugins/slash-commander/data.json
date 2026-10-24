@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "confirmDeletion": true,
+  "showDescriptions": true,
+  "showSourcesForDuplicates": true,
+  "debug": false,
+  "mainTrigger": "/",
+  "extraTriggers": [],
+  "useExtraTriggers": false,
+  "triggerOnlyOnNewLine": true,
+  "queryPattern": {},
+  "bindings": [
+    {
+      "name": "Table",
+      "id": "editor:insert-table",
+      "icon": "table-2",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "editor:insert-table"
+    },
+    {
+      "name": "Callout",
+      "id": "editor:insert-callout",
+      "icon": "indent",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "editor:insert-callout"
+    },
+    {
+      "name": "Code",
+      "id": "editor:insert-codeblock",
+      "icon": "air-vent",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "editor:insert-codeblock"
+    },
+    {
+      "name": "Math",
+      "id": "editor:insert-mathblock",
+      "icon": "percent",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "editor:insert-mathblock"
+    },
+    {
+      "name": "Embed",
+      "id": "editor:insert-embed",
+      "icon": "sticky-note",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "editor:insert-embed"
+    },
+    {
+      "name": "Attachment",
+      "id": "editor:attach-file",
+      "icon": "paperclip",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "editor:attach-file"
+    },
+    {
+      "name": "Property",
+      "id": "markdown:add-metadata-property",
+      "icon": "plus-circle",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "markdown:add-metadata-property"
+    },
+    {
+      "name": "Admonition",
+      "id": "obsidian-admonition:insert-admonition",
+      "icon": "indent",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "obsidian-admonition:insert-admonition"
+    },
+    {
+      "name": "Excalidraw",
+      "id": "obsidian-excalidraw-plugin:excalidraw-autocreate-and-embed-new-tab",
+      "icon": "image",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "obsidian-excalidraw-plugin:excalidraw-autocreate-and-embed-new-tab"
+    },
+    {
+      "name": "Task",
+      "id": "obsidian-tasks-plugin:edit-task",
+      "icon": "check-circle",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "obsidian-tasks-plugin:edit-task"
+    },
+    {
+      "name": "Template",
+      "id": "templater-obsidian:insert-templater",
+      "icon": "book-copy",
+      "mode": "any",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "templater-obsidian:insert-templater"
+    },
+    {
+      "name": "Citation",
+      "id": "zotlit:insert-markdown-citation",
+      "icon": "book-marked",
+      "mode": "desktop",
+      "triggerMode": "anywhere",
+      "chosen": false,
+      "selected": false,
+      "action": "zotlit:insert-markdown-citation"
+    }
+  ]
+}

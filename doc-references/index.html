@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document References — vault14.2</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0f1117;
+      color: #c9d1d9;
+      padding: 32px 24px;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #e6edf3;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 0.85rem;
+      color: #8b949e;
+      margin-bottom: 28px;
+    }
+    .search-wrap {
+      margin-bottom: 28px;
+    }
+    #search {
+      width: 100%;
+      max-width: 520px;
+      padding: 9px 14px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      color: #c9d1d9;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    #search:focus { border-color: #58a6ff; }
+    #search::placeholder { color: #484f58; }
+    .category {
+      margin-bottom: 28px;
+    }
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #21262d;
+    }
+    .category-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e6edf3;
+    }
+    .count-badge {
+      background: #21262d;
+      color: #8b949e;
+      font-size: 0.72rem;
+      padding: 1px 7px;
+      border-radius: 20px;
+    }
+    .ref-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .ref-item {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 6px;
+      padding: 10px 14px;
+      transition: border-color 0.15s;
+    }
+    .ref-item:hover { border-color: #388bfd44; }
+    .ref-item.hidden { display: none; }
+    .ref-url {
+      display: block;
+      font-size: 0.85rem;
+      color: #58a6ff;
+      text-decoration: none;
+      word-break: break-all;
+      margin-bottom: 4px;
+    }
+    .ref-url:hover { text-decoration: underline; }
+    .ref-sources {
+      font-size: 0.75rem;
+      color: #6e7681;
+    }
+    .ref-sources span {
+      background: #21262d;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-right: 4px;
+      display: inline-block;
+      margin-top: 2px;
+    }
+    .no-results {
+      color: #6e7681;
+      font-size: 0.88rem;
+      display: none;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Document References</h1>
+<p class="subtitle">All external URLs extracted from vault14.2 markdown files &mdash; generated 2026-05-02</p>
+
+<div class="search-wrap">
+  <input type="text" id="search" placeholder="Filter references&hellip;" autocomplete="off">
+</div>
+<p class="no-results" id="no-results">No references match your filter.</p>
+
+
+<!-- ── AI / Machine Learning ── -->
+<section class="category" data-cat="ai">
+  <div class="category-header">
+    <span class="category-title">AI &amp; Machine Learning</span>
+    <span class="count-badge">3</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="https://api-inference.huggingface.co/models/facebook/bart-large-cnn" target="_blank" rel="noopener">
+        https://api-inference.huggingface.co/models/facebook/bart-large-cnn
+      </a>
+      <div class="ref-sources"><span>textgenerator/templates/huggingface/summarizeBART.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://api-inference.huggingface.co/models/facebook/bart-large-mnli" target="_blank" rel="noopener">
+        https://api-inference.huggingface.co/models/facebook/bart-large-mnli
+      </a>
+      <div class="ref-sources"><span>textgenerator/templates/huggingface/classify-bart-large-mnli.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://huggingface.co/microsoft/Phi-3-mini-128k-instruct/resolve/main/LICENSE" target="_blank" rel="noopener">
+        https://huggingface.co/microsoft/Phi-3-mini-128k-instruct/resolve/main/LICENSE
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer (3 sim logs)</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── Model Licenses ── -->
+<section class="category" data-cat="licenses">
+  <div class="category-header">
+    <span class="category-title">Licenses</span>
+    <span class="count-badge">3</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="https://huggingface.co/microsoft/Phi-3.5-mini-instruct/resolve/main/LICENSE" target="_blank" rel="noopener">
+        https://huggingface.co/microsoft/Phi-3.5-mini-instruct/resolve/main/LICENSE
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer (23 sim logs)</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">
+        http://www.apache.org/licenses/LICENSE-2.0
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer (4 sim logs)</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="http://www.apache.org/licenses/" target="_blank" rel="noopener">
+        http://www.apache.org/licenses/
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer (4 sim logs)</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── GitHub / Source Code ── -->
+<section class="category" data-cat="github">
+  <div class="category-header">
+    <span class="category-title">GitHub &amp; Source Code</span>
+    <span class="count-badge">7</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="https://github.com/kilitary/nnamed" target="_blank" rel="noopener">
+        https://github.com/kilitary/nnamed
+      </a>
+      <div class="ref-sources"><span>README.md</span><span>index.md</span><span>README_ru.md</span><span>index_ru.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://github.com/kilitary/nnamed.git" target="_blank" rel="noopener">
+        https://github.com/kilitary/nnamed.git
+      </a>
+      <div class="ref-sources"><span>README.md</span><span>README_ru.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://github.com/kilitary/named/blob/main/axis9/research/research.md" target="_blank" rel="noopener">
+        https://github.com/kilitary/named/blob/main/axis9/research/research.md
+      </a>
+      <div class="ref-sources"><span>README.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://github.com/kilitary/nnamed/issues" target="_blank" rel="noopener">
+        https://github.com/kilitary/nnamed/issues
+      </a>
+      <div class="ref-sources"><span>index.md</span><span>index_ru.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://github.com/docker/cagent/tree/main/examples" target="_blank" rel="noopener">
+        https://github.com/docker/cagent/tree/main/examples
+      </a>
+      <div class="ref-sources"><span>team/persons.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://github.com/xllowl/obsidian-excalidraw-plugin/blob/master/images/Mindmap%20connector1.png" target="_blank" rel="noopener">
+        https://github.com/xllowl/obsidian-excalidraw-plugin (Mindmap connector1.png)
+      </a>
+      <div class="ref-sources"><span>Excalidraw/Scripts/Downloaded/Mindmap connector.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://github.com/zsviczian/obsidian-excalidraw-plugin/blob/master/ea-scripts/Repeat%20Elements.md" target="_blank" rel="noopener">
+        https://github.com/zsviczian/obsidian-excalidraw-plugin (Repeat Elements)
+      </a>
+      <div class="ref-sources"><span>Excalidraw/Scripts/Downloaded/Repeat Texts.md</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── Excalidraw Assets ── -->
+<section class="category" data-cat="excalidraw">
+  <div class="category-header">
+    <span class="category-title">Excalidraw Script Assets</span>
+    <span class="count-badge">9</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="https://zsviczian.github.io/obsidian-excalidraw-plugin/ExcalidrawScriptsEngine.html" target="_blank" rel="noopener">
+        https://zsviczian.github.io/obsidian-excalidraw-plugin/ExcalidrawScriptsEngine.html
+      </a>
+      <div class="ref-sources"><span>Repeat Elements.md</span><span>Set Dimensions.md</span><span>Set Link Alias.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://raw.githubusercontent.com/zsviczian/obsidian-excalidraw-plugin/master/images/scripts-dimensions.jpg" target="_blank" rel="noopener">
+        scripts-dimensions.jpg
+      </a>
+      <div class="ref-sources"><span>Set Dimensions.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://raw.githubusercontent.com/zsviczian/obsidian-excalidraw-plugin/master/images/scripts-download-raw.jpg" target="_blank" rel="noopener">
+        scripts-download-raw.jpg
+      </a>
+      <div class="ref-sources"><span>Repeat Elements.md</span><span>Set Dimensions.md</span><span>Set Link Alias.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://raw.githubusercontent.com/zsviczian/obsidian-excalidraw-plugin/master/images/scripts-mindmap-format-1.png" target="_blank" rel="noopener">
+        scripts-mindmap-format-1.png
+      </a>
+      <div class="ref-sources"><span>Mindmap format.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://raw.githubusercontent.com/zsviczian/obsidian-excalidraw-plugin/master/images/scripts-mindmap-format-2.png" target="_blank" rel="noopener">
+        scripts-mindmap-format-2.png
+      </a>
+      <div class="ref-sources"><span>Mindmap format.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://raw.githubusercontent.com/zsviczian/obsidian-excalidraw-plugin/master/images/scripts-normalize-selected-arrows.png" target="_blank" rel="noopener">
+        scripts-normalize-selected-arrows.png
+      </a>
+      <div class="ref-sources"><span>Normalize Selected Arrows.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://raw.githubusercontent.com/zsviczian/obsidian-excalidraw-plugin/master/images/scripts-organic-line.jpg" target="_blank" rel="noopener">
+        scripts-organic-line.jpg
+      </a>
+      <div class="ref-sources"><span>Organic Line.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://raw.githubusercontent.com/zsviczian/obsidian-excalidraw-plugin/master/images/scripts-repeat-elements.png" target="_blank" rel="noopener">
+        scripts-repeat-elements.png
+      </a>
+      <div class="ref-sources"><span>Repeat Elements.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://raw.githubusercontent.com/zsviczian/obsidian-excalidraw-plugin/master/images/scripts-sticky-note-matrix.jpg" target="_blank" rel="noopener">
+        scripts-sticky-note-matrix.jpg
+      </a>
+      <div class="ref-sources"><span>Text to Sticky Notes.md</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── Technical Standards ── -->
+<section class="category" data-cat="standards">
+  <div class="category-header">
+    <span class="category-title">Technical Standards &amp; IEEE</span>
+    <span class="count-badge">4</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.rfc-editor.org/rfc/rfc7231" target="_blank" rel="noopener">
+        https://www.rfc-editor.org/rfc/rfc7231
+      </a>
+      <div class="ref-sources"><span>axis9/research/research.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.rfc-editor.org/rfc/rfc7231#section-3.4" target="_blank" rel="noopener">
+        https://www.rfc-editor.org/rfc/rfc7231#section-3.4
+      </a>
+      <div class="ref-sources"><span>axis9/research/research.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.rfc-editor.org/rfc/rfc2295" target="_blank" rel="noopener">
+        https://www.rfc-editor.org/rfc/rfc2295
+      </a>
+      <div class="ref-sources"><span>axis9/research/research.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="http://ieeexplore.ieee.org" target="_blank" rel="noopener">
+        http://ieeexplore.ieee.org
+      </a>
+      <div class="ref-sources"><span>SKYNET/For vacuum divider/Untitled 3.md</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── International Organizations ── -->
+<section class="category" data-cat="intl">
+  <div class="category-header">
+    <span class="category-title">International Organizations &amp; Legal</span>
+    <span class="count-badge">5</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.ohchr.org/EN/HRBodies/Pages/LiasonOffices.aspx" target="_blank" rel="noopener">
+        https://www.ohchr.org/EN/HRBodies/Pages/LiasonOffices.aspx
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer/sim_log_7633703000000.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.interpol.int/How-we-work/Notifiable-offences" target="_blank" rel="noopener">
+        https://www.interpol.int/How-we-work/Notifiable-offences
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer/sim_log_7633703000000.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.interpol.int/How-we-work/ifications/View-Red-Notices" target="_blank" rel="noopener">
+        https://www.interpol.int — Red Notices
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer/sim_log_3608250000000.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.unodc.org/unod/en/criminal_just/index.html" target="_blank" rel="noopener">
+        https://www.unodc.org/unod/en/criminal_just/index.html
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer/sim_log_3608250000000.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.cpt.coe.int/en/web/cpt/members" target="_blank" rel="noopener">
+        https://www.cpt.coe.int/en/web/cpt/members
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer/sim_log_7633703000000.md</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── Whistleblowing / Human Rights ── -->
+<section class="category" data-cat="rights">
+  <div class="category-header">
+    <span class="category-title">Whistleblowing &amp; Human Rights</span>
+    <span class="count-badge">2</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.transparency.org/en/what-we-do/whistleblowing" target="_blank" rel="noopener">
+        https://www.transparency.org/en/what-we-do/whistleblowing
+      </a>
+      <div class="ref-sources"><span>Red&amp;Queen/playground/models_queryer/sim_log_7633703000000.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.lifeofjohnchristiana.com/torture-journal.html" target="_blank" rel="noopener">
+        https://www.lifeofjohnchristiana.com/torture-journal.html
+      </a>
+      <div class="ref-sources"><span>psy-references/notes-girl.md</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── Social & Web ── -->
+<section class="category" data-cat="social">
+  <div class="category-header">
+    <span class="category-title">Social &amp; Web</span>
+    <span class="count-badge">3</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="https://vk.com/agent1349" target="_blank" rel="noopener">
+        https://vk.com/agent1349
+      </a>
+      <div class="ref-sources"><span>axis9/issues/ss/automated_psy_machine.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="http://fsb.ru/" target="_blank" rel="noopener">
+        http://fsb.ru/
+      </a>
+      <div class="ref-sources"><span>axis9/issues/ss/twitter-sign.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="http://chucknorris.com/" target="_blank" rel="noopener">
+        http://chucknorris.com/
+      </a>
+      <div class="ref-sources"><span>indirect/textgenerator/templates/Experimental/testCustomForm.md</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── Personal / Project ── -->
+<section class="category" data-cat="personal">
+  <div class="category-header">
+    <span class="category-title">Personal &amp; Project</span>
+    <span class="count-badge">2</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="http://kilitary.ru?laterst" target="_blank" rel="noopener">
+        http://kilitary.ru?laterst
+      </a>
+      <div class="ref-sources"><span>SKYNET/advisories/README.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://obsidian.md/" target="_blank" rel="noopener">
+        https://obsidian.md/
+      </a>
+      <div class="ref-sources"><span>README.md</span><span>README_ru.md</span><span>CLAUDE.md</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── Bing Search Results ── -->
+<section class="category" data-cat="bing">
+  <div class="category-header">
+    <span class="category-title">Bing Search Result Links</span>
+    <span class="count-badge">4</span>
+  </div>
+  <ul class="ref-list">
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.bing.com/ck/a?!&&p=1988ce3aa0d073765bfa53faed0f2b85ccec4422e8b6dcb5d742485b37eaef04JmltdHM9MTc2MjY0NjQwMA&ptn=3&ver=2&hsh=4&fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&u=a1aHR0cHM6Ly9kaXNzZXJncmFkLmNvbS9hcnRpY2xlL3ZvcHJvc3ktc3R1ZGVudG92L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbGphLW5hLWRpc3NlcnRhY2lqdS1vYnJhemVj&ntb=1" target="_blank" rel="noopener">
+        Bing → dissergad.com — отзыв научного руководителя
+      </a>
+      <div class="ref-sources"><span>axis9/CORE-SSE/notes.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.bing.com/ck/a?!&&p=46b3bd676aab121dfea72ff68706d1f5ef1879079a66837fc5a4d51df7c645fdJmltdHM9MTc2MjY0NjQwMA&ptn=3&ver=2&hsh=4&fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&u=a1aHR0cHM6Ly93d3cuaW1wLnVyYW4ucnUvP3E9cnUvZGlzc292ZXRfcHJhdmlsYS1vZm9ybWxlbml5YS1vdHp5dm92&ntb=1" target="_blank" rel="noopener">
+        Bing → imp.uran.ru — правила оформления отзывов
+      </a>
+      <div class="ref-sources"><span>axis9/CORE-SSE/notes.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.bing.com/ck/a?!&&p=522140b8ed4e4c56934aea43dc499f7b1d30573f06e33d8ac4aa85da176091bbJmltdHM9MTc2MjY0NjQwMA&ptn=3&ver=2&hsh=4&fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&u=a1aHR0cHM6Ly94bi0tLS0tOGtjZ25yZm5wZnlzbzRnLnhuLS1wMWFpL290enlpdi1uYS1kaXBsb21udXl1LXJhYm90dQ&ntb=1" target="_blank" rel="noopener">
+        Bing → отзыв на дипломную работу
+      </a>
+      <div class="ref-sources"><span>axis9/CORE-SSE/notes.md</span></div>
+    </li>
+    <li class="ref-item">
+      <a class="ref-url" href="https://www.bing.com/ck/a?!&&p=ed607e582b86d8fd80e26176f911ed3d6c760dfae0ebaeb077d89197c600c080JmltdHM9MTc2MjY0NjQwMA&ptn=3&ver=2&hsh=4&fclid=2b220f64-cc61-6155-291a-19c4cd7f60e6&psq=%2b%d1%81%d0%b2%d0%be+%d0%be%d1%82%d0%b7%d1%8b%d0%b2+%d0%bd%d0%b0%d1%80%d1%83%d1%87%d0%bd%d0%be%d0%b3%d0%be+%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8f&u=a1aHR0cHM6Ly9kaXBsb212dXphLnJ1L290enl2LW5hdWNobm9nby1ydWtvdm9kaXRlbHlhLW5hLWRpc3NlcnRhdHNpeXUv&ntb=1" target="_blank" rel="noopener">
+        Bing → diplomvuza.ru — отзыв научного руководителя
+      </a>
+      <div class="ref-sources"><span>axis9/CORE-SSE/notes.md</span></div>
+    </li>
+  </ul>
+</section>
+
+
+<script>
+  const search = document.getElementById('search');
+  const noResults = document.getElementById('no-results');
+
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    let visible = 0;
+
+    document.querySelectorAll('.ref-item').forEach(item => {
+      const text = item.textContent.toLowerCase();
+      const show = !q || text.includes(q);
+      item.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+
+    document.querySelectorAll('.category').forEach(cat => {
+      const anyVisible = cat.querySelectorAll('.ref-item:not(.hidden)').length > 0;
+      cat.style.display = anyVisible ? '' : 'none';
+    });
+
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+  });
+</script>
+
+</body>
+</html>

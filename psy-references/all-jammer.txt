@@ -1,0 +1,125 @@
+Bluetooth Tesla coil / flyback driver
+
+http://jammers4u.com/12-antenna-103w-jammer
+
+CT-2012H 12 Antenna 103W 3G 4G WiFi RC GPS Lojack Jammer up to 80m
+
+Desktop Portable 12 Band Antenna Jammer medium power 8-10W per band, total 90-103W with range up to 80m. ( Much higher output power than 2-3W per band Jammers ) Jamm all types of Android phones, Tablets, Smart Phones, iPhones, GPS, Loajck, remote control signals from various devices such as rc cars, rc boats, alarms, wireless sensors, amateur or professional remotely controlled toys,UAVs, Drones, etc.
+
+
+
+1 Ver CT-2012H EUR VU Europe type :
+920-965MHz GSM 900 10W
+1800-1920MHz DCS 10W
+2100-2170MHz 3G, UMTS 10W
+WiFi 2400-2480MHz 11.b, g 8W
+790-830MHz 4G Low 10W
+2570-2690MHz 4G High LTE 8W
+1570-1620Mhz GPS: L1 + Glonass L1 10W
+1220-1280MHz GPS L2 + Glonass L2 10W
+164-173MHz Lojack Car Tracking  5W
+130-180MHz VHF (or RC 315MHz or RC 868Mhz ) 5W
+420-480MHz UHF  (or 433MHz) 5W
+5.1-5.9GHz 5Ghz WiFi 11.a  2W
+TOTAL: 93W
+
+2 Ver CT-2012H EUR GP Europe
+920-965MHz GSM 900 10W
+1800-1920MHz DCS 10W
+2100-2170MHz 3G, UMTS 10W
+WiFi 2400-2480MHz 11.b, g 8W
+790-830MHz 4G Low 10W
+2570-2690MHz 4G High LTE 8W
+1570-1620Mhz GPS: L1 + Glonass L1 10W
+1220-1280MHz GPS L2 + Glonass L2 10W
+164-173MHz Lojack Car Tracking  5W
+1170MHz GPS L5 10W
+1370-1390MHz GPS L3+ L4 10W
+5.1-5.9GHz 5Ghz WiFi 11.a 2W
+TOTAL : 103W
+
+3 Ver CT-2012H EUR Office Europe
+920-965MHz GSM 900 10W
+1800-1920MHz DCS 10W
+2100-2170MHz 3G, UMTS 10W
+WiFi 2400-2480MHz 11.b, g 8W
+790-830MHz 4G Low 10W
+2570-2690MHz 4G High LTE 8W
+1570-1620Mhz GPS: L1 + Glonass L1 10W
+1220-1280MHz GPS L2 + Glonass L2 10W
+420-480MHz UHF 5W
+130-180MHz VHF 5W
+5.1-5.5GHz 5Ghz WiFi 11.a 2W
+5.5-5.9GHz 5Ghz WiFi 11.a 2W
+TOTAL: 90W
+
+4 Ver CT-2012H A VU  America type:
+850-895MHz CDMA 10W
+1800-1990MHz PHS, DCS 10W
+2100-2170MHz 3G, UMTS 10W
+2345-2480MHz WiFi 11.b, g 8W
+720-805MHz 4G LTE USA iPhone 10W
+2500-2700MHz 4G WiMAX USA Sprint 8W
+1570-1620Mhz GPS: L1 + Glonass L1 10W
+1220-1280MHz GPS L2 + Glonass L2 10W
+164-173MHz Lojack Car Tracking  5W
+130-180MHz VHF (or RC 315MHz or RC 868Mhz ) 5W
+420-480MHz UHF  (or 433MHz) 5W
+5.1-5.9GHz 5Ghz WiFi 11.a  2W
+TOTAL: 93W
+
+5 Ver CT-2012H A GP America
+850-895MHz CDMA 10W
+1800-1990MHz PHS, DCS 10W
+2100-2170MHz 3G, UMTS 10W
+2345-2480MHz WiFi 11.b, g 8W
+720-805MHz 4G LTE USA iPhone 10W
+2500-2700MHz 4G WiMAX USA Sprint 8W
+1570-1620Mhz GPS: L1 + Glonass L1 10W
+1220-1280MHz GPS L2 + Glonass L2 10W
+164-173MHz Lojack Car Tracking  5W
+1170MHz GPS L5 10W
+1370-1390MHz GPS L3+ L4 10W
+5.1-5.9GHz 5Ghz WiFi 11.a 2W
+TOTAL : 103W
+
+6 Ver CT-2012H A Office America
+850-895MHz CDMA 10W
+1800-1990MHz PHS, DCS 10W
+2100-2170MHz 3G, UMTS 10W
+2345-2480MHz WiFi 11.b, g 8W
+720-805MHz 4G LTE USA iPhone 10W
+2500-2700MHz 4G WiMAX USA Sprint 8W
+1570-1620Mhz GPS: L1 + Glonass L1 10W
+1220-1280MHz GPS L2 + Glonass L2 10W
+420-480MHz UHF 5W
+130-180MHz VHF 5W
+5.1-5.5GHz 5Ghz WiFi 11.a 2W
+5.5-5.9GHz 5Ghz WiFi 11.a 2W
+TOTAL: 90W
+
+Each of 12 frequency module/band is separate and adjustable.
+Per request all 12 frequency modules we can mix very flexible, Options: Remote/Alarm Control 315MHz, 433MHz, 920-965MHz, GPS L1 L2 L3 L4 L5, LoJack 173MHz, 4G 700-800MHz (USA), UHF, VHF, CDMA450, SAT Satellite Phones 1520-1670MHz, 5Ghz etc. Any combinations and customizations are possible just send us your inquiry and we will give you our recommendation.
+
+Jamming Range Radius 20~80 meters
+The jamming distance always depending on the signal strength and location.
+Good cooling system with unique case as big heat sink and 3 fans inside, low noise
+Working time: Without the time limit, may continue to work.
+Antennas 380mm long. Power supply: AC100-240V or DC 24V
+Dimension: 350 x 240 x 100mm, Weight 5kg
+
+Package contents:
+1pc Desktop portable Jammer
+1pc AC Power Supplay
+12psc Antennas
+1pc Infrared Remote Control Turn ON/OFF Power 2-5 Meters
+
+Additional antenna options:
+Directional External Patch Panel Antennas
+Omni car magnetic antenna bases
+
+Power source additional order options:
+- B-20AH Battery LiFePO4 DC24V/20AH in portable case with LCD status and ON/OFF Switch
+  Working time 1.5 hours for CT-2012H 12 Bands Jammer. Charging time is 2-3 hours from 0 to full.
+  Battery case 40x19x10cm 7.8kg, Charger is 1.5kg. Per order request, price is US$500
+- DC 12V to AC 220V inverter 2000W, to use normal car battery DC 12/80-100AH

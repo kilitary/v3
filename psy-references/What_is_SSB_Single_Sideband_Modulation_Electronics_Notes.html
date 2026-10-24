@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-GB"> <!--<![endif]-->
+<head>
+	<!-- Template: desktop standard -->
+	<!-- Meta -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="author" content="electronics notes">
+    <meta name="viewport" content="width=1160" />
+
+<!-- Google Auto Ads Snippet -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2603569892487793",
+          enable_page_level_ads: true
+     });
+</script>
+<!-- End Google Auto Ads Snippet -->
+
+
+
+
+	
+
+
+<TITLE>What is SSB: Single Sideband Modulation &raquo; Electronics Notes</TITLE>
+<META NAME="keywords" CONTENT="single sideband,modulation,ssb,transmission,transmitter,transceiver,receiver,two,way,radio,communication,electronics,electronic,information,article,articles,data,tutorial,tutorials,today,">
+<META NAME="description" CONTENT="Key details about single sideband: SSB modulation; what is SSB; single sideband theory, types of SSB; how to use SSB  . . . .">
+
+
+
+
+
+
+
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="/parts/css/style.complete.min.css?go=10"/>	
+
+	<!-- Favicon -->
+	<link type="image/x-icon" href="https://www.electronics-notes.com/favicon.ico" rel="shortcut icon">
+	
+	<!-- DFP header for desktop  -->
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script async='async' src="https://biddr.brealtime.com/85519400-1505.js" type="text/javascript"></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+  googletag.cmd.push(function() {
+    var mappingAdhesion = googletag.sizeMapping().addSize([1025, 0], [728, 90]).addSize([0, 0], []).build();
+    googletag.defineSlot('/1898494/E-R_RoS_Skyscraper-160x600', [160, 600], 'div-gpt-ad-1500559719902-0').addService(googletag.pubads());
+    googletag.defineSlot('/1898494/E-R_RoS_Top-Leaderboard-728x90', [728, 90], 'div-gpt-ad-1500559719902-1').addService(googletag.pubads());
+    googletag.defineSlot('/1898494/E-R_RoS_Top-MPU-300x250', [300, 250], 'div-gpt-ad-1500559719902-2').addService(googletag.pubads());
+    googletag.defineSlot('/1898494/E-R_RoS-Bottom-Leaderboard-728x90', [728, 90], 'div-gpt-ad-1500559719902-3').addService(googletag.pubads());
+    googletag.defineSlot('/1898494/ELN//adhesion', [728, 90], 'div-gpt-ad-oko-adhesion').defineSizeMapping(mappingAdhesion).addService(googletag.pubads());
+    googletag.pubads().disableInitialLoad();    
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+    window.onload = function(){
+    biddr.que.push(function () {
+    biddr.requestBids({
+    bidsBackHandler: function () {
+    biddr.setTargetingForGPTAsync();
+    googletag.pubads().refresh();
+   }
+  });
+ });
+}
+</script>
+<!-- End DFP header -->
+<!-- Note: code for the bottom sticky ad also included in css and at bottom of page in page template for desktop standard page and home page -->
+
+
+<!-- Start Insticator header code for additional RH column CEU ad - desktop standard page only 
+<script data-cfasync='false' type='text/javascript'>(function (a, c, s, u){'Insticator'in a || (a.Insticator={ad:{loadAd: function (b){Insticator.ad.q.push(b)}, q: []}, helper:{}, embed:{}, version: "4.0", q: [], load: function (t, o){Insticator.q.push({t: t, o: o})}}); var b=c.createElement(s); b.src=u; b.async=!0; var d=c.getElementsByTagName(s)[0]; d.parentNode.insertBefore(b, d)})(window, document, 'script', 'https://d2f0uviei09pxb.cloudfront.net/ads-code/467af1b3-ca93-4b99-bd42-36227c3045d5.js')</script>
+ End Header Tag Code -->
+
+	
+	
+
+
+</head>
+
+<body class="layout-narrow">
+
+	<!-- Page / Start -->	
+	<div id="page" class="hfeed site clearfix">
+	
+	
+		<!-- SKY ad / Start -->
+	
+		<div class="sky-ad">
+			<!-- /1898494/E-R_RoS_Skyscraper-160x600 -->
+
+<div id='div-gpt-ad-1500559719902-0' style='height:600px; width:160px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1500559719902-0'); });
+</script>
+</div>
+
+<!-- end skyscraper ad code -->
+		</div>
+	
+		 <!-- SKY ad / End -->
+
+	
+		<!-- Masthead / Start -->
+		<header id="masthead" class="site-header container clearfix">
+
+			
+			<div id="logo">
+				<a href="/"><img src="/parts/images/electronics-notes-2.png" alt="Electronics Notes" width="262" height="101" /></a>
+			</div>
+
+			<div class="header-ad">
+				<!-- /1898494/E-R_RoS_Top-Leaderboard-728x90 -->
+<div id='div-gpt-ad-1500559719902-1' style='height:90px; width:728px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1500559719902-1'); });
+</script>
+</div>			</div>
+
+			<div class="clearfix"></div>
+
+			<!-- Secondary Bar / Start -->
+			<div id="secondary-bar" class="clearfix">
+
+				<a id="secondary-mobile-menu" href="#"><i class="fa fa-bars"></i> <span>Menu</span></a>
+
+				<!-- Secondary Navigation / Start -->
+				<nav id="secondary-nav">
+					<ul id="secondary-menu" class="sf-menu">
+						<li class="current_item"><a href="/">Home</a></li>
+						
+						<li>
+							<a href="#">Electronics</a>
+							<ul>
+								<li><a href="/articles/audio-video/">Audio and Video</a></li>			
+								<li><a href="/articles/basic_concepts/">Basic concepts</a></li>	
+								<li><a href="/articles/analogue_circuits/">Circuit Design</a></li>
+								<li><a href="/articles/electronic_components/">Components</a></li>
+								<li><a href="/articles/constructional_techniques/">Constructional Techniques</a></li>
+								<li><a href="/articles/digital-embedded-processing/">Digital Logic & Embedded Processing</a></li>
+								<li><a href="/articles/eco-green-engineering/">Eco engineering</a></li>
+								<li><a href="/articles/equipment-items-gadgets/">Electronic technology &amp; gadgets</a></li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="#">Communications</a>
+							<ul>
+								<li><a href="/articles/antennas-propagation/">Antennas &amp; Propagation</a></li>
+								<li><a href="/articles/connectivity/">Connectivity: wired &amp; wireless</a></li>
+								<li><a href="/articles/ham_radio/">Ham Radio</a></li>
+								<li><a href="/articles/radio/">Radio Technology</a></li>
+								<li><a href="/articles/satellites/">Satellites</a></li>
+							</ul>
+						</li>
+						<li><a href="/articles/test-methods/">Test Equipment</a></li>
+						<li>  <a href="/articles/history/">History</a></li>
+
+						<li>
+							<a href="#">Resources</a>
+							<ul>
+								<li><a href="/articles/becoming-an-engineer/">Careers</a></li>
+								<li><a href="/supplier-directory/">Supplier directory</a></li>
+								<li><a href="/events-exhibitions-trade-shows/">Events</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Shopping</a>
+							<ul>
+								<li><a href="/articles/buyers-buying-guides/">Buying Guides</a></li>
+								<li><a href="/bookstore/">Book Store</a></li>
+								<li><a href="/store/computers.php">Computer Store</a></li>
+								<li><a href="/store/ham-radio.php">Ham Radio Store</a></li>
+								<li><a href="/articles/connectivity/ethernet-ieee-802-3/buy-ethernet-products-cables-switches-routers.php">Ethernet Equipment</a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</nav>
+				<!-- Secondary Navigation / End -->
+
+				<div class="header-search">
+
+                    <i class="fa fa-search" style="color:#009999;font-size:1.5em;"></i>
+                    <i class="fa fa-times" style="color:#009999;font-size:1.5em;"></i>
+
+	                <div class="search-form">
+
+<!-- SiteSearch Google -->
+<form action="https://www.google.co.uk/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2603569892487793:6914770473" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="40" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+
+<!-- SiteSearch Google -->
+
+
+
+					</div><!-- .search-form -->		  
+
+				</div><!-- .header-search -->		
+
+			</div>	
+			<!-- Secondary Bar / End -->
+
+		</header>
+		<!-- Masthead / End -->
+
+		<!-- Site Main / Start -->
+		<main id="main" class="site-main container" style="display:block">
+
+			<div id="primary" class="content-area column">
+
+<!-- Article / Start -->
+<article class="post entry-content">
+
+
+
+
+
+
+
+
+<header>
+<h1>Single Sideband Modulation, SSB</h1>
+<h2>Single sideband, SSB, modulation is used in many voice applications. It is used for HF communications, but forms have been used for analogue TV broadcasting. </h2>
+</header>
+
+<!-- Start top links section here -->
+                                              
+<!-- Top links -->
+<hr>
+<p><b>Amplitude Modulation, AM  Tutorial Includes:</b><br>
+  <a href="amplitude-modulation-am.php">Amplitude modulation, AM</a> &nbsp; &nbsp;
+  <a href="amplitude-modulation-am-theory-equations-formulas.php">AM basic theory &amp; formulas</a> &nbsp; &nbsp;
+  <a href="amplitude-modulation-am-bandwidth-spectrum-sidebands.php">AM bandwidth &amp; sidebands</a> &nbsp; &nbsp;
+  <a href="amplitude-modulation-am-index-depth.php">Modulation index &amp; depth</a> &nbsp; &nbsp;
+  <a href="amplitude-modulation-am-efficiency.php">AM efficiency</a> &nbsp; &nbsp;
+  <a href="amplitude-modulation-am-demodulation-detection.php">AM demodulation / detection</a> &nbsp; &nbsp;
+  <a href="am-diode-detector-demodulator.php">Diode detector</a> &nbsp; &nbsp;
+  <a href="am-synchronous-demodulation-detection-detector.php">Synchronous detector</a> &nbsp; &nbsp;
+  <a href="amplitude-modulation-am-modulator-circuits.php">AM modulators</a> &nbsp; &nbsp;
+
+  <a href="single-sideband-ssb-basics.php">Single sideband, SSB</a> &nbsp; &nbsp;
+  <a href="single-sideband-ssb-demodulation-reception.php">SSB demodulation</a> &nbsp; &nbsp;
+
+<br><br><i>Modulation formats:</i> &nbsp; &nbsp;
+  <a href="types-techniques-am-fm-pm-psk-qam.php">Modulation types &amp; techniques</a> &nbsp; &nbsp;
+  <a href="frequency-modulation-fm.php">Frequency modulation</a> &nbsp; &nbsp;
+  <a href="phase-modulation-what-is-pm-tutorial.php">Phase modulation</a> &nbsp; &nbsp;
+  <a href="quadrature-amplitude-modulation-what-is-qam-basics.php">Quadrature amplitude modulation</a> &nbsp; &nbsp;
+<hr>
+<!-- End Top Links -->
+<!-- Stop top links section here -->
+
+<p>Single sideband modulation is widely used in the HF portion, or short wave portion of the radio spectrum for two way radio communication. There are many users of single sideband modulation.</p>
+<p> Many users requiring two way radio communication will use single sideband and they range from marine applications, generally HF point to point transmissions, military as well as radio amateurs or radio hams.</p>
+
+<figure>
+  <img src="/images/single-sideband-transceiver-1528.jpg" alt="Image of an HF transceiver that uses single sideband SSB">
+</figure>
+
+<p>Single sideband modulation or SSB is derived from amplitude modulation (AM) and SSB modulation overcomes a number of the disadvantages of AM.</p>
+<p>Single sideband modulation is normally used for voice transmission, but technically it can be used for many other applications where two way radio communication using analogue signals is required.</p>
+<p>As a result of its widespread use there are many items of radio communication equipment designed to use single sideband radio including: SSB receiver, SSB transmitter and SSB transceiver equipments.</p>
+
+<h2>What is single sideband modulation?</h2>
+<p>Single sideband, SSB modulation is basically a derivative of amplitude modulation, AM. By removing some of the components of the ordinary AM signal it is possible to significantly improve its efficiency.</p>
+<p>It is possible to see how an AM signal can be improved by looking at the spectrum of the signal. When a steady state carrier is modulated with an audio signal, for example a tone of 1 kHz, then two smaller signals are seen at frequencies 1 kHz above and below the main carrier.</p>
+
+<!--  Insert diagram of 1 kHz modulation of a carrier -->
+
+<p>If the steady state tones are replaced with audio like that encountered with speech of music, these comprise many different frequencies and an audio spectrum with frequencies over a band of frequencies is seen. When modulated onto the carrier, these spectra are seen above and below the carrier.</p>
+
+<figure>
+  <img src="/images/single-sideband-ssb-overview.png" alt="Single sideband modulation showing the remaining sideband and the suppressed lower sideband and carrier">
+  <figcaption> Single sideband modulation</figcaption>
+</figure>
+
+<p>It can be seen that if the top frequency that is modulated onto the carrier is 6 kHz, then the top spectra will extend to 6 kHz above and below the signal. In other words the bandwidth occupied by the AM signal is twice the maximum frequency of the signal that is used to modulated the carrier, i.e. it is twice the bandwidth of the audio signal to be carried.</p>
+<p>Amplitude modulation is very inefficient from two points. The first is that it occupies twice the bandwidth of the maximum audio frequency, and the second is that it is inefficient in terms of the power used.</p>
+<p> The carrier is a steady state signal and in itself carries no information, only providing a reference for the demodulation process. Single sideband modulation improves the efficiency of the transmission by removing some unnecessary elements.</p>
+<p> In the first instance, the carrier is removed - it can be re-introduced in the receiver, and secondly one sideband is removed - both sidebands are mirror images of one another and the carry the same information. This leaves only one sideband - hence the name Single SideBand / SSB.</p>
+
+<!--   Insert image of SSB signal  -->
+
+<h2>SSB receiver</h2>
+<p>While signals that use single sideband modulation are more efficient for two way radio communication and more effective than ordinary AM, they do require an increased level of complexity in the receiver.</p>
+<p> As SSB modulation has the carrier removed, this needs to be re-introduced in the receiver to be able to reconstitute the original audio. This is achieved using an internal oscillator called a Beat Frequency Oscillator (BFO) or Carrier Insertion Oscillator (CIO).</p>
+<p> The BFO generates a carrier signal that can be mixed with the incoming SSB signal, thereby enabling the required audio to be recovered in the detector.</p>
+<p>Typically the SSB detector itself uses a mixer circuit to combine the SSB modulation and the BFO signals. This circuit is often called a product detector because (like any RF mixer) the output is the product of the two inputs.</p>
+<p>It is necessary to introduce the carrier using the BFO / CIO on the same frequency relative to the SSB signal as the original carrier.</p>
+<p> Any deviation from this will cause the pitch of the recovered audio to change. Whilst errors of up to about 100 Hz are acceptable for communications applications including amateur radio, if music is to be transmitted the carrier must be reintroduced on exactly the correct frequency.</p>
+<p> This can be accomplished by transmitting a small amount of carrier, and using circuitry in the receiver to lock onto this.</p>
+
+<!--
+<h2>SSB transmitter</h2>
+<p>Single sideband transmitters used for two way radio communication can generate the SSB signal in one of several ways. 
+
+</p>
+
+
+-->
+
+
+
+<h2>Single sideband power measurement</h2>
+<p> It is often necessary to define the output power of a single sideband transmitter or single sideband transmission. For example it is necessary to know the power of a transmitter used for two way radio communication to enable its effectiveness to be judged for particular applications.</p>
+<p>Power measurement for an SSB signal is not as easy as it is for many other types of transmission because the actual output power is dependent upon the level of the modulating signal.</p>
+<p> To overcome this a measure known as the peak envelope power (PEP) is used. This takes the power of the RF envelope of the transmission and uses the peak level of the signal at any instant and it includes any components that may be present. Obviously this includes the sideband being used, but it also includes any residual carrier that may be transmitted.  </p>
+<p>The level of the peak envelope power may be stated in Watts, or nowadays figures quoted in dBW or dBm may be used.</p>
+<p> These are simply the power levels relative to 1 Watt or 1 milliwatt respectively. As an example a signal of 10 watts peak envelope power is 10 dB above a 1 Watt signal and therefore it has a power of 10 dBW. Similar logic can be used to determine powers in dBm.</p>
+
+<h2>Single sideband modulation variants</h2>
+<p>There are many variants of single sideband modulation that are used, and there are several different abbreviations for them. These are explained below.
+
+<ul>
+<li><b><I>LSB: </I></b> &nbsp; This stands for Lower Sideband. This form of single sideband modulation is formed when the lower sideband only of the original signal is transmitted. Typically this is used by radio amateurs or radio hams on their allocations below 9 MHz.   </li>
+<li><b><I>USB: </I></b> &nbsp; This stands for Upper Sideband. This form of single sideband modulation is formed when the upper sideband only of the original signal is transmitted. Typically this form of SSB modulation is used by professional users on all frequencies and by radio amateurs or radio hams on their allocations above 9 MHz.      </li>
+<li><b><I>DSB: </I></b> &nbsp; This is Double Sideband and it is a form of modulation where an AM signal is taken and the carrier is removed to leave the two sidebands. Although easy to generate, it does not give any improvements in spectrum efficiency and it is also not particularly easy to resolve. Accordingly it is rarely used.   </li>
+<li><b><I>SSB SC: </I></b> &nbsp; This stands for Single Sideband Suppressed Carrier. It is the form of SSB modulation where the carrier is removed completely as opposed to SSB reduced carrier where some of the carrier is left. </li>
+<li><b><I>VSB: </I></b> &nbsp; This stands for Vestigial Sideband. It is a form is signal where one sideband is completely present, and the other sideband that has been only partly cut off or suppressed. It is widely used for analogue television transmissions. It comes in useful because the baseband video signal is wide (typically 6 MHz). To transmit this using AM would require a bandwidth of 12 MHz. To reduce the amount of spectrum used, one sideband is transmitted fully, whereas only the lower frequencies of the other are transmitted. The high frequencies can be later enhanced using filters. </li>
+<li><b><I>SSB reduced carrier : </I></b> &nbsp; In this form of SSB modulation one sideband is present along with a small amount of the carrier. For some applications, a small amount of carrier is kept. This may be used to provide a reference signal for accurate demodulation.   </li>
+</ul>
+</p>
+
+
+<h2>SSB advantages</h2>
+<p align="justify">Single sideband modulation is often compared to AM, of which it is a derivative. It has several advantages for two way radio communication that more than outweigh the additional complexity required in the SSB receiver and SSB transmitter required for its reception and transmission.</p>
+
+<ol>
+  <li>As the carrier is not transmitted, this enables a 50% reduction in transmitter power level for the same level of information carrying signal. [NB for an AM transmission using 100% modulation, half of the power is used in the carrier and a total of half the power in the two sideband - each sideband has a quarter of the power.]</li>
+  <li>As only one sideband is transmitted there is a further reduction in transmitter power.</li>
+  <li>As only one sideband is transmitted the receiver bandwidth can be reduced by half. This improves the signal to noise ratio by a factor of two, i.e. 3 dB, because the narrower bandwidth used will allow through less noise and interference.</li>
+</ol>
+</p>
+<p>The summary of this is that SSB modulation offers a far more effective solution for two way radio communication because it provides a significant improvement in efficiency.</p>
+
+<h2>Summary</h2>
+<p>Single sideband modulation, SSB is the main modulation format used for analogue voice transmission for two way radio communication on the HF portion of the radio spectrum. Its efficiency in terms of spectrum and power when compared to other modes means that for many years it has been the most effective option to use. Now some forms of digital voice transmission are being used, but it is unlikely that single sideband will be ousted for many years as the main format used on these bands.</p>
+
+
+<nav class="pagination">
+	<a class="page-numbers prev" href="amplitude-modulation-am-modulator-circuits.php">Previous page</a> 
+	<a class="page-numbers next" href="single-sideband-ssb-demodulation-reception.php">&nbsp; &nbsp; Next page &nbsp; &nbsp; </a>                  
+</nav>
+
+
+<!-- AddThis Buttons 
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4df2243e2ef8ffab" async="async"></script>
+<div class="addthis_native_toolbox"></div>
+<br><br> the double br ensures that Add this share drop down does not interfere with bottom leaderbaord -->
+<!--  End AddThis buttons -->
+
+<!-- Start Bottom Links -->
+				
+<!-- Popular links -->
+<p><b>More Essential Radio Topics:</b><br>
+  <a href="/articles/radio/basic_radio/radio_signals.php">Radio Signals</a> &nbsp; &nbsp;
+  <a href="/articles/radio/modulation/types-techniques-am-fm-pm-psk-qam.php">Modulation types &amp; techniques</a> &nbsp; &nbsp;
+  <a href="/articles/radio/modulation/amplitude-modulation-am.php">Amplitude modulation</a> &nbsp; &nbsp;
+  <a href="/articles/radio/modulation/frequency-modulation-fm.php">Frequency modulation</a> &nbsp; &nbsp;
+  <a href="/articles/radio/multicarrier-modulation/ofdm-orthogonal-frequency-division-multiplexing-what-is-tutorial-basics.php">OFDM</a> &nbsp; &nbsp;
+  <a href="/articles/radio/rf-mixer/rf-mixing-basics.php">RF mixing</a> &nbsp; &nbsp;
+  <a href="/articles/radio/pll-phase-locked-loop/tutorial-primer-basics.php">Phase locked loops</a> &nbsp; &nbsp;
+  <a href="/articles/radio/frequency-synthesizer/synthesizer-types-introduction.php">Frequency synthesizers</a> &nbsp; &nbsp;
+  <a href="/articles/radio/passive-intermodulation-pim/what-is-pim-basics-primer.php">Passive intermodulation</a> &nbsp; &nbsp;
+  <a href="/articles/radio/rf-attenuators/what-is-an-rf-attenuator-types.php">RF attenuators</a> &nbsp; &nbsp;
+  <a href="/articles/radio/rf-filters/understanding-rf-filters-basics-tutorial.php">RF filters</a> &nbsp; &nbsp;
+  <a href="/articles/radio/rf-microwave-circulator-isolator/what-is-an-rf-circulator-isolator.php">RF circulator</a> &nbsp; &nbsp;
+  <a href="/articles/radio/radio-receivers/receiver-types.php">Radio receiver types</a> &nbsp; &nbsp;
+  <a href="/articles/radio/superheterodyne-receiver/basics.php">Superhet radio</a> &nbsp; &nbsp;
+  <a href="/articles/radio/radio-receiver-selectivity/basics.php">Receiver selectivity</a> &nbsp; &nbsp;
+  <a href="/articles/radio/radio-receiver-sensitivity/basics.php">Receiver sensitivity</a> &nbsp; &nbsp;
+  <a href="/articles/radio/receiver-overload-strong-signal/basics.php">Receiver strong signal handling</a> &nbsp; &nbsp;
+  <a href="/articles/radio/receiver-dynamic-range/what-is.php">Receiver dynamic range</a> &nbsp; &nbsp;
+
+<br><b><i>&nbsp; &nbsp; Return to <a href="https://www.electronics-notes.com/articles/radio/">Radio topics menu . . .</a></b></i>
+<!-- Popular links -->
+<!-- Stop Bottom Links  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Article / End -->
+</article>
+
+
+			    <div class="content-ad">
+			        
+<br><br> <!-- added space to ensure sharing buttons don't interfere with ad -->
+
+<!-- /1898494/E-R_RoS-Bottom-Leaderboard-728x90 -->
+
+
+<div id='div-gpt-ad-1500559719902-3' style='height:90px; width:728px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1500559719902-3'); });
+</script>
+</div>
+
+<!-- End bottom leaderboard code -->			    </div><!-- .content-ad --> 
+
+
+			</div>
+			<!-- Primary / End -->
+
+
+
+<!-- Sidebar #2 / Start -->
+
+<br>
+
+<div id="secondary" class="widget-area widget-primary sidebar2 column" role="complementary">
+<br> <br>
+			 <!-- .widget .widget_social / Start  --> 
+			    <div class="widget widget_social clearfix">
+			      <h3 class="widget-title"><strong>Follow</strong></h3>
+			        <ul>
+			              <li><a href="https://twitter.com/ElecNotes" title="Twitter" target="_blank" rel="nofollow noreferrer"><i class="fa fa-twitter"></i></a></li>
+			              <li><a href="https://www.youtube.com/ElectronicsNotes" title="YouTube" target="_blank" rel="nofollow noreferrer"><i class="fa fa-youtube"></i></a></li>
+			              <li><a href="https://www.linkedin.com/company/radio-electronics-com" title="LinkedIn" target="_blank" rel="nofollow noreferrer"><i class="fa fa-linkedin"></i></a></li>      
+			            
+			        </ul>
+			    </div> <!-- .widget .widget_social End --> 
+<br><br><br>
+<!-- ensures the top shopping menu does not interfere with top MPU -->
+
+
+  <!-- Top MPU Ad -->
+  
+			    <div class="widget widget_ads">
+			        <!-- <h3 class="widget-title">Advertisement</h3> -->
+			        <br>
+			        <!-- /1898494/E-R_RoS_Top-MPU-300x250 -->
+
+<div id='div-gpt-ad-1500559719902-2' style='height:250px; width:300px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1500559719902-2'); });
+</script>
+</div>			    </div><!-- .widget .widget_ads -->
+  <br><br><br>
+<!-- End top MPU Ad -->
+
+
+ <!-- Facts of the Day -->
+ <div class="widget">
+    <h3 class="widget-title fact-date"></h3>
+	<div class="fact-of-the-day"></div> 
+	<div class="fact-quote"></div>
+	<div class="fact-fact"></div>
+  </div>
+  <!-- End Facts of the Day -->
+
+<br>
+
+
+<!-- Bookstore  -->
+  <div class="widget">
+    <h3 class="widget-title"><span style='color: #c00;'><strong> Electronics Notes Bookshop </strong></span></h3>
+	<a href="/bookstore/"><img src="/bookstore/book-v2-01.svg"  style="width:100%;"></a>
+     <p>Check out our book shop for essential reading and reference on electronics related topics:<br>
+	▶︎ <b><a href="/bookstore/">Electronics Notes Bookshop</a></b><br> 
+  </div>
+<!-- End Bookstore -->			    
+<br>
+
+<!-- Shopping  -->
+  <div class="widget">
+    <h3 class="widget-title"><span style='color: red;'><strong>Shopping on Electronics Notes</strong></span></h3>
+     <p> <img src="/images/shopping-trolley-01.png" style="float:right;margin-left:2em;height:50px;"> Electronics Notes offers a host of products are very good prices from our shopping pages (in association with Amazon). Check out these pages on our website:<br>
+	▶︎ <b><a href="/articles/connectivity/ethernet-ieee-802-3/buy-ethernet-products-cables-switches-routers.php"> Ethernet Products.</a></b><br>
+	▶︎ <b><a href="/store/computers.php"> Computer Products.</a></b><br>
+	▶︎ <b><a href="/store/ham-radio.php"> Ham Radio Products.</a></b><br>
+	▶︎ <b><a href="/articles/audio-video/hdmi/essential-hdmi-buying-list.php"> HDMI Products.</a></b><br>
+<b>Note:</b> Electronics Notes receives a small commission on sales at no cost to you.
+  </div>
+<!-- End Shopping -->			    
+  <br>
+	    
+
+  <!-- Events -->
+  <div class="widget">
+    <h3 class="widget-title"><strong>Events</strong></h3>
+	<div class="events-widget"></div> 
+	<b><a href="/events-exhibitions-trade-shows/">More events</a></b>
+  </div>
+  <!-- End Events -->			    
+  <br>
+
+<!-- Video  -->
+  <div class="widget">
+    <h3 class="widget-title"><strong>Selected Video</strong></h3>
+
+	            
+	<img src="https://img.youtube.com/vi/6PRY-LczCB4/sddefault.jpg" style="width:100%">												   
+	<div class="more-link">
+	<b><a href="https://www.youtube.com/watch?v=6PRY-LczCB4" target="_blank">Morse Code Alphabet Receiving Practice Video</a></b>
+	</div>
+	<br />            
+	<img src="https://img.youtube.com/vi/8ZjYM0dcc9c/sddefault.jpg" style="width:100%">												   
+	<div class="more-link">
+	<b><a href="https://www.youtube.com/watch?v=8ZjYM0dcc9c" target="_blank">What is a Potential Divider</a></b>
+	</div>
+	<!-- Cached 22nd October 2022 10:26 -->
+  </div>
+<!-- End Video -->
+<br>
+
+<!-- Insticator API Fire Widget 
+<div id="insticator-container" class="embedid-13962735-46c5-456c-9503-748a448a846c">
+<div id="div-insticator-ad-8"></div>
+<div id="insticator-embed"></div>
+<div id="div-insticator-ad-9"></div>
+<script data-cfasync='false' type="text/javascript">Insticator.ad.loadAd("div-insticator-ad-8");Insticator.ad.loadAd("div-insticator-ad-9");Insticator.load("em",{id : "13962735-46c5-456c-9503-748a448a846c"})</script></div>
+ End Insticator API Fire Widget -->
+
+<br><br>
+
+<!-- Suppliers -->
+  <div class="widget">
+    <h3 class="widget-title"><strong>Supplier Directory</strong></h3>
+     <p>For everything from distribution to test equipment, components and more, our directory covers it.<br>
+	▶︎ <b>Check our <a href="/supplier-directory/" rel="nofollow noreferrer"> Supplier Directory</a></b><br>
+  </div>
+<!-- End Suppliers -->			    
+  <br>		    
+
+
+
+  <!-- Articles -->
+  <div class="widget">
+    <h3 class="widget-title"><strong>Featured articles</strong></h3>
+	<div class="articles-widget"></div> 
+  </div>
+  <!-- End Articles -->	
+
+  <br>
+
+
+<!--
+  <div class="widget">		    
+    <a href="/about-us/advertise-with-us.php" rel="nofollow noreferrer"><img src="/parts/images/advertise-with-us.png" width="300" alt="Advertise on Electronics Notes"></a>
+  </div>
+-->
+
+  <!--
+  <br>
+    <a href="/photographs-images/stock-images.php"><img src="/images/stock-image-ad-01.jpg" alt="stock images"></a><br>
+  <br> 
+  -->
+</div>
+<!-- Sidebar #2 / Start -->
+
+			<div class="clearfix"></div>
+
+			<!-- Sidebar #2 / End -->		
+
+		</main>
+		<!-- Site Main / End -->
+		
+		<!-- Footer / Start -->	
+		<footer id="footer" class="container clearfix">
+						
+
+			<!-- Site Bottom / Start -->
+			<div id="site-bottom" class="clearfix">
+
+				<nav id="footer-nav">
+					Electronics Notes receives a small commission on sales via Amazon to pay for running the site and providing free information.<br><br>
+					<ul>
+						<li><a href="/about-us/about-electronics-notes.php" rel="nofollow noreferrer">About Electronics Notes</a></li>												
+						<li><a href="/about-us/advertise-with-us.php" rel="nofollow noreferrer">Advertise</a></li>	
+						<li><a href="/about-us/privacy-policy.php" rel="nofollow noreferrer">Privacy Policy</a></li>
+						<li><a href="/photographs-images/stock-images.php">Images</a></li>
+					</ul>
+				</nav><!-- #footer-nav -->
+
+				<div class="copyright">
+					&copy; <a href="/">electronics-notes.com</a>   <br><br><br><br><br><br><br><br><br>
+				</div>
+
+			</div>
+			<!-- Site Bottom / End -->
+
+		</footer>
+		<!-- Footer / End -->	
+
+	</div>
+	<!-- Page / End -->
+	
+
+<!-- Code for desktop bottom of page sticky ad OLD -->
+   <div class="oko-adhesion">
+    <div class="oko-container-main">
+               <div class="adhesion-close-button" onclick="this.parentElement.style.display = 'none';">X</div>
+    <div id='div-gpt-ad-oko-adhesion'>
+        <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-oko-adhesion'); });
+        </script>
+    </div>
+  </div>
+</div>
+
+
+<!-- End code for desktop bottom of page sticky ad -->
+
+<!-- Code for desktop bottom of page sticky ad -->
+
+
+<!-- End code for desktop bottom of page sticky ad -->
+
+	
+	<!-- JavaScripts -->
+	<script type="text/javascript" src="/parts/js/all.min.js"></script>	
+
+	<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+	<script type="text/javascript" src="/parts/js/local.js?up"></script> 
+	
+
+	
+
+<!-- Google Tracking Code --> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-675939-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-675939-2');
+</script>
+
+
+<!-- End Google Tracking Code -->
+
+<!-- Amazon One-Tag - no longer required-->
+<!--
+<div id="amzn-assoc-ad-6c44dfda-71d5-4774-9787-50f7686b0cd5"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=6c44dfda-71d5-4774-9787-50f7686b0cd5"></script>
+-->
+<!-- End Amazon One Tag -->
+</body>
+</html>

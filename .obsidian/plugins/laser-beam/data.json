@@ -1,0 +1,11 @@
+{
+  "isLaserActive": false,
+  "laserMovement": "static",
+  "laserType": "area",
+  "laserColor": "red",
+  "laserWidth": 1.4,
+  "laserIntensity": 0.3,
+  "laserArea": 30,
+  "laserMarginLeft": 402,
+  "laserMarginRight": 323
+}

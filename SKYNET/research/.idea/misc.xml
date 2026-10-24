@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.10 (ollama-dev)" />
+  </component>
+  <component name="CodyActiveAccount">
+    <option name="activeAccountId" value="VXNlcjoyMDQ1MTQ=" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (ollama-dev)" project-jdk-type="Python SDK" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1723716858578</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723716858578</updated>
+    </task>
+    <servers />
+  </component>
+</project>

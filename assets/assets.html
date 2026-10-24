@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assets</title>
+    <style>
+        /* Kid-fest colors on a white terminal-style background */
+        body {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        a {
+            color: #2E7D32;
+            text-decoration:  dotted #843b62;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            transform: scale(1.05) rotate(1deg);
+            color: #843b62;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        ul, ol {
+            margin: 0.5em 0;
+            padding-left: 1.8em;
+        }
+        li {
+            margin: 0.3em 0;
+        }
+        blockquote {
+            border-left: 6px solid #6A0572;
+            padding: 0.4em 1.2em;
+            margin: 1em 0;
+            background: #fafafa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            background: #fafafa;
+            padding: 0.15em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #843b62;
+        }
+        pre {
+            background: #fafafa;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 3px dotted #C70039;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        th {
+            background: #ffffff;
+            padding: 8px 12px;
+            border: 2px solid #2D2942;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px dashed #B660A6;
+        }
+        tr:nth-child(odd) td {
+            background: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+        hr {
+            border: 4px solid #843b62;
+            background: transparent;
+            margin: 1.5em 0;
+            border-radius: 2px;
+        }
+        img {
+            max-width: 90%;
+            border: 6px solid #2E7D32;
+            border-radius: 12px;
+            margin: 1em 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5em;
+            padding: 8px 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #416EB4;
+            font-weight: bold;
+        }
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    <a href="javascript:history.back()" class="back-link">← assets</a>
+    <hr />
+<p style="color:#416EB4;">tags: MOCs, assets, media, resources, images
+title: "Assets - Media Resources &amp; Documentation Support"
+created: 2024-06-08
+updated: 2024-12-08
+summary: "Repository media assets, images, and supporting resources for documentation"
+sticker: emoji//1f5bc
+banner: images/1f4a2.png</p>
+<hr />
+<h1 id="assets-media-resources-documentation-support" style="color:#1A535C;border-bottom:1px dashed #9B5DE8;padding-bottom:4px;">🖼️ Assets - Media Resources &amp; Documentation Support</h1>
+<p style="color:#416EB4;"><strong>Centralized repository for media files, images, and supporting resources used throughout the NNAMED documentation system.</strong></p>
+<h2 id="overview" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">📋 Overview</h2>
+<p style="color:#416EB4;">The assets directory serves as the central repository for all media files, images, icons, and supporting resources used throughout the NNAMED project. This includes emoji icons, documentation banners, reference images, and other visual assets that enhance the documentation experience.</p>
+<h2 id="directory-structure" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">📂 Directory Structure</h2>
+<h3 id="images-image-repository" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">🖼️ <strong>images/</strong> - Image Repository</h3>
+<ul>
+<li style="color:#B660A6;"><strong><a href="images/images.html">images.html</a></strong> - Image collection overview</li>
+<li style="color:#B660A6;"><strong>Emoji Icons</strong>: Extensive collection of Unicode emoji PNG files (1f4a2.png, 1f3ab.png, etc.)</li>
+<li style="color:#B660A6;"><strong>Flag Icons</strong>: Country flag representations (1f1e8-1f1f3.png, 1f1f7-1f1fa.png, etc.)</li>
+<li style="color:#B660A6;"><strong>Building Icons</strong>: Architectural and structural icons (1f3e3.png through 1f3ed.png)</li>
+<li style="color:#B660A6;"><strong>Document Icons</strong>: File and document type representations (1f4a1.png through 1f4da.png)</li>
+<li style="color:#B660A6;"><strong>System Icons</strong>: Application and system interface icons (.ico files)</li>
+<li style="color:#B660A6;"><strong>Reference Images</strong>: Documentation support images (alarm.png, Print.ico, etc.)</li>
+</ul>
+<h2 id="asset-categories" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🎨 Asset Categories</h2>
+<h3 id="emoji-unicode-icons" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">📱 Emoji &amp; Unicode Icons</h3>
+<p style="color:#416EB4;">Over 50 emoji PNG files supporting Obsidian stickers and visual documentation:
+- <strong>Documents</strong>: 📁 📂 📃 📄 📊 📋 📌
+- <strong>Buildings</strong>: 🏠 🏢 🏥 🏦 🏨 🏩 🏪 🏫 🏬 🏭
+- <strong>Flags</strong>: Country and regional flag representations
+- <strong>Symbols</strong>: Various symbolic representations for categorization</p>
+<h3 id="system-interface-icons" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">⚙️ System Interface Icons</h3>
+<p style="color:#416EB4;">Windows-style .ico files for system integration:
+- <strong>Rotation Icons</strong>: Rotate1.ico through Rotate10.ico (animation sequences)
+- <strong>System Actions</strong>: Print.ico, Save.ico, Setup.ico, stop.ico
+- <strong>Status Indicators</strong>: SysReqMet.ico, SysReqNotMet.ico, warn.ico, alarm.png</p>
+<h3 id="documentation-assets" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">🖼️ Documentation Assets</h3>
+<ul>
+<li style="color:#B660A6;"><strong>Banner Images</strong>: Visual headers for markdown files</li>
+<li style="color:#B660A6;"><strong>Reference Images</strong>: Supporting visuals for technical documentation</li>
+<li style="color:#B660A6;"><strong>Icon Libraries</strong>: Consistent iconography across the repository</li>
+</ul>
+<h2 id="usage-patterns" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🔗 Usage Patterns</h2>
+<h3 id="in-markdown-frontmatter" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">In Markdown Frontmatter</h3>
+<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #6A0572;"><span class="nt">banner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/images/1f4a2.png</span>
+<span class="nt">sticker</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">emoji//1f4a2</span>
+</code></pre></div>
+
+<h3 id="in-documentation-links" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">In Documentation Links</h3>
+<ul>
+<li style="color:#B660A6;">Repository banners and headers</li>
+<li style="color:#B660A6;">Section dividers and visual elements</li>
+<li style="color:#B660A6;">Sticker assignments for files and folders</li>
+</ul>
+<h3 id="cross-reference-integration" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">Cross-Reference Integration</h3>
+<ul>
+<li style="color:#B660A6;"><strong><a href="../SKYNET/SKYNET.html">SKYNET/</a></strong> - Technical documentation visuals</li>
+<li style="color:#B660A6;"><strong><a href="../Red&amp;Queen/Red&amp;Queen.html">Red&amp;Queen/</a></strong> - Research visualization assets</li>
+<li style="color:#B660A6;"><strong><a href="../axis9/axis9.html">axis9/</a></strong> - Strategic analysis visual aids</li>
+</ul>
+<h2 id="asset-statistics" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">📊 Asset Statistics</h2>
+<ul>
+<li style="color:#B660A6;"><strong>Total Image Files</strong>: 60+ PNG and ICO files</li>
+<li style="color:#B660A6;"><strong>Emoji Icons</strong>: 40+ Unicode emoji representations</li>
+<li style="color:#B660A6;"><strong>System Icons</strong>: 15+ Windows interface icons</li>
+<li style="color:#B660A6;"><strong>File Types</strong>: PNG, ICO formats for cross-platform compatibility</li>
+<li style="color:#B660A6;"><strong>Usage Scope</strong>: Repository-wide visual consistency</li>
+</ul>
+<h2 id="asset-management" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🛠️ Asset Management</h2>
+<h3 id="file-naming-convention" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">File Naming Convention</h3>
+<ul>
+<li style="color:#B660A6;"><strong>Emoji Files</strong>: Unicode hex codes (1f4a2.png = 📂)</li>
+<li style="color:#B660A6;"><strong>Flag Files</strong>: Country code combinations (1f1e8-1f1f3.png = 🇨🇳)</li>
+<li style="color:#B660A6;"><strong>System Files</strong>: Descriptive names (Print.ico, Save.ico)</li>
+</ul>
+<h3 id="quality-standards" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">Quality Standards</h3>
+<ul>
+<li style="color:#B660A6;"><strong>Resolution</strong>: Optimized for documentation display</li>
+<li style="color:#B660A6;"><strong>Format</strong>: Web-compatible formats (PNG, ICO)</li>
+<li style="color:#B660A6;"><strong>Consistency</strong>: Standardized visual style across all assets</li>
+</ul>
+<h2 id="getting-started" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🚀 Getting Started</h2>
+<ol>
+<li style="color:#B660A6;"><strong>Browse Images</strong>: Explore <a href="images/">images/</a> directory for available assets</li>
+<li style="color:#B660A6;"><strong>Usage Examples</strong>: Check existing markdown files for implementation patterns</li>
+<li style="color:#B660A6;"><strong>Integration</strong>: Use in frontmatter for banners and stickers</li>
+<li style="color:#B660A6;"><strong>Reference</strong>: Link directly in documentation content</li>
+</ol>
+<h2 id="asset-usage-across-repository" style="color:#416EB4;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🔗 Asset Usage Across Repository</h2>
+<h3 id="documentation-enhancement" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">Documentation Enhancement</h3>
+<ul>
+<li style="color:#B660A6;"><strong><a href="../Dashboard.html">Dashboard</a></strong> - Uses emoji stickers and banner images for visual hierarchy</li>
+<li style="color:#B660A6;"><strong><a href="../README.html">README</a></strong> - Incorporates visual elements for enhanced navigation</li>
+<li style="color:#B660A6;"><strong><a href="../index.html">index</a></strong> - Features banner and visual organization elements</li>
+</ul>
+<h3 id="section-branding" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">Section Branding</h3>
+<ul>
+<li style="color:#B660A6;"><strong><a href="../axis9/axis9.html">axis9</a></strong> - Strategic research visual identity</li>
+<li style="color:#B660A6;"><strong><a href="../SKYNET/SKYNET.html">SKYNET</a></strong> - Technology section visual branding</li>
+<li style="color:#B660A6;"><strong><a href="../Red&amp;Queen/Red&amp;Queen.html">Red&amp;Queen</a></strong> - Interdisciplinary research visual elements</li>
+<li style="color:#B660A6;"><strong><a href="../Excalidraw/Excalidraw.html">Excalidraw</a></strong> - Visual documentation and diagram tools</li>
+</ul>
+<h3 id="integration-tools" style="color:#2D2942;border-bottom:1px dashed #2E7D32;padding-bottom:4px;">Integration Tools</h3>
+<ul>
+<li style="color:#B660A6;"><strong><a href="../.obsidian/plugins/">.obsidian/plugins</a></strong> - Plugin system visual elements</li>
+<li style="color:#B660A6;"><strong><a href="../textgenerator/textgenerator.html">textgenerator</a></strong> - AI tools visual integration</li>
+<li style="color:#B660A6;"><strong><a href="../programs/programs.html">programs</a></strong> - Development tools visual identity</li>
+</ul>
+<hr />
+<div class="codehilite"><pre><span></span><code style="color:#1A535C;background:#fafafa;border:1px solid #6A0572;">
+</code></pre></div>
+
+<!-- 29053DCB -->
+    <script>
+        // Sprinkle animated confetti that matches the kid-fest palette
+        (function() {
+            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
+            const confetti = document.getElementById('confetti');
+            const count = 120;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                const size = Math.random() * 8 + 4;
+                el.style.cssText =
+                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
+                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
+                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
+                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
+                el.style.transform = 'rotate('+Math.random()*360+'deg)';
+                confetti.appendChild(el);
+            }
+            const style = document.createElement('style');
+            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "openWith": {
+    "property": "created",
+    "secondaryProperty": {
+      "name": "modified",
+      "inUse": false,
+      "useAs": "end"
+    },
+    "filter": {
+      "query": ""
+    },
+    "groups": [],
+    "previousState": false
+  }
+}

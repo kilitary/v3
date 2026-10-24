@@ -1,0 +1,21 @@
+{
+  "access": {
+    "replaceNewTab": true,
+    "enableRibbonIcon": true,
+    "enableCommand": true
+  },
+  "showStateMenu": true,
+  "states": {
+    "visible": [
+      "Idea",
+      "Shortlisted",
+      "Drafting",
+      "Focus",
+      "Final"
+    ],
+    "hidden": [
+      "Archived",
+      "Cancelled"
+    ]
+  }
+}

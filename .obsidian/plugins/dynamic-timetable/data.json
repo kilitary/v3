@@ -1,0 +1,29 @@
+{
+  "filePath": "vault14/alarm.png",
+  "showEstimate": true,
+  "showStartTime": true,
+  "showEstimateInTaskName": false,
+  "showStartTimeInTaskName": true,
+  "showBufferTime": true,
+  "showProgressBar": true,
+  "intervalTime": 1,
+  "taskEstimateDelimiter": ";",
+  "startTimeDelimiter": "@",
+  "dateDelimiter": "",
+  "enableOverdueNotice": true,
+  "headerNames": [
+    "Tasks",
+    "Estimate",
+    "Start",
+    "End"
+  ],
+  "showCompletedTasks": true,
+  "applyBackgroundColorByCategory": true,
+  "showCategoryNamesInTask": true,
+  "categoryColors": [],
+  "categoryTransparency": 0.3,
+  "pathToDictionary": "",
+  "showRemainingTime": true,
+  "customUrlScheme": "",
+  "showUntilRegex": ""
+}

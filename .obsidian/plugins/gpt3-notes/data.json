@@ -1,0 +1,52 @@
+{
+  "appName": "GP3_NOTES",
+  "token": "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",
+  "model": "text-davinci-003",
+  "tokens": 300,
+  "temperature": 1,
+  "promptHistory": [
+    {
+      "prompt": "Write an article with comments about this ☍ ",
+      "processedPrompt": "Write an article with comments about this ☍ ",
+      "temperature": 0.1,
+      "tokens": 300
+    },
+    {
+      "prompt": "Write an article with comments about this document",
+      "processedPrompt": "Write an article with comments about this document",
+      "temperature": 0.1,
+      "tokens": 300
+    },
+    {
+      "prompt": "Write an article with comments about this document",
+      "processedPrompt": "Write an article with comments about this document",
+      "temperature": 0.1,
+      "tokens": 300
+    },
+    {
+      "prompt": "Write an article with comments about this document",
+      "processedPrompt": "Write an article with comments about this document",
+      "temperature": 0.1,
+      "tokens": 300
+    }
+  ],
+  "tokenParams": {
+    "prefix": [
+      "Write an essay",
+      "Write dashed notes",
+      "Write bullet notes",
+      "Write paragraphs",
+      "Write an article",
+      "Create a manual",
+      "Create an outline",
+      "Write a summary",
+      "Write a program"
+    ],
+    "postfix": [
+      "with sources",
+      "with footnotes",
+      "with comments",
+      "with quotes"
+    ]
+  }
+}

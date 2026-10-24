@@ -1,0 +1,20 @@
+{
+  "pinned": [
+    "properties:open-local",
+    "table-editor-obsidian:table-control-bar",
+    "obsidian-tasks-plugin:edit-task",
+    "big-calendar:open-big-calendar",
+    "progress-clocks:open-panel",
+    "obsidian-day-planner:show-day-planner-timeline",
+    "obsidian-day-planner:show-weekly-view",
+    "metadata-menu:fileClassAttr_options",
+    "metadata-menu:open_fileclass_view",
+    "obsidian-kanban:add-kanban-lane",
+    "obsidian-kanban:create-new-kanban-board",
+    "obsidian-git:backup-and-close",
+    "obsidian-git:open-git-view",
+    "obsidian-mindmap-nextgen:mindmapnextgen:pinned",
+    "obsidian-textgenerator-plugin:set_max_tokens",
+    "webpage-html-export:export-html-vault"
+  ]
+}

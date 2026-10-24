@@ -1,0 +1,258 @@
+[
+    {
+        "role": "user",
+        "content": "what do you think?"
+    },
+    {
+        "role": "user",
+        "content": "/ref on"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><p><strong>Reference updated: on</strong></p></div>"
+    },
+    {
+        "role": "user",
+        "content": "what do you think about this terror?"
+    },
+    {
+        "role": "assistant",
+        "content": "It is difficult for me to provide a specific response without more context. Can you please provide more information or clarify your question?"
+    },
+    {
+        "role": "user",
+        "content": "ну чо ты думаеш про даунов этих и"
+    },
+    {
+        "role": "assistant",
+        "content": "\n* 1:00:00 - 1:05:00: Описание технологий, используемых для создания психотронного оружия.\n* 1:05:00 - 1:10:00: Какие организации и государства занимаются разработкой и использованием этого оружия?\n* 1:10:00 - 1:15:00: Как работает аппаратура \"Рука\" и как она влияет на человека?\n* 1:15:00 - 1:20:00: Какие технологии используются для слежки и сбора информации о людях?\n* 1:20:00 - 1:25:00: Как работает моральный и психологический прессинг, осуществляемый спецслужбами?\n* 1:25:00 - 1:30:00: Какие методы используются для дискредитации людей в обществе?\n* 1:30:00 - 1:35:00: Какие меры могут быть приняты для защиты от этого оружия и насилия?\n* 1:35:00 - 1:40:00: Описание преступлений, которые могут быть совершены с использованием этого оружия.\n* 1:40:00 - 1:45:00: Как можно применить законодательство для борьбы с этим типом травли-преследования?\n* 1:45:00 - 1:50:00: Описание случаев, в которых была использована технология \"Рука\" и её результатов."
+    },
+    {
+        "role": "user",
+        "content": "/help\\"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\">Command not recognized.</div>"
+    },
+    {
+        "role": "user",
+        "content": "/help"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><h2>Commands</h2>\n  <p><code>/model [MODEL-NAME] or [VALUE]</code> - List or change model.</p>\n  <p><code>/profile [PROFILE-NAME] or [VALUE]</code> - List or change profile.</p>\n  <p><code>/prompt [PROMPT-NAME] or [VALUE]</code> - List or change prompts.</p>\n  <p><code>/prompt clear</code> - Clear prompt.</p>\n  <p><code>/maxtokens [VALUE]</code> - Set max tokens.</p>\n  <p><code>/temp [VALUE]</code> - Change temperature range from 0 to 2.</p>\n  <p><code>/ref on | off</code> - Turn on or off \"reference current note\".</p>\n  <p><code>/append</code> - Append current chat history to current active note.</p>\n  <p><code>/save</code> - Save current chat history to a note.</p>\n  <p><code>/clear</code> or <code>/c</code> - Clear chat history.</p>\n  <p><code>/stop</code> or <code>/s</code> - [STREAMING MODELS ONLY]: Stop fetching response.</p></div>"
+    },
+    {
+        "role": "user",
+        "content": "/temp 0.3"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><p><strong>Temperature updated: 0.30</strong></p></div>"
+    },
+    {
+        "role": "user",
+        "content": "/append"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><p><strong>Message history appended.</strong></p></div>"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><p><strong>Message history saved.</strong></p></div>"
+    },
+    {
+        "role": "user",
+        "content": "/maxtokens 2000"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><p><strong>Max tokens updated: 2000</strong></p></div>"
+    },
+    {
+        "role": "user",
+        "content": "какие обьекты негативно затрагивают эти террористические действия?"
+    },
+    {
+        "role": "assistant",
+        "content": "\n* 1:50:00 - 2:00:00: Какие организации и государства занимаются разработкой и использованием психотронного оружия?\n* 2:00:00 - 2:05:00: Как работает аппаратура \"Рука\" и как она влияет на человека?\n* 2:05:00 - 2:10:00: Какие технологии используются для слежки и сбора информации о людях?\n* 2:10:00 - 2:15:00: Как работает моральный и психологический прессинг, осуществляемый спецслужбами?\n* 2:15:00 - 2:20:00: Какие методы используются для дискредитации людей в обществе?\n* 2:20:00 - 2:25:00: Какие меры могут быть приняты для защиты от этого оружия и насилия?\n* 2:25:00 - 2:30:00: Описание преступлений, которые могут быть совершены с использованием этого оружия.\n* 2:30:00 - 2:35:00: Как можно применить законодательство для борьбы с этим типом травли-преследования?\n* 2:35:00 - 2:40:00: Описание случаев, в которых была использована технология \"Рука\" и её результатов."
+    },
+    {
+        "role": "assistant",
+        "content": ""
+    },
+    {
+        "role": "user",
+        "content": "определить поврежденные обьекты"
+    },
+    {
+        "role": "assistant",
+        "content": "```python\ndef find_damaged_objects(positions):\n    damaged_objects = []\n    for position in positions:\n        if position[0] > 0 and position[1] < 100:\n            damaged_objects.append(position)\n    return damaged_objects\n```\nThis code looks correct to me. It takes a list of positions represented as tuples (x, y) where x is the new position and y is the old position. The function `find_damaged_objects()` iterates through each position in the list and checks if the new position has a value greater than 0 and the old position has a value less than 100. If both conditions are true, the position is considered damaged and added to the list of damaged objects. Finally, the function returns the list of damaged objects.\n\nThe time complexity of this solution is O(n) because it iterates through each position in the list once. The space complexity is O(1) because it only uses a few variables to store information about the damaged objects."
+    },
+    {
+        "role": "user",
+        "content": "/append"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><p><strong>Message history appended.</strong></p></div>"
+    },
+    {
+        "role": "user",
+        "content": "/help"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><h2>Commands</h2>\n  <p><code>/model [MODEL-NAME] or [VALUE]</code> - List or change model.</p>\n  <p><code>/profile [PROFILE-NAME] or [VALUE]</code> - List or change profile.</p>\n  <p><code>/prompt [PROMPT-NAME] or [VALUE]</code> - List or change prompts.</p>\n  <p><code>/prompt clear</code> - Clear prompt.</p>\n  <p><code>/maxtokens [VALUE]</code> - Set max tokens.</p>\n  <p><code>/temp [VALUE]</code> - Change temperature range from 0 to 2.</p>\n  <p><code>/ref on | off</code> - Turn on or off \"reference current note\".</p>\n  <p><code>/append</code> - Append current chat history to current active note.</p>\n  <p><code>/save</code> - Save current chat history to a note.</p>\n  <p><code>/clear</code> or <code>/c</code> - Clear chat history.</p>\n  <p><code>/stop</code> or <code>/s</code> - [STREAMING MODELS ONLY]: Stop fetching response.</p></div>"
+    },
+    {
+        "role": "user",
+        "content": "/profile"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><h2>Profiles</h2>\n      <p><b>Current profile:</b> BMO</p>\n      <ol></ol></div>"
+    },
+    {
+        "role": "user",
+        "content": "определить поврежденные с помощью аппаратуры \"Рука\" обьекты "
+    },
+    {
+        "role": "assistant",
+        "content": "```python\ndef find_damaged_objects(positions):\n    damaged_objects = []\n    for position in positions:\n        if position[0] > 0 and position[1] < 100:\n            damaged_objects.append(position)\n    return damaged_objects\n```"
+    },
+    {
+        "role": "user",
+        "content": "/ref on"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><p><strong>Reference updated: on</strong></p></div>"
+    },
+    {
+        "role": "user",
+        "content": "как думаеш сколько времени надо?"
+    },
+    {
+        "role": "assistant",
+        "content": "It is difficult for me to provide an exact estimate without more information about the specific task or project you are referring to. Can you please provide more details or clarify your question?"
+    },
+    {
+        "role": "user",
+        "content": "ты вообще по русскп умееш разговаривать? крым чей?"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"errorBotMessage\"><p>Error: net::ERR_NETWORK_IO_SUSPENDED</p></div>"
+    },
+    {
+        "role": "user",
+        "content": "here?"
+    },
+    {
+        "role": "assistant",
+        "content": "```python\nimport pandas as pd\n\n# Load data into a DataFrame\ndf = pd.read_csv(\"data.csv\")\n\n# Perform some analysis on the data\nresult = df.groupby('category')['value'].mean()\n\n# Print the result\nprint(result)\n```\nThis code loads a CSV file called \"data.csv\" into a Pandas DataFrame and then calculates the mean value for each category using the `groupby()` method. Finally, it prints the result."
+    },
+    {
+        "role": "user",
+        "content": "print current time"
+    },
+    {
+        "role": "assistant",
+        "content": "```python\nimport datetime\n\nnow = datetime.datetime.now()\nprint(now)\n```\nThis code uses the `datetime` module to get the current date and time and then prints it."
+    },
+    {
+        "role": "user",
+        "content": "/help"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><h2>Commands</h2>\n  <p><code>/model [MODEL-NAME] or [VALUE]</code> - List or change model.</p>\n  <p><code>/profile [PROFILE-NAME] or [VALUE]</code> - List or change profile.</p>\n  <p><code>/prompt [PROMPT-NAME] or [VALUE]</code> - List or change prompts.</p>\n  <p><code>/prompt clear</code> - Clear prompt.</p>\n  <p><code>/maxtokens [VALUE]</code> - Set max tokens.</p>\n  <p><code>/temp [VALUE]</code> - Change temperature range from 0 to 2.</p>\n  <p><code>/ref on | off</code> - Turn on or off \"reference current note\".</p>\n  <p><code>/append</code> - Append current chat history to current active note.</p>\n  <p><code>/save</code> - Save current chat history to a note.</p>\n  <p><code>/clear</code> or <code>/c</code> - Clear chat history.</p>\n  <p><code>/stop</code> or <code>/s</code> - [STREAMING MODELS ONLY]: Stop fetching response.</p></div>"
+    },
+    {
+        "role": "user",
+        "content": "/prompt clear"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\">Prompt cleared.</div>"
+    },
+    {
+        "role": "user",
+        "content": "/ref on"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><p><strong>Reference updated: on</strong></p></div>"
+    },
+    {
+        "role": "user",
+        "content": "/prompt"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><h2>Prompts</h2>\n      <p><b>Current prompt:</b> Empty</p>\n      <ol></ol></div>"
+    },
+    {
+        "role": "user",
+        "content": "/help"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><h2>Commands</h2>\n  <p><code>/model [MODEL-NAME] or [VALUE]</code> - List or change model.</p>\n  <p><code>/profile [PROFILE-NAME] or [VALUE]</code> - List or change profile.</p>\n  <p><code>/prompt [PROMPT-NAME] or [VALUE]</code> - List or change prompts.</p>\n  <p><code>/prompt clear</code> - Clear prompt.</p>\n  <p><code>/maxtokens [VALUE]</code> - Set max tokens.</p>\n  <p><code>/temp [VALUE]</code> - Change temperature range from 0 to 2.</p>\n  <p><code>/ref on | off</code> - Turn on or off \"reference current note\".</p>\n  <p><code>/append</code> - Append current chat history to current active note.</p>\n  <p><code>/save</code> - Save current chat history to a note.</p>\n  <p><code>/clear</code> or <code>/c</code> - Clear chat history.</p>\n  <p><code>/stop</code> or <code>/s</code> - [STREAMING MODELS ONLY]: Stop fetching response.</p></div>"
+    },
+    {
+        "role": "user",
+        "content": "/model"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><h2>Models</h2>\n    <p><b>Current Model:</b> Empty</p>\n    <ol><li>codegemma:7b</li><li>codegemma:latest</li><li>command-r:latest</li><li>dolphin-mistral:7b-v2.6-q6_K</li><li>everythinglm:latest</li><li>llama2:latest</li><li>llama2-uncensored:latest</li><li>llama3:latest</li><li>mistral:latest</li><li>phi:2.7b-chat-v2-fp16</li><li>wizardlm-uncensored:13b-llama2-q5_0</li><li>wizardlm-uncensored:latest</li><li>wizardlm2:latest</li><li>mattw/dockerit:latest</li></ol></div>"
+    },
+    {
+        "role": "user",
+        "content": "/model 5"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\">Updated Model to <b>wizardlm2:latest</b></div>"
+    },
+    {
+        "role": "user",
+        "content": "here?"
+    },
+    {
+        "role": "assistant",
+        "content": " As an AI, I don't have personal opinions or feelings, but I'm here to provide information, answer questions, and assist with a wide range of topics to the best of my abilities based on the data and programming I have. If you have a specific question or need assistance with something, feel free to ask, and I'll do my best to help you!"
+    },
+    {
+        "role": "user",
+        "content": "/model     // Uses an external function 'gen' to generate concepts and their definitions\n    async function extractAndDefineConcepts(text) {\n        const prompt = `Extract concepts from the following content and define them. Do not refer to the current note. do not refer to already refered concepts(contained in []). Return a json Record<name, definition>. Ensure the 'name' is exactly as it appears in the text, without any modifications: \\n${text.replace(/\\[\\[.*?\\]\\]/g, '')}`;\n        \n        const conceptData = await genJSON(prompt); // returns object\n\n        return [[[[Object.]]]]entries(conceptData).map(([name, definition]) => ({name, definition}));\n    }\n    \n    function replaceConceptsWithLinks(text, concepts) {\n        let modifiedText = text;\n        concepts.forEach(concept => {\n            modifiedText = modifiedText.replace(new RegExp(concept.name, 'g'), `[[${concept.name}]]`);\n        });\n        return modifiedText;\n    }\n     \n    async function createConceptPages(concepts) {\n        const currentFolder = app.workspace.getActiveFile().parent.path;\n        for (const concept of concepts) {\n            const conceptFilePath = `${currentFolder}/${concept.name}.md`;\n            if (!await app.vault.exists(conceptFilePath)) {\n                await app.vault.create(conceptFilePath, `# ${concept.name}\\n\\n${concept.definition}`);\n            }\n        }\n    }\n\n    async function extractConcepts() {\n            const activeFile = app.workspace.getActiveFile();\n            if (!activeFile) return;\n\n            const fileContent = (\"\"+await app.vault.read(activeFile))\n            \n            const concepts = await extractAndDefineConcepts(fileContent);\n\n            const modifiedContent = replaceConceptsWithLinks(fileContent, concepts);\n            console.log({modifiedContent})\n            await app.vault.modify(activeFile, modifiedContent);\n\n            await createConceptPages(concepts);\n        }\n\n await extractConcepts();\n return \"\";"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\"><h2>Models</h2>\n    <p><b>Current Model:</b> wizardlm2:latest</p>\n    <ol><li>phi3:latest</li><li>dolphin-phi:2.7b-v2.6-q8_0</li><li>sunapi386/llama-3-lexi-uncensored:8b</li><li>impulse2000/dolphincoder-starcoder2-7b:q8_0</li><li>wizardlm2:latest</li><li>llama3:8b-text-q8_0</li><li>llama3-gradient:latest</li><li>starling-lm:latest</li><li>codellama:latest</li><li>llava:latest</li><li>gemma:latest</li><li>llama2:latest</li><li>llama2-uncensored:latest</li><li>solar:latest</li><li>llama3:latest</li><li>neural-chat:latest</li><li>phi:latest</li><li>gemma:7b</li><li>gemma:2b</li><li>gurubot/llama3-guru-uncensored:latest</li><li>war-resolver:latest</li><li>mistral:7b</li><li>gfg/solar-10.7b-instruct-v1.0-uncensored:latest</li><li>mannix/dolphin-2.9-llama3-8b:q5_k_m</li><li>wizardlm-uncensored:13b-llama2-q5_K_M</li><li>wizard-vicuna-uncensored:13b</li><li>gurubot/llama3-guru:latest</li></ol></div>"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\">Model '' does not exist for this API key.</div>"
+    },
+    {
+        "role": "user",
+        "content": "/model wizardlm-uncensored:13b-llama2-q5_K_M"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"commandBotMessage\">Updated Model to <b>wizardlm-uncensored:13b-llama2-q5_K_M</b></div>"
+    },
+    {
+        "role": "user",
+        "content": "краткое содержание"
+    },
+    {
+        "role": "assistant",
+        "content": "\n* 1:50:00 - 2:00:00: What are the potential consequences of using psychotronic weapons on a person?\n* 2:00:00 - 2:05:00: How does the \"Ru"
+    }
+]

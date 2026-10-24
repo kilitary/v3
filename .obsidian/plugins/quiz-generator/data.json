@@ -1,0 +1,20 @@
+{
+  "apiKey": "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",
+  "model": "gpt-3.5-turbo-0125",
+  "showNotePath": false,
+  "showFolderPath": false,
+  "randomizeQuestions": true,
+  "language": "English",
+  "numberOfMultipleChoice": 1,
+  "numberOfTrueFalse": 1,
+  "numberOfShortAnswer": 1,
+  "generateMultipleChoice": true,
+  "generateTrueFalse": true,
+  "generateShortAnswer": true,
+  "autoSave": false,
+  "questionSavePath": "",
+  "saveForSpacedRepetition": false,
+  "inlineSeparator": "::",
+  "multilineSeparator": "?",
+  "saveAsCallout": true
+}

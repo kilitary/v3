@@ -1,0 +1,5 @@
+{
+  "openaiKey": "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",
+  "model": "gpt-3.5-turbo",
+  "maxTokens": "600"
+}

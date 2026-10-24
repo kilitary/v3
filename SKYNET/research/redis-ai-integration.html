@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Redis AI Integration with AI/LLM/Agent Systems"</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 85%;
+        }
+        pre {
+            background-color: #f6f8fa;
+            padding: 16px;
+            overflow: auto;
+            border-radius: 3px;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        blockquote {
+            border-left: 4px solid #dfe2e5;
+            padding-left: 16px;
+            color: #6a737d;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #dfe2e5;
+            padding: 6px 13px;
+        }
+        table tr:nth-child(2n) {
+            background-color: #f6f8fa;
+        }
+        ul, ol {
+            padding-left: 2em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            background-color: #f1f3f5;
+            border-radius: 4px;
+            color: #0366d6;
+        }
+        .back-link:hover {
+            background-color: #e1e4e8;
+            text-decoration: none;
+        }
+        .banner-image {
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .banner-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <ul>
+<li>redis</li>
+<li>ai</li>
+<li>llm</li>
+<li>agent</li>
+<li>integration</li>
+<li>architecture</li>
+<li>machine-learning
+state: Research
+type: technical-documentation
+category: AI-Infrastructure</li>
+</ul>
+<hr />
+<h1 id="redis-ai-integration-with-aillmagent-systems">Redis AI Integration with AI/LLM/Agent Systems</h1>
+<h2 id="overview">Overview</h2>
+<p>Redis AI (now part of RedisAI) is a Redis module that enables AI model serving and execution directly within Redis. This document explores what can be connected to AI/LLM/agent systems from Redis AI, providing a comprehensive guide to integration patterns, architectures, and use cases.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#what-can-be-connected">What Can Be Connected</a></li>
+<li><a href="#core-integration-components">Core Integration Components</a></li>
+<li><a href="#architecture-patterns">Architecture Patterns</a></li>
+<li><a href="#implementation-examples">Implementation Examples</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#use-cases">Use Cases</a></li>
+</ol>
+<h2 id="what-can-be-connected">What Can Be Connected</h2>
+<p>Redis AI serves as a powerful integration hub that can connect various AI/LLM/agent components:</p>
+<h3 id="1-machine-learning-models">1. Machine Learning Models</h3>
+<h4 id="deep-learning-frameworks">Deep Learning Frameworks</h4>
+<ul>
+<li><strong>TensorFlow</strong> models (.pb format)</li>
+<li><strong>PyTorch</strong> models (.pt format)</li>
+<li><strong>ONNX</strong> (Open Neural Network Exchange) models</li>
+<li><strong>TensorFlow Lite</strong> models for edge deployment</li>
+</ul>
+<h4 id="model-types">Model Types</h4>
+<ul>
+<li>Neural networks (CNN, RNN, LSTM, Transformers)</li>
+<li>Computer vision models</li>
+<li>Natural language processing models</li>
+<li>Time-series prediction models</li>
+<li>Reinforcement learning models</li>
+</ul>
+<h3 id="2-large-language-models-llms">2. Large Language Models (LLMs)</h3>
+<h4 id="llm-integration-points">LLM Integration Points</h4>
+<ul>
+<li><strong>Embedding Models</strong>: Store and retrieve vector embeddings</li>
+<li>OpenAI embeddings</li>
+<li>Sentence transformers</li>
+<li>
+<p>Custom embedding models</p>
+</li>
+<li>
+<p><strong>Token Management</strong>: Cache tokenized inputs/outputs</p>
+</li>
+<li>Token counting and tracking</li>
+<li>Context window management</li>
+<li>
+<p>Token-based rate limiting</p>
+</li>
+<li>
+<p><strong>Prompt Templates</strong>: Store and manage prompts</p>
+</li>
+<li>Template versioning</li>
+<li>A/B testing of prompts</li>
+<li>
+<p>Dynamic prompt generation</p>
+</li>
+<li>
+<p><strong>Response Caching</strong>: Cache LLM responses</p>
+</li>
+<li>Semantic caching</li>
+<li>Exact match caching</li>
+<li>TTL-based cache invalidation</li>
+</ul>
+<h3 id="3-ai-agent-systems">3. AI Agent Systems</h3>
+<h4 id="agent-components">Agent Components</h4>
+<ul>
+<li><strong>Agent State Management</strong></li>
+<li>Session state persistence</li>
+<li>Agent memory (short-term and long-term)</li>
+<li>Conversation history</li>
+<li>
+<p>Context preservation</p>
+</li>
+<li>
+<p><strong>Multi-Agent Communication</strong></p>
+</li>
+<li>Inter-agent messaging via Redis Pub/Sub</li>
+<li>Shared knowledge bases</li>
+<li>Coordination and orchestration</li>
+<li>
+<p>Task queues and job distribution</p>
+</li>
+<li>
+<p><strong>Agent Tools and Functions</strong></p>
+</li>
+<li>Tool result caching</li>
+<li>Function call history</li>
+<li>API response caching</li>
+<li>Rate limiting and throttling</li>
+</ul>
+<h3 id="4-vector-databases-and-semantic-search">4. Vector Databases and Semantic Search</h3>
+<h4 id="vector-operations">Vector Operations</h4>
+<ul>
+<li><strong>Vector Storage</strong>: Store embeddings in Redis</li>
+<li>Dense vectors from LLMs</li>
+<li>Sparse vectors for hybrid search</li>
+<li>
+<p>Multi-modal embeddings</p>
+</li>
+<li>
+<p><strong>Similarity Search</strong></p>
+</li>
+<li>K-nearest neighbors (KNN)</li>
+<li>Approximate nearest neighbors (ANN)</li>
+<li>Semantic search capabilities</li>
+<li>
+<p>Vector indexing with RediSearch</p>
+</li>
+<li>
+<p><strong>RAG (Retrieval-Augmented Generation)</strong></p>
+</li>
+<li>Document embedding storage</li>
+<li>Context retrieval for LLMs</li>
+<li>Hybrid search (vector + full-text)</li>
+<li>Metadata filtering</li>
+</ul>
+<h3 id="5-real-time-data-streams">5. Real-Time Data Streams</h3>
+<h4 id="stream-processing">Stream Processing</h4>
+<ul>
+<li><strong>Redis Streams</strong> for data ingestion</li>
+<li>Real-time event processing</li>
+<li>Time-series data for AI models</li>
+<li>Feature streams for online learning</li>
+<li>
+<p>Model input/output logging</p>
+</li>
+<li>
+<p><strong>Pub/Sub Integration</strong></p>
+</li>
+<li>Model inference triggers</li>
+<li>Result broadcasting</li>
+<li>Multi-consumer patterns</li>
+<li>Event-driven AI pipelines</li>
+</ul>
+<h3 id="6-application-backends">6. Application Backends</h3>
+<h4 id="backend-integration">Backend Integration</h4>
+<ul>
+<li><strong>API Gateways</strong></li>
+<li>Request/response caching</li>
+<li>Rate limiting</li>
+<li>Load balancing</li>
+<li>
+<p>Authentication tokens</p>
+</li>
+<li>
+<p><strong>Microservices</strong></p>
+</li>
+<li>Service discovery</li>
+<li>Configuration management</li>
+<li>Inter-service communication</li>
+<li>
+<p>Distributed tracing</p>
+</li>
+<li>
+<p><strong>Web Applications</strong></p>
+</li>
+<li>Session management</li>
+<li>User preferences</li>
+<li>Personalization data</li>
+<li>A/B testing configurations</li>
+</ul>
+<h3 id="7-data-processing-pipelines">7. Data Processing Pipelines</h3>
+<h4 id="pipeline-components">Pipeline Components</h4>
+<ul>
+<li><strong>ETL (Extract, Transform, Load)</strong></li>
+<li>Data preprocessing caching</li>
+<li>Feature engineering results</li>
+<li>Transformation rules</li>
+<li>
+<p>Data validation states</p>
+</li>
+<li>
+<p><strong>Model Training Infrastructure</strong></p>
+</li>
+<li>Training data sampling</li>
+<li>Hyperparameter storage</li>
+<li>Experiment tracking</li>
+<li>
+<p>Model versioning</p>
+</li>
+<li>
+<p><strong>Inference Pipelines</strong></p>
+</li>
+<li>Pre-processing cache</li>
+<li>Post-processing cache</li>
+<li>Batch inference queues</li>
+<li>Result aggregation</li>
+</ul>
+<h3 id="8-monitoring-and-observability">8. Monitoring and Observability</h3>
+<h4 id="monitoring-systems">Monitoring Systems</h4>
+<ul>
+<li><strong>Metrics Collection</strong></li>
+<li>Model performance metrics</li>
+<li>Inference latency tracking</li>
+<li>Resource utilization</li>
+<li>
+<p>Error rates and logging</p>
+</li>
+<li>
+<p><strong>Alerting Systems</strong></p>
+</li>
+<li>Threshold-based alerts</li>
+<li>Anomaly detection triggers</li>
+<li>Model drift detection</li>
+<li>Performance degradation alerts</li>
+</ul>
+<h2 id="core-integration-components">Core Integration Components</h2>
+<h3 id="redisai-capabilities">RedisAI Capabilities</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Core RedisAI operations that enable integrations</span>
+
+<span class="c1"># 1. Model Management</span>
+<span class="c1"># Store a machine learning model in Redis for later inference</span>
+<span class="n">AI</span><span class="o">.</span><span class="n">MODELSTORE</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">backend</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">tag</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">model_blob</span><span class="o">&gt;</span>
+<span class="c1"># Parameters:</span>
+<span class="c1">#   - key: Unique identifier for the model (e.g., &quot;sentiment_model&quot;)</span>
+<span class="c1">#   - backend: Framework type (TORCH, TF, TFLITE, ONNX)</span>
+<span class="c1">#   - device: Execution device (CPU, GPU, GPU:0, GPU:1)</span>
+<span class="c1">#   - tag: Version tag for model tracking</span>
+<span class="c1">#   - model_blob: Binary model data</span>
+
+<span class="c1"># Retrieve model metadata or binary blob</span>
+<span class="n">AI</span><span class="o">.</span><span class="n">MODELGET</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">META</span> <span class="o">|</span> <span class="n">BLOB</span><span class="p">]</span>
+<span class="c1"># Returns model configuration or full binary data</span>
+
+<span class="c1"># Remove a model from Redis</span>
+<span class="n">AI</span><span class="o">.</span><span class="n">MODELDEL</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span>
+
+<span class="c1"># Execute inference on a stored model</span>
+<span class="n">AI</span><span class="o">.</span><span class="n">MODELEXECUTE</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="n">INPUTS</span> <span class="o">&lt;</span><span class="n">input_keys</span><span class="o">...&gt;</span> <span class="n">OUTPUTS</span> <span class="o">&lt;</span><span class="n">output_keys</span><span class="o">...&gt;</span>
+<span class="c1"># This is the core inference operation that enables AI/LLM/agent integrations</span>
+<span class="c1"># Parameters:</span>
+<span class="c1">#   - key: The model identifier stored in Redis</span>
+<span class="c1">#   - INPUTS: One or more tensor keys containing input data</span>
+<span class="c1">#   - OUTPUTS: One or more keys where results will be stored</span>
+<span class="c1"># Example: AI.MODELEXECUTE my_model INPUTS input_tensor OUTPUTS prediction</span>
+<span class="c1"># </span>
+<span class="c1"># This command executes the model inference operation and is fundamental to:</span>
+<span class="c1">#   - Real-time AI/ML predictions in applications</span>
+<span class="c1">#   - Low-latency model serving without external dependencies</span>
+<span class="c1">#   - Integration with LLM preprocessing/postprocessing pipelines</span>
+<span class="c1">#   - Agent decision-making based on ML model outputs</span>
+<span class="c1">#   - Multi-step inference pipelines using DAG operations</span>
+<span class="c1">#</span>
+<span class="c1"># Performance characteristics:</span>
+<span class="c1">#   - Latency: 1-100ms depending on model complexity</span>
+<span class="c1">#   - Throughput: Can handle 10,000+ inferences/second</span>
+<span class="c1">#   - Memory: Models stay in memory for fast execution</span>
+<span class="c1">#   - Scalability: Horizontal scaling with Redis Cluster</span>
+
+<span class="c1"># 2. Tensor Operations</span>
+<span class="n">AI</span><span class="o">.</span><span class="n">TENSORSET</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nb">type</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">shape</span><span class="o">...&gt;</span> <span class="p">[</span><span class="n">BLOB</span> <span class="o">&lt;</span><span class="n">data</span><span class="o">&gt;</span> <span class="o">|</span> <span class="n">VALUES</span> <span class="o">&lt;</span><span class="n">val</span><span class="o">...&gt;</span><span class="p">]</span>
+<span class="n">AI</span><span class="o">.</span><span class="n">TENSORGET</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">META</span> <span class="o">|</span> <span class="n">VALUES</span> <span class="o">|</span> <span class="n">BLOB</span><span class="p">]</span>
+
+<span class="c1"># 3. Script Execution (TorchScript)</span>
+<span class="n">AI</span><span class="o">.</span><span class="n">SCRIPTSTORE</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="n">AI</span><span class="o">.</span><span class="n">SCRIPTEXECUTE</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">function</span><span class="o">&gt;</span> <span class="n">INPUTS</span> <span class="o">&lt;</span><span class="n">input_keys</span><span class="o">...&gt;</span> <span class="n">OUTPUTS</span> <span class="o">&lt;</span><span class="n">output_keys</span><span class="o">...&gt;</span>
+
+<span class="c1"># 4. DAG (Directed Acyclic Graph) for complex pipelines</span>
+<span class="n">AI</span><span class="o">.</span><span class="n">DAGRUN</span> <span class="p">[</span><span class="n">LOAD</span> <span class="o">&lt;</span><span class="n">n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">...&gt;</span><span class="p">]</span> <span class="p">[</span><span class="n">PERSIST</span> <span class="o">&lt;</span><span class="n">n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">...&gt;</span><span class="p">]</span> <span class="o">|&gt;</span> <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span> <span class="o">|&gt;</span> <span class="o">...</span>
+</code></pre></div>
+
+<h3 id="redis-data-structures-for-ai">Redis Data Structures for AI</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Data structures commonly used in AI integrations</span>
+
+<span class="c1"># 1. Strings - Simple key-value storage</span>
+<span class="c1"># Use: Model predictions, cached responses, configuration</span>
+<span class="n">SET</span> <span class="n">model</span><span class="p">:</span><span class="n">prediction</span><span class="p">:</span><span class="n">user123</span> <span class="s2">&quot;positive&quot;</span>
+<span class="n">GET</span> <span class="n">model</span><span class="p">:</span><span class="n">prediction</span><span class="p">:</span><span class="n">user123</span>
+
+<span class="c1"># 2. Hashes - Structured data</span>
+<span class="c1"># Use: Agent state, user profiles, model metadata</span>
+<span class="n">HSET</span> <span class="n">agent</span><span class="p">:</span><span class="n">state</span><span class="p">:</span><span class="n">session1</span> <span class="s2">&quot;context&quot;</span> <span class="s2">&quot;shopping&quot;</span> <span class="s2">&quot;turn&quot;</span> <span class="s2">&quot;5&quot;</span>
+<span class="n">HGETALL</span> <span class="n">agent</span><span class="p">:</span><span class="n">state</span><span class="p">:</span><span class="n">session1</span>
+
+<span class="c1"># 3. Lists - Ordered collections</span>
+<span class="c1"># Use: Conversation history, task queues</span>
+<span class="n">LPUSH</span> <span class="n">conversation</span><span class="p">:</span><span class="n">user123</span> <span class="s2">&quot;User: Hello&quot;</span>
+<span class="n">LPUSH</span> <span class="n">conversation</span><span class="p">:</span><span class="n">user123</span> <span class="s2">&quot;Agent: Hi, how can I help?&quot;</span>
+<span class="n">LRANGE</span> <span class="n">conversation</span><span class="p">:</span><span class="n">user123</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="c1"># 4. Sets - Unique collections</span>
+<span class="c1"># Use: Tags, categories, user segments</span>
+<span class="n">SADD</span> <span class="n">user</span><span class="p">:</span><span class="n">segments</span><span class="p">:</span><span class="mi">123</span> <span class="s2">&quot;premium&quot;</span> <span class="s2">&quot;active&quot;</span> <span class="s2">&quot;tech-savvy&quot;</span>
+<span class="n">SMEMBERS</span> <span class="n">user</span><span class="p">:</span><span class="n">segments</span><span class="p">:</span><span class="mi">123</span>
+
+<span class="c1"># 5. Sorted Sets - Ranked data</span>
+<span class="c1"># Use: Recommendation scores, priority queues</span>
+<span class="n">ZADD</span> <span class="n">recommendations</span><span class="p">:</span><span class="n">user123</span> <span class="mf">0.95</span> <span class="s2">&quot;item1&quot;</span> <span class="mf">0.87</span> <span class="s2">&quot;item2&quot;</span>
+<span class="n">ZRANGE</span> <span class="n">recommendations</span><span class="p">:</span><span class="n">user123</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="n">WITHSCORES</span>
+
+<span class="c1"># 6. Streams - Event logs</span>
+<span class="c1"># Use: Model input/output logging, audit trails</span>
+<span class="n">XADD</span> <span class="n">inference</span><span class="p">:</span><span class="n">log</span> <span class="o">*</span> <span class="n">model</span> <span class="s2">&quot;gpt-4&quot;</span> <span class="nb">input</span> <span class="s2">&quot;hello&quot;</span> <span class="n">output</span> <span class="s2">&quot;Hi there&quot;</span>
+<span class="n">XREAD</span> <span class="n">STREAMS</span> <span class="n">inference</span><span class="p">:</span><span class="n">log</span> <span class="mi">0</span>
+
+<span class="c1"># 7. JSON - Complex nested data (RedisJSON)</span>
+<span class="c1"># Use: Agent memory, complex configurations</span>
+<span class="n">JSON</span><span class="o">.</span><span class="n">SET</span> <span class="n">agent</span><span class="p">:</span><span class="n">memory</span><span class="p">:</span><span class="n">session1</span> <span class="err">$</span> <span class="s1">&#39;{&quot;facts&quot;: [], &quot;preferences&quot;: </span><span class="si">{}</span><span class="s1">}&#39;</span>
+<span class="n">JSON</span><span class="o">.</span><span class="n">GET</span> <span class="n">agent</span><span class="p">:</span><span class="n">memory</span><span class="p">:</span><span class="n">session1</span>
+</code></pre></div>
+
+<h2 id="architecture-patterns">Architecture Patterns</h2>
+<h3 id="pattern-1-llm-response-caching-architecture">Pattern 1: LLM Response Caching Architecture</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────┐
+│   Client    │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────────────────────────────┐
+│     API Gateway / Load Balancer     │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+       ┌───────────────┐
+       │  Check Cache  │◄─────┐
+       │  (Redis)      │      │
+       └───────┬───────┘      │
+               │              │
+        ┌──────▼──────┐       │
+        │Cache Hit?   │       │
+        └──┬───────┬──┘       │
+           │Yes    │No        │
+           │       │          │
+           │       ▼          │
+           │   ┌─────────┐   │
+           │   │   LLM   │   │
+           │   │ Service │   │
+           │   └────┬────┘   │
+           │        │        │
+           │        ├────────┘
+           │        │Store Result
+           │        │
+           ▼        ▼
+       ┌──────────────┐
+       │   Response   │
+       └──────────────┘
+</code></pre></div>
+
+<h3 id="pattern-2-multi-agent-system-with-redis">Pattern 2: Multi-Agent System with Redis</h3>
+<div class="codehilite"><pre><span></span><code>┌──────────────────────────────────────────────────────┐
+│                    Redis Cluster                      │
+│                                                        │
+│  ┌──────────────┐  ┌──────────────┐  ┌────────────┐ │
+│  │ Agent States │  │ Message Queue│  │ Shared KB  │ │
+│  └──────────────┘  └──────────────┘  └────────────┘ │
+└───────────┬──────────────┬──────────────┬────────────┘
+            │              │              │
+    ┌───────┴───────┬──────┴──────┬───────┴────────┐
+    │               │             │                │
+┌───▼────┐     ┌────▼───┐    ┌────▼───┐      ┌────▼───┐
+│Agent 1 │     │Agent 2 │    │Agent 3 │      │Agent N │
+│(Planner)│     │(Executor)   │(Critic)│      │(Custom)│
+└────────┘     └────────┘    └────────┘      └────────┘
+</code></pre></div>
+
+<h3 id="pattern-3-rag-retrieval-augmented-generation-pipeline">Pattern 3: RAG (Retrieval-Augmented Generation) Pipeline</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────┐
+│   Query     │
+└──────┬──────┘
+       │
+       ▼
+┌──────────────────┐
+│ Embedding Model  │
+│   (via Redis)    │
+└──────┬───────────┘
+       │
+       ▼
+┌────────────────────────────┐
+│ Vector Search (RediSearch) │
+│   - Find similar docs      │
+│   - Retrieve context       │
+└──────┬─────────────────────┘
+       │
+       ▼
+┌──────────────────┐
+│  Build Prompt    │
+│  Query + Context │
+└──────┬───────────┘
+       │
+       ▼
+┌──────────────────┐
+│   LLM Service    │
+│  (e.g., GPT-4)   │
+└──────┬───────────┘
+       │
+       ▼
+┌──────────────────┐
+│   Response       │
+│   (cached)       │
+└──────────────────┘
+</code></pre></div>
+
+<h3 id="pattern-4-real-time-model-inference-pipeline">Pattern 4: Real-Time Model Inference Pipeline</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│  Data Source    │
+│ (Streams/Pub/Sub)│
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────────┐
+│  Feature Engineering│
+│   (Redis + Script)  │
+└────────┬────────────┘
+         │
+         ▼
+┌─────────────────────┐
+│   Model Inference   │
+│    (RedisAI)        │
+└────────┬────────────┘
+         │
+         ▼
+┌─────────────────────┐
+│  Post-Processing    │
+│  &amp; Result Storage   │
+└────────┬────────────┘
+         │
+         ▼
+┌─────────────────────┐
+│  Consumer Services  │
+│ (Dashboards/APIs)   │
+└─────────────────────┘
+</code></pre></div>
+
+<h2 id="implementation-examples">Implementation Examples</h2>
+<h3 id="example-1-llm-response-caching-with-semantic-search">Example 1: LLM Response Caching with Semantic Search</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="k">class</span> <span class="nc">LLMCache</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_client</span><span class="p">:</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="n">redis_client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ttl</span> <span class="o">=</span> <span class="mi">3600</span>  <span class="c1"># 1 hour</span>
+
+    <span class="k">def</span> <span class="nf">_generate_cache_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate a unique cache key based on prompt and parameters&quot;&quot;&quot;</span>
+        <span class="n">cache_input</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;llm:cache:</span><span class="si">{</span><span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">cache_input</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve cached response&quot;&quot;&quot;</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_cache_key</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="n">cached</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cached</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cached</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Store response in cache&quot;&quot;&quot;</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_cache_key</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">setex</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ttl</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get cache statistics&quot;&quot;&quot;</span>
+        <span class="n">total_keys</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">keys</span><span class="p">(</span><span class="s2">&quot;llm:cache:*&quot;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;total_cached_responses&quot;</span><span class="p">:</span> <span class="n">total_keys</span><span class="p">,</span>
+            <span class="s2">&quot;ttl&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ttl</span>
+        <span class="p">}</span>
+
+
+<span class="c1"># Usage</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">decode_responses</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">LLMCache</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="c1"># Check cache before calling LLM</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;Explain quantum computing&quot;</span>
+<span class="n">model</span> <span class="o">=</span> <span class="s2">&quot;gpt-4&quot;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span> <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+
+<span class="n">cached_response</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">cached_response</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cache hit! Response: </span><span class="si">{</span><span class="n">cached_response</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Call actual LLM (pseudo-code)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">call_llm</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+    <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cache miss. Stored new response: </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="example-2-agent-state-management">Example 2: Agent State Management</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="k">class</span> <span class="nc">AgentStateManager</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_client</span><span class="p">:</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="n">redis_client</span>
+
+    <span class="k">def</span> <span class="nf">save_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">agent_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">session_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save agent state to Redis&quot;&quot;&quot;</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;agent:</span><span class="si">{</span><span class="n">agent_id</span><span class="si">}</span><span class="s2">:session:</span><span class="si">{</span><span class="n">session_id</span><span class="si">}</span><span class="s2">:state&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">hset</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">mapping</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;context&quot;</span><span class="p">,</span> <span class="p">{})),</span>
+            <span class="s2">&quot;memory&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory&quot;</span><span class="p">,</span> <span class="p">[])),</span>
+            <span class="s2">&quot;turn_count&quot;</span><span class="p">:</span> <span class="n">state</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;turn_count&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+            <span class="s2">&quot;last_action&quot;</span><span class="p">:</span> <span class="n">state</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;last_action&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">state</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">expire</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="mi">86400</span><span class="p">)</span>  <span class="c1"># 24 hours</span>
+
+    <span class="k">def</span> <span class="nf">load_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">agent_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">session_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load agent state from Redis&quot;&quot;&quot;</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;agent:</span><span class="si">{</span><span class="n">agent_id</span><span class="si">}</span><span class="s2">:session:</span><span class="si">{</span><span class="n">session_id</span><span class="si">}</span><span class="s2">:state&quot;</span>
+        <span class="n">state_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">hgetall</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">state_data</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{}</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">state_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;context&quot;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">)),</span>
+            <span class="s2">&quot;memory&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">state_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;memory&quot;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;[]&quot;</span><span class="p">)),</span>
+            <span class="s2">&quot;turn_count&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">state_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;turn_count&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
+            <span class="s2">&quot;last_action&quot;</span><span class="p">:</span> <span class="n">state_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;last_action&quot;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(),</span>
+            <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">state_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">add_to_memory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">agent_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">session_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">memory_item</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add item to agent&#39;s conversation memory&quot;&quot;&quot;</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;agent:</span><span class="si">{</span><span class="n">agent_id</span><span class="si">}</span><span class="s2">:session:</span><span class="si">{</span><span class="n">session_id</span><span class="si">}</span><span class="s2">:conversation&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">lpush</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">memory_item</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">ltrim</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span>  <span class="c1"># Keep last 100 items</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">expire</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="mi">86400</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_conversation_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">agent_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">session_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve conversation history&quot;&quot;&quot;</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;agent:</span><span class="si">{</span><span class="n">agent_id</span><span class="si">}</span><span class="s2">:session:</span><span class="si">{</span><span class="n">session_id</span><span class="si">}</span><span class="s2">:conversation&quot;</span>
+        <span class="n">history</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">lrange</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">limit</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">item</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">history</span><span class="p">]</span>
+
+
+<span class="c1"># Usage</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">)</span>
+<span class="n">agent_manager</span> <span class="o">=</span> <span class="n">AgentStateManager</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="c1"># Save agent state</span>
+<span class="n">agent_manager</span><span class="o">.</span><span class="n">save_state</span><span class="p">(</span>
+    <span class="n">agent_id</span><span class="o">=</span><span class="s2">&quot;assistant-001&quot;</span><span class="p">,</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="s2">&quot;user-session-123&quot;</span><span class="p">,</span>
+    <span class="n">state</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;technology&quot;</span><span class="p">,</span> <span class="s2">&quot;mood&quot;</span><span class="p">:</span> <span class="s2">&quot;helpful&quot;</span><span class="p">},</span>
+        <span class="s2">&quot;memory&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Previous discussion about AI&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;turn_count&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;last_action&quot;</span><span class="p">:</span> <span class="s2">&quot;provided_information&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-11-17T13:00:00Z&quot;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># Load agent state</span>
+<span class="n">state</span> <span class="o">=</span> <span class="n">agent_manager</span><span class="o">.</span><span class="n">load_state</span><span class="p">(</span><span class="s2">&quot;assistant-001&quot;</span><span class="p">,</span> <span class="s2">&quot;user-session-123&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loaded state: </span><span class="si">{</span><span class="n">state</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add to conversation memory</span>
+<span class="n">agent_manager</span><span class="o">.</span><span class="n">add_to_memory</span><span class="p">(</span><span class="s2">&quot;assistant-001&quot;</span><span class="p">,</span> <span class="s2">&quot;user-session-123&quot;</span><span class="p">,</span> <span class="s2">&quot;User: Tell me about Redis&quot;</span><span class="p">)</span>
+<span class="n">agent_manager</span><span class="o">.</span><span class="n">add_to_memory</span><span class="p">(</span><span class="s2">&quot;assistant-001&quot;</span><span class="p">,</span> <span class="s2">&quot;user-session-123&quot;</span><span class="p">,</span> <span class="s2">&quot;Agent: Redis is an in-memory database...&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get conversation history</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">agent_manager</span><span class="o">.</span><span class="n">get_conversation_history</span><span class="p">(</span><span class="s2">&quot;assistant-001&quot;</span><span class="p">,</span> <span class="s2">&quot;user-session-123&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Conversation history: </span><span class="si">{</span><span class="n">history</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="example-3-vector-similarity-search-for-rag">Example 3: Vector Similarity Search for RAG</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">redis.commands.search.field</span> <span class="kn">import</span> <span class="n">VectorField</span><span class="p">,</span> <span class="n">TextField</span><span class="p">,</span> <span class="n">NumericField</span>
+<span class="kn">from</span> <span class="nn">redis.commands.search.indexDefinition</span> <span class="kn">import</span> <span class="n">IndexDefinition</span><span class="p">,</span> <span class="n">IndexType</span>
+<span class="kn">from</span> <span class="nn">redis.commands.search.query</span> <span class="kn">import</span> <span class="n">Query</span>
+
+<span class="k">class</span> <span class="nc">VectorRAG</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_client</span><span class="p">:</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="n">redis_client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">index_name</span> <span class="o">=</span> <span class="s2">&quot;doc_embeddings_idx&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_create_index</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_create_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a vector search index&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">ft</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index_name</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Index </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">index_name</span><span class="si">}</span><span class="s2"> already exists&quot;</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">schema</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">TextField</span><span class="p">(</span><span class="s2">&quot;$.content&quot;</span><span class="p">,</span> <span class="n">as_name</span><span class="o">=</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
+                <span class="n">TextField</span><span class="p">(</span><span class="s2">&quot;$.metadata&quot;</span><span class="p">,</span> <span class="n">as_name</span><span class="o">=</span><span class="s2">&quot;metadata&quot;</span><span class="p">),</span>
+                <span class="n">VectorField</span><span class="p">(</span>
+                    <span class="s2">&quot;$.embedding&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;FLAT&quot;</span><span class="p">,</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;FLOAT32&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;DIM&quot;</span><span class="p">:</span> <span class="mi">1536</span><span class="p">,</span>  <span class="c1"># OpenAI ada-002 dimension</span>
+                        <span class="s2">&quot;DISTANCE_METRIC&quot;</span><span class="p">:</span> <span class="s2">&quot;COSINE&quot;</span>
+                    <span class="p">},</span>
+                    <span class="n">as_name</span><span class="o">=</span><span class="s2">&quot;embedding&quot;</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="n">definition</span> <span class="o">=</span> <span class="n">IndexDefinition</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;doc:&quot;</span><span class="p">],</span> <span class="n">index_type</span><span class="o">=</span><span class="n">IndexType</span><span class="o">.</span><span class="n">JSON</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">ft</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index_name</span><span class="p">)</span><span class="o">.</span><span class="n">create_index</span><span class="p">(</span>
+                <span class="n">fields</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span>
+                <span class="n">definition</span><span class="o">=</span><span class="n">definition</span>
+            <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created index </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">index_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_document</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">doc_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">embedding</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">metadata</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a document with its embedding&quot;&quot;&quot;</span>
+        <span class="n">doc_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;doc:</span><span class="si">{</span><span class="n">doc_id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">doc_data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">content</span><span class="p">,</span>
+            <span class="s2">&quot;embedding&quot;</span><span class="p">:</span> <span class="n">embedding</span><span class="p">,</span>
+            <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="n">metadata</span> <span class="ow">or</span> <span class="p">{}</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">doc_key</span><span class="p">,</span> <span class="s2">&quot;$&quot;</span><span class="p">,</span> <span class="n">doc_data</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">search_similar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_embedding</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">top_k</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Search for similar documents using vector similarity&quot;&quot;&quot;</span>
+        <span class="n">query_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">query_embedding</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">tobytes</span><span class="p">()</span>
+
+        <span class="n">q</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">Query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;*=&gt;[KNN </span><span class="si">{</span><span class="n">top_k</span><span class="si">}</span><span class="s2"> @embedding $vec AS score]&quot;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="s2">&quot;score&quot;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">return_fields</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">,</span> <span class="s2">&quot;metadata&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">dialect</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">ft</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index_name</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+            <span class="n">q</span><span class="p">,</span>
+            <span class="n">query_params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;vec&quot;</span><span class="p">:</span> <span class="n">query_vector</span><span class="p">}</span>
+        <span class="p">)</span>
+
+        <span class="n">documents</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">results</span><span class="o">.</span><span class="n">docs</span><span class="p">:</span>
+            <span class="n">documents</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">doc</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
+                <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="n">doc</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span>
+                <span class="s2">&quot;score&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">score</span><span class="p">)</span>
+            <span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">documents</span>
+
+    <span class="k">def</span> <span class="nf">rag_query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">query_embedding</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> 
+                  <span class="n">llm_function</span><span class="p">,</span> <span class="n">top_k</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform RAG: retrieve context and generate response&quot;&quot;&quot;</span>
+        <span class="c1"># 1. Retrieve relevant documents</span>
+        <span class="n">relevant_docs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_similar</span><span class="p">(</span><span class="n">query_embedding</span><span class="p">,</span> <span class="n">top_k</span><span class="p">)</span>
+
+        <span class="c1"># 2. Build context from retrieved documents</span>
+        <span class="n">context</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">doc</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">relevant_docs</span><span class="p">])</span>
+
+        <span class="c1"># 3. Build prompt with context</span>
+        <span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Context information:</span>
+<span class="si">{</span><span class="n">context</span><span class="si">}</span>
+
+<span class="s2">Question: </span><span class="si">{</span><span class="n">query</span><span class="si">}</span>
+
+<span class="s2">Answer based on the context provided:&quot;&quot;&quot;</span>
+
+        <span class="c1"># 4. Generate response using LLM</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">llm_function</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+
+
+<span class="c1"># Usage example (pseudo-code)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">decode_responses</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">rag</span> <span class="o">=</span> <span class="n">VectorRAG</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="c1"># Add documents (you would get embeddings from an embedding model)</span>
+<span class="k">def</span> <span class="nf">get_embedding</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># Call embedding model (e.g., OpenAI ada-002)</span>
+    <span class="c1"># This is pseudo-code</span>
+    <span class="k">return</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1536</span>  <span class="c1"># Replace with actual embedding</span>
+
+<span class="n">doc1_embedding</span> <span class="o">=</span> <span class="n">get_embedding</span><span class="p">(</span><span class="s2">&quot;Redis is an in-memory database&quot;</span><span class="p">)</span>
+<span class="n">rag</span><span class="o">.</span><span class="n">add_document</span><span class="p">(</span>
+    <span class="n">doc_id</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Redis is an in-memory database that supports various data structures&quot;</span><span class="p">,</span>
+    <span class="n">embedding</span><span class="o">=</span><span class="n">doc1_embedding</span><span class="p">,</span>
+    <span class="n">metadata</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;redis_docs&quot;</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;database&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># Query with RAG</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;What is Redis?&quot;</span>
+<span class="n">query_embedding</span> <span class="o">=</span> <span class="n">get_embedding</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">mock_llm</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;Redis is an in-memory database...&quot;</span> <span class="c1"># Replace with actual LLM call</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">rag</span><span class="o">.</span><span class="n">rag_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">query_embedding</span><span class="p">,</span> <span class="n">mock_llm</span><span class="p">,</span> <span class="n">top_k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RAG Response: </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="example-4-multi-agent-coordination-with-pubsub">Example 4: Multi-Agent Coordination with Pub/Sub</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Dict</span>
+
+<span class="k">class</span> <span class="nc">AgentCoordinator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_client</span><span class="p">:</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">,</span> <span class="n">agent_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="n">redis_client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent_id</span> <span class="o">=</span> <span class="n">agent_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pubsub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">pubsub</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_handlers</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">subscribe_to_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">handler</span><span class="p">:</span> <span class="n">Callable</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Subscribe to a communication channel&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_handlers</span><span class="p">[</span><span class="n">channel</span><span class="p">]</span> <span class="o">=</span> <span class="n">handler</span>
+
+    <span class="k">def</span> <span class="nf">send_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Send a message to a channel&quot;&quot;&quot;</span>
+        <span class="n">message_data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;from&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent_id</span><span class="p">,</span>
+            <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-11-17T13:00:00Z&quot;</span><span class="p">,</span>  <span class="c1"># Use actual timestamp</span>
+            <span class="s2">&quot;payload&quot;</span><span class="p">:</span> <span class="n">message</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">message_data</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">listen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Listen for messages (blocking)&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">listen</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">message</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span>
+                <span class="n">channel</span> <span class="o">=</span> <span class="n">message</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+
+                <span class="c1"># Don&#39;t process own messages</span>
+                <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;from&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent_id</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="c1"># Call the appropriate handler</span>
+                <span class="k">if</span> <span class="n">channel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_handlers</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">message_handlers</span><span class="p">[</span><span class="n">channel</span><span class="p">](</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">start_listening</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start listening in a separate thread&quot;&quot;&quot;</span>
+        <span class="n">listener_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">listen</span><span class="p">,</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">listener_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">broadcast_task</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">task_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Broadcast a task to all agents&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;agent:tasks&quot;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s2">&quot;task_type&quot;</span><span class="p">:</span> <span class="n">task_type</span><span class="p">,</span>
+            <span class="s2">&quot;task_data&quot;</span><span class="p">:</span> <span class="n">task_data</span>
+        <span class="p">})</span>
+
+    <span class="k">def</span> <span class="nf">request_assistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">problem</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Request help from other agents&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;agent:assistance&quot;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s2">&quot;problem&quot;</span><span class="p">:</span> <span class="n">problem</span><span class="p">,</span>
+            <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="n">context</span><span class="p">,</span>
+            <span class="s2">&quot;requesting_agent&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent_id</span>
+        <span class="p">})</span>
+
+    <span class="k">def</span> <span class="nf">share_knowledge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">knowledge_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">knowledge</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Share knowledge with other agents&quot;&quot;&quot;</span>
+        <span class="n">knowledge_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;knowledge:</span><span class="si">{</span><span class="n">knowledge_type</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">agent_id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">setex</span><span class="p">(</span><span class="n">knowledge_key</span><span class="p">,</span> <span class="mi">3600</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">knowledge</span><span class="p">))</span>
+
+        <span class="c1"># Notify other agents</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;agent:knowledge&quot;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s2">&quot;knowledge_type&quot;</span><span class="p">:</span> <span class="n">knowledge_type</span><span class="p">,</span>
+            <span class="s2">&quot;knowledge_key&quot;</span><span class="p">:</span> <span class="n">knowledge_key</span>
+        <span class="p">})</span>
+
+
+<span class="c1"># Usage example</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">)</span>
+
+<span class="c1"># Agent 1: Planning Agent</span>
+<span class="n">planner_agent</span> <span class="o">=</span> <span class="n">AgentCoordinator</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;planner-001&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">handle_task_completion</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Planner received task completion: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">planner_agent</span><span class="o">.</span><span class="n">subscribe_to_channel</span><span class="p">(</span><span class="s2">&quot;agent:task_completion&quot;</span><span class="p">,</span> <span class="n">handle_task_completion</span><span class="p">)</span>
+<span class="n">planner_agent</span><span class="o">.</span><span class="n">start_listening</span><span class="p">()</span>
+
+<span class="c1"># Broadcast a new task</span>
+<span class="n">planner_agent</span><span class="o">.</span><span class="n">broadcast_task</span><span class="p">(</span><span class="s2">&quot;analyze_data&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="s2">&quot;user_behavior_2025&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span>
+<span class="p">})</span>
+
+<span class="c1"># Agent 2: Executor Agent</span>
+<span class="n">executor_agent</span> <span class="o">=</span> <span class="n">AgentCoordinator</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;executor-001&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">handle_new_task</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Executor received task: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="c1"># Process the task...</span>
+    <span class="c1"># When done, notify completion</span>
+    <span class="n">executor_agent</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;agent:task_completion&quot;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s2">&quot;task_type&quot;</span><span class="p">:</span> <span class="n">message</span><span class="p">[</span><span class="s1">&#39;payload&#39;</span><span class="p">][</span><span class="s1">&#39;task_type&#39;</span><span class="p">],</span>
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;completed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;analyzed&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="p">})</span>
+
+<span class="n">executor_agent</span><span class="o">.</span><span class="n">subscribe_to_channel</span><span class="p">(</span><span class="s2">&quot;agent:tasks&quot;</span><span class="p">,</span> <span class="n">handle_new_task</span><span class="p">)</span>
+<span class="n">executor_agent</span><span class="o">.</span><span class="n">start_listening</span><span class="p">()</span>
+
+<span class="c1"># Agent 3: Knowledge Agent</span>
+<span class="n">knowledge_agent</span> <span class="o">=</span> <span class="n">AgentCoordinator</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;knowledge-001&quot;</span><span class="p">)</span>
+<span class="n">knowledge_agent</span><span class="o">.</span><span class="n">share_knowledge</span><span class="p">(</span><span class="s2">&quot;best_practices&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;data_analysis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tips&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;validate data&quot;</span><span class="p">,</span> <span class="s2">&quot;check for outliers&quot;</span><span class="p">]</span>
+<span class="p">})</span>
+</code></pre></div>
+
+<h3 id="example-5-model-inference-with-redisai">Example 5: Model Inference with RedisAI</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">redisai</span> <span class="kn">import</span> <span class="n">Client</span> <span class="k">as</span> <span class="n">RedisAI</span>
+
+<span class="k">class</span> <span class="nc">ModelInferenceService</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">redis_port</span><span class="o">=</span><span class="mi">6379</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">RedisAI</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">redis_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">redis_port</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;TORCH&#39;</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;CPU&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load a model into RedisAI&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">model_blob</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">modelstore</span><span class="p">(</span>
+            <span class="n">model_key</span><span class="p">,</span>
+            <span class="n">backend</span><span class="p">,</span>
+            <span class="n">device</span><span class="p">,</span>
+            <span class="n">model_blob</span><span class="p">,</span>
+            <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model </span><span class="si">{</span><span class="n">model_key</span><span class="si">}</span><span class="s2"> loaded successfully&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">set_tensor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tensor_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Store a tensor in Redis&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">tensorset</span><span class="p">(</span>
+            <span class="n">tensor_key</span><span class="p">,</span>
+            <span class="n">data</span><span class="p">,</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run_inference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">input_tensor_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">output_tensor_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Run model inference&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">modelexecute</span><span class="p">(</span>
+            <span class="n">model_key</span><span class="p">,</span>
+            <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">input_tensor_key</span><span class="p">],</span>
+            <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">output_tensor_key</span><span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_tensor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tensor_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve a tensor from Redis&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">tensorget</span><span class="p">(</span><span class="n">tensor_key</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run_inference_pipeline</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">input_data</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Complete inference pipeline&quot;&quot;&quot;</span>
+        <span class="c1"># Generate unique keys for this inference</span>
+        <span class="kn">import</span> <span class="nn">uuid</span>
+        <span class="n">request_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+        <span class="n">input_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;input:</span><span class="si">{</span><span class="n">request_id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">output_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;output:</span><span class="si">{</span><span class="n">request_id</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># 1. Store input tensor</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_tensor</span><span class="p">(</span><span class="n">input_key</span><span class="p">,</span> <span class="n">input_data</span><span class="p">)</span>
+
+            <span class="c1"># 2. Run inference</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">run_inference</span><span class="p">(</span><span class="n">model_key</span><span class="p">,</span> <span class="n">input_key</span><span class="p">,</span> <span class="n">output_key</span><span class="p">)</span>
+
+            <span class="c1"># 3. Retrieve output</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tensor</span><span class="p">(</span><span class="n">output_key</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="c1"># Cleanup temporary tensors</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">input_key</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">output_key</span><span class="p">)</span>
+
+
+<span class="c1"># Usage example</span>
+<span class="n">service</span> <span class="o">=</span> <span class="n">ModelInferenceService</span><span class="p">()</span>
+
+<span class="c1"># Load a model (e.g., PyTorch model)</span>
+<span class="c1"># service.load_model(&#39;sentiment_model&#39;, &#39;path/to/model.pt&#39;, backend=&#39;TORCH&#39;)</span>
+
+<span class="c1"># Run inference</span>
+<span class="n">input_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">run_inference_pipeline</span><span class="p">(</span><span class="s1">&#39;sentiment_model&#39;</span><span class="p">,</span> <span class="n">input_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model output: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-caching-strategy">1. Caching Strategy</h3>
+<h4 id="when-to-cache">When to Cache</h4>
+<ul>
+<li><strong>High-frequency queries</strong>: Cache responses for common questions</li>
+<li><strong>Expensive operations</strong>: Cache results of costly LLM calls</li>
+<li><strong>Static content</strong>: Cache rarely-changing information</li>
+<li><strong>Rate-limited APIs</strong>: Reduce API calls to stay within limits</li>
+</ul>
+<h4 id="cache-invalidation">Cache Invalidation</h4>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Time-based expiration</span>
+<span class="n">redis</span><span class="o">.</span><span class="n">setex</span><span class="p">(</span><span class="s2">&quot;cache:key&quot;</span><span class="p">,</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+
+<span class="c1"># Manual invalidation on data updates</span>
+<span class="k">def</span> <span class="nf">update_data</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">new_value</span><span class="p">):</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;data:</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">new_value</span><span class="p">)</span>
+    <span class="n">redis</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cache:</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Invalidate cache</span>
+
+<span class="c1"># Version-based caching</span>
+<span class="k">def</span> <span class="nf">get_cached_with_version</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
+    <span class="n">versioned_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;cache:</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">:v</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">versioned_key</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="2-connection-management">2. Connection Management</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">from</span> <span class="nn">redis.connection</span> <span class="kn">import</span> <span class="n">ConnectionPool</span>
+
+<span class="c1"># Use connection pooling for better performance</span>
+<span class="n">pool</span> <span class="o">=</span> <span class="n">ConnectionPool</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span>
+    <span class="n">max_connections</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">decode_responses</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="n">redis_client</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">connection_pool</span><span class="o">=</span><span class="n">pool</span><span class="p">)</span>
+
+<span class="c1"># Use Redis cluster for high availability</span>
+<span class="kn">from</span> <span class="nn">redis.cluster</span> <span class="kn">import</span> <span class="n">RedisCluster</span>
+
+<span class="n">cluster_nodes</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;node1&quot;</span><span class="p">,</span> <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">6379</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;node2&quot;</span><span class="p">,</span> <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">6379</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;node3&quot;</span><span class="p">,</span> <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">6379</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="n">redis_cluster</span> <span class="o">=</span> <span class="n">RedisCluster</span><span class="p">(</span><span class="n">startup_nodes</span><span class="o">=</span><span class="n">cluster_nodes</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="3-error-handling-and-resilience">3. Error Handling and Resilience</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">from</span> <span class="nn">redis.exceptions</span> <span class="kn">import</span> <span class="n">RedisError</span><span class="p">,</span> <span class="ne">ConnectionError</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">resilient_redis_operation</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">backoff</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Wrapper for resilient Redis operations&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_retries</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">func</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">attempt</span> <span class="o">==</span> <span class="n">max_retries</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">backoff</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">attempt</span><span class="p">))</span>
+        <span class="k">except</span> <span class="n">RedisError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># Log error and handle appropriately</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Redis error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span>
+
+<span class="c1"># Usage</span>
+<span class="k">def</span> <span class="nf">get_data</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">redis_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;some:key&quot;</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">resilient_redis_operation</span><span class="p">(</span><span class="n">get_data</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="4-security-considerations">4. Security Considerations</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 1. Use ACL (Access Control Lists)</span>
+<span class="c1"># Configure in redis.conf or via command:</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">ACL SETUSER llm_service on &gt;secure_password ~llm:* +get +set +del</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># 2. Enable TLS/SSL</span>
+<span class="kn">import</span> <span class="nn">redis</span>
+
+<span class="n">redis_client</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="s1">&#39;redis.example.com&#39;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="mi">6380</span><span class="p">,</span>
+    <span class="n">ssl</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ssl_cert_reqs</span><span class="o">=</span><span class="s1">&#39;required&#39;</span><span class="p">,</span>
+    <span class="n">ssl_ca_certs</span><span class="o">=</span><span class="s1">&#39;/path/to/ca.crt&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># 3. Sensitive data handling</span>
+<span class="kn">from</span> <span class="nn">cryptography.fernet</span> <span class="kn">import</span> <span class="n">Fernet</span>
+
+<span class="k">class</span> <span class="nc">SecureCache</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_client</span><span class="p">,</span> <span class="n">encryption_key</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="n">redis_client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cipher</span> <span class="o">=</span> <span class="n">Fernet</span><span class="p">(</span><span class="n">encryption_key</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">set_secure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="n">encrypted</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">encrypted</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_secure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">encrypted</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">encrypted</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+
+<h3 id="5-performance-optimization">5. Performance Optimization</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 1. Use pipelining for batch operations</span>
+<span class="n">pipe</span> <span class="o">=</span> <span class="n">redis_client</span><span class="o">.</span><span class="n">pipeline</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">pipe</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;key:</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;value:</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">pipe</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+
+<span class="c1"># 2. Use Lua scripts for atomic operations</span>
+<span class="n">lua_script</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">local key = KEYS[1]</span>
+<span class="s2">local value = redis.call(&#39;GET&#39;, key)</span>
+<span class="s2">if value then</span>
+<span class="s2">    redis.call(&#39;SET&#39;, key, tonumber(value) + 1)</span>
+<span class="s2">    return tonumber(value) + 1</span>
+<span class="s2">else</span>
+<span class="s2">    redis.call(&#39;SET&#39;, key, 1)</span>
+<span class="s2">    return 1</span>
+<span class="s2">end</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">increment_script</span> <span class="o">=</span> <span class="n">redis_client</span><span class="o">.</span><span class="n">register_script</span><span class="p">(</span><span class="n">lua_script</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">increment_script</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;counter:requests&#39;</span><span class="p">])</span>
+
+<span class="c1"># 3. Memory optimization</span>
+<span class="n">redis_client</span><span class="o">.</span><span class="n">config_set</span><span class="p">(</span><span class="s1">&#39;maxmemory-policy&#39;</span><span class="p">,</span> <span class="s1">&#39;allkeys-lru&#39;</span><span class="p">)</span>
+<span class="n">redis_client</span><span class="o">.</span><span class="n">config_set</span><span class="p">(</span><span class="s1">&#39;maxmemory&#39;</span><span class="p">,</span> <span class="s1">&#39;2gb&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="use-cases">Use Cases</h2>
+<h3 id="use-case-1-conversational-ai-with-memory">Use Case 1: Conversational AI with Memory</h3>
+<p><strong>Scenario</strong>: Building a chatbot that remembers conversation context across sessions.</p>
+<p><strong>Components</strong>:
+- Redis for conversation history storage
+- LLM for response generation
+- Vector search for semantic memory retrieval</p>
+<p><strong>Benefits</strong>:
+- Fast context retrieval (&lt; 1ms)
+- Persistent memory across sessions
+- Scalable to millions of users</p>
+<h3 id="use-case-2-real-time-recommendation-system">Use Case 2: Real-Time Recommendation System</h3>
+<p><strong>Scenario</strong>: E-commerce platform providing personalized product recommendations.</p>
+<p><strong>Components</strong>:
+- RedisAI for model inference
+- Sorted sets for ranking
+- Vectors for similarity matching</p>
+<p><strong>Benefits</strong>:
+- Sub-millisecond inference latency
+- Real-time personalization
+- A/B testing capabilities</p>
+<h3 id="use-case-3-multi-agent-customer-service">Use Case 3: Multi-Agent Customer Service</h3>
+<p><strong>Scenario</strong>: Distributed agent system handling customer inquiries.</p>
+<p><strong>Components</strong>:
+- Redis Pub/Sub for agent communication
+- Shared knowledge base in Redis
+- Task queue for work distribution</p>
+<p><strong>Benefits</strong>:
+- Scalable agent architecture
+- Load balancing across agents
+- Consistent knowledge sharing</p>
+<h3 id="use-case-4-intelligent-content-moderation">Use Case 4: Intelligent Content Moderation</h3>
+<p><strong>Scenario</strong>: Automated content moderation using ML models.</p>
+<p><strong>Components</strong>:
+- RedisAI for model serving
+- Streams for processing pipeline
+- Caching for repeated content</p>
+<p><strong>Benefits</strong>:
+- High-throughput processing
+- Low latency decisions
+- Cost-effective at scale</p>
+<h3 id="use-case-5-semantic-search-engine">Use Case 5: Semantic Search Engine</h3>
+<p><strong>Scenario</strong>: Document search using natural language queries.</p>
+<p><strong>Components</strong>:
+- Vector embeddings in Redis
+- RediSearch for indexing
+- RAG for enhanced results</p>
+<p><strong>Benefits</strong>:
+- Semantic understanding
+- Fast vector search
+- Hybrid search capabilities</p>
+<h2 id="monitoring-and-metrics">Monitoring and Metrics</h2>
+<h3 id="key-metrics-to-track">Key Metrics to Track</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">RedisAIMetrics</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_client</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="n">redis_client</span>
+
+    <span class="k">def</span> <span class="nf">track_inference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">latency_ms</span><span class="p">,</span> <span class="n">success</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Track model inference metrics&quot;&quot;&quot;</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+
+        <span class="c1"># Increment counters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">incr</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;metrics:</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">:total_requests&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">incr</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;metrics:</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">:successful_requests&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">incr</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;metrics:</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">:failed_requests&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Track latency (using sorted set for percentile calculations)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">zadd</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;metrics:</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">:latencies&quot;</span><span class="p">,</span>
+            <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">timestamp</span><span class="p">):</span> <span class="n">latency_ms</span><span class="p">}</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Trim old data (keep last 1000 entries)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">zremrangebyrank</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;metrics:</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">:latencies&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1001</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve metrics for a model&quot;&quot;&quot;</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;metrics:</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">:total_requests&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">successful</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;metrics:</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">:successful_requests&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;metrics:</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">:failed_requests&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Calculate percentiles</span>
+        <span class="n">latencies</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">zrange</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;metrics:</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">:latencies&quot;</span><span class="p">,</span>
+            <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">withscores</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">latencies</span><span class="p">:</span>
+            <span class="n">latency_values</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">score</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">latencies</span><span class="p">])</span>
+            <span class="n">p50</span> <span class="o">=</span> <span class="n">latency_values</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">latency_values</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
+            <span class="n">p95</span> <span class="o">=</span> <span class="n">latency_values</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">latency_values</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.95</span><span class="p">)]</span>
+            <span class="n">p99</span> <span class="o">=</span> <span class="n">latency_values</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">latency_values</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.99</span><span class="p">)]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">p50</span> <span class="o">=</span> <span class="n">p95</span> <span class="o">=</span> <span class="n">p99</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;total_requests&quot;</span><span class="p">:</span> <span class="n">total</span><span class="p">,</span>
+            <span class="s2">&quot;successful_requests&quot;</span><span class="p">:</span> <span class="n">successful</span><span class="p">,</span>
+            <span class="s2">&quot;failed_requests&quot;</span><span class="p">:</span> <span class="n">failed</span><span class="p">,</span>
+            <span class="s2">&quot;success_rate&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">successful</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="k">if</span> <span class="n">total</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;latency_p50&quot;</span><span class="p">:</span> <span class="n">p50</span><span class="p">,</span>
+            <span class="s2">&quot;latency_p95&quot;</span><span class="p">:</span> <span class="n">p95</span><span class="p">,</span>
+            <span class="s2">&quot;latency_p99&quot;</span><span class="p">:</span> <span class="n">p99</span>
+        <span class="p">}</span>
+</code></pre></div>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Redis AI integration provides a powerful foundation for building scalable, low-latency AI/LLM/agent systems. The key integration points include:</p>
+<ol>
+<li><strong>Model Serving</strong>: Direct model inference with RedisAI</li>
+<li><strong>Caching</strong>: Response and computation caching for cost reduction</li>
+<li><strong>State Management</strong>: Agent and session state persistence</li>
+<li><strong>Vector Operations</strong>: Semantic search and RAG implementations</li>
+<li><strong>Communication</strong>: Multi-agent coordination via Pub/Sub</li>
+<li><strong>Real-time Processing</strong>: Stream-based AI pipelines</li>
+<li><strong>Monitoring</strong>: Comprehensive metrics and observability</li>
+</ol>
+<p>By leveraging Redis's performance characteristics and RedisAI's capabilities, you can build production-ready AI systems that scale to millions of users while maintaining sub-millisecond response times.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://redis.io/docs/stack/ai/">RedisAI Documentation</a></li>
+<li><a href="https://redis.io/docs/stack/search/reference/vectors/">RediSearch Vector Similarity</a></li>
+<li><a href="https://redis.io/docs/manual/pubsub/">Redis Pub/Sub</a></li>
+<li><a href="https://redis.io/docs/data-types/streams/">Redis Streams</a></li>
+<li><a href="https://redis.io/docs/stack/json/">RedisJSON</a></li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li>[[SKYNET.md]] - Technology &amp; Systems Research</li>
+<li>[[ai scenarios simulator]] - AI Scenarios and Simulations</li>
+<li>[[textgenerator]] - AI Text Generation Tools</li>
+</ul>
+<hr />
+<p><em>Last Updated: 2025-11-17</em>
+<em>Category: AI Infrastructure</em>
+<em>Status: Research Documentation</em></p>
+<!-- 8A4F2E91 -->
+</body>
+</html>

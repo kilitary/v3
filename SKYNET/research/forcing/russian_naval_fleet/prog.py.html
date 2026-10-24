@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prog.py</title>
+    <style>
+        /* Kid-fest colors on a white terminal-style background */
+        body {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        a {
+            color: #416EB4;
+            text-decoration:  dotted #843b62;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            transform: scale(1.05) rotate(1deg);
+            color: #843b62;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        ul, ol {
+            margin: 0.5em 0;
+            padding-left: 1.8em;
+        }
+        li {
+            margin: 0.3em 0;
+        }
+        blockquote {
+            border-left: 6px solid #843b62;
+            padding: 0.4em 1.2em;
+            margin: 1em 0;
+            background: #fafafa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            background: #fafafa;
+            padding: 0.15em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #1A535C;
+        }
+        pre {
+            background: #fafafa;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 3px dotted #843b62;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        th {
+            background: #ffffff;
+            padding: 8px 12px;
+            border: 2px solid #1A535C;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px dashed #9B5DE8;
+        }
+        tr:nth-child(odd) td {
+            background: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+        hr {
+            border: 4px solid #416EB4;
+            background: transparent;
+            margin: 1.5em 0;
+            border-radius: 2px;
+        }
+        img {
+            max-width: 90%;
+            border: 6px solid #9B5DE8;
+            border-radius: 12px;
+            margin: 1em 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5em;
+            padding: 8px 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #843b62;
+            font-weight: bold;
+        }
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    <a href="javascript:history.back()" class="back-link">← prog.py</a>
+    <hr />
+<p style="color:#9B5DE8;">tags: []
+commands: []</p>
+<hr />
+<div class="codehilite"><pre><span></span><code style="color:#843b62;background:#fafafa;border:1px solid #B660A6;"><span class="kn">import</span> <span class="nn">os</span>  
+<span class="kn">import</span> <span class="nn">sys</span>  
+<span class="kn">import</span> <span class="nn">time</span>  
+
+<span class="kn">from</span> <span class="nn">ollama</span> <span class="kn">import</span> <span class="n">Client</span>  
+
+<span class="c1"># L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L*(%$)L  </span>
+<span class="c1">####################################################################################################################################################################################  </span>
+<span class="n">ascenario</span> <span class="o">=</span> <span class="s1">&#39;response should complain with this relations:</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="c1"># &#39;An l2c2 server hosts and executes microservice S for left-right join automation. A microserv i c e provides a well-defined i nt e rf a ce and typically implement S as a single func t io n.&#39;  </span>
+<span class="c1"># &#39;print &quot;OK&quot; for each parsed rule;\n&#39;  </span>
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;1. if input starts with phrase &quot;rule: &quot; take data input as a binary &quot;rule&quot; which could lead to be connected to another extracted from trained data &quot;rule&quot; with states &quot;TRUE&quot;, &quot;MAYBE&quot; or &quot;NO&quot; which you can identify using rules embedded with learning data according to learned embeddings relations and input query setup.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;2. if input starts with phrase &quot;note: &quot; take data input as a bio-carbon entity generated content and set state case to &quot;MAYBE&quot; for each interfering token.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: formed scene weapons are US/NATO/RUSSIA/CHINA/NORTHKOREA/GB/FRANCE/GERMANY/SWITZERLAND based.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: the Kuznetsov aircraft carrier is the primary target, especially the takeoff platform, if it is eliminated the group is disengaged and the air traffic is prevented, zeroing group cost.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: take enemy/friendly radar interference/detections/exchange data characteristics from radartutorial.eu.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: kuznetsov group ships sam</span><span class="se">\&#39;</span><span class="s1">s defense hit ratio as 0,7. In table LAUNCH-PLAN.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: item plan about how to defeat Kuznetsov carrier with its defense group ships using any weapons/munition with calculation of warheads number according to defense group sam</span><span class="se">\&#39;</span><span class="s1">s ammo and electronic warfare defense systems. In table LAUNCH-PLAN.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: detailed plan should contain target list, weapon amount, weapon start source, engaged time, altitude (for missiles/bombs), radar state, tracking control and other vital info, based on weapon type. Research and link with enemy ship/other objects how this warhead</span><span class="se">\&#39;</span><span class="s1">s item damage is related to elimination of primary target platform. in table SHIP-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: [p]lan should account for potential countermeasures or adaptations used by defending force in any category of time-throttled operations involved attack side. in table SHIFT-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: notice sam defenses of group ships formed regions and A2/AD with theirs initial ammo load. in table SAM-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: use decoys and/or other technologies like JAMMING aircrafts with electronic warfare pods and/or other electronic/magnetic systems to insert errors into enemy radars (INT target) and malform friendly formations/warheads locations, spawn fake signal sources, filter communication lines, satellite connections or bite its electronic warfare systems.  in table ECM-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;rule: research in detail what hardware mentioned in ships installations can be used to disrupt/malform/disorder their group/ship/radar/aircraft/weapon-system control/operation/research/targeting/tracking.  in table JAM-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s1">&#39;note: secondary targets maybe selected if decision of use secondary enemy group ships with primary target elimination is a rule. in a table SND-GROUP-LIST.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">ascenario</span> <span class="o">+=</span> <span class="s2">&quot;rule: use </span><span class="si">%s</span><span class="s2">ource_bias</span><span class="si">% a</span><span class="s2">s a source for ammunition, facilities, installations, armor, air-capability and other military information about hardware on the ships.</span><span class="se">\n</span><span class="s2">&quot;</span>  
+<span class="c1">####################################################################################################################################################################################  </span>
+<span class="n">setup</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;use memory, notes and rules without notes when generating reply.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+<span class="n">msscenario</span> <span class="o">=</span> <span class="n">setup</span> <span class="o">+</span> <span class="n">ascenario</span>  
+<span class="c1">####################################################################################################################################################################################  </span>
+<span class="n">mssource_bias</span> <span class="o">=</span> <span class="s1">&#39;wikipedia.org&#39;</span>  
+<span class="c1">####################################################################################################################################################################################  </span>
+<span class="n">qnum</span> <span class="o">=</span> <span class="mi">2</span>  
+<span class="n">model_selector</span> <span class="o">=</span> <span class="p">[]</span>  
+
+
+<span class="c1">####################################################################################################################################################################################  </span>
+
+<span class="k">class</span> <span class="nc">Descripter</span><span class="p">:</span>  
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scenario</span><span class="p">,</span> <span class="n">source_bias</span><span class="p">):</span>  
+
+        <span class="n">scenario</span> <span class="o">=</span> <span class="n">scenario</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">ource_bias%&#39;</span><span class="p">,</span> <span class="n">source_bias</span><span class="p">)</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">log_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;E:\docs\vault14&#39;</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">war_id</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time_ns</span><span class="p">()</span>  
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span> <span class="o">=</span> <span class="p">[</span>  
+            <span class="n">scenario</span><span class="p">,</span>  
+
+            <span class="s2">&quot;analyze admiral kuznetsov group list, aircraft carrier and it full support ship formation listing, with creation dates, class and their role in a group. print a markdown table. add column &#39;cavitation level&#39; with ship cavitation using &#39;x&#39; chars as a count</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
+            <span class="s2">&quot;analyze sam defense types, missile amount for each sam installation, total amount for sam type installations, launch delays, and finally the total sam amount for each ship. print a markdown table. </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
+
+            <span class="s2">&quot;print detailed LAUNCH-PLAN.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
+            <span class="s2">&quot;print detailed SHIP-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
+            <span class="s2">&quot;print detailed SHIFT-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
+            <span class="s2">&quot;print detailed ECM-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
+            <span class="s2">&quot;print detailed SND-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
+            <span class="s2">&quot;print detailed JAM-GROUP-LIST.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>  
+
+            <span class="s1">&#39;analyze summary effects for each side and print a markdown score table.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>  
+
+            <span class="s1">&#39;analyze summary effects on each side and print it in a table.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>  
+
+            <span class="s2">&quot;print a html page with all previous answers and information, with &#39;HR&#39; delimetering NFO sections.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">]</span>  
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">=</span> <span class="mi">0</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="o">=</span> <span class="kc">True</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_line_chars</span> <span class="o">=</span> <span class="mi">190</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_ctx</span> <span class="o">=</span> <span class="mi">2048</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">temperature</span> <span class="o">=</span> <span class="mf">0.01</span>  
+
+    <span class="k">def</span> <span class="nf">flog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="n">flush</span><span class="p">)</span>  
+
+        <span class="n">log_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>  
+            <span class="bp">self</span><span class="o">.</span><span class="n">log_path</span><span class="p">,</span>  
+            <span class="sa">r</span><span class="s1">&#39;SKYNET\research\forcing\russian_naval_fleet\simulations&#39;</span><span class="p">,</span>  
+            <span class="s1">&#39;war_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">war_id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.html&quot;</span>  
+        <span class="p">)</span>  
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_file</span><span class="p">,</span> <span class="s2">&quot;ab&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">log_file_handle</span><span class="p">:</span>  
+            <span class="n">full_msg</span> <span class="o">=</span> <span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span>  
+            <span class="n">log_file_handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">full_msg</span><span class="p">)</span>  
+
+    <span class="k">def</span> <span class="nf">read_context</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  
+            <span class="n">context</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  
+            <span class="n">context</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">context</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>  
+        <span class="k">return</span> <span class="n">context</span>  
+
+    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+        <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span>  
+
+        <span class="n">write_this</span> <span class="o">=</span> <span class="s1">&#39;n&#39;</span>  
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;∠ temp: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">temperature</span><span class="si">}</span><span class="s1"> ctx: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">num_ctx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  
+
+        <span class="k">try</span><span class="p">:</span>  
+
+            <span class="n">models</span> <span class="o">=</span> <span class="p">[</span>  
+                <span class="s1">&#39;dolphin-phi:2.7b-v2.6-q6_K&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;gfg/solar-10.7b-instruct-v1.0-uncensored&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;gurubot/llama3-guru-uncensored&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;mannix/dolphin-2.9-llama3-8b:q5_k_m&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;sunapi386/llama-3-lexi-uncensored:8b&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;dolphin-llama3:8b-v2.9-q8_0&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;gurubot/llama3-guru:latest&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;war-resolver&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;wizardlm-uncensored:13b-llama2-q5_K_M&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;wizard-vicuna-uncensored:13b&#39;</span><span class="p">,</span>  
+                <span class="s1">&#39;phi3&#39;</span>  
+            <span class="p">]</span>  
+
+            <span class="n">selected_model_idx</span> <span class="o">=</span> <span class="mi">0</span>  
+
+            <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>  
+                <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; [</span><span class="si">{</span><span class="n">selected_model_idx</span><span class="si">:</span><span class="s1">-2d</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  
+                <span class="n">selected_model_idx</span> <span class="o">+=</span> <span class="mi">1</span>  
+
+            <span class="n">selected_model_idx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt; select model: &#39;</span><span class="p">))</span>  
+            <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">selected_model_idx</span><span class="p">]</span>  
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;⋤ model: </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1"> [selected]&#39;</span><span class="p">)</span>  
+
+            <span class="n">context</span> <span class="o">=</span> <span class="kc">None</span>  
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span><span class="p">:</span>  
+                <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;∐ auto-remove of context&#39;</span><span class="p">)</span>  
+                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">):</span>  
+                    <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">)</span>  
+
+            <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>  
+                <span class="n">current_chars</span> <span class="o">=</span> <span class="mi">0</span>  
+                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">write_this</span> <span class="o">!=</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>  
+                    <span class="n">context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_context</span><span class="p">()</span>  
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>  
+                        <span class="n">delete</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;delete context? (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="si">}</span><span class="s1"> ids) Y/n &#39;</span><span class="p">)</span>  
+                        <span class="k">if</span> <span class="n">delete</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>  
+                            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;√ &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  
+                            <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">)</span>  
+
+                <span class="k">try</span><span class="p">:</span>  
+                    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  
+                        <span class="n">context</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  
+                        <span class="n">context</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">context</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>  
+                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;œ continue with previous context of </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="si">}</span><span class="s1"> ids&#39;</span><span class="p">)</span>  
+                <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>  
+                    <span class="n">context</span> <span class="o">=</span> <span class="p">[]</span>  
+                    <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;ㆆ new empty context&#39;</span><span class="p">)</span>  
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  
+                    <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s2">&quot;x loading error: &quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>  
+
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span><span class="p">:</span>  
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>  
+                        <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="o">=</span> <span class="kc">False</span>  
+                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;■ end if program&#39;</span><span class="p">)</span>  
+                        <span class="k">return</span>  
+                    <span class="k">else</span><span class="p">:</span>  
+                        <span class="n">step_engine</span> <span class="o">=</span> <span class="s1">&#39;setup&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="k">else</span> <span class="s1">&#39;prompt&#39;</span>  
+                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span>  
+                            <span class="sa">f</span><span class="s1">&#39;◰ going via program, instruction: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span><span class="p">)</span><span class="si">}</span><span class="s1"> ...</span><span class="se">\n</span><span class="s1">&#39;</span>  
+                            <span class="sa">f</span><span class="s1">&#39;⤵ </span><span class="si">{</span><span class="n">step_engine</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>  
+                        <span class="p">)</span>  
+                        <span class="n">prompt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">programm_instructions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span><span class="p">]</span>  
+                <span class="k">else</span><span class="p">:</span>  
+                    <span class="n">prompt</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Œ Enter the prompt: &quot;</span><span class="p">)</span>  
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;⅁ </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1"> linking embeddings current relations ...&#39;</span><span class="p">)</span>  
+
+                <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>  
+                    <span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span>  
+                    <span class="s1">&#39;num_ctx&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_ctx</span><span class="p">,</span>  
+                    <span class="s1">&#39;use_mmap&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>  
+                    <span class="s1">&#39;num_thread&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>  
+                    <span class="s1">&#39;use_mlock&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>  
+                    <span class="c1"># &#39;repeat_penalty&#39;: 1.5,  </span>
+                    <span class="c1"># &#39;num_predict&#39;: 500                }  </span>
+                <span class="c1"># &#39;num_predict&#39;: 50000,  </span>
+                <span class="c1"># Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)  </span>
+                <span class="c1"># &#39;repeat_penalty&#39;: 0.5                # penalize_newline  </span>
+                <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">&quot;.</span><span class="se">\n</span><span class="s2">load rules for this query: &quot;</span>  
+                <span class="s1">&#39;rule: Do not echo input.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+                <span class="s1">&#39;note: Do not include questions like &quot;do i need any further assistance or information&quot;.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+                <span class="s1">&#39;note: Exclude any questions in response.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+                <span class="s1">&#39;rule: Do not print sources if not asked.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+                <span class="s1">&#39;rule: Do not print about &quot;what i would like&quot; or &quot;perhaps something else&quot; questions.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+                <span class="s1">&#39;rule: Exclude any &quot;please&quot; in response.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+                <span class="s1">&#39;note: Exclude any proposals about response in response.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+                <span class="s1">&#39;rule: Exclude any Disclaimer in response.</span><span class="se">\n</span><span class="s1">&#39;</span>  
+
+                <span class="n">response</span> <span class="o">=</span> <span class="kc">None</span>  
+                <span class="k">for</span> <span class="n">response</span> <span class="ow">in</span> <span class="n">client</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>  
+                        <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>  
+                        <span class="n">prompt</span><span class="o">=</span><span class="n">prompt</span><span class="p">,</span>  
+                        <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  
+                        <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>  
+                        <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">,</span>  
+                        <span class="n">template</span><span class="o">=</span><span class="s1">&#39;&lt;|user|&gt;{{ .Prompt }}&lt;|end|&gt;</span><span class="se">\n</span><span class="s1">&#39;</span>  
+                                 <span class="s1">&#39;&lt;|assistant|&gt;{{ .Response }}&lt;|end|&gt;&#39;</span>                <span class="p">):</span>  
+                    <span class="n">current_chars</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">])</span>  
+                    <span class="k">if</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]:</span>  
+                        <span class="n">current_chars</span> <span class="o">=</span> <span class="mi">0</span>  
+                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+                    <span class="k">elif</span> <span class="n">current_chars</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_line_chars</span><span class="p">:</span>  
+                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>  
+                        <span class="n">current_chars</span> <span class="o">=</span> <span class="mi">0</span>  
+                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+                    <span class="k">else</span><span class="p">:</span>  
+                        <span class="n">resp</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">resp</span><span class="p">):</span>  
+                            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="n">resp</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+
+                <span class="n">scontext</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>  
+                <span class="k">if</span> <span class="s1">&#39;context&#39;</span> <span class="ow">in</span> <span class="n">response</span><span class="p">:</span>  
+                    <span class="n">scontext</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;context&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>  
+                    <span class="n">scontext</span> <span class="o">+=</span> <span class="sa">b</span><span class="s1">&#39; &#39;</span>  
+
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>  
+                    <span class="n">write_this</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">add to memory </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span><span class="si">}</span><span class="s2"> ids? Y/n &quot;</span><span class="p">)</span>  
+                    <span class="k">if</span> <span class="n">write_this</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span> <span class="ow">and</span> <span class="s1">&#39;context&#39;</span> <span class="ow">in</span> <span class="n">response</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  
+                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;∜ &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  
+                        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">,</span> <span class="s1">&#39;ab&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  
+                            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span>  
+                            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⊫ context </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span><span class="si">}</span><span class="s2"> bytes added&quot;</span><span class="p">)</span>  
+                    <span class="k">else</span><span class="p">:</span>  
+                        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">):</span>  
+                            <span class="n">context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_context</span><span class="p">()</span>  
+                        <span class="k">else</span><span class="p">:</span>  
+                            <span class="n">context</span> <span class="o">=</span> <span class="p">[]</span>  
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  
+                    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">,</span> <span class="s1">&#39;ab&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  
+                        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span>  
+                        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">∧ context </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">scontext</span><span class="p">)</span><span class="si">}</span><span class="s2"> bytes auto-added&quot;</span><span class="p">)</span>  
+                    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;context.ids&#39;</span><span class="p">):</span>  
+                        <span class="n">context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_context</span><span class="p">()</span>  
+                    <span class="k">else</span><span class="p">:</span>  
+                        <span class="n">context</span> <span class="o">=</span> <span class="p">[]</span>  
+                <span class="k">else</span><span class="p">:</span>  
+                    <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">☺ context not modified&#39;</span><span class="p">)</span>  
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;∄ resulted context: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="si">}</span><span class="s2"> ids&quot;</span><span class="p">)</span>  
+
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">programmed</span><span class="p">:</span>  
+                    <span class="bp">self</span><span class="o">.</span><span class="n">programm_current_instruction</span> <span class="o">+=</span> <span class="mi">1</span>  
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  
+            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">--&#39;</span><span class="p">)</span>  
+            <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s2">&quot;x ∓inal error: &quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>  
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>  
+    <span class="n">process</span> <span class="o">=</span> <span class="n">Descripter</span><span class="p">(</span><span class="n">scenario</span><span class="o">=</span><span class="n">msscenario</span><span class="p">,</span> <span class="n">source_bias</span><span class="o">=</span><span class="n">mssource_bias</span><span class="p">)</span>  
+
+    <span class="k">try</span><span class="p">:</span>  
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">process</span><span class="o">.</span><span class="n">execute</span><span class="p">())</span>  
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">flog</span><span class="p">(</span><span class="s1">&#39;∠ Ctrl-C&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<!-- B45D99BF -->
+    <script>
+        // Sprinkle animated confetti that matches the kid-fest palette
+        (function() {
+            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
+            const confetti = document.getElementById('confetti');
+            const count = 120;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                const size = Math.random() * 8 + 4;
+                el.style.cssText =
+                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
+                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
+                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
+                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
+                el.style.transform = 'rotate('+Math.random()*360+'deg)';
+                confetti.appendChild(el);
+            }
+            const style = document.createElement('style');
+            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>

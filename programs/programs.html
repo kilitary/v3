@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>programs</title>
+    <style>
+        /* Kid-fest colors on a white terminal-style background */
+        body {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            line-height: 1.6;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+        }
+        a {
+            color: #7B61FF;
+            text-decoration:  dotted #416EB4;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            transform: scale(1.05) rotate(1deg);
+            color: #416EB4;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        ul, ol {
+            margin: 0.5em 0;
+            padding-left: 1.8em;
+        }
+        li {
+            margin: 0.3em 0;
+        }
+        blockquote {
+            border-left: 6px solid #6A0572;
+            padding: 0.4em 1.2em;
+            margin: 1em 0;
+            background: #fafafa;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        code {
+            background: #fafafa;
+            padding: 0.15em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #2D2942;
+        }
+        pre {
+            background: #fafafa;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 3px dotted #7B61FF;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        th {
+            background: #ffffff;
+            padding: 8px 12px;
+            border: 2px solid #1A535C;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px dashed #7B61FF;
+        }
+        tr:nth-child(odd) td {
+            background: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+        hr {
+            border: 4px solid #416EB4;
+            background: transparent;
+            margin: 1.5em 0;
+            border-radius: 2px;
+        }
+        img {
+            max-width: 90%;
+            border: 6px solid #843b62;
+            border-radius: 12px;
+            margin: 1em 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5em;
+            padding: 8px 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #1A535C;
+            font-weight: bold;
+        }
+        .confetti {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    <a href="javascript:history.back()" class="back-link">← programs</a>
+    <hr />
+<p style="color:#7B61FF;">tags: MOCs, programs, software, tools, development, utilities
+title: "Programs - Software Tools &amp; Development Utilities"
+created: 2024-06-08
+updated: 2024-12-08
+summary: "Software development tools, utilities, and executable programs supporting NNAMED research"
+sticker: emoji//1f4bb
+banner: assets/images/1f4bb.png</p>
+<hr />
+<h1 id="programs-software-tools-development-utilities" style="color:#1A535C;border-bottom:1px dashed #6A0572;padding-bottom:4px;">💻 Programs - Software Tools &amp; Development Utilities</h1>
+<p style="color:#7B61FF;"><strong>Repository for software development tools, utilities, and executable programs that support NNAMED research activities.</strong></p>
+<h2 id="overview" style="color:#2D2942;border-bottom:1px dashed #416EB4;padding-bottom:4px;">📋 Overview</h2>
+<p style="color:#7B61FF;">The programs directory serves as the central hub for software tools, utilities, and development resources that support various research activities throughout the NNAMED repository. This includes custom tools, development utilities, and supporting software for research automation.</p>
+<h2 id="repository-programs" style="color:#2D2942;border-bottom:1px dashed #416EB4;padding-bottom:4px;">📂 Repository Programs</h2>
+<h3 id="core-development-tools" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">🔧 Core Development Tools</h3>
+<h4 id="expandorc-core-system-expander" style="color:#843b62;border-bottom:1px dashed #7B61FF;padding-bottom:4px;"><strong>expandor.c</strong> - <a href="../expandor.c">Core System Expander</a></h4>
+<p style="color:#7B61FF;">Located in the repository root, this C program provides core system expansion functionality:
+- <strong>Node Management</strong>: Handles HUMAN_NODE and ELECTRONIC_NODE types
+- <strong>Channel Processing</strong>: Manages HUMAN_CHANNEL and ELECTRONIC_CHANNEL connections
+- <strong>System Integration</strong>: Core functionality for system expansion and networking
+- <strong>Random Processing</strong>: Advanced random number generation for system operations</p>
+<h3 id="python-development-tools" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">🐍 Python Development Tools</h3>
+<p style="color:#7B61FF;">Located in <code style="color:#416EB4;background:#fafafa;border:1px solid #2E7D32;">.obsidian/scripts/python/</code>:
+- <strong><a href="../.obsidian/scripts/python/main2.py">main2.py</a></strong> - Primary Python automation script for Obsidian integration</p>
+<h3 id="development-infrastructure" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">⚙️ Development Infrastructure</h3>
+<h4 id="obsidian-plugin-ecosystem" style="color:#843b62;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Obsidian Plugin Ecosystem</h4>
+<p style="color:#7B61FF;">Supporting JavaScript development tools:
+- <strong>Image Management</strong>: <a href="../.obsidian/plugins/obsidian-imgur-plugin/main.js">obsidian-imgur-plugin</a> for image handling
+- <strong>UI Enhancement</strong>: <a href="../.obsidian/plugins/obsidian-focus-mode/main.js">obsidian-focus-mode</a>, <a href="../.obsidian/plugins/editing-toolbar/main.js">editing-toolbar</a> for interface improvements<br />
+- <strong>Visualization</strong>: <a href="../.obsidian/plugins/semantic-canvas/main.js">semantic-canvas</a>, <a href="../.obsidian/plugins/multi-column-markdown/main.js">multi-column-markdown</a> for content presentation
+- <strong>Intelligence</strong>: <a href="../.obsidian/plugins/smart-connections/main.js">smart-connections</a> for content analysis and relationship mapping
+- <strong>Intelligence</strong>: smart-connections for content analysis and relationship mapping
+- <strong>Organization</strong>: obsidian-contacts, janitor for content organization
+- <strong>Navigation</strong>: new-tab-plus for enhanced workspace management</p>
+<h2 id="tool-categories" style="color:#2D2942;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🎯 Tool Categories</h2>
+<h3 id="research-automation-tools" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">🔬 Research Automation Tools</h3>
+<ul>
+<li style="color:#7B61FF;"><strong>Data Processing</strong>: Automated data analysis and processing utilities</li>
+<li style="color:#7B61FF;"><strong>Content Generation</strong>: Tools for automated content creation and analysis</li>
+<li style="color:#7B61FF;"><strong>Research Integration</strong>: Utilities that integrate with research workflows</li>
+</ul>
+<h3 id="analysis-utilities" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">📊 Analysis Utilities</h3>
+<ul>
+<li style="color:#7B61FF;"><strong>Statistical Analysis</strong>: Data analysis and statistical processing tools</li>
+<li style="color:#7B61FF;"><strong>Visualization</strong>: Tools for creating charts, graphs, and visual representations</li>
+<li style="color:#7B61FF;"><strong>Report Generation</strong>: Automated report creation and formatting utilities</li>
+</ul>
+<h3 id="development-support" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">🛠️ Development Support</h3>
+<ul>
+<li style="color:#7B61FF;"><strong>Build Tools</strong>: Compilation and build automation utilities</li>
+<li style="color:#7B61FF;"><strong>Testing Frameworks</strong>: Tools for testing and validation</li>
+<li style="color:#7B61FF;"><strong>Documentation</strong>: Automated documentation generation tools</li>
+</ul>
+<h2 id="integration-points" style="color:#2D2942;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🔗 Integration Points</h2>
+<h3 id="nnamed-research-integration" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">NNAMED Research Integration</h3>
+<ul>
+<li style="color:#7B61FF;"><strong><a href="../SKYNET/SKYNET.html">SKYNET/</a></strong> - Technology research tool support</li>
+<li style="color:#7B61FF;"><strong><a href="../Red&amp;Queen/Red&amp;Queen.html">Red&amp;Queen/</a></strong> - Interdisciplinary analysis tools</li>
+<li style="color:#7B61FF;"><strong><a href="../axis9/axis9.html">axis9/</a></strong> - Strategic analysis automation</li>
+<li style="color:#7B61FF;"><strong><a href="../textgenerator/textgenerator.html">textgenerator/</a></strong> - Text generation and processing tools</li>
+</ul>
+<h3 id="obsidian-vault-integration" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Obsidian Vault Integration</h3>
+<ul>
+<li style="color:#7B61FF;"><strong>Plugin Ecosystem</strong>: JavaScript plugins for enhanced functionality</li>
+<li style="color:#7B61FF;"><strong>Python Scripts</strong>: Automation and analysis scripts</li>
+<li style="color:#7B61FF;"><strong>Content Processing</strong>: Tools for markdown and content management</li>
+</ul>
+<h2 id="development-metrics" style="color:#2D2942;border-bottom:1px dashed #416EB4;padding-bottom:4px;">📈 Development Metrics</h2>
+<ul>
+<li style="color:#7B61FF;"><strong>Core Programs</strong>: C-based system tools</li>
+<li style="color:#7B61FF;"><strong>Python Scripts</strong>: Research automation utilities  </li>
+<li style="color:#7B61FF;"><strong>JavaScript Plugins</strong>: 10+ Obsidian integration tools</li>
+<li style="color:#7B61FF;"><strong>Integration Scope</strong>: Repository-wide tool support</li>
+</ul>
+<h2 id="getting-started" style="color:#2D2942;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🚀 Getting Started</h2>
+<h3 id="tool-development" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Tool Development</h3>
+<ol>
+<li style="color:#7B61FF;"><strong>C Development</strong>: Use expandor.c as foundation for system tools</li>
+<li style="color:#7B61FF;"><strong>Python Scripting</strong>: Extend .obsidian/scripts/python/ for automation</li>
+<li style="color:#7B61FF;"><strong>JavaScript Plugins</strong>: Develop Obsidian plugins for enhanced functionality</li>
+</ol>
+<h3 id="tool-usage" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Tool Usage</h3>
+<ol>
+<li style="color:#7B61FF;"><strong>System Tools</strong>: Compile and run expandor.c for system operations</li>
+<li style="color:#7B61FF;"><strong>Research Automation</strong>: Use Python scripts for data processing</li>
+<li style="color:#7B61FF;"><strong>Interface Enhancement</strong>: Leverage Obsidian plugins for improved workflow</li>
+</ol>
+<h2 id="development-standards" style="color:#2D2942;border-bottom:1px dashed #416EB4;padding-bottom:4px;">🛡️ Development Standards</h2>
+<h3 id="code-quality" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Code Quality</h3>
+<ul>
+<li style="color:#7B61FF;"><strong>Documentation</strong>: Comprehensive inline documentation</li>
+<li style="color:#7B61FF;"><strong>Testing</strong>: Thorough testing and validation procedures</li>
+<li style="color:#7B61FF;"><strong>Integration</strong>: Seamless integration with existing research workflows</li>
+</ul>
+<h3 id="tool-categories_1" style="color:#2D2942;border-bottom:1px dashed #7B61FF;padding-bottom:4px;">Tool Categories</h3>
+<ul>
+<li style="color:#7B61FF;"><strong>System Level</strong>: Low-level C programs for core functionality</li>
+<li style="color:#7B61FF;"><strong>Research Level</strong>: Python scripts for data analysis and automation</li>
+<li style="color:#7B61FF;"><strong>Interface Level</strong>: JavaScript tools for user experience enhancement</li>
+</ul>
+<hr />
+<div class="codehilite"><pre><span></span><code style="color:#416EB4;background:#fafafa;border:1px solid #2E7D32;">
+</code></pre></div>
+
+<!-- 0246A9CF -->
+    <script>
+        // Sprinkle animated confetti that matches the kid-fest palette
+        (function() {
+            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
+            const confetti = document.getElementById('confetti');
+            const count = 120;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('div');
+                const size = Math.random() * 8 + 4;
+                el.style.cssText =
+                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
+                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
+                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
+                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
+                el.style.transform = 'rotate('+Math.random()*360+'deg)';
+                confetti.appendChild(el);
+            }
+            const style = document.createElement('style');
+            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>

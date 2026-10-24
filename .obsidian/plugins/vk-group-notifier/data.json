@@ -1,0 +1,8 @@
+{
+  "accessToken": "vk1.a.zna9GsmJRce9L_jo7lMGJx-879XDfmNJmVHKUCzdqZGHpLgLxu1bLow46uOcLjh3FqLwcZEdgHvhPoQIzD8zFYxeQwXhySsn72GE5wPjiG8NgRVMYHPBaQYmoZ_ZFL1W3smwWaOktrhx_5kTHuFsC0A9mEzCmvKd9DtbsICuPdqlzN-JfgxRwhDzJsqFCbWHpKa2XQr2bWhYwXxAA81ePg&e",
+  "maxDays": 5,
+  "pinLast": false,
+  "style": "\n\t.vkGroupNotifier{}\n\t.pinnedVkPost{font-style:bold}",
+  "dateFormat": "DD-MMMM-YYYY",
+  "maxTextLength": 100
+}
