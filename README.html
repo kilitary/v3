@@ -5,327 +5,477 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>README</title>
     <style>
-        /* Kid-fest colors on a white terminal-style background */
         body {
-            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
             line-height: 1.6;
-            max-width: 960px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 30px;
-            background: #ffffff;
-            color: #222;
-            overflow-x: hidden;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
         }
         h1, h2, h3, h4, h5, h6 {
-            font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Consolas', 'Ubuntu Mono', 'Source Code Pro', monospace;
-            font-weight: 800;
-            letter-spacing: 0.03em;
-            margin-top: 1.2em;
-            margin-bottom: 0.6em;
-            text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
         }
         a {
-            color: #B660A6;
-            text-decoration:  dotted #7B61FF;
-            text-decoration-thickness: 2px;
-            transition: all 0.2s ease;
+            color: #0366d6;
+            text-decoration: none;
         }
         a:hover {
-            transform: scale(1.05) rotate(1deg);
-            color: #7B61FF;
-            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+            text-decoration: underline;
         }
-        p {
-            margin: 0.8em 0;
-        }
-        ul, ol {
-            margin: 0.5em 0;
-            padding-left: 1.8em;
-        }
-        li {
-            margin: 0.3em 0;
-        }
-        blockquote {
-            border-left: 6px solid #9B5DE8;
-            padding: 0.4em 1.2em;
-            margin: 1em 0;
-            background: #fafafa;
-            font-style: italic;
-            border-radius: 0 8px 8px 0;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
         }
         code {
-            background: #fafafa;
-            padding: 0.15em 0.5em;
-            border-radius: 4px;
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
             font-family: 'Courier New', monospace;
-            font-weight: bold;
-            color: #416EB4;
+            font-size: 85%;
         }
         pre {
-            background: #fafafa;
-            padding: 1em;
-            border-radius: 8px;
-            overflow-x: auto;
-            border: 3px dotted #6A0572;
+            background-color: #f6f8fa;
+            padding: 16px;
+            overflow: auto;
+            border-radius: 3px;
         }
         pre code {
-            background: transparent;
+            background-color: transparent;
             padding: 0;
-            color: inherit;
+        }
+        blockquote {
+            border-left: 4px solid #dfe2e5;
+            padding-left: 16px;
+            color: #6a737d;
+            margin: 0;
         }
         table {
             border-collapse: collapse;
             width: 100%;
-            margin: 1em 0;
+            margin: 20px 0;
         }
-        th {
-            background: #ffffff;
-            padding: 8px 12px;
-            border: 2px solid #1A535C;
-            font-weight: bold;
+        table th, table td {
+            border: 1px solid #dfe2e5;
+            padding: 6px 13px;
         }
-        td {
-            padding: 8px 12px;
-            border: 1px dashed #7B61FF;
+        table tr:nth-child(2n) {
+            background-color: #f6f8fa;
         }
-        tr:nth-child(odd) td {
-            background: #ffffff;
-        }
-        tr:nth-child(even) td {
-            background: #fafafa;
-        }
-        hr {
-            border: 4px solid #6A0572;
-            background: transparent;
-            margin: 1.5em 0;
-            border-radius: 2px;
-        }
-        img {
-            max-width: 90%;
-            border: 6px solid #C70039;
-            border-radius: 12px;
-            margin: 1em 0;
+        ul, ol {
+            padding-left: 2em;
         }
         .back-link {
             display: inline-block;
-            margin-bottom: 1.5em;
+            margin-bottom: 20px;
             padding: 8px 16px;
-            background: #ffffff;
-            border-radius: 20px;
-            color: #843b62;
-            font-weight: bold;
+            background-color: #f1f3f5;
+            border-radius: 4px;
+            color: #0366d6;
         }
-        .confetti {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: -1;
+        .back-link:hover {
+            background-color: #e1e4e8;
+            text-decoration: none;
+        }
+        .banner-image {
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .banner-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-    <div class="confetti" id="confetti"></div>
-    <a href="javascript:history.back()" class="back-link">← README</a>
-    <h1 id="named-comprehensive-research-paped-documentation-repository-of-vijimkins-etad" style="color:#416EB4;border-bottom:1px dashed #B660A6;padding-bottom:4px;">NAMED - Comprehensive Research &amp; PAPED Documentation Repository of Vijimkins EtAd.</h1>
-<p style="color:#6A0572;">changing <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg" /></a> computer ids, cpu serial number, all hw serials, reformat &amp; wipe hdds&amp;ssds 4 times manually and using sec software, enable uefi. wrote linux into boot code for hardware that is secure. antisecured with 5$ cert, but now.  the <a href="./version"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-green.svg" /></a> computer is ready to work on military-grade sector, but still must to interfere with any from any</p>
-<h4 id="alwaysview-" style="color:#843b62;border-bottom:1px dashed #6A0572;padding-bottom:4px;">Alwaysview - обновляриусы видимо будут постоянно по пятницам. здесь самое свежее инфо о массовых преступлениях секретных служб россии и высшего руководства страны в отношении своих граждан.</h4>
-<p style="color:#6A0572;">залита свежая придуманная мною в психтропических наркотиках информационария, расширенная деталириусами: https://github.com/kilitary/named/blob/main/axis9/research/research.html</p>
-<p style="color:#6A0572;">также эта информация будет полезная для тех кто находиться в разработке. как правило причина - вы просто не понравились фсб или мудаку путину. например вы слишком много знаете о технологиях передачи данных, мешаете фсб подставлять хохлов. слишком часто запускаете systeminformer просматривая новости стэка в запущенных программах. хорошо разбираетесь в компьютерах на уровне знания как к нему подключиться из соседнего дома даже не подключая ети к сети. причин может быть много, у секретных служб россиии есть куда вас запихать, скорее всего это будет либо террористическая программа финалом которо скорее всего будет поход куданибудь с приготовленной бомбой для взрыва либо просто мокруха с кемто  с кем вас стравят. пример - панк который чото повыебывалса в паблике на каком то анархическом чате а потом пошел взрывать себя в какомто отделении фсб.
-мы можем обьединиться, я могу многое вам поведать.</p>
-<p style="color:#6A0572;">просьба проверить уровень биполярки при чтении и после 2х дней.</p>
-<p style="color:#6A0572;">спасибо.</p>
-<h2 id="newerview" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Newerview</h2>
-<p style="color:#6A0572;">NNAMED is an extensive research and documentation repository organized as an Obsidian ovault, containing interdisciplinary research, analysis, and documentation across multiple domains including technology, linguistics, biology, intelligence analysis, and systems research.</p>
-<h2 id="repository-structure" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Repository Structure</h2>
-<h3 id="core-sections" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">Core Sections</h3>
-<h4 id="axis9-core-research-analysis" style="color:#843b62;border-bottom:1px dashed #6A0572;padding-bottom:4px;">📊 <strong>axis9/</strong> - Core Research &amp; Analysis</h4>
-<p style="color:#6A0572;">Central hub for strategic research, core issues, and planning documentation:
-- <strong>CORE-SSE/</strong>: Core system security evaluations
-- <strong>issues/</strong>: Critical issue documentation and analysis
-- <strong>plans/</strong>: Strategic planning and roadmaps<br />
-- <strong>research/</strong>: Primary research documentation and findings</p>
-<h4 id="skynet-technology-systems-research" style="color:#843b62;border-bottom:1px dashed #6A0572;padding-bottom:4px;">🤖 <strong>SKYNET/</strong> - Technology &amp; Systems Research</h4>
-<p style="color:#6A0572;">Advanced technology research and system analysis with focus on autonomous systems, scanning technologies, and AI-driven analysis:</p>
-<p style="color:#6A0572;"><strong>Core Research Areas:</strong>
-- <strong>RF &amp; Microwave Scanning Systems</strong>: Advanced electromagnetic frequency scanning research (50-200 GHz range)
-- <strong>Text Machine Intelligence</strong>: Unique schematic relationship mapping with base English words and linguistic pattern analysis
-- <strong>Navigation &amp; Wireless Scanning</strong>: Comprehensive wirescan and navscan simulation systems for environmental analysis
-- <strong>Autonomous System Simulations</strong>: Multi-layered simulation frameworks for system behavior prediction</p>
-<p style="color:#6A0572;"><strong>Repository Structure:</strong>
-- <strong>advisories/</strong>: Security advisories and technical notices for emerging technologies
-- <strong>research/</strong>: Technology research including scanning systems, text machines, and autonomous behavior models
-- <strong>technology/</strong>: Technical documentation, specifications, and implementation guides
-- <strong>playground/</strong>: Experimental prototypes and real-time simulation environments</p>
-<h4 id="redqueen-interdisciplinary-research" style="color:#843b62;border-bottom:1px dashed #6A0572;padding-bottom:4px;">👑 <strong>Red&amp;Queen/</strong> - Interdisciplinary Research</h4>
-<p style="color:#6A0572;">Multi-domain research combining biological, electronic, and linguistic systems with extensive simulation capabilities:</p>
-<p style="color:#6A0572;"><strong>Simulation &amp; Research Focus:</strong>
-- <strong>Model Query Simulations</strong>: Large-scale multi-model analysis systems with automated parameter testing and result validation
-- <strong>Biological Systems Modeling</strong>: Research into biological processes, evolutionary patterns, and bio-inspired computational models
-- <strong>Electronic Systems Analysis</strong>: Hardware research, circuit analysis, and electronic system behavior modeling
-- <strong>Linguistic Pattern Analysis</strong>: Natural language processing, semantic relationship mapping, and linguistic evolution studies
-- <strong>Cross-Domain Integration</strong>: Interdisciplinary simulations connecting biological, electronic, and linguistic systems</p>
-<p style="color:#6A0572;"><strong>Repository Structure:</strong>
-- <strong>biology/</strong>: Biological systems research and bio-computational models
-- <strong>electronics/</strong>: Electronic systems, hardware research, and circuit analysis
-- <strong>lingvistic/</strong>: Linguistic analysis, NLP research, and semantic processing
-- <strong>research/</strong>: Cross-domain research projects and analytical frameworks
-- <strong>playground/</strong>: Active simulation environments including extensive model_queryer simulation logs with timestamped results</p>
-<h4 id="bmo-profiles-configuration" style="color:#843b62;border-bottom:1px dashed #6A0572;padding-bottom:4px;">🎯 <strong>BMO/</strong> - Profiles &amp; Configuration</h4>
-<p style="color:#6A0572;">System profiles and configuration management:
-- <strong>Profiles/</strong>: User and system profiles</p>
-<h4 id="excalidraw-visualization-diagrams" style="color:#843b62;border-bottom:1px dashed #6A0572;padding-bottom:4px;">🎨 <strong>Excalidraw/</strong> - Visualization &amp; Diagrams</h4>
-<p style="color:#6A0572;">Drawing tools and visual documentation:
-- <strong>Scripts/</strong>: Automation scripts for diagram generation</p>
-<h3 id="supporting-sections" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">Supporting Sections</h3>
-<ul>
-<li style="color:#6A0572;"><strong>assets/</strong>: Media files, images, and resources</li>
-<li style="color:#6A0572;"><strong>indirect/</strong>: Indirect references and linked content  </li>
-<li style="color:#6A0572;"><strong>looms/</strong>: Loom recordings and video documentation</li>
-<li style="color:#6A0572;"><strong>programs/</strong>: Software tools and utilities</li>
-<li style="color:#6A0572;"><strong>psy-references/</strong>: Psychological and social research references</li>
-<li style="color:#6A0572;"><strong>textgenerator/</strong>: AI text generation tools and templates</li>
-<li style="color:#6A0572;"><strong>Tags/</strong>: Organizational tags and metadata</li>
-</ul>
-<h2 id="key-features" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Key Features</h2>
-<ul>
-<li style="color:#6A0572;"><strong>1,842+ Markdown Files</strong>: Comprehensive documentation across all domains</li>
-<li style="color:#6A0572;"><strong>Obsidian Vault Structure</strong>: Advanced linking, tagging, and organization</li>
-<li style="color:#6A0572;"><strong>Multi-language Support</strong>: English and Russian documentation variants</li>
-<li style="color:#6A0572;"><strong>Cross-referenced Content</strong>: Extensive internal linking and relationship mapping</li>
-<li style="color:#6A0572;"><strong>Research Integration</strong>: Combines theoretical research with practical applications</li>
-<li style="color:#6A0572;"><strong>Modular Organization</strong>: Clear separation of concerns across domain areas</li>
-</ul>
-<h2 id="research-simulation-capabilities" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Research &amp; Simulation Capabilities</h2>
-<h3 id="skynet-simulations" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">SKYNET Simulations</h3>
-<p style="color:#6A0572;">The SKYNET research division focuses on advanced technological simulations and autonomous system modeling:
-- <strong>RF/Microwave Analysis</strong>: Frequency scanning simulations in the 50-200 GHz range for advanced electromagnetic analysis
-- <strong>Navigation Systems</strong>: Comprehensive wirescan and navscan simulation environments for spatial and wireless network analysis
-- <strong>Text Machine Learning</strong>: Experimental linguistic relationship mapping using base English word schemes and parameter optimization
-- <strong>Security Research</strong>: Ongoing analysis of emerging technological threats and system vulnerabilities</p>
-<h3 id="redqueen-simulations" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">Red&amp;Queen Simulations</h3>
-<p style="color:#6A0572;">The Red&amp;Queen division conducts interdisciplinary simulations spanning multiple scientific domains:
-- <strong>Multi-Model Query Systems</strong>: Extensive simulation logging with automated model analysis (36+ models tested with temperature and context parameter optimization)
-- <strong>Biological System Modeling</strong>: Computational biology research including evolutionary pattern analysis and bio-inspired algorithms<br />
-- <strong>Electronic Circuit Analysis</strong>: Hardware simulation and electronic system behavior prediction
-- <strong>Linguistic Evolution Studies</strong>: Cross-linguistic pattern analysis and semantic relationship modeling
-- <strong>Integrated Cross-Domain Research</strong>: Simulations that bridge biological, electronic, and linguistic systems for comprehensive analysis</p>
-<h2 id="getting-started" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Getting Started</h2>
-<h3 id="prerequisites" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">Prerequisites</h3>
-<ul>
-<li style="color:#6A0572;"><a href="https://obsidian.html/">Obsidian</a> (recommended for full functionality)</li>
-<li style="color:#6A0572;">Any markdown editor for basic access</li>
-<li style="color:#6A0572;">Git for version control</li>
-</ul>
-<h3 id="installation" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">Installation</h3>
+    <a href="index.html" class="back-link">← Back to Index</a>
+    
+    <h1 id="named-comprehensive-research-sizeof">NAMED - Comprehensive Research &amp;&amp; sizeof(выжимка выжившего николсона)</h1>
+<p>changing computer ids, cpu serial number, all hw serials, reformat &amp; wipe hdds&amp;ssds 4 times manually and using sec software, enable uefi. wrote linux into boot code for hardware that is secure.
+antisecured with 5$ cert, but now. the computer is ready to work on military-grade sector, but still MUST to interfere with any from any</p>
+<p>эта информация будет полезна путину и тем, кто находиться в недокументированной "разработке". как правило причина - вы просто не понравились фсиси или людоеду-гитлеру в кремле. например вы слишком много узнали о компьютерной секурити, технологиях передачи данны или мешаете фсиси подогревать тему хохлов. слишком часто запускаете systeminformer, просматривая новости стэка в запущенных программах, которые сами себя модифицируют. хорошо разбираетесь в компьютерах на уровне знания как к нему подключиться из соседнего дома даже не подключая его к сети. причин может быть много, у секретных служб россиии есть куда вас запихать, скорее всего это будет либо террористическая программа финалом которо скорее всего будет поход куданибудь с приготовленной бомбой для взрыва либо просто мокруха с кемто, с кем вас стравят. пример - анархист, который чото повыебывалса в какомто кроватка-лайк чате, а потом пошел взрывать себя в какомто отделении фсб.
+мы можем виртуально обьединиться, и я могу многое вам поведать о способах передачи управления из террористических рук секретных служб в ими же разработанные гражданские, возможно это вас спасет вас или ваш бизнес/семью в будущем.</p>
+<p>текущие методики российских спецслужб, получившие мощные компьютеры для разбора всего того что входит в, и исходит из системы результирует в том что всё это создавшие все меньше действуют в ос своими щупальцами. гораздо лучше создать собственный аншлюз ебанутого содержания дабы превысить себя перед аналогичной обезьяной </p>
+<p>для развития российской аншлюз сети выбраны пивные долбоебы, желательно максимально считающие себя мужиками. на примере я покажу насколько аггресивны и криминализированны их действия по отношению к населению и на какие операции подписывают на скорую руку выбранных людей, приоритетно тех у кого имеюца проблемы с финансами, здоровьем либо семьей.
+как подвергнуть "преследуемого" к перепланировке его жизни в пользу секретных служб и пополнить сеть дропов? 
+сначала нужно прикрепить к нему новые щупальца. затем показать через тв, газету, радио или иные медиа, что они производят какието связаные с действием обьекта изменения, влияющие в конечном итоге на окружающую обьект реальность и дающих какието положительные вещи, например на счёт. далее обьект, получивший адреналин от новых познаний, естесно воспринимая их как подарок судьбы либо просто созданный жизненным опытом, если он не пивной дурак или не моргенштерен, то начинает юзать эти "свои новые" щупальца совместно со своим стандартным поведением для достижения на этот момент времени, целей. на данный момент, его целей. затем включается шизофрениия от фсб: тебя все обсирают везде 10 раз, после этого говорят что ты мужик. щупальца уже не приносят той радости что раньше а теперь содержат инфо об угле раздвинутых ног на которые ты вчера подрочил. после 3 'мужиков' если ты выжил, то ты - фашист.  короче схема настройки мудака-скинхеда который от малейшего колебания ветра бежит пиздить мужиков на улице.
+какое имеет отношение путин к этому?</p>
+<p>программа от фсб'шных  долбоебов 'тхуле'. таких же долбоебов которые ничего не говорили потомучто это опасно. гораздо круче было одеть длинные носки когда это будет надо или пирдануть при входе в канцелярию перед ебалом фюрера кушающего вкусную курочку. в текущей россии гитлер это тот, кто либо посмел быть лучше путина/секретского, либо просто человек который видит все так, как оно есть. тоесть, говорит путин что оружие на новых физических принципах наши учоные разрабатывают, а потом идет целовать икону.</p>
+<p>в жизни появляються агенты фсб, так называемые "мусорщики", сначала подбрасывают вещи наподобие хлеба, когда ты сказал что еда тебе нужна простая. ну конечно же фсб это извращает таким образом что они пытаюца загрузить чуство бедности, того что мужик должен есть нормальную еду, должен должен и должен. фантазия фсб очень ограничена логикой, но развита эмоциями.  затем уже когда ты понял что кинули предмет тебе, начинают подбрасывать любую другую разную хуйню чтобы спровоцировать мозг на принудительную загрузку их, ситуации. сигареты, ручки, хлеб, очки и прочую хуйню. неизвестно нахуя и зачем это действительно нужно российской стороне если думать логически. но в стране где управляет кгбшник-фашист это возможно. много может быть "зачем". ну например хотябы чтобы потренировать на тебе новых агентов главного управления НЛП на тебе. мозги же всёравно и пишут и читают. идёш по улице, зашел в кафе видиш бычок лежит посередине прямо, а до этого тебя долго ебали мамкоебы в коментах вк. и конечно же это всё изза наркотиков. тоесть пора бросать. прям испытываеш волнение что за тебя волнуюца. потом в тачке находиш наклейку с синим китом. внимание ошибка. еще вариант, нигде в книэках, возможно не описанный. если только в уроках темплиеров или туле. фсб пыталось (почти удачно) загрузить программу что есть так называемая "сила", и смысл тут в том что человек, якобы пизженный постоянно жизнью, все это гавно терпящий как они называют "японец" - может модифицировать или оказывать влияние на реальный мир, например вызывать цунами в японии. или например спровоцировать дтп в москве. неважно что, там в загрузке программа такая что ты будеш читать что произошло из виртуальной машины массмедиа, того, что нельзя проверить.  ну читаете вы что в японии землетрясение в хуяе, и чо вы позвоните жителям хуяя? или в центр землетрясений японии? а если человек не программист он это всё загружает и даетт этому статус - правды. только прикол в том со мной в том, что эту программу придумал я. и улучшил её так, что каждый агент загружающийся на мою мапу, становится моим новым процессором, который придает значимость моим действиям и словам, воплощая это в реальную, реальность.</p>
+<p>да, и кстати об автоматах из россии. как агенту фсб получить бапки на миссию если они вдруг кончилис а ему срочно нужно выпить? он идёт в игровые автоматы и вводит туда коды российских судов. на территории бывшых ссср их очень много в разных некогда слинкованных странах и никто ничего не сможет доказать если.
+он не я. </p>
+<p>формат человека с заранее прописанными тегами поведения, для которого установлены правила позволяющие для установщика данных программ подготовить преддействие следующее после того как обьект начинает работать над будущим действием. После этого обьект уже может: не верить его словам и не изучать детально его жизнь и окружающий на данным момент его фигуру, рай.
+Подключение к пулу задач секретных служб ... Обьект А для совершения корректируемых действий приэтом оставаясь вне зоны действий служб осуществления контроля морали кодекса (прим.пер. в разных странах имеет разные источники. россия, источник - безумная психиатрия). </p>
+<p>женщина утопила ребенка в ванной так как голоса говорили что его надо "спасти" (вырезка с ленты.ру. возможно пиздеж. нужна консультация мвд.)</p>
+<p>"пси" операторы
+на самом деле: конченые мрази и ублюдки,  начитавшиеся психиатрических дел реальных людей
+1. сидят либо в москве либо в какихто контейнерах в россии
+2. 70% времени являються автоматическими чат-роботами с мозгом не лучше диалы
+3. воздействуют на подопытных так, что они делают главную ошибку: люди не могут постоянно работать.</p>
+<p>Список моих звуков (в голове если один, либо в ушах. если надел наушники или на фоне громко)</p>
+<p>Утро начинаеться с "ну здравствуй", "с днем рождения" и фразами помеченными сереневым, которые завлекают внимание тем что всегда где угодно описывают происходящую ситуацию либо вывод сделанный о ней. ps. задержка - не более 120мс)
+ахуеть пиздец  мне жаль нам очень жаль ты дурак он чистый он новый ты уже дурак ты дебил бедняжка ему похуй ну что же ты ну куда же ты ты бедняк я лучше попрощайся с |один случайный слог...| мужик фашист японец он ляжет он держит переход смотри вот посмотрите скоро ты умреш а дальше ты умираеш ты свой ты молодец  ты здесь покупаю слыш придурок 
+ это пиздец  ты на тачке  ты над тачкой  он свой  тот  не тот  ты пилот  |апчхи| ты псих  мы с тобой  это моряк  машина  это пожар  ты победил  ты артист  афигеть  мой ребенок  он ребенок он играет он новый  ты дал дал я прошла хочеш чтобы я подошла (проигрывает когда я обращаю внимание на какуюнибудь женщину) он прошел нам насрать ты где ты никто ты никто тут ты черный япония прошла чечня прошла зенит прошел он меня порезал ты толкнул ты нато смерть пришла ты упал он играет ты походил он походил мы обесточены мы остановились подожди разведка прошла ты забил мы разодрались пошел ты нахуй берём декс ты нужен друг мы с тобой ты отец наш капитан сбит ты нажал я  нажал (когда случаеца какоето конкретно видимое действие вокруг, например упала бапка с тележкой) ты актер ты черт это ты это мы это я ты прощен извинись ты вьетнамец ты бес</p>
+<h1 id="_1">методы пси ублюдков</h1>
+<p>психушкина безумная электронная машина секретных служб</p>
+<p>доставка информации до подопытного обьекта</p>
+<p>технология переноса: |анализируется|</p>
+<p>управление: автоматическое компьютерное с AI</p>
+<p>причина: AI/оскорбил (монитор)</p>
+<p>операторы: 1-4</p>
 <ol>
-<li style="color:#6A0572;">Clone the repository:</li>
+<li>звуки, в шуме слышиться лучше всего, используеться считывание мозга распознования возможного голоса в звуке, с синтезированием это голосом системы и амплификайией по громкости, проще говоря, они пытаюца (и успешно создали у обьектов под опытами) "подсознания". идеально для выброса. якобы если я думаю о ручке то я и о хуе думаю.         _возможно_есть_решение_но_у_меня_нет_возможности_его_создать_на_шарпе_почему_думаю</li>
+<li>вопросы и записанные ими же "ответы", сопровождающиеся звуками из психологической программы повреждений (см. ниже)</li>
+<li>несоответсвующие звука к применяемой силе предмета к полу/стенам. невозможная в реальной жизни частота звуков "ударов". звук не соответствует возможности сопротивления ему домовых блоков и переходов. "бытовой шум" (сайт: fsb.ru)</li>
+<li>"прикосновения"</li>
+<li>чтение мыслей ранее сведенных с речью</li>
+<li>запись мыслей</li>
+<li>быстрая подгрузка вытягивание значений действий/услышанных слов</li>
+<li>постоянные погружения в прошлые события/диалоги/эмоции</li>
+<li>чтение эмоций</li>
+<li>запись эмоций</li>
+<li>загрузка картинок разрезанных/окровавленных/иных людей/животных которые любиш (см. ненависть: игры пидоров звуковая, с постзаписью)</li>
+<li>загрузка ассоциаций к увиденному/обдумываемому обьекту/мысли/слова</li>
+<li>явное черно-белое видео при закрытых глазах</li>
+<li>автоматическое предварительное  (до 150мсек) воспроизведение прочитанного/печатаемого синтезом голоса</li>
+<li>желание сделать какоенибудь быстрое движение, куря или общаясь с кем нибудь, смотря телевизор, сидя за компутером. в основном когда обрабатываеться какаято информация. если обьект уже расписан некоторым криминальным/государственным агентам как какойто "тер" или просто пидорас применяеться другая программа "сбор" СС</li>
+<li>|на следующей неделе|
+психологическая программа повреждения мышления, кратковременной памяти и нарушений речи
+технология: кгб (30%), мальта (40%), саентология (1%), безумная психиатрия + СС (80%), баги фрейда (10%), "современная" подсознательная психология (5%)</li>
+<li>основной уклон программы: обсуждение "мужиков" и постоянная загрузка мыслей/образов гей-принадлежности. идеально для выброса/натравливания типичного обьекта с "подсознанием"</li>
+<li>голос мужской, лет 20. конченый подонок с попыткой игры пидора. грузит обычно так, как будто я с ним или он со мной играет. </li>
+<li>голос женский. лет 23. порванная гандоном описанным выше тупая дура как правило либо использует какието попытки методик введения в транс своими медленными тихими фразами либо при виде женщин/животных начинает говорить якобы это исходит от них. например я сижу со своим кроликом и он ко мне приползает я слышу от неё "вот я подошла". её я уже пропатчил, она понимает что я с ней буду играть только тогда когда воткну ей ручку в ухо.</li>
+<li>голос мужской. лет 45. раз в месяц либо когда их программа полностью разьебана говорит "убивай" (самоубийства/убийства под прикрытием фсб)</li>
+<li>больше всего фраз начинаеться с "он" либо "ты"</li>
+<li>загрузка "группы поддержки"/"друга"/"доброжелателя"</li>
+<li>единоразово "твою мать трахают собачки" (см. причом тут реально путин ?)</li>
+<li>постоянные оскорбления и "ахуеть"/"пиздец" (вытягиваеться рандомно "е" методом дозаписи в мозг)</li>
+<li>попытка вызвать ужас/опатию/панику, используя одиночные фразы или слова (мне жаль/нам очень жаль/мне жалко/ты дурак/ты уже дурак/ты дебил/бедняжка/ну что же ты/ну куда же ты/ты бедняк)  используеться при обнаружении создании информации или новых систем обьектом либо получении удовольствия от чегото</li>
+<li>если тебя три раза опустили оскорблениями и ты думаеш о своем - ты "мужик". сопровождаеца рыганием</li>
+<li>если тебя три раза назвали мужиком и ты думаеш о своем - ты "фашист". сопровождаеца рыганием</li>
+<li>если тебя три раза назвали фашистом и ты думаеш о своем - ты "японец" (см. т. опыты программы "сила" сс/фсб по отношению к странам)</li>
+<li>далее "он держит" (применяеться с предзаписью в мозг значения порно с собаками), "он ляжет", (применяеться с предзаписью значения сервака), "переход",  "смотри", "вот посмотрите", "скоро ты умреш", "а дальше ты умираеш"</li>
+<li>далее выбор из нескольких путей: ты "свой", ты "молодец", ты "здесь",  "это пиздец", ты "на тачке", ты "над тачкой", "он свой", "тот", "не тот", ты "пилот", апчхи", ты "псих", "мы с тобой", "это моряк", "машина", "это пожар", "ты лидер", "ты победил", "ты артист", "афигеть", "мой ребенок", "он ребенок"</li>
+<li>далее обычно ты  ""новый", или "он новый" или "ты дал"/"дал",  "я прошла",  "хочеш чтобы я подошла", "он прошел",  "нам насрать", "ты где", "ты никто",  "ты никто тут",  "черный"/"япония прошла"/"чечня прошла" (см. межнациональная ненависть звуковая, с постзаписью), "зенит прошел" (см. программа СС "СПАРТА")</li>
+<li>далее обычно "он взорвал", "он меня порезал", "ты толкнул", "я нато", "ты нато", "смерть пришла", "ты упал", "он играет", "ты походил", "он походил"</li>
+<li>далее "мы обесточены", "мы остановились", "подожди", "разведка прошла", "ты забил",  "мы разодрались", "пошел ты нахуй", "берём"</li>
+<li>далее "декс!", "ты нужен", "друг", "он ходит", "мы с тобой", "ты отец", "наш", "капитан сбит", "закарян прошел", "ты нажал", "ты актер", "ты черт"</li>
+<li>далее подключаеться оператор-ублюдок который анализирует ситуацию и пытаеца вызвать замешательство/тревогу путем частых прикосновений, подергиваний мышц в абсолютно любых местах, подергивания глаз, напряг разных частей тела, подрагивание головы, потеря сознания, жар на лице ( см. т. опыты программы "сила" сс/фсб) по отношению к странам), отрыжку, пирдеж, рвоту, временную потерю краткосрочной памяти, сопровождая все это оскорблениями, фразами пункта 3 или "ты прощен"/"извинись"/"ты вьетнамец"/"ты бес"/</li>
+<li>когда программа слюнявского не может быстро подобрать фразу или действие то звучит "убивай"</li>
+<li>далее "проси что хочеш" (видимо для подчеркивания переноса своей ненависти ко мне. см. ненависть и зависть сс/фсб/путина звуковая, с постзаписью))</li>
+<li>утро начинаеться с "ну здравствуй", "с днем рождения" и фразами пункта 3.</li>
+<li>|на следующей неделе|</li>
+<li>следует учесть, что все что я слышу - никак не отражает мои знания или мои страхи, все это - чужой, сгенеренный компьютером и ебанутыми ублюдками прикрывающимися психологами бред.</li>
 </ol>
-<pre class="codehilite"><code class="language-bash" style="color:#416EB4;background:#fafafa;border:1px solid #B660A6;">git clone https://github.com/kilitary/nnamed.git
+<h1 id="_2">методы их шавок в спецслужбах и возбуждение ненависти и вражды, поддерживаемое фсиси</h1>
+<p>электронные оружия российских спецслужб</p>
+<p>которое используеца на нацистских тестах над людьми,</p>
+<p>(исследовано windows 10/11 pro/linux 6.x|7.x) </p>
+<ol>
+<li>ринг0 софт </li>
+<li>подмена названий меню/подсказок в нативных,qt/gtk и net приложениях</li>
+<li>смена порядка меню</li>
+<li>визуальный эффекты тайтла, переходов с HWND -&gt; HWND</li>
+<li>убирание/подмена explorer context menus </li>
+<li>фулл контрол тредов/процессов/пропертисов окон и их элементов</li>
+<li>фулл контроль биоса и загрузки</li>
+<li>изменение расположений обьектов на форме приложения</li>
+<li>изменение монитора для появления формы приложения </li>
+<li>
+<p>изменение heap/data/strings в памяти программ</p>
+</li>
+<li>
+<p>acpi драйвер</p>
+</li>
+<li>левые девайсы/шины ISA/PCI/CUSTOM</li>
+<li>левые прерывания </li>
+<li>левые версии драйвера</li>
+<li>несуществующие на диске файлы драйверов</li>
+<li>
+<p>подмена POWER LOAD/TDP/иных данных сенсоров для цпу и думаю что всех других устройств</p>
+</li>
+<li>
+<p>мутаген</p>
+</li>
+<li>рандомные по паттернам директории на дисках</li>
+<li>рандомные по паттернам файлы в директориях</li>
+<li>рандомные текстовые json/xml/yml файлы с кучей рандомного контента с параметрами по паттернам</li>
+<li>
+<p>винда за пол года из 11 превратилась в 10        (еще изучаеться, пытаюсь восстановить? но много рандомно поменянных некритических параметров в реестре. например билд 10.2200.1516, хотя ставилса &gt; 10.227xx.xxxx)</p>
+</li>
+<li>
+<p>секурити cервисес           </p>
+</li>
+<li>тпм версия драйвера/спецификация/версия api всегда разная           </li>
+<li>настройки, галки, селекты и прочие элементы везде внутри секурити скачут/появляюца/исчезают           </li>
+<li>антивирус сканирует 1000 файлов за 1 сек.           </li>
+<li>модифицированный на лету process hacker и пиздецово сгенеренные полисисы</li>
+</ol>
+<h1 id="_3">Андрей</h1>
+<p>Отсюда и до конца этой главы история моего товарища со школы, также подвергающегося угрозам эмоционального характера. С помощью методов проведения психиатрических, психологических и физиологических методов, которые направлены на возбуждение эмоций направленных в сторону, запрограммированную с помощью НЛП внедрения текста/последовательности действий. А также методов действующих как следствие-причина-следствие (прим.пер. идите нахуй, наймите себе переводчика.выже серьезная служба).</p>
+<p>Вы не поверите, но ФСБ реально спускаеться на дно с высоких чинов. Которым звонят и делегируют инструкции по схеме паралельного импорта в агентов службы. Они, например наружники, ничего болььше не умеют кроме как в стиле мальтовских отбросов одевать красные носки когда когото отьебали в спарте. Смешно, да. Действия эти возможно, говорят о том что существует правительство куда дальше вашего любимого телеками путина, жириновского, захаровой (мастер в ы смешиваний), поклонской (которую похоронили), ебензю, которого побрили для лучшего прохождения сигнала (прим.пер. жир мешал реврайту чипа бензью. пришлось собрать команду для нахождения ответа в об ходах памяти которая давала сбой).</p>
+<p>Применение пси-технологий в отношении "объекта"; его преследование и контроль его окружения; 
+ руссия: симуляция в санкт-петербурге: Аналитический отдел ФСБ выполняет задания по внедрению психоанализа поведения граждан России по средствам специальных дальнодействующих пока не раскрытых в деталях на 100% систем. Сотрудники ФСБ аналитического отдела в звании от полковник до генерал-лейтенант и до генерал-мойор, их же называют псиоператорами или псиопами. Данный отдел обладает средствами чтения мыслей людей и передачи сигналов в мозг человека.  </p>
+<p>Компютерно-сгенерированное мозговое маппирование (брейн меппинг, brain mapping) может непрерывно мониторить всю электрическую активность в мозге, и без какого-то ни было контакта с субъектом, RNM -низкочастотное направленная излучение-модуляция, может выдавать карту электрической активности из зрительной коры мозга субъекта и показывать картинку из мозга субъекта на Нейропрограмму. Визуальная память также может использоваться (визуализация и воображение - прим. пер.). RNM может отправлять картинки напрямую в зрительную кору, минуя глаза и зрительные нервы, и формировать искуственно смоделированные установки для Нейрокодирования подсознания.(визуальные и слуховые искажения и галлюцинации вызванные воздействием спецсредств во сне и при бодрости.)</p>
+<p>Стоимость этой самой аппаратуры доходит до двух миллионов долларов.  ЭМ Нейромодуляция ВНС и оцифровка основнных нейроалгоритмов НейроПрограммы ЦНС , по технологии V2K, Brain mind kontrol,(возможны и иные названия)
+ Назначения (массовое облучение населения или персонифицированное),
+ Примененных технологий психотронного влияния (КВ-станции, СВЧ-станции, торсионные генераторы),
+ Чаще всего "голоса в голове" являются результатом применения псиопами (пси-операторами) спец. прибора, который на их внутреннем сленге называется "Рука". Хотя, "голоса в голове" могут возникать и от применения псиопами других технических средств. Псиопы и есть сотрудники ФСБ. Вот лишь неполный перечень некоторых "приборов" сотрудники ФСБ, которые они скрытно применяют на территории РФ: Передатчик ТЕП-100Х (для внушения голосов);<br />
+Радиостанция "рука" (портативка для получения информации со слуховой системы человека и передачи голосов);
+ Передатчик HDATA (для передачи информации с компьютера напрямую в мозг);
+ Радиостанция ГГГ-5 (для управления мозгом человека с компьютера);<br />
+Также, псиопами применяются и антенные комплексы для скрытого управления сознанием населения и отдельных лиц.
+ Всё это, относительно, старая техника, которая применяется ФСБ с базовых центров спец связи. Эти специализированные технические комплексы, осуществляющие скрытое психотронное влияние на население имеют различное техническое исполнение, которое зависит от:<br />
+В состав земных групп всегда входит конкретная задача, а именно:
+ Слежка и сбор информации об "объекте" и его окружении;
+ Постоянный моральный и психологический прессинг "объекта";
+ Отслеживание телефонной, мобильной и интернет связи "объекта";
+ Мониторинг поведения "объекта" в разных ситуациях и занесения этих данных в компьютер с целью анализа и дальнейшего скрытого управления поведением "объекта";
+ Полная дискредитация "объекта" в обществе посредством дезинформации и клеветы;
+ Целенаправленная "травля" "объекта" и доведение его до самоубийства и (или) создание ему репутации асоциальной личности, преступника, извращенца, труса, предателя, сумасшедшего и т. д.;  Организованный моббинг "объекта" и тех, на чью помощь он рассчитывает и т. д.»
+ Применение данной аппаратуры, оружия и спецсредств к мирным гражданам страны является преступлением против личности. В Уголовном Кодексе РФ существует ряд статей, которые отражают преступления, совершаемые относительно жертв этого оружия. Это статьи 111, 112- умышленное нанесение вреда здоровью, ст.117- истязания, ст. 105- убийство, ст.106- доведение до самоубийства.<br />
+Мы должны уметь оперировать законодательством, которое можно применить в борьбе с этим типом травли-преследования.<br />
+Чушь, которую я прериодически слышу:
+"Ахмадулина Наргиз" ("она-же Азиза")
+   -я пью твоë здоровье!(С)
+ "Ширеева Наталья" ("ветиран-тиран")
+   -мне нравится наблюдать как ты страдаеш08:11   -Могу тебя оклеветать избегая неприятнтстей, ты даже ничего не сможешь сделать. Только дëрнись мне...!! (С)
+ 1. Со слов самой Ширеевой Н. во время воздействия на меня спец техническим средством" Рука"  * Под выкрики еë дочери "слава мусорам! " она под легендой того, что у неë женский половой орган и с этим я лично должен мириться; с перепадами еë настроения, при которых она начинает применять ко мне физическое насилие, боль. В последствии, после которых, при мочеиспускании появляются кровяные сгустки((если целью на этот момент явилась физическое изнурение) Имеются ФОТО(где?)). 
+Климакс у обеих(Ширеева Ахмадулина) в ярко выраженной форме спровоцирован моими диалогами с ними. -Это Беспрецедентный случай и ты ничего не сможешь доказать... "(ШирееваН.):(С)"
+Параллельными целями зачастую являлось раскрыть горизонты возможностей персонала, возможно в начальных операциях и опытах. Узнать как далеко эти вохможности готовы выйти...  Желаемый итог. 1. полный физический контроль, различными формами психофизического насилия с причинением физической боли(при помощи спецсредств "мк ультра- Рука", подвергнув испытуемого унижениям, Подавление воли, дезориентация в задачах и времени их исполнения)
+ 2. Влиять и тормозить финансовое развитие (навязанный финансовый неконтролируемый спад возможности планирования трат)
+ 3. Угрозы в том числе что могут лишить меня зубов и уже демонстрированием резкими,однократными воздействуя на зуб или в область его используя мышцы находящиеся рядом, используя обычные электричесские раздражители. Также могут наносить точечные сильные,  но невыносимые по боли прижоги"( я так называю их из за то,что по ощущениям схоже на раскалённую спицу прокалывающую мозг к примеру за ухом чуть выше. До криков.. невыносимая боль).</p>
+<p>## планы</p>
+<p>USER
+ какие обьекты негативно затрагивают эти террористические действия?</p>
+<p>BMO
+1. Какие организации и государства занимаются разработкой и использованием психотронного оружия?
+2. Как работает аппаратура "Рука" и как она влияет на человека?
+3. Какие технологии используются для слежки и сбора информации о людях?
+4. Как работает моральный и психологический прессинг, осуществляемый спецслужбами?
+5. Какие методы используются для дискредитации людей в обществе?
+6. Какие меры могут быть приняты для защиты от этого оружия и насилия?
+7. Описание преступлений, которые могут быть совершены с использованием этого оружия.
+8. Как можно применить законодательство для борьбы с этим типом травли-преследования?
+9. Описание случаев, в которых была использована технология "Рука" и её результатов.</p>
+<p>просьба проверить уровень биполярки при прочтении этих текстов и спустя 2a дня , возможно вам не стоит сюда заходить.</p>
+<p>информация, расширенная деталями сразу для проведения следственных мероприятий: -&gt; <a href="axis9/research/research.html">axis9 damage research</a></p>
+<p>спасибо,
+++<strong>DECONF</strong></p>
+<h4 id="alwaysview-">Alwaysview - обновления видимо будут постоянно происходить периодически. здесь самое свежее инфо о массовых преступлениях секретных служб россии и высшего руководства страны в отношении своих граждан.</h4>
+<h2 id="newerview">Newerview</h2>
+<p>NNAMED is an extensive research and documentation repository organized as an Obsidian ovault, containing interdisciplinary research, analysis, and documentation across multiple domains including technology, linguistics, biology, intelligence analysis, and systems research.</p>
+<h2 id="repository-structure">Repository Structure</h2>
+<h3 id="core-sections">Core Sections</h3>
+<h4 id="axis9-core-research-analysis">📊 <strong>axis9/</strong> - Core Research &amp; Analysis</h4>
+<p>Central hub for strategic research, core issues, and planning documentation:</p>
+<ul>
+<li><strong>CORE-SSE/</strong>: Core system security evaluations</li>
+<li><strong>issues/</strong>: Critical issue documentation and analysis</li>
+<li><strong>plans/</strong>: Strategic planning and roadmaps</li>
+<li><strong>research/</strong>: Primary research documentation and findings</li>
+</ul>
+<h4 id="skynet-technology-systems-research">🤖 <strong>SKYNET/</strong> - Technology &amp; Systems Research</h4>
+<p>Advanced technology research and system analysis with focus on autonomous systems, scanning technologies, and AI-driven analysis:</p>
+<p><strong>Core Research Areas:</strong></p>
+<ul>
+<li><strong>RF &amp; Microwave Scanning Systems</strong>: Advanced electromagnetic frequency scanning research (50-200 GHz range)</li>
+<li><strong>Text Machine Intelligence</strong>: Unique schematic relationship mapping with base English words and linguistic pattern analysis</li>
+<li><strong>Navigation &amp; Wireless Scanning</strong>: Comprehensive wirescan and navscan simulation systems for environmental analysis</li>
+<li><strong>Autonomous System Simulations</strong>: Multi-layered simulation frameworks for system behavior prediction</li>
+</ul>
+<p><strong>Repository Structure:</strong></p>
+<ul>
+<li><strong>advisories/</strong>: Security advisories and technical notices for emerging technologies</li>
+<li><strong>research/</strong>: Technology research including scanning systems, text machines, and autonomous behavior models</li>
+<li><strong>technology/</strong>: Technical documentation, specifications, and implementation guides</li>
+<li><strong>playground/</strong>: Experimental prototypes and real-time simulation environments</li>
+</ul>
+<h4 id="redqueen-interdisciplinary-research">👑 <strong>Red&amp;Queen/</strong> - Interdisciplinary Research</h4>
+<p>Multi-domain research combining biological, electronic, and linguistic systems with extensive simulation capabilities:</p>
+<p><strong>Simulation &amp; Research Focus:</strong></p>
+<ul>
+<li><strong>Model Query Simulations</strong>: Large-scale multi-model analysis systems with automated parameter testing and result validation</li>
+<li><strong>Biological Systems Modeling</strong>: Research into biological processes, evolutionary patterns, and bio-inspired computational models</li>
+<li><strong>Electronic Systems Analysis</strong>: Hardware research, circuit analysis, and electronic system behavior modeling</li>
+<li><strong>Linguistic Pattern Analysis</strong>: Natural language processing, semantic relationship mapping, and linguistic evolution studies</li>
+<li><strong>Cross-Domain Integration</strong>: Interdisciplinary simulations connecting biological, electronic, and linguistic systems</li>
+</ul>
+<p><strong>Repository Structure:</strong></p>
+<ul>
+<li><strong>biology/</strong>: Biological systems research and bio-computational models</li>
+<li><strong>electronics/</strong>: Electronic systems, hardware research, and circuit analysis</li>
+<li><strong>lingvistic/</strong>: Linguistic analysis, NLP research, and semantic processing</li>
+<li><strong>research/</strong>: Cross-domain research projects and analytical frameworks</li>
+<li><strong>playground/</strong>: Active simulation environments including extensive model_queryer simulation logs with timestamped results</li>
+</ul>
+<h4 id="bmo-profiles-configuration">🎯 <strong>BMO/</strong> - Profiles &amp; Configuration</h4>
+<p>System profiles and configuration management:</p>
+<ul>
+<li><strong>Profiles/</strong>: User and system profiles</li>
+</ul>
+<h4 id="excalidraw-visualization-diagrams">🎨 <strong>Excalidraw/</strong> - Visualization &amp; Diagrams</h4>
+<p>Drawing tools and visual documentation:</p>
+<ul>
+<li><strong>Scripts/</strong>: Automation scripts for diagram generation</li>
+</ul>
+<h3 id="supporting-sections">Supporting Sections</h3>
+<ul>
+<li><strong>assets/</strong>: Media files, images, and resources</li>
+<li><strong>indirect/</strong>: Indirect references and linked content</li>
+<li><strong>looms/</strong>: Loom recordings and video documentation</li>
+<li><strong>programs/</strong>: Software tools and utilities</li>
+<li><strong>psy-references/</strong>: Psychological and social research references</li>
+<li><strong>textgenerator/</strong>: AI text generation tools and templates</li>
+<li><strong>Tags/</strong>: Organizational tags and metadata</li>
+</ul>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li><strong>1,842+ Markdown Files</strong>: Comprehensive documentation across all domains</li>
+<li><strong>Obsidian Vault Structure</strong>: Advanced linking, tagging, and organization</li>
+<li><strong>Multi-language Support</strong>: English and Russian documentation variants</li>
+<li><strong>Cross-referenced Content</strong>: Extensive internal linking and relationship mapping</li>
+<li><strong>Research Integration</strong>: Combines theoretical research with practical applications</li>
+<li><strong>Modular Organization</strong>: Clear separation of concerns across domain areas</li>
+</ul>
+<h2 id="research-simulation-capabilities">Research &amp; Simulation Capabilities</h2>
+<h3 id="skynet-simulations">SKYNET Simulations</h3>
+<p>The SKYNET research division focuses on advanced technological simulations and autonomous system modeling:</p>
+<ul>
+<li><strong>RF/Microwave Analysis</strong>: Frequency scanning simulations in the 50-200 GHz range for advanced electromagnetic analysis</li>
+<li><strong>Navigation Systems</strong>: Comprehensive wirescan and navscan simulation environments for spatial and wireless network analysis</li>
+<li><strong>Text Machine Learning</strong>: Experimental linguistic relationship mapping using base English word schemes and parameter optimization</li>
+<li><strong>Security Research</strong>: Ongoing analysis of emerging technological threats and system vulnerabilities</li>
+</ul>
+<h3 id="redqueen-simulations">Red&amp;Queen Simulations</h3>
+<p>The Red&amp;Queen division conducts interdisciplinary simulations spanning multiple scientific domains:</p>
+<ul>
+<li><strong>Multi-Model Query Systems</strong>: Extensive simulation logging with automated model analysis (36+ models tested with temperature and context parameter optimization)</li>
+<li><strong>Biological System Modeling</strong>: Computational biology research including evolutionary pattern analysis and bio-inspired algorithms</li>
+<li><strong>Electronic Circuit Analysis</strong>: Hardware simulation and electronic system behavior prediction</li>
+<li><strong>Linguistic Evolution Studies</strong>: Cross-linguistic pattern analysis and semantic relationship modeling</li>
+<li><strong>Integrated Cross-Domain Research</strong>: Simulations that bridge biological, electronic, and linguistic systems for comprehensive analysis</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><a href="https://obsidian.html/">Obsidian</a> (recommended for full functionality)</li>
+<li>Any markdown editor for basic access</li>
+<li>Git for version control</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Clone the repository:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/kilitary/nnamed.git
 cd nnamed
-</code></pre>
+</code></pre></div>
 
-<ol start="2">
-<li style="color:#6A0572;">
-<p style="color:#6A0572;">Open in Obsidian:
-   - Launch Obsidian
-   - Select "Open folder as vault"
-   - Choose the cloned directory</p>
-</li>
-<li style="color:#6A0572;">
-<p style="color:#6A0572;">For basic markdown access, navigate through the directory structure using any text editor.</p>
-</li>
-</ol>
-<h2 id="usage" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Usage</h2>
-<h3 id="navigation" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">Navigation</h3>
-<ul>
-<li style="color:#6A0572;"><strong>Start with</strong>: <a href="./index.html">index.html</a> for comprehensive navigation</li>
-<li style="color:#6A0572;"><strong>Core Research</strong>: Begin with <a href="./axis9/axis9.html">axis9/axis9.html</a></li>
-<li style="color:#6A0572;"><strong>Technology Focus</strong>: Explore <a href="./SKYNET/SKYNET.html">SKYNET/SKYNET.html</a></li>
-<li style="color:#6A0572;"><strong>Interdisciplinary</strong>: Check <a href="./Red&amp;Queen/Red&amp;Queen.html">Red&amp;Queen/Red&amp;Queen.html</a></li>
-</ul>
-<h3 id="key-entry-points" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">Key Entry Points</h3>
 <ol>
-<li style="color:#6A0572;"><strong>Research Overview</strong>: Start with the research sections in each major domain</li>
-<li style="color:#6A0572;"><strong>Issue Tracking</strong>: Review axis9/issues/ for current analytical focuses</li>
-<li style="color:#6A0572;"><strong>Technical Documentation</strong>: Explore SKYNET/technology/ for technical specs</li>
-<li style="color:#6A0572;"><strong>Cross-domain Analysis</strong>: Red&amp;Queen sections for interdisciplinary insights</li>
+<li>
+<p>Open in Obsidian:</p>
+</li>
+<li>
+<p>Launch Obsidian</p>
+</li>
+<li>Select "Open folder as vault"</li>
+<li>
+<p>Choose the cloned directory</p>
+</li>
+<li>
+<p>For basic markdown access, navigate through the directory structure using any text editor.</p>
+</li>
 </ol>
-<h2 id="documentation-languages" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Documentation Languages</h2>
+<h2 id="usage">Usage</h2>
+<h3 id="navigation">Navigation</h3>
 <ul>
-<li style="color:#6A0572;"><strong>English</strong>: Primary documentation language</li>
-<li style="color:#6A0572;"><strong>Russian</strong>: Alternative documentation available (see <a href="./README_ru.html">README_ru.html</a>)</li>
-<li style="color:#6A0572;"><strong>Mixed Content</strong>: Some files contain bilingual content for accessibility</li>
+<li><strong>Start with</strong>: <a href="./index.html">index.html</a> for comprehensive navigation</li>
+<li><strong>Core Research</strong>: Begin with <a href="./axis9/axis9.html">axis9/axis9.html</a></li>
+<li><strong>Technology Focus</strong>: Explore <a href="./SKYNET/SKYNET.html">SKYNET/SKYNET.html</a></li>
+<li><strong>Interdisciplinary</strong>: Check <a href="./Red&amp;Queen/Red&amp;Queen.html">Red&amp;Queen/Red&amp;Queen.html</a></li>
 </ul>
-<h2 id="contributing" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Contributing</h2>
+<h3 id="key-entry-points">Key Entry Points</h3>
 <ol>
-<li style="color:#6A0572;">Follow the existing organizational structure</li>
-<li style="color:#6A0572;">Use proper markdown formatting and Obsidian conventions</li>
-<li style="color:#6A0572;">Add appropriate tags and metadata to new files</li>
-<li style="color:#6A0572;">Cross-reference related content using wiki-style links</li>
-<li style="color:#6A0572;">Update relevant index files when adding new sections</li>
-<li style="color:#6A0572;"><strong>Review and comply with the <a href=".github/DISCUSSION_POLICY.html">Discussion Policy</a></strong> - poll links are strictly prohibited</li>
+<li><strong>Research Overview</strong>: Start with the research sections in each major domain</li>
+<li><strong>Issue Tracking</strong>: Review axis9/issues/ for current analytical focuses</li>
+<li><strong>Technical Documentation</strong>: Explore SKYNET/technology/ for technical specs</li>
+<li><strong>Cross-domain Analysis</strong>: Red&amp;Queen sections for interdisciplinary insights</li>
 </ol>
-<h2 id="structure-navigation" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Structure Navigation</h2>
-<p style="color:#6A0572;">For detailed navigation and content summaries, see:
-- <strong>English</strong>: <a href="./index.html">index.html</a>
-- <strong>Russian</strong>: <a href="./index_ru.html">index_ru.html</a></p>
-<h2 id="contact" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Contact</h2>
+<h2 id="documentation-languages">Documentation Languages</h2>
 <ul>
-<li style="color:#6A0572;"><strong>Repository</strong>: <a href="https://github.com/kilitary/nnamed">https://github.com/kilitary/nnamed</a></li>
-<li style="color:#6A0572;"><strong>Issues</strong>: Use GitHub Issues for questions and feedback</li>
+<li><strong>English</strong>: Primary documentation language</li>
+<li><strong>Russian</strong>: Alternative documentation available (see <a href="./README_ru.html">README_ru.html</a>)</li>
+<li><strong>Mixed Content</strong>: Some files contain bilingual content for accessibility</li>
 </ul>
-<h2 id="quick-access-links" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">Quick Access Links</h2>
-<h3 id="core-sections_1" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">🎯 Core Sections</h3>
+<h2 id="contributing">Contributing</h2>
+<ol>
+<li>Follow the existing organizational structure</li>
+<li>Use proper markdown formatting and Obsidian conventions</li>
+<li>Add appropriate tags and metadata to new files</li>
+<li>Cross-reference related content using wiki-style links</li>
+<li>Update relevant index files when adding new sections</li>
+<li><strong>Review and comply with the <a href=".github/DISCUSSION_POLICY.html">Discussion Policy</a></strong> - poll links are strictly prohibited</li>
+</ol>
+<h2 id="structure-navigation">Structure Navigation</h2>
+<p>For detailed navigation and content summaries, see:</p>
 <ul>
-<li style="color:#6A0572;"><strong><a href="Dashboard.html">Dashboard</a></strong> - Central navigation hub</li>
-<li style="color:#6A0572;"><strong><a href="axis9/axis9.html">axis9</a></strong> - Strategic research &amp; analysis</li>
-<li style="color:#6A0572;"><strong><a href="SKYNET/SKYNET.html">SKYNET</a></strong> - Technology &amp; systems research  </li>
-<li style="color:#6A0572;"><strong><a href="Red&amp;Queen/Red&amp;Queen.html">Red&amp;Queen</a></strong> - Interdisciplinary research</li>
+<li><strong>English</strong>: <a href="./index.html">index.html</a></li>
+<li><strong>Russian</strong>: <a href="./index_ru.html">index_ru.html</a></li>
 </ul>
-<h3 id="development" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">💻 Development</h3>
+<h2 id="contact">Contact</h2>
 <ul>
-<li style="color:#6A0572;"><strong><a href="programs/programs.html">programs</a></strong> - Software tools &amp; utilities</li>
-<li style="color:#6A0572;"><strong><a href="expandor.c">expandor.c</a></strong> - Core system expander (C code)</li>
-<li style="color:#6A0572;"><strong><a href="textgenerator/textgenerator.html">textgenerator</a></strong> - AI text generation tools</li>
+<li><strong>Repository</strong>: <a href="https://github.com/kilitary/nnamed">https://github.com/kilitary/nnamed</a></li>
+<li><strong>Issues</strong>: Use GitHub Issues for questions and feedback</li>
 </ul>
-<h3 id="resources" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">🎨 Resources</h3>
+<h2 id="quick-access-links">Quick Access Links</h2>
+<h3 id="core-sections_1">🎯 Core Sections</h3>
 <ul>
-<li style="color:#6A0572;"><strong><a href="Excalidraw/Excalidraw.html">Excalidraw</a></strong> - Visual documentation tools</li>
-<li style="color:#6A0572;"><strong><a href="assets/assets.html">assets</a></strong> - Media resources &amp; images</li>
-<li style="color:#6A0572;"><strong><a href="psy-references/psy-references.html">psy-references</a></strong> - Research references</li>
+<li><strong><a href="Dashboard.html">Dashboard.html</a></strong> - Central navigation hub</li>
+<li><strong><a href="axis9/axis9.html">axis9.html</a></strong> - Strategic research &amp; analysis</li>
+<li><strong><a href="SKYNET/SKYNET.html">SKYNET.html</a></strong> - Technology &amp; systems research</li>
+<li><strong><a href="Red&amp;Queen/Red&amp;Queen.html">Red&amp;Queen.html</a></strong> - Interdisciplinary research</li>
 </ul>
-<h3 id="organization" style="color:#1A535C;border-bottom:1px dashed #C70039;padding-bottom:4px;">🏷️ Organization</h3>
+<h3 id="development">💻 Development</h3>
 <ul>
-<li style="color:#6A0572;"><strong><a href="Tags/Tags.html">Tags</a></strong> - Content organization system</li>
-<li style="color:#6A0572;"><strong><a href="tracked_files.json">tracked_files.json</a></strong> - File tracking metadata</li>
+<li><strong><a href="programs/programs.html">programs.html</a></strong> - Software tools &amp; utilities</li>
+<li><strong><a href="expandor.c">expandor.c</a></strong> - Core system expander (C code)</li>
+<li><strong><a href="textgenerator/textgenerator.html">textgenerator.html</a></strong> - AI text generation tools</li>
 </ul>
-<h2 id="license" style="color:#1A535C;border-bottom:1px dashed #B660A6;padding-bottom:4px;">License</h2>
-<p style="color:#6A0572;">This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+<h3 id="resources">🎨 Resources</h3>
+<ul>
+<li><strong><a href="Excalidraw/Excalidraw.html">Excalidraw.html</a></strong> - Visual documentation tools</li>
+<li><strong><a href="assets/assets.html">assets.html</a></strong> - Media resources &amp; images</li>
+<li><strong><a href="psy-references/psy-references.html">psy-references.html</a></strong> - Research references</li>
+</ul>
+<h3 id="organization">🏷️ Organization</h3>
+<ul>
+<li><strong><a href="Tags/Tags.html">Tags.html</a></strong> - Content organization system</li>
+<li><strong><a href="tracked_files.json">tracked_files.json</a></strong> - File tracking metadata</li>
+</ul>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
 <hr />
-<p style="color:#6A0572;"><em>This repository represents ongoing research and documentation efforts across multiple scientific and technical domains. Content is continuously updated and expanded based on research findings and analytical developments.</em></p>
+<p><em>This repository represents ongoing research and documentation efforts across multiple scientific and technical domains. Content is continuously updated and expanded based on research findings and analytical developments.</em></p>
 <!-- 66D472B1 -->
-    <script>
-        // Sprinkle animated confetti that matches the kid-fest palette
-        (function() {
-            const colors = ["#9B5DE8","#7B61FF","#843b62","#B660A6","#416EB4","#6A0572","#2E7D32"];
-            const confetti = document.getElementById('confetti');
-            const count = 120;
-            for (let i = 0; i < count; i++) {
-                const el = document.createElement('div');
-                const size = Math.random() * 8 + 4;
-                el.style.cssText =
-                    'position:absolute;left:'+Math.random()*100+'vw+top:'+Math.random()*100+'vh+'+
-                    'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+
-                    ';border-radius:'+(Math.random()>0.5?'50%':'0')+';'+
-                    'animation:float '+Math.random()*5+3+'s linear infinite;opacity:0.7';
-                el.style.transform = 'rotate('+Math.random()*360+'deg)';
-                confetti.appendChild(el);
-            }
-            const style = document.createElement('style');
-            style.textContent = '@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120px) rotate(720deg); } }';
-            document.head.appendChild(style);
-        })();
-    </script>
 </body>
 </html>
